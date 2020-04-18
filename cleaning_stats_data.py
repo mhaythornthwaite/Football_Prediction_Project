@@ -16,11 +16,6 @@ import pandas as pd
 import math
 
 
-def load_burnley_match_stats():
-    burnley_fixture_df = read_json_as_pd_df('burnley_fixture.json', orient_def='values')
-    return burnley_fixture_df
-
-
 #------------------------- MAKING CLEAN FIXTURE LIST --------------------------
 
 fixtures = pd.read_json('prem_seasons_fixture_id/2019_premier_league_fixtures.json', orient='records')
