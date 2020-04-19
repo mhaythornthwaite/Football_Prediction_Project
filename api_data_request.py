@@ -93,7 +93,7 @@ def req_prem_stats(start_index, end_index):
             fixture_sliced = slice_api(fixture_raw, 34, 2)
             save_api_output('2019_prem_game_stats/' + fix_id, fixture_sliced)
         
-#req_prem_stats(70, 160)
+#req_prem_stats(160, 250)
  
 
 
