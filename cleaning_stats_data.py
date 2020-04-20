@@ -56,7 +56,7 @@ for team in team_id_list:
     
     #working the home teams
     team_fixture_list = []
-    for i in fixtures_clean.index[:50]:
+    for i in fixtures_clean.index[:]:
         if fixtures_clean['Home Team ID'].iloc[i] == team:
             if math.isnan(fixtures_clean['Home Team Goals'].iloc[i]) == False:
                 team_fixture_list.append(fixtures_clean['Fixture ID'].iloc[i])
@@ -69,7 +69,7 @@ for team in team_id_list:
         
     #working the away teams    
     team_fixture_list = []    
-    for i in fixtures_clean.index[:50]:
+    for i in fixtures_clean.index[:]:
         if fixtures_clean['Away Team ID'].iloc[i] == team:
             if math.isnan(fixtures_clean['Away Team Goals'].iloc[i]) == False:
                 team_fixture_list.append(fixtures_clean['Fixture ID'].iloc[i])
@@ -82,10 +82,10 @@ for team in team_id_list:
 
 #saving our generated dictionary as a pickle file to import into a later python file.
 
-with open('2019_prem_generated_clean/saved_all_stats_dict.txt', 'wb') as myFile:
+with open('2019_prem_generated_clean/2019_prem_all_stats_dict.txt', 'wb') as myFile:
     pickle.dump(all_stats_dict, myFile)
 
-with open('2019_prem_generated_clean/saved_all_stats_dict.txt', 'rb') as myFile:
+with open('2019_prem_generated_clean/2019_prem_all_stats_dict.txt', 'rb') as myFile:
     loaded_dict_test = pickle.load(myFile)
 
 
