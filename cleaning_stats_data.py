@@ -11,7 +11,6 @@ print(' ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
-import requests
 import pandas as pd
 import math
 import pickle
@@ -44,6 +43,8 @@ fixtures_clean.to_csv('2019_prem_generated_clean/2019_premier_league_fixtures_df
 #---------------------------- CREATING DF PER TEAM ----------------------------
 #in this section we will create a nested dictionary containing the 20 teams, each with a value as another dictionary. In this dictionary we will have the game id along with the game dataframe.
 
+#creating the 'fixtures_clean' ID index which we will use to take data from this dataframe and add to each of our individual fixture stats dataframe.
+fixtures_clean_ID_index = pd.Index(fixtures_clean['Fixture ID'])
 
 #team id list that we can iterate over
 team_id_list = (fixtures_clean['Home Team ID'].unique()).tolist()
@@ -62,8 +63,24 @@ for team in team_id_list:
                 team_fixture_list.append(fixtures_clean['Fixture ID'].iloc[i])
     all_stats_dict[team] = {}
     for j in team_fixture_list:
+        #loading df
         df = pd.read_json('2019_prem_game_stats/' + str(j) + '.json', orient='values')
-        df['Home vs Away ID'] = [1,2]
+        #removing percentage symbol in possession and passes and conv to int
+        df['Ball Possession'] = df['Ball Possession'].str.replace('[\%]', '').astype(int)
+        df['Passes %'] = df['Passes %'].str.replace('[\%]', '').astype(int)
+        #adding home vs away goals to df
+        temp_index = fixtures_clean_ID_index.get_loc(j)
+        home_goals = fixtures_clean['Home Team Goals'].iloc[temp_index]
+        away_goals = fixtures_clean['Away Team Goals'].iloc[temp_index]
+        df['Goals'] = [home_goals, away_goals]
+        #adding home-away identifier to df
+        df['Team Identifier'] = [1,2]
+        #adding team id
+        df['Team ID'] = [team, fixtures_clean['Away Team ID'].iloc[temp_index]]
+        #adding game date
+        gd = fixtures_clean['Game Date'].iloc[temp_index]
+        df['Game Date'] = [gd, gd]
+        #adding this modified df to nested dictionary
         sub_dict_1 = {j:df}
         all_stats_dict[team].update(sub_dict_1)
         
@@ -74,8 +91,24 @@ for team in team_id_list:
             if math.isnan(fixtures_clean['Away Team Goals'].iloc[i]) == False:
                 team_fixture_list.append(fixtures_clean['Fixture ID'].iloc[i])
     for j in team_fixture_list:
+        #loading df
         df = pd.read_json('2019_prem_game_stats/' + str(j) + '.json', orient='values')
-        df['Home vs Away ID'] = [2,1]
+        #removing percentage symbol in possession and passes and conv to int
+        df['Ball Possession'] = df['Ball Possession'].str.replace('[\%]', '').astype(int)
+        df['Passes %'] = df['Passes %'].str.replace('[\%]', '').astype(int)
+        #adding home vs away goals to df
+        temp_index = fixtures_clean_ID_index.get_loc(j)
+        home_goals = fixtures_clean['Home Team Goals'].iloc[temp_index]
+        away_goals = fixtures_clean['Away Team Goals'].iloc[temp_index]
+        df['Goals'] = [home_goals, away_goals]
+        #adding home-away identifier to df
+        df['Team Identifier'] = [2,1]       
+        #adding team id
+        df['Team ID'] = [fixtures_clean['Home Team ID'].iloc[temp_index], team]
+        #adding game date
+        gd = fixtures_clean['Game Date'].iloc[temp_index]
+        df['Game Date'] = [gd, gd]
+        #adding this modified df to nested dictionary
         sub_dict_1 = {j:df}
         all_stats_dict[team].update(sub_dict_1)
         
