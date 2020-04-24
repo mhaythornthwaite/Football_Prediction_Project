@@ -73,6 +73,15 @@ for team in team_id_list:
         home_goals = fixtures_clean['Home Team Goals'].iloc[temp_index]
         away_goals = fixtures_clean['Away Team Goals'].iloc[temp_index]
         df['Goals'] = [home_goals, away_goals]
+        #adding points data
+        if home_goals > away_goals:
+            df['Points'] = [3,0]
+        elif home_goals == away_goals:
+            df['Points'] = [1,1]
+        elif home_goals < away_goals:
+            df['Points'] = [0,3]
+        else:
+            df['Points'] = ['nan', 'nan']
         #adding home-away identifier to df
         df['Team Identifier'] = [1,2]
         #adding team id
@@ -101,6 +110,15 @@ for team in team_id_list:
         home_goals = fixtures_clean['Home Team Goals'].iloc[temp_index]
         away_goals = fixtures_clean['Away Team Goals'].iloc[temp_index]
         df['Goals'] = [home_goals, away_goals]
+        #adding points data
+        if home_goals > away_goals:
+            df['Points'] = [3,0]
+        elif home_goals == away_goals:
+            df['Points'] = [1,1]
+        elif home_goals < away_goals:
+            df['Points'] = [0,3]
+        else:
+            df['Points'] = ['nan', 'nan']
         #adding home-away identifier to df
         df['Team Identifier'] = [2,1]       
         #adding team id
