@@ -12,7 +12,6 @@ print(' ---------------- START ---------------- \n')
 #-------------------------------- API-FOOTBALL --------------------------------
 
 import pandas as pd
-import math
 import pickle
 import numpy as np
 
@@ -82,124 +81,144 @@ o_pass_accuracy = []
 o_goals = []
 o_goals_target = []
 
-sliding_game_index = [1,2,3,4,5,6,7,8,9]  
 
-games_slide = 5
-
+#running average function
 def running_mean(x, N):
     cumsum = np.cumsum(np.insert(x, 0, 0)) 
     return (cumsum[N:] - cumsum[:-N]) / float(N)
 
-for team_id in team_list[:]:
-    team = game_stats[team_id] #team dictionary
+#the number of games over which the past data is averaged. A large number will smooth out past performance where as a small number will result in the prediction being heavily reliant on very recent form. 
+
+def generate_ml_df(games_slide):
+  
+    #creating final features which will be appended
+    t_total_shots = []
+    t_shots_inside_box = []     
+    t_fouls = []
+    t_corners = []
+    t_posession = []
+    t_pass_accuracy = []
+    t_goals = []
+    t_goals_target = []
     
-    #creating the initial features - it is important these get overwritten with each iteration
-    team_total_shots = []
-    team_shots_inside_box = []     
-    team_fouls = []
-    team_corners = []
-    team_posession = []
-    team_pass_accuracy = []
-    team_goals = []
-    opponent_total_shots = []
-    opponent_shots_inside_box = []     
-    opponent_fouls = []
-    opponent_corners = []
-    opponent_posession = []
-    opponent_pass_accuracy = []
-    opponent_goals = []
+    o_total_shots = []
+    o_shots_inside_box = []     
+    o_fouls = []
+    o_corners = []
+    o_posession = []
+    o_pass_accuracy = []
+    o_goals = []
+    o_goals_target = []
     
-    #iterating over the fixture id to create feature lists
-    for game_id in team_fixture_id_dict[team_id]:
-        game = team[game_id] #game df
-        temp_index = pd.Index(game['Team Identifier'])
-        team_ind = temp_index.get_loc(1)
-        opponent_ind = temp_index.get_loc(2)
+    for team_id in team_list[:]:
+        team = game_stats[team_id] #team dictionary
         
-        #team pseudo features: list of raw feature data for each game
-        team_total_shots.append(game['Total Shots'][team_ind])
-        team_shots_inside_box.append(game['Shots insidebox'][team_ind])
-        team_fouls.append(game['Fouls'][team_ind])
-        team_corners.append(game['Corner Kicks'][team_ind])
-        team_posession.append(game['Ball Possession'][team_ind])
-        team_pass_accuracy.append(game['Passes %'][team_ind])
-        team_goals.append(game['Goals'][team_ind])     
+        #creating the initial features - it is important these get overwritten with each iteration
+        team_total_shots = []
+        team_shots_inside_box = []     
+        team_fouls = []
+        team_corners = []
+        team_posession = []
+        team_pass_accuracy = []
+        team_goals = []
+        opponent_total_shots = []
+        opponent_shots_inside_box = []     
+        opponent_fouls = []
+        opponent_corners = []
+        opponent_posession = []
+        opponent_pass_accuracy = []
+        opponent_goals = []
         
-        #opponent pseudo features: list of raw feature data for each game
-        opponent_total_shots.append(game['Total Shots'][opponent_ind])
-        opponent_shots_inside_box.append(game['Shots insidebox'][opponent_ind])
-        opponent_fouls.append(game['Fouls'][opponent_ind])
-        opponent_corners.append(game['Corner Kicks'][opponent_ind])
-        opponent_posession.append(game['Ball Possession'][opponent_ind])
-        opponent_pass_accuracy.append(game['Passes %'][opponent_ind])
-        opponent_goals.append(game['Goals'][opponent_ind])  
+        #iterating over the fixture id to create feature lists
+        for game_id in team_fixture_id_dict[team_id]:
+            game = team[game_id] #game df
+            temp_index = pd.Index(game['Team Identifier'])
+            team_ind = temp_index.get_loc(1)
+            opponent_ind = temp_index.get_loc(2)
+            
+            #team and opponent pseudo features: list of raw feature data for each game
+            team_total_shots.append(game['Total Shots'][team_ind])
+            team_shots_inside_box.append(game['Shots insidebox'][team_ind])
+            team_fouls.append(game['Fouls'][team_ind])
+            team_corners.append(game['Corner Kicks'][team_ind])
+            team_posession.append(game['Ball Possession'][team_ind])
+            team_pass_accuracy.append(game['Passes %'][team_ind])
+            team_goals.append(game['Goals'][team_ind])     
+            opponent_total_shots.append(game['Total Shots'][opponent_ind])
+            opponent_shots_inside_box.append(game['Shots insidebox'][opponent_ind])
+            opponent_fouls.append(game['Fouls'][opponent_ind])
+            opponent_corners.append(game['Corner Kicks'][opponent_ind])
+            opponent_posession.append(game['Ball Possession'][opponent_ind])
+            opponent_pass_accuracy.append(game['Passes %'][opponent_ind])
+            opponent_goals.append(game['Goals'][opponent_ind])  
+        
+        #sliding average of the raw feature lists above to create the final features
+        team_total_shots_slide = running_mean(team_total_shots, games_slide)[:-1]
+        team_shots_inside_box_slide = running_mean(team_shots_inside_box, games_slide)[:-1]
+        team_fouls_slide = running_mean(team_fouls, games_slide)[:-1]
+        team_corners_slide = running_mean(team_corners, games_slide)[:-1]
+        team_posession_slide = running_mean(team_posession, games_slide)[:-1]
+        team_pass_accuracy_slide = running_mean(team_pass_accuracy, games_slide)[:-1]
+        team_goals_slide = running_mean(team_goals, games_slide)[:-1]
+        team_goals_target = team_goals[games_slide:]
+        opponent_total_shots_slide = running_mean(opponent_total_shots, games_slide)[:-1]
+        opponent_shots_inside_box_slide = running_mean( opponent_shots_inside_box, games_slide)[:-1]
+        opponent_fouls_slide = running_mean(opponent_fouls, games_slide)[:-1]
+        opponent_corners_slide = running_mean(opponent_corners, games_slide)[:-1]
+        opponent_posession_slide = running_mean(opponent_posession, games_slide)[:-1]
+        opponent_pass_accuracy_slide = running_mean(opponent_pass_accuracy, games_slide)[:-1]
+        opponent_goals_slide = running_mean(opponent_goals, games_slide)[:-1]
+        opponent_goals_target = opponent_goals[games_slide:]
     
-    #sliding average of the raw feature lists above to create the final features
-    team_total_shots_slide = running_mean(team_total_shots, games_slide)[:-1]
-    team_shots_inside_box_slide = running_mean(team_shots_inside_box, games_slide)[:-1]
-    team_fouls_slide = running_mean(team_fouls, games_slide)[:-1]
-    team_corners_slide = running_mean(team_corners, games_slide)[:-1]
-    team_posession_slide = running_mean(team_posession, games_slide)[:-1]
-    team_pass_accuracy_slide = running_mean(team_pass_accuracy, games_slide)[:-1]
-    team_goals_slide = running_mean(team_goals, games_slide)[:-1]
-    team_goals_target = team_goals[games_slide:]
+        #appending over the iterableas the above variables will be overwritten with each iteration
+        t_total_shots.extend(team_total_shots_slide)
+        t_shots_inside_box.extend(team_shots_inside_box_slide)
+        t_fouls.extend(team_fouls_slide)
+        t_corners.extend(team_corners_slide)
+        t_posession.extend(team_posession_slide)
+        t_pass_accuracy.extend(team_pass_accuracy_slide)
+        t_goals.extend(team_goals_slide)
+        t_goals_target.extend(team_goals_target)
+        o_total_shots.extend(opponent_total_shots_slide)
+        o_shots_inside_box.extend(opponent_shots_inside_box_slide)
+        o_fouls.extend(opponent_fouls_slide)
+        o_corners.extend(opponent_corners_slide)
+        o_posession.extend(opponent_posession_slide)
+        o_pass_accuracy.extend(opponent_pass_accuracy_slide)
+        o_goals.extend(opponent_goals_slide)
+        o_goals_target.extend(opponent_goals_target)
     
-    opponent_total_shots_slide = running_mean(opponent_total_shots, games_slide)[:-1]
-    opponent_shots_inside_box_slide = running_mean( opponent_shots_inside_box, games_slide)[:-1]
-    opponent_fouls_slide = running_mean(opponent_fouls, games_slide)[:-1]
-    opponent_corners_slide = running_mean(opponent_corners, games_slide)[:-1]
-    opponent_posession_slide = running_mean(opponent_posession, games_slide)[:-1]
-    opponent_pass_accuracy_slide = running_mean(opponent_pass_accuracy, games_slide)[:-1]
-    opponent_goals_slide = running_mean(opponent_goals, games_slide)[:-1]
-    opponent_goals_target = opponent_goals[games_slide:]
-
-    #appending over the iterableas the above variables will be overwritten with each iteration
-    t_total_shots.extend(team_total_shots_slide)
-    t_shots_inside_box.extend(team_shots_inside_box_slide)
-    t_fouls.extend(team_fouls_slide)
-    t_corners.extend(team_corners_slide)
-    t_posession.extend(team_posession_slide)
-    t_pass_accuracy.extend(team_pass_accuracy_slide)
-    t_goals.extend(team_goals_slide)
-    t_goals_target.extend(team_goals_target)
-
-    o_total_shots.extend(opponent_total_shots_slide)
-    o_shots_inside_box.extend(opponent_shots_inside_box_slide)
-    o_fouls.extend(opponent_fouls_slide)
-    o_corners.extend(opponent_corners_slide)
-    o_posession.extend(opponent_posession_slide)
-    o_pass_accuracy.extend(opponent_pass_accuracy_slide)
-    o_goals.extend(opponent_goals_slide)
-    o_goals_target.extend(opponent_goals_target)
-
+    #piecing together the results into a dataframe   
+    df_ready_for_ml = pd.DataFrame({})  
+    df_ready_for_ml['Team Av Shots'] = t_total_shots
+    df_ready_for_ml['Team Av Shots Inside Box'] = t_shots_inside_box
+    df_ready_for_ml['Team Av Fouls'] = t_fouls
+    df_ready_for_ml['Team Av Corners'] = t_corners
+    df_ready_for_ml['Team Av Possession'] = t_posession
+    df_ready_for_ml['Team Av Pass Accuracy'] = t_pass_accuracy
+    df_ready_for_ml['Team Av Goals'] = t_goals
+    df_ready_for_ml['Opponent Av Shots'] = o_total_shots
+    df_ready_for_ml['Opponent Av Shots Inside Box'] = o_shots_inside_box
+    df_ready_for_ml['Opponent Av Fouls'] = o_fouls
+    df_ready_for_ml['Opponent Av Corners'] = o_corners
+    df_ready_for_ml['Opponent Av Possession'] = o_posession
+    df_ready_for_ml['Opponent Av Goals'] = o_goals
+    df_ready_for_ml['Opponent Av Pass Accuracy'] = o_pass_accuracy
+    df_ready_for_ml['Team Goal Target'] = t_goals_target
+    df_ready_for_ml['Opponent Goal Target'] = o_goals_target
     
-#piecing together the results into a dataframe   
-df_ready_for_ml = pd.DataFrame({})  
-
-df_ready_for_ml['Team Av Shots'] = t_total_shots
-df_ready_for_ml['Team Av Shots Inside Box'] = t_shots_inside_box
-df_ready_for_ml['Team Av Fouls'] = t_fouls
-df_ready_for_ml['Team Av Corners'] = t_corners
-df_ready_for_ml['Team Av Possession'] = t_posession
-df_ready_for_ml['Team Av Pass Accuracy'] = t_pass_accuracy
-df_ready_for_ml['Team Av Goals'] = t_goals
-
-df_ready_for_ml['Opponent Av Shots'] = o_total_shots
-df_ready_for_ml['Opponent Av Shots Inside Box'] = o_shots_inside_box
-df_ready_for_ml['Opponent Av Fouls'] = o_fouls
-df_ready_for_ml['Opponent Av Corners'] = o_corners
-df_ready_for_ml['Opponent Av Possession'] = o_posession
-df_ready_for_ml['Opponent Av Goals'] = o_pass_accuracy
-df_ready_for_ml['Opponent Av Pass Accuracy'] = o_goals
-
-df_ready_for_ml['Team Goal Target'] = t_goals_target
-df_ready_for_ml['Opponent Goal Target'] = o_goals_target
+    return df_ready_for_ml
 
 
+df_ready_for_ml_5 = generate_ml_df(5)
 #saving the final df ready for reimport in future py file
-with open('2019_prem_generated_clean/2019_prem_df_for_ml.txt', 'wb') as myFile:
-    pickle.dump(df_ready_for_ml, myFile)
+with open('2019_prem_generated_clean/2019_prem_df_for_ml_5.txt', 'wb') as myFile:
+    pickle.dump(df_ready_for_ml_5, myFile)
 
+df_ready_for_ml_10 = generate_ml_df(10)
+#saving the final df ready for reimport in future py file
+with open('2019_prem_generated_clean/2019_prem_df_for_ml_10.txt', 'wb') as myFile:
+    pickle.dump(df_ready_for_ml_10, myFile)
 
 
 # ----------------------------------- END -------------------------------------
