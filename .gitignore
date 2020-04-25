@@ -124,7 +124,7 @@ dmypy.json
 .pyre/
 
 # Working Data to Ignore
-**/2019_prem_game_stats/**
+#**/2019_prem_game_stats/**
 **/prem_seasons_fixture_id/**
 **/test_data/**
 **/misc/**
