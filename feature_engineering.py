@@ -43,51 +43,13 @@ for team in team_fixture_id_dict:
     team_fixture_id_dict[team].sort()
 
 
-#we can now iterate over the fixture ID list given a team id key using the dict created above
-
-#creating the initial features 
-team_total_shots = []
-team_shots_inside_box = []     
-team_fouls = []
-team_corners = []
-team_posession = []
-team_pass_accuracy = []
-team_goals = []
-
-opponent_total_shots = []
-opponent_shots_inside_box = []     
-opponent_fouls = []
-opponent_corners = []
-opponent_posession = []
-opponent_pass_accuracy = []
-opponent_goals = []
-
-#creating final features which will be appended
-t_total_shots = []
-t_shots_inside_box = []     
-t_fouls = []
-t_corners = []
-t_posession = []
-t_pass_accuracy = []
-t_goals = []
-t_goals_target = []
-
-o_total_shots = []
-o_shots_inside_box = []     
-o_fouls = []
-o_corners = []
-o_posession = []
-o_pass_accuracy = []
-o_goals = []
-o_goals_target = []
-
-
-#running average function
+#creating a running average function
 def running_mean(x, N):
     cumsum = np.cumsum(np.insert(x, 0, 0)) 
     return (cumsum[N:] - cumsum[:-N]) / float(N)
+ 
 
-#the number of games over which the past data is averaged. A large number will smooth out past performance where as a small number will result in the prediction being heavily reliant on very recent form. 
+#we can now iterate over the fixture ID list given a team id key using the dict created above. N.B./ the number of games over which the past data is averaged. A large number will smooth out past performance where as a small number will result in the prediction being heavily reliant on very recent form. This is worth testing the ml model build phase
 
 def generate_ml_df(games_slide):
   
@@ -100,7 +62,6 @@ def generate_ml_df(games_slide):
     t_pass_accuracy = []
     t_goals = []
     t_goals_target = []
-    
     o_total_shots = []
     o_shots_inside_box = []     
     o_fouls = []
@@ -170,7 +131,7 @@ def generate_ml_df(games_slide):
         opponent_goals_slide = running_mean(opponent_goals, games_slide)[:-1]
         opponent_goals_target = opponent_goals[games_slide:]
     
-        #appending over the iterableas the above variables will be overwritten with each iteration
+        #appending over the iterables, the above variables will be overwritten with each iteration
         t_total_shots.extend(team_total_shots_slide)
         t_shots_inside_box.extend(team_shots_inside_box_slide)
         t_fouls.extend(team_fouls_slide)
@@ -207,16 +168,17 @@ def generate_ml_df(games_slide):
     df_ready_for_ml['Team Goal Target'] = t_goals_target
     df_ready_for_ml['Opponent Goal Target'] = o_goals_target
     
+    #returning the dataframe
     return df_ready_for_ml
 
 
+#creating and saving the ml dataframe with a 5 game sliding average.
 df_ready_for_ml_5 = generate_ml_df(5)
-#saving the final df ready for reimport in future py file
 with open('2019_prem_generated_clean/2019_prem_df_for_ml_5.txt', 'wb') as myFile:
     pickle.dump(df_ready_for_ml_5, myFile)
 
+#creating and saving the ml dataframe with a 10 game sliding average.
 df_ready_for_ml_10 = generate_ml_df(10)
-#saving the final df ready for reimport in future py file
 with open('2019_prem_generated_clean/2019_prem_df_for_ml_10.txt', 'wb') as myFile:
     pickle.dump(df_ready_for_ml_10, myFile)
 

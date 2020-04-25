@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Apr 25 12:04:11 2020
+Created on Sat Apr 25 14:11:16 2020
 
 @author: mhayt
 """
+
 
 print('\n\n')
 print(' ---------------- START ---------------- \n')
@@ -13,17 +14,10 @@ print(' ---------------- START ---------------- \n')
 import pandas as pd
 import pickle
 import numpy as np
+import matplotlib.pyplot as plt
 
 
-#------------------------------- ML MODEL BUILD -------------------------------
-
-
-with open('2019_prem_generated_clean/2019_prem_df_for_ml_5.txt', 'rb') as myFile:
-    df_ml_5 = pickle.load(myFile)
-
-with open('2019_prem_generated_clean/2019_prem_df_for_ml_10.txt', 'rb') as myFile:
-    df_ml_10 = pickle.load(myFile)
-
+#-------------------------- PRE-ML DATA VISUALISATION -------------------------
 
 
 
