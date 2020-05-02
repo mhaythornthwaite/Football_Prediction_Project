@@ -75,11 +75,11 @@ for team in team_id_list:
         df['Goals'] = [home_goals, away_goals]
         #adding points data
         if home_goals > away_goals:
-            df['Points'] = [3,0]
+            df['Points'] = [2,0]
         elif home_goals == away_goals:
             df['Points'] = [1,1]
         elif home_goals < away_goals:
-            df['Points'] = [0,3]
+            df['Points'] = [0,2]
         else:
             df['Points'] = ['nan', 'nan']
         #adding home-away identifier to df
@@ -112,11 +112,11 @@ for team in team_id_list:
         df['Goals'] = [home_goals, away_goals]
         #adding points data
         if home_goals > away_goals:
-            df['Points'] = [3,0]
+            df['Points'] = [2,0]
         elif home_goals == away_goals:
             df['Points'] = [1,1]
         elif home_goals < away_goals:
-            df['Points'] = [0,3]
+            df['Points'] = [0,2]
         else:
             df['Points'] = ['nan', 'nan']
         #adding home-away identifier to df

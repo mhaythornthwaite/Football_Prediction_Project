@@ -23,14 +23,6 @@ with open('2019_prem_generated_clean/2019_prem_df_for_ml_5.txt', 'rb') as myFile
 with open('2019_prem_generated_clean/2019_prem_df_for_ml_10.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
-def sort_df(df):
-    df = df.sort_values('Target Fixture ID')
-    df = df.reset_index(drop=True)
-    return df
-
-df_ml_10_sort = sort_df(df_ml_10)
-df_ml_5_sort = sort_df(df_ml_5)
-
 
 
 def mod_df(df):
@@ -46,14 +38,71 @@ def mod_df(df):
     df_output['Av Possession Diff'] = df_sort['Team Av Possession'] - df_sort['Opponent Av Possession']
     df_output['Av Pass Accuracy Diff'] = df_sort['Team Av Pass Accuracy'] - df_sort['Opponent Av Pass Accuracy']
     df_output['Av Goal Difference'] = df_sort['Team Av Goals'] - df_sort['Opponent Av Goals']
+    df_output['Fixture ID'] = df_sort['Target Fixture ID']
+    df_output['Result Indicator'] = df_sort['Result Indicator']
     
     return df_output
 
-df_ml_10_mod = mod_df(df_ml_10)
+
+
+def combining_fixture_id(df):
+    #iterating over each opponent row to add to the previous
+    odd_list = []
+    for x in range(1, len(df)+1, 2):
+        odd_list.append(x)
+    even_list = []
+    for x in range(0, len(df)-1, 2):
+        even_list.append(x)
+        
+    team_df = df.drop(df.index[odd_list])
+    team_df = team_df.reset_index(drop=True)
+    opponent_df = df.drop(df.index[even_list])
+    opponent_df = opponent_df.reset_index(drop=True)
+    
+    df_output = pd.DataFrame({})
+    df_output['Team Av Shots Diff'] = team_df['Av Shots Diff']
+    df_output['Team Av Shots Inside Box Diff'] = team_df['Av Shots Inside Box Diff']
+    df_output['Team Av Fouls Diff'] = team_df['Av Fouls Diff']
+    df_output['Team Av Corners Diff'] = team_df['Av Corners Diff']
+    df_output['Team Av Possession Diff'] = team_df['Av Possession Diff']
+    df_output['Team Av Pass Accuracy Diff'] = team_df['Av Pass Accuracy Diff']
+    df_output['Team Av Goal Difference'] = team_df['Av Goal Difference']
+    df_output['Opponent Av Shots Diff'] = opponent_df['Av Shots Diff']
+    df_output['Opponent Av Shots Inside Box Diff'] = opponent_df['Av Shots Inside Box Diff']
+    df_output['Opponent Av Fouls Diff'] = opponent_df['Av Fouls Diff']
+    df_output['Opponent Av Corners Diff'] = opponent_df['Av Corners Diff']
+    df_output['Opponent Av Possession Diff'] = opponent_df['Av Possession Diff']
+    df_output['Opponent Av Pass Accuracy Diff'] = opponent_df['Av Pass Accuracy Diff']
+    df_output['Opponent Av Goal Difference'] = opponent_df['Av Goal Difference']
+    df_output['Fixture ID'] = team_df['Fixture ID']
+    df_output['Team Result Indicator'] = team_df['Result Indicator']
+    df_output['Opponent Result Indicator'] = opponent_df['Result Indicator']
+    
+    return df_output
+
+
+def creating_ml_df(df):
+    modified_df = mod_df(df)
+    comb_df = combining_fixture_id(modified_df)
+    return comb_df
+        
+
+
+#creating and saving the ml dataframe with a 5 game sliding average.
+df_for_ml_5_v2 = creating_ml_df(df_ml_5)
+with open('2019_prem_generated_clean/2019_prem_df_for_ml_5_v2.txt', 'wb') as myFile:
+    pickle.dump(df_for_ml_5_v2, myFile)
+
+#creating and saving the ml dataframe with a 10 game sliding average.
+df_for_ml_10_v2 = creating_ml_df(df_ml_10)
+with open('2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'wb') as myFile:
+    pickle.dump(df_for_ml_10_v2, myFile)
+
+
+
 
 
 # =============================================================================
-# 
 # 
 #     df_ready_for_ml = pd.DataFrame({})  
 #     df_ready_for_ml['Team Av Shots'] = t_total_shots
@@ -74,8 +123,8 @@ df_ml_10_mod = mod_df(df_ml_10)
 #     df_ready_for_ml['Opponent Goal Target'] = o_goals_target
 #     df_ready_for_ml['Target Fixture ID'] = fix_id
 #     
-# 
 # =============================================================================
+
 
 
 
