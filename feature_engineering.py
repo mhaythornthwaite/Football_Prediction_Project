@@ -71,6 +71,7 @@ def generate_ml_df(games_slide):
     o_goals = []
     o_goals_target = []
     fix_id = []
+    result_indicator = []
     
     for team_id in team_list[:]:
         team = game_stats[team_id] #team dictionary
@@ -90,6 +91,7 @@ def generate_ml_df(games_slide):
         opponent_posession = []
         opponent_pass_accuracy = []
         opponent_goals = []
+        result_indicator_raw = []
         
         
         #iterating over the fixture id to create feature lists
@@ -114,6 +116,7 @@ def generate_ml_df(games_slide):
             opponent_posession.append(game['Ball Possession'][opponent_ind])
             opponent_pass_accuracy.append(game['Passes %'][opponent_ind])
             opponent_goals.append(game['Goals'][opponent_ind])
+            result_indicator_raw.append(game['Points'][team_ind])
              
         
         #sliding average of the raw feature lists above to create the final features
@@ -134,6 +137,8 @@ def generate_ml_df(games_slide):
         opponent_goals_slide = running_mean(opponent_goals, games_slide)[:-1]
         opponent_goals_target = opponent_goals[games_slide:]
         fix_id_slide = team_fixture_id_dict[team_id][games_slide:]
+        result_indicator_slide = result_indicator_raw[games_slide:]
+
     
         #appending over the iterables, the above variables will be overwritten with each iteration
         t_total_shots.extend(team_total_shots_slide)
@@ -153,6 +158,8 @@ def generate_ml_df(games_slide):
         o_goals.extend(opponent_goals_slide)
         o_goals_target.extend(opponent_goals_target)
         fix_id.extend(fix_id_slide)
+        result_indicator.extend(result_indicator_slide)
+
     
     #piecing together the results into a dataframe   
     df_ready_for_ml = pd.DataFrame({})  
@@ -173,6 +180,7 @@ def generate_ml_df(games_slide):
     df_ready_for_ml['Team Goal Target'] = t_goals_target
     df_ready_for_ml['Opponent Goal Target'] = o_goals_target
     df_ready_for_ml['Target Fixture ID'] = fix_id
+    df_ready_for_ml['Result Indicator'] = result_indicator
     
     #returning the dataframe
     return df_ready_for_ml
