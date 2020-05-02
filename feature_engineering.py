@@ -70,6 +70,7 @@ def generate_ml_df(games_slide):
     o_pass_accuracy = []
     o_goals = []
     o_goals_target = []
+    fix_id = []
     
     for team_id in team_list[:]:
         team = game_stats[team_id] #team dictionary
@@ -89,6 +90,7 @@ def generate_ml_df(games_slide):
         opponent_posession = []
         opponent_pass_accuracy = []
         opponent_goals = []
+        
         
         #iterating over the fixture id to create feature lists
         for game_id in team_fixture_id_dict[team_id]:
@@ -111,7 +113,8 @@ def generate_ml_df(games_slide):
             opponent_corners.append(game['Corner Kicks'][opponent_ind])
             opponent_posession.append(game['Ball Possession'][opponent_ind])
             opponent_pass_accuracy.append(game['Passes %'][opponent_ind])
-            opponent_goals.append(game['Goals'][opponent_ind])  
+            opponent_goals.append(game['Goals'][opponent_ind])
+             
         
         #sliding average of the raw feature lists above to create the final features
         team_total_shots_slide = running_mean(team_total_shots, games_slide)[:-1]
@@ -130,6 +133,7 @@ def generate_ml_df(games_slide):
         opponent_pass_accuracy_slide = running_mean(opponent_pass_accuracy, games_slide)[:-1]
         opponent_goals_slide = running_mean(opponent_goals, games_slide)[:-1]
         opponent_goals_target = opponent_goals[games_slide:]
+        fix_id_slide = team_fixture_id_dict[team_id][games_slide:]
     
         #appending over the iterables, the above variables will be overwritten with each iteration
         t_total_shots.extend(team_total_shots_slide)
@@ -148,6 +152,7 @@ def generate_ml_df(games_slide):
         o_pass_accuracy.extend(opponent_pass_accuracy_slide)
         o_goals.extend(opponent_goals_slide)
         o_goals_target.extend(opponent_goals_target)
+        fix_id.extend(fix_id_slide)
     
     #piecing together the results into a dataframe   
     df_ready_for_ml = pd.DataFrame({})  
@@ -167,6 +172,7 @@ def generate_ml_df(games_slide):
     df_ready_for_ml['Opponent Av Pass Accuracy'] = o_pass_accuracy
     df_ready_for_ml['Team Goal Target'] = t_goals_target
     df_ready_for_ml['Opponent Goal Target'] = o_goals_target
+    df_ready_for_ml['Target Fixture ID'] = fix_id
     
     #returning the dataframe
     return df_ready_for_ml
