@@ -19,6 +19,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn import svm
 
+plt.close('all')
 
 #------------------------------- ML MODEL BUILD -------------------------------
 
@@ -34,17 +35,7 @@ print('\nRANDOM FOREST\n')
 #------------------------------- RANDOM FOREST --------------------------------
 
 def rand_forest_train(df):
-    '''
-    Parameters
-    ----------
-    df : Pandas df
-        df in the format of df_ml_10 or df_ml_5.
 
-    Returns
-    -------
-    Trained model as well as printing the training and test data set accuracy.
-
-    '''
     #create features matrix
     x = df.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
     y = df['Team Result Indicator']
@@ -59,9 +50,6 @@ def rand_forest_train(df):
     #train the model
     clf.fit(x_train, y_train)
     
-    #making predictions on the test dataset
-    y_pred = clf.predict(x_test)
-    
     #training data
     train_data_score = round(clf.score(x_train, y_train) * 100, 1)
     print(f'Training data score = {train_data_score}%')
@@ -71,6 +59,7 @@ def rand_forest_train(df):
     print(f'Test data score = {test_data_score}% \n')
     
     return clf
+
 
 ml_10_rand_forest = rand_forest_train(df_ml_10)
 ml_5_rand_forest = rand_forest_train(df_ml_5)
@@ -93,12 +82,16 @@ def svm_train(df):
     x = df.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
     y = df['Team Result Indicator']
     
-    #instantiate the SVM class
-    clf = svm.SVC()
-    
     #split into training data and test data
     np.random.seed(0)
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state = 1)
+    
+    #default gamma value
+    gamma = 1 / (14 * sum(x_train.var()))
+    C = 1 / gamma
+    
+    #instantiate the SVM class
+    clf = svm.SVC(kernel='rbf', C=3)
     
     #train the model
     clf.fit(x_train, y_train)
@@ -126,7 +119,36 @@ with open('ml_models/svm_model_10.pk1', 'wb') as myFile:
 
 
 
+# --------------- TESTING C PARAMS ---------------
 
+expo_iter = np.square(np.arange(0.1, 10, 0.1))
+
+def testing_c_parms(df, iterable):
+    training_score_li = []
+    test_score_li = []
+    for c in iterable:
+        x = df.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
+        y = df['Team Result Indicator']
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state = 1)
+        clf = svm.SVC(kernel='rbf', C=c)
+        clf.fit(x_train, y_train)
+        train_data_score = round(clf.score(x_train, y_train) * 100, 1)
+        test_data_score = round(clf.score(x_test, y_test) * 100, 1)
+        training_score_li.append(train_data_score)
+        test_score_li.append(test_data_score)
+    return training_score_li, test_score_li
+    
+training_score_li, test_score_li = testing_c_parms(df_ml_10, expo_iter)
+
+#from the plot below we can see that a c of around 3 is likely to be more optimal than 1
+plt.plot(expo_iter, test_score_li)
+    
+
+
+
+
+    
+    
 # ----------------------------------- END -------------------------------------
 
 print(' ----------------- END ----------------- ')
