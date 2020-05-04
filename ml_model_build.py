@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn import svm
+from sklearn.neighbors import KNeighborsClassifier
 
 plt.close('all')
 
@@ -119,7 +120,7 @@ with open('ml_models/svm_model_10.pk1', 'wb') as myFile:
 
 
 
-# --------------- TESTING C PARAMS ---------------
+# --------------- TESTING C PARAM ---------------
 
 expo_iter = np.square(np.arange(0.1, 10, 0.1))
 
@@ -145,9 +146,69 @@ plt.plot(expo_iter, test_score_li)
     
 
 
+print('\nK NEAREST NEIGHBORS\n')
+#----------------------------- K NEAREST NEIGHBORS ----------------------------
 
 
+def k_nearest_neighbor_train(df):
     
+    #create features matrix
+    x = df.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
+    y = df['Team Result Indicator']
+    
+    #split into training data and test data
+    np.random.seed(0)
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state = 1)
+      
+    #instantiate the K Nearest Neighbor class
+    clf = KNeighborsClassifier(n_neighbors=28)
+    
+    #train the model
+    clf.fit(x_train, y_train)
+    
+    #training data
+    train_data_score = round(clf.score(x_train, y_train) * 100, 1)
+    print(f'Training data score = {train_data_score}%')
+    
+    #test data
+    test_data_score = round(clf.score(x_test, y_test) * 100, 1)
+    print(f'Test data score = {test_data_score}% \n')
+    
+    return clf
+
+
+ml_10_knn = k_nearest_neighbor_train(df_ml_10)
+ml_5_knn = k_nearest_neighbor_train(df_ml_5)
+
+with open('ml_models/knn_model_5.pk1', 'wb') as myFile:
+    pickle.dump(ml_5_knn, myFile)
+
+with open('ml_models/knn_model_10.pk1', 'wb') as myFile:
+    pickle.dump(ml_10_knn, myFile)
+
+
+# --------------- TESTING N_NEIGHBORS PARAM ---------------
+
+df = df_ml_10
+
+#create features matrix
+x = df.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
+y = df['Team Result Indicator']
+
+#split into training data and test data
+np.random.seed(0)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state = 1)
+    
+
+test_accuracy = []
+for n in range(1, 50, 1):
+    clf = KNeighborsClassifier(n_neighbors=n)
+    clf.fit(x_train, y_train)
+    test_accuracy.append(round(clf.score(x_test, y_test) * 100, 1))
+    
+plt.plot(range(1,50, 1), test_accuracy)
+
+
     
 # ----------------------------------- END -------------------------------------
 
