@@ -234,11 +234,11 @@ cv_score_av = round(np.mean(cross_val_score(ml_5_svm, x_5, y_5, cv=5))*100,1)
 print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 #prediction probability plots
-fig = pred_proba_plot(ml_10_svm, x_10, y_10, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_10)')
-fig.savefig('figures/svm_pred_proba_ml10_50iter.png')
+#fig = pred_proba_plot(ml_10_svm, x_10, y_10, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_10)')
+#fig.savefig('figures/svm_pred_proba_ml10_50iter.png')
 
-fig = pred_proba_plot(ml_5_svm, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_5)')
-fig.savefig('figures/svm_pred_proba_ml5_50iter.png')
+#fig = pred_proba_plot(ml_5_svm, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_5)')
+#fig.savefig('figures/svm_pred_proba_ml5_50iter.png')
 
 
 
@@ -319,11 +319,11 @@ print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 
 #prediction probability plots
-fig = pred_proba_plot(ml_10_knn, x_10, y_10, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_10)')
-fig.savefig('figures/knn_pred_proba_ml10_50iter.png')
+#fig = pred_proba_plot(ml_10_knn, x_10, y_10, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_10)')
+#fig.savefig('figures/knn_pred_proba_ml10_50iter.png')
 
-fig = pred_proba_plot(ml_5_knn, x_5, y_5, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_5)')
-fig.savefig('figures/knn_pred_proba_ml5_50iter.png')
+#fig = pred_proba_plot(ml_5_knn, x_5, y_5, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_5)')
+#fig.savefig('figures/knn_pred_proba_ml5_50iter.png')
 
 
     
