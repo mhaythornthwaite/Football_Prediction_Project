@@ -114,7 +114,7 @@ print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 
 #prediction probability plots
-fig = pred_proba_plot(ml_10_knn, x_10, y_10, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_10)')
+#fig = pred_proba_plot(ml_10_knn, x_10, y_10, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_10)')
 #fig.savefig('figures/knn_pred_proba_ml10_50iter.png')
 
 #fig = pred_proba_plot(ml_5_knn, x_5, y_5, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_5)')

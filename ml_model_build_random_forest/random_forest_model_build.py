@@ -90,7 +90,7 @@ cv_score_av = round(np.mean(cross_val_score(ml_5_rand_forest, x_5, y_5, cv=5))*1
 print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 #prediction probability plots
-fig = pred_proba_plot(ml_10_rand_forest, x_10, y_10, no_iter=5, no_bins=36, x_min=0.3, classifier='Random Forest (ml_10)')
+#fig = pred_proba_plot(ml_10_rand_forest, x_10, y_10, no_iter=5, no_bins=36, x_min=0.3, classifier='Random Forest (ml_10)')
 #fig.savefig('figures/random_forest_pred_proba_ml10_50iter.png')
 
 #fig = pred_proba_plot(ml_5_rand_forest, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Random Forest (ml_5)')
