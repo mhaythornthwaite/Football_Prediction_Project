@@ -10,6 +10,12 @@ print(' ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
+#!/usr/bin/python
+from os.path import dirname, realpath, sep, pardir
+import sys
+sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
+
+
 from ml_functions.ml_model_eval import pred_proba_plot
 import pickle
 import numpy as np
