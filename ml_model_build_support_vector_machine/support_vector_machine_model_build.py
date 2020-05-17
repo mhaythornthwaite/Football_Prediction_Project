@@ -16,7 +16,7 @@ import sys
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
 
-from ml_functions.ml_model_eval import pred_proba_plot
+from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
@@ -77,11 +77,11 @@ def svm_train(df):
     test_data_score = round(clf.score(x_test, y_test) * 100, 1)
     print(f'Test data score = {test_data_score}% \n')
     
-    return clf
+    return clf, x_train, x_test, y_train, y_test
 
 
-ml_10_svm = svm_train(df_ml_10)
-ml_5_svm = svm_train(df_ml_5)
+ml_10_svm, x10_train, x10_test, y10_train, y10_test = svm_train(df_ml_10)
+ml_5_svm, x5_train, x5_test, y5_train, y5_test = svm_train(df_ml_5)
 
 
 with open('ml_models/svm_model_5.pk1', 'wb') as myFile:
@@ -120,11 +120,14 @@ ax.plot(expo_iter, test_score_li)
 #---------- MODEL EVALUATION ----------
 
 #cross validation
-cv_score_av = round(np.mean(cross_val_score(ml_10_svm, x_10, y_10, cv=5))*100,1)
+skf = StratifiedKFold(n_splits=5, shuffle=True)
+
+cv_score_av = round(np.mean(cross_val_score(ml_10_svm, x_10, y_10, cv=skf))*100,1)
 print('Cross-Validation Accuracy Score ML10: ', cv_score_av, '%\n')
 
-cv_score_av = round(np.mean(cross_val_score(ml_5_svm, x_5, y_5, cv=5))*100,1)
+cv_score_av = round(np.mean(cross_val_score(ml_5_svm, x_5, y_5, cv=skf))*100,1)
 print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
+
 
 #prediction probability plots
 #fig = pred_proba_plot(ml_10_svm, x_10, y_10, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_10)')
@@ -132,6 +135,14 @@ print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 #fig = pred_proba_plot(ml_5_svm, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_5)')
 #fig.savefig('figures/svm_pred_proba_ml5_50iter.png')
+
+
+#plot confusion matrix - modified to take cross-val results.
+plot_cross_val_confusion_matrix(ml_10_svm, x_10, y_10, display_labels=('team loses', 'draw', 'team wins'), title='Support Vector Machine Confusion Matrix ML10', cv=skf)
+plt.savefig('figures\ml_10_confusion_matrix_cross_val_random_forest.png')
+
+plot_cross_val_confusion_matrix(ml_5_svm, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Support Vector Machine Confusion Matrix ML5', cv=skf)
+plt.savefig('figures\ml_5_confusion_matrix_cross_val_random_forest.png')
 
 
 

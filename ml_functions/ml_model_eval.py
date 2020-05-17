@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import roc_curve, roc_auc_score
 from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_predict
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
   
 
 #----------------------------- ML MODEL EVALUATION ----------------------------
@@ -21,18 +22,34 @@ from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_
 
 def pred_proba_plot(clf, x, y, cv=5, no_iter=5, no_bins=25, x_min=0.5, x_max=1, output_progress=True, classifier=''):
     '''
-    This function outputs a histogram which informs the user about the number of correct and incorrect predictions given an outputed model probability on the test dataset. This give an indication as to whether the predicted proabilities may be trusted. 
-    --Variables--
-    clf: instantiated model with hyperparemeters
-    x: feature array
-    y: target array
-    cv: no. cross-validation iterations
-    no_iter: number of iterations of cross-validation
-    no_bins: number of bins of histogram
-    x_min: min x on histogram plot
-    x_max: max x on histogram plot
-    output_progress: print no. iterations complete to console
+    Parameters
+    ----------
+    clf : estimator object implementing 'fit' and 'predict'
+        The object to use to fit the data..
+    x : array-like
+        The data to fit. Can be, for example a list, or an array at least 2d..
+    y : array-like
+        The target variable to try to predict in the case of
+    cv : int, cross-validation generator or an iterable, optional
+        Determines the cross-validation splitting strategy.. The default is 5.
+    no_iter : int, optional
+        number of iterations of cross-validation. The default is 5.
+    no_bins : int, optional
+        number of bins of histogram. The default is 25.
+    x_min : int, optional
+        min x on histogram plot. The default is 0.5.
+    x_max : in, optional
+        max x on histogram plot. The default is 1.
+    output_progress : display, optional
+        print no. iterations complete to console. The default is True.
+    classifier : string, optional
+        classifier used, will be input to title. The default is ''.
+
+    Returns
+    -------
+    fig : histogram display of correcly predicted results against incorrectly given results given the outputed probability of the classifier.
     '''
+
     y_dup = []
     correct_guess_pred = []
     incorrect_guess_pred = []
@@ -60,6 +77,37 @@ def pred_proba_plot(clf, x, y, cv=5, no_iter=5, no_bins=25, x_min=0.5, x_max=1, 
     return fig
 
 
+
+
+def plot_cross_val_confusion_matrix(clf, x, y, display_labels='', title='', cv=5):
+    '''
+    Parameters
+    ----------
+    clf : estimator object implementing 'fit' and 'predict'
+        The object to use to fit the data.
+    x : array-like
+        The data to fit. Can be, for example a list, or an array at least 2d..
+    y : array-like
+        The target variable to try to predict in the case of
+    supervised learning.
+    display_labels : ndarray of shape (n_classes,), optional
+        display labels for plot. The default is ''.
+    title : string, optional
+        Title to be displayed at top of plot. The default is ''.
+    cv : int, cross-validation generator or an iterable, optional
+        Determines the cross-validation splitting strategy.. The default is 5.
+
+    Returns
+    -------
+    display : :class:`~sklearn.metrics.ConfusionMatrixDisplay`
+    '''
+    
+    y_pred = cross_val_predict(clf, x, y, cv=cv)
+    cm = confusion_matrix(y, y_pred)
+    fig = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=display_labels)
+    fig.plot(cmap=plt.cm.Blues)
+    fig.ax_.set_title(title)
+    return fig
 
 
    
