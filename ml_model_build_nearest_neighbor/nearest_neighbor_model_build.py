@@ -22,8 +22,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, confusion_matrix, plot_confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import classification_report, confusion_matrix, plot_confusion_matrix, ConfusionMatrixDisplay, accuracy_score
 from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_predict
+from sklearn.ensemble import VotingClassifier
+
 
 plt.close('all')
 
@@ -85,6 +87,36 @@ with open('ml_models/knn_model_10.pk1', 'wb') as myFile:
     pickle.dump(ml_10_knn, myFile)
 
 
+# ----- ENSEMBLE MODELLING -----
+
+#reducing fixtures in df_ml_5 to contain only the fixtures within df_ml_10 and training that new dataset
+df_ml_5_dropto10 = df_ml_5.drop(list(range(0,50)))
+ml_5_to10_knn, x5_to10_train, x5_to10_test, y5_to10_train, y5_to10_test = k_nearest_neighbor_train(df_ml_5_dropto10)
+
+#making predictions using the two df inputs independantly
+y_pred_ml10 = ml_10_knn.predict(x10_test)
+y_pred_ml5to10 = ml_5_to10_knn.predict(x5_to10_test)
+
+#making probability predictions on each of the datasets independantly
+pred_proba_ml10 = ml_10_knn.predict_proba(x10_test)
+pred_proba_ml5_10 = ml_5_to10_knn.predict_proba(x5_to10_test)
+
+#combining independant probabilities and creating combined class prediction
+pred_proba_ml5and10 = (np.array(pred_proba_ml10) + np.array(pred_proba_ml5_10)) / 2.0
+y_pred_ml5and10 = np.argmax(pred_proba_ml5and10, axis=1)
+
+#accuracy score variables
+y_pred_ml10_accuracy = round(accuracy_score(y5_to10_test, y_pred_ml10), 3) * 100
+y_pred_ml5to10_accuracy = round(accuracy_score(y5_to10_test, y_pred_ml5to10), 3) * 100
+y_pred_ml5and10_accuracy = round(accuracy_score(y5_to10_test, y_pred_ml5and10), 3) * 100
+
+print('ENSEMBLE MODEL TESTING')
+print(f'Accuracy of df_10 alone = {y_pred_ml10_accuracy}%')
+print(f'Accuracy of df_5 alone = {y_pred_ml5to10_accuracy}%')
+print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%\n')
+
+
+
 # --------------- TESTING N_NEIGHBORS PARAM ---------------
 
 
@@ -124,6 +156,10 @@ plt.savefig('figures\ml_10_confusion_matrix_cross_val_nearest_neighbor.png')
 
 plot_cross_val_confusion_matrix(ml_5_knn, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Nearest Neighbor Confusion Matrix ML5', cv=skf)
 plt.savefig('figures\ml_5_confusion_matrix_cross_val_nearest_neighbor.png')
+
+
+
+
 
     
 # ----------------------------------- END -------------------------------------
