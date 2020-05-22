@@ -22,7 +22,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, confusion_matrix, plot_confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix, plot_confusion_matrix, accuracy_score
 from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_predict
 
 plt.close('all')
@@ -50,7 +50,7 @@ print('\nSUPPORT VECTOR MACHINES\n')
 #--------------------------- SUPPORT VECTOR MACHINE ---------------------------
 
 
-def svm_train(df):
+def svm_train(df, print_result=True, print_result_label=''):
     
     #create features matrix
     x = df.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
@@ -69,13 +69,15 @@ def svm_train(df):
     #train the model
     clf.fit(x_train, y_train)
     
-    #training data
-    train_data_score = round(clf.score(x_train, y_train) * 100, 1)
-    print(f'Training data score = {train_data_score}%')
-    
-    #test data
-    test_data_score = round(clf.score(x_test, y_test) * 100, 1)
-    print(f'Test data score = {test_data_score}% \n')
+    if print_result:
+        print(print_result_label)
+        #training data
+        train_data_score = round(clf.score(x_train, y_train) * 100, 1)
+        print(f'Training data score = {train_data_score}%')
+        
+        #test data
+        test_data_score = round(clf.score(x_test, y_test) * 100, 1)
+        print(f'Test data score = {test_data_score}% \n')
     
     return clf, x_train, x_test, y_train, y_test
 
@@ -116,6 +118,40 @@ training_score_li, test_score_li = testing_c_parms(df_ml_10, expo_iter)
 fig, ax = plt.subplots()
 ax.plot(expo_iter, test_score_li)
     
+
+# ----- ENSEMBLE MODELLING -----
+#In this section we will combine the results of using the same algorithm but with different input data used to train the model. The features are still broadly the same but have been averaged over a different number of games df_ml_10 is 10 games, df_ml_5 is 5 games. 
+
+
+#reducing fixtures in df_ml_5 to contain only the fixtures within df_ml_10 and training that new dataset
+df_ml_5_dropto10 = df_ml_5.drop(list(range(0,50)))
+ml_5_to10_svm, x5_to10_train, x5_to10_test, y5_to10_train, y5_to10_test = svm_train(df_ml_5_dropto10, print_result=False)
+
+#making predictions using the two df inputs independantly
+y_pred_ml10 = ml_10_svm.predict(x10_test)
+y_pred_ml5to10 = ml_5_to10_svm.predict(x10_test)
+
+#making probability predictions on each of the datasets independantly
+pred_proba_ml10 = ml_10_svm.predict_proba(x10_test)
+pred_proba_ml5_10 = ml_5_to10_svm.predict_proba(x10_test)
+
+#combining independant probabilities and creating combined class prediction
+pred_proba_ml5and10 = (np.array(pred_proba_ml10) + np.array(pred_proba_ml5_10)) / 2.0
+y_pred_ml5and10 = np.argmax(pred_proba_ml5and10, axis=1)
+
+#accuracy score variables
+y_pred_ml10_accuracy = round(accuracy_score(y10_test, y_pred_ml10), 3) * 100
+y_pred_ml5to10_accuracy = round(accuracy_score(y10_test, y_pred_ml5to10), 3) * 100
+y_pred_ml5and10_accuracy = round(accuracy_score(y10_test, y_pred_ml5and10), 3) * 100
+
+print('ENSEMBLE MODEL TESTING')
+print(f'Accuracy of df_10 alone = {y_pred_ml10_accuracy}%')
+print(f'Accuracy of df_5 alone = {y_pred_ml5to10_accuracy}%')
+print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%\n')
+
+
+
+
 
 #---------- MODEL EVALUATION ----------
 

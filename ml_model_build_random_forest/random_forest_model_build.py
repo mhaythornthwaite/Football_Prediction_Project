@@ -90,6 +90,7 @@ with open('ml_models/random_forest_model_10.pk1', 'wb') as myFile:
 # ----- ENSEMBLE MODELLING -----
 #In this section we will combine the results of using the same algorithm but with different input data used to train the model. The features are still broadly the same but have been averaged over a different number of games df_ml_10 is 10 games, df_ml_5 is 5 games. 
 
+
 #reducing fixtures in df_ml_5 to contain only the fixtures within df_ml_10 and training that new dataset
 df_ml_5_dropto10 = df_ml_5.drop(list(range(0,50)))
 ml_5_to10_rand_forest, x5_to10_train, x5_to10_test, y5_to10_train, y5_to10_test = rand_forest_train(df_ml_5_dropto10, print_result=False)
@@ -115,8 +116,6 @@ print('ENSEMBLE MODEL TESTING')
 print(f'Accuracy of df_10 alone = {y_pred_ml10_accuracy}%')
 print(f'Accuracy of df_5 alone = {y_pred_ml5to10_accuracy}%')
 print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%\n')
-
-
 
 
 
