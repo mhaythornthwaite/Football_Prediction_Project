@@ -25,6 +25,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix, plot_confusion_matrix, ConfusionMatrixDisplay, accuracy_score
 from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_predict
 from sklearn.ensemble import VotingClassifier
+import pandas as pd
 
 
 plt.close('all')
@@ -61,7 +62,7 @@ def k_nearest_neighbor_train(df, print_result=True, print_result_label=''):
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
       
     #instantiate the K Nearest Neighbor class
-    clf = KNeighborsClassifier(n_neighbors=10)
+    clf = KNeighborsClassifier(n_neighbors=11, weights='distance')
     
     #train the model
     clf.fit(x_train, y_train)
@@ -127,15 +128,26 @@ print(confusion_matrix(y10_test, y_pred_ml5and10), '\n\n')
 
 # --------------- TESTING N_NEIGHBORS PARAM ---------------
 
-
-test_accuracy = []
-for n in range(1, 50, 1):
-    clf = KNeighborsClassifier(n_neighbors=n)
-    clf.fit(x10_train, y10_train)
-    test_accuracy.append(round(clf.score(x10_test, y10_test) * 100, 1))
+#sort this out
+test_accuracy_compiled = []
+for i in range(1, 2, 1):
+    test_accuracy = []
+    for n in range(1, 50, 1):
+        x_train, x_test, y_train, y_test = train_test_split(x_10, y_10, test_size=0.2)
+        clf = KNeighborsClassifier(n_neighbors=n, weights='distance')
+        clf.fit(x_train, y_train)
+        test_accuracy.append(round(clf.score(x_test, y_test) * 100, 1))
+    test_accuracy_compiled.append(test_accuracy)
+test_accuracy_compiled_np = np.transpose(np.array(test_accuracy_compiled))
+test_accuracy_compiled_av = np.mean(test_accuracy_compiled_np, axis=1)
 
 fig, ax = plt.subplots()
-ax.plot(range(1,50, 1), test_accuracy)
+ax.plot(range(1,50, 1), test_accuracy_compiled_av, label='Weights = Distance')
+ax.set_xlabel('n_neighbors') 
+ax.set_ylabel('Accuracy Score %') 
+ax.set_title('Testing k values ml_10', y=1, fontsize=14, fontweight='bold');
+ax.legend(loc=4)
+#plt.savefig('figures\ml_10_testing_k_values_distance.png')
 
 
 #---------- MODEL EVALUATION ----------

@@ -175,7 +175,6 @@ def plot_learning_curve(clf, X, y, scoring='accuracy', training_set_size=5, cv=5
     
     #organising axis
     ax.set_title(title, y=1, fontsize=14, fontweight='bold');
-    #ax.set_title(title)
     ax.set_ylim(y_min,y_max)
     ax.set_xlim(x_min,x_max)
     
