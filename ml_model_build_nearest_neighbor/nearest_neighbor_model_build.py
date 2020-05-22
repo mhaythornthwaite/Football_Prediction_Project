@@ -16,7 +16,7 @@ import sys
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
 
-from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix
+from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix, plot_learning_curve
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
@@ -61,7 +61,7 @@ def k_nearest_neighbor_train(df, print_result=True, print_result_label=''):
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
       
     #instantiate the K Nearest Neighbor class
-    clf = KNeighborsClassifier(n_neighbors=28)
+    clf = KNeighborsClassifier(n_neighbors=10)
     
     #train the model
     clf.fit(x_train, y_train)
@@ -117,8 +117,11 @@ y_pred_ml5and10_accuracy = round(accuracy_score(y10_test, y_pred_ml5and10), 3) *
 
 print('ENSEMBLE MODEL TESTING')
 print(f'Accuracy of df_10 alone = {y_pred_ml10_accuracy}%')
+print(confusion_matrix(y10_test, y_pred_ml10), '\n')
 print(f'Accuracy of df_5 alone = {y_pred_ml5to10_accuracy}%')
-print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%\n')
+print(confusion_matrix(y10_test, y_pred_ml5to10), '\n')
+print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%')
+print(confusion_matrix(y10_test, y_pred_ml5and10), '\n\n')
 
 
 
@@ -149,10 +152,10 @@ print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 #prediction probability plots
 #fig = pred_proba_plot(ml_10_knn, x_10, y_10, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_10)')
-#fig.savefig('figures/knn_pred_proba_ml10_50iter.png')
+#fig.savefig('figures/ml_10_nearest_neighbor_pred_proba.png')
 
 #fig = pred_proba_plot(ml_5_knn, x_5, y_5, no_iter=50, no_bins=18, x_min=0.3, classifier='Nearest Neighbor (ml_5)')
-#fig.savefig('figures/knn_pred_proba_ml5_50iter.png')
+#fig.savefig('figures/ml_5_nearest_neighbor_pred_proba.png')
 
 
 #plot confusion matrix - modified to take cross-val results.
@@ -163,7 +166,12 @@ plot_cross_val_confusion_matrix(ml_5_knn, x_5, y_5, display_labels=('team loses'
 plt.savefig('figures\ml_5_confusion_matrix_cross_val_nearest_neighbor.png')
 
 
+#plotting learning curves
+plot_learning_curve(ml_10_knn, x_10, y_10, training_set_size=10, x_max=160, title='Learning Curve - Nearest Neighbor DF_10', leg_loc=1)
+plt.savefig('figures\ml_10_nearest_neighbor_learning_curve.png')
 
+plot_learning_curve(ml_5_knn, x_5, y_5, training_set_size=10, x_max=230, title='Learning Curve - Nearest Neighbor DF_5', leg_loc=1)
+plt.savefig('figures\ml_5_nearest_neighbor_learning_curve.png')
 
 
     
