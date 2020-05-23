@@ -24,6 +24,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix, plot_confusion_matrix, accuracy_score
 from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_predict
+import pandas as pd
 
 
 plt.close('all')
@@ -56,7 +57,7 @@ def rand_forest_train(df, print_result=True, print_result_label=''):
     y = df['Team Result Indicator']
     
     #instantiate the random forest class
-    clf = RandomForestClassifier()
+    clf = RandomForestClassifier(max_depth = 5)
     
     #split into training data and test data
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
@@ -85,6 +86,9 @@ with open('ml_models/random_forest_model_5.pk1', 'wb') as myFile:
 
 with open('ml_models/random_forest_model_10.pk1', 'wb') as myFile:
     pickle.dump(ml_10_rand_forest, myFile)
+
+
+fi = pd.DataFrame({'feature': list(x10_train.columns),'importance': ml_10_rand_forest.feature_importances_}).sort_values('importance', ascending = False)
 
 
 # ----- ENSEMBLE MODELLING -----
@@ -143,19 +147,25 @@ print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 
 #plot confusion matrix - modified to take cross-val results.
-plot_cross_val_confusion_matrix(ml_10_rand_forest, x_10, y_10, display_labels=('team loses', 'draw', 'team wins'), title='Random Forest Confusion Matrix ML10', cv=skf)
-plt.savefig('figures\ml_10_confusion_matrix_cross_val_random_forest.png')
+#plot_cross_val_confusion_matrix(ml_10_rand_forest, x_10, y_10, display_labels=('team loses', 'draw', 'team wins'), title='Random Forest Confusion Matrix ML10', cv=skf)
+#plt.savefig('figures\ml_10_confusion_matrix_cross_val_random_forest.png')
 
-plot_cross_val_confusion_matrix(ml_5_rand_forest, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Random Forest Confusion Matrix ML5', cv=skf)
-plt.savefig('figures\ml_5_confusion_matrix_cross_val_random_forest.png')
+#plot_cross_val_confusion_matrix(ml_5_rand_forest, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Random Forest Confusion Matrix ML5', cv=skf)
+#plt.savefig('figures\ml_5_confusion_matrix_cross_val_random_forest.png')
 
 
 #plotting learning curves
-plot_learning_curve(ml_10_rand_forest, x_10, y_10, training_set_size=20, x_max=160, title='Learning Curve - Random Forest DF_10')
-plt.savefig('figures\ml_10_random_forest_learning_curve.png')
+#plot_learning_curve(ml_10_rand_forest, x_10, y_10, training_set_size=20, x_max=160, title='Learning Curve - Random Forest DF_10')
+#plt.savefig('figures\ml_10_random_forest_learning_curve.png')
 
-plot_learning_curve(ml_5_rand_forest, x_5, y_5, training_set_size=20, x_max=190, title='Learning Curve - Random Forest DF_5')
-plt.savefig('figures\ml_5_random_forest_learning_curve.png')
+#plot_learning_curve(ml_5_rand_forest, x_5, y_5, training_set_size=20, x_max=190, title='Learning Curve - Random Forest DF_5')
+#plt.savefig('figures\ml_5_random_forest_learning_curve.png')
+
+
+#feature importance
+fi_ml_10 = pd.DataFrame({'feature': list(x10_train.columns),'importance': ml_10_rand_forest.feature_importances_}).sort_values('importance', ascending = False)
+
+fi_ml_5 = pd.DataFrame({'feature': list(x5_train.columns),'importance': ml_5_rand_forest.feature_importances_}).sort_values('importance', ascending = False)
 
 
 # ----------------------------------- END -------------------------------------
