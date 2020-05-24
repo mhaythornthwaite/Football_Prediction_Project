@@ -128,7 +128,7 @@ print(confusion_matrix(y10_test, y_pred_ml5and10), '\n\n')
 
 # --------------- TESTING N_NEIGHBORS PARAM ---------------
 
-#sort this out
+
 test_accuracy_compiled = []
 for i in range(1, 2, 1):
     test_accuracy = []

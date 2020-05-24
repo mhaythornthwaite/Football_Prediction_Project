@@ -88,8 +88,6 @@ with open('ml_models/random_forest_model_10.pk1', 'wb') as myFile:
     pickle.dump(ml_10_rand_forest, myFile)
 
 
-fi = pd.DataFrame({'feature': list(x10_train.columns),'importance': ml_10_rand_forest.feature_importances_}).sort_values('importance', ascending = False)
-
 
 # ----- ENSEMBLE MODELLING -----
 #In this section we will combine the results of using the same algorithm but with different input data used to train the model. The features are still broadly the same but have been averaged over a different number of games df_ml_10 is 10 games, df_ml_5 is 5 games. 
@@ -123,6 +121,67 @@ print(f'Accuracy of df_5 alone = {y_pred_ml5to10_accuracy}%')
 print(confusion_matrix(y10_test, y_pred_ml5to10), '\n')
 print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%')
 print(confusion_matrix(y10_test, y_pred_ml5and10), '\n\n')
+
+
+# ----- TESTING MAX-DEPTH -----
+
+
+def test_rand_f_max_depth(X, y, iterations=5, max_depth=10, y_min=0.3, y_max=1.02, title='', leg_loc=4):
+    
+    #instantiating test and train lists to be appended.
+    test_accuracy_compiled = []
+    train_accuracy_compiled = []
+    
+    for i in range(1, iterations, 1):
+        #instantiating test and train lists to be appended.
+        test_accuracy = []
+        train_accuracy = []
+        
+        for n in range(1, max_depth, 1):
+            #instantiating model, creating splits and training the model
+            clf = RandomForestClassifier(max_depth = n)
+            x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+            clf.fit(x_train, y_train)
+            
+            #generating eval metrics and appending to list
+            train_data_score = round(clf.score(x_train, y_train), 3)
+            test_data_score = round(clf.score(x_test, y_test), 3)
+            train_accuracy.append(train_data_score)
+            test_accuracy.append(test_data_score)
+            
+        #second appedn, this is necessary due to the two for loops  
+        train_accuracy_compiled.append(train_accuracy)
+        test_accuracy_compiled.append(test_accuracy)
+    
+    #calculating metrics which will be plotted
+    train_accuracy_compiled_np = np.transpose(np.array(train_accuracy_compiled))
+    train_accuracy_compiled_av = np.mean(train_accuracy_compiled_np, axis=1)
+    test_accuracy_compiled_np = np.transpose(np.array(test_accuracy_compiled))
+    test_accuracy_compiled_av = np.mean(test_accuracy_compiled_np, axis=1)
+    test_accuracy_compiled_std = np.std(test_accuracy_compiled_np,axis=1)
+    
+    #instantiating figure and plotting accuracy lines and error bounds
+    fig, ax = plt.subplots()
+    ax.plot(list(range(1,10,1)), train_accuracy_compiled_av, color="royalblue",  label="Training score")
+    ax.plot(list(range(1,10,1)), test_accuracy_compiled_av, '--', color="#111111", label="Test score")
+    ax.fill_between(list(range(1,10,1)), test_accuracy_compiled_av - test_accuracy_compiled_std, test_accuracy_compiled_av + test_accuracy_compiled_std, color="#DDDDDD")
+
+    #Plotting details
+    ax.set_xlabel("Max Depth - n Nodes") 
+    ax.set_ylabel("Accuracy Score") 
+    ax.legend(loc=leg_loc)
+    ax.set_title(title, y=1, fontsize=14, fontweight='bold');
+    ax.set_ylim(y_min,y_max)
+    ax.set_xlim(0,max_depth)
+    
+    return fig
+
+
+#fig = test_rand_f_max_depth(x_10, y_10, iterations=50, title='Testing Max Depth of Internal Nodes - ML_10')
+#plt.savefig('figures\ml_10_testing_max_depth_random_forest.png')
+
+#fig = test_rand_f_max_depth(x_5, y_5, iterations=50, title='Testing Max Depth of Internal Nodes - ML_5')
+#plt.savefig('figures\ml_10_testing_max_depth_random_forest.png')
 
 
 
