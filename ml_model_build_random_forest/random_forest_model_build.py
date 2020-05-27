@@ -7,6 +7,8 @@ Created on Sun May 10 15:59:55 2020
 
 print('\n\n')
 print(' ---------------- START ---------------- \n')
+import time
+start=time.time()
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
@@ -21,7 +23,7 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import classification_report, confusion_matrix, plot_confusion_matrix, accuracy_score
 from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_predict
 import pandas as pd
@@ -185,6 +187,20 @@ def test_rand_f_max_depth(X, y, iterations=5, max_depth=10, y_min=0.3, y_max=1.0
 
 
 
+# ----- GRID SEARCH -----
+
+param_grid_grad = [{'n_estimators':list(range(50,200,50)),'max_depth':list(range(1,5,1)),'max_features':list(range(2,5,1))}]
+
+#random forest gridsearch 
+grid_search_grad = GridSearchCV(ml_10_rand_forest, param_grid_grad, cv=5, scoring = 'accuracy', return_train_score = True)
+grid_search_grad.fit(x_10, y_10)
+
+#Output best Cross Validation score and parameters from grid search
+print('\n', 'Gradient Best Params: ' , grid_search_grad.best_params_)
+print('Gradient Best Score: ' , grid_search_grad.best_score_ , '\n')
+
+
+
 #---------- MODEL EVALUATION ----------
 
 #cross validation
@@ -229,5 +245,6 @@ fi_ml_5 = pd.DataFrame({'feature': list(x5_train.columns),'importance': ml_5_ran
 
 # ----------------------------------- END -------------------------------------
 
+print('\n', 'Script runtime:', (time.time()-start)/60)
 print(' ----------------- END ----------------- ')
 print('\n')
