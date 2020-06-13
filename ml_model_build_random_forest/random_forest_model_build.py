@@ -89,12 +89,13 @@ def rand_forest_train(df, print_result=True, print_result_label=''):
 ml_10_rand_forest, x10_train, x10_test, y10_train, y10_test = rand_forest_train(df_ml_10, print_result_label='DF_ML_10')
 ml_5_rand_forest, x5_train, x5_test, y5_train, y5_test = rand_forest_train(df_ml_5, print_result_label='DF_ML_5')
 
-with open('ml_models/random_forest_model_5.pk1', 'wb') as myFile:
-    pickle.dump(ml_5_rand_forest, myFile)
 
-with open('ml_models/random_forest_model_10.pk1', 'wb') as myFile:
-    pickle.dump(ml_10_rand_forest, myFile)
+#with open('ml_models/random_forest_model_5.pk1', 'wb') as myFile:
+#    pickle.dump(ml_5_rand_forest, myFile)
 
+#with open('ml_models/random_forest_model_10.pk1', 'wb') as myFile:
+#    pickle.dump(ml_10_rand_forest, myFile)
+    
 
 
 # ----- ENSEMBLE MODELLING -----

@@ -17,6 +17,7 @@ sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
 
 from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix, plot_learning_curve
+from ml_functions.data_processing import scale_df
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,6 +37,11 @@ with open('../2019_prem_generated_clean/2019_prem_df_for_ml_5_v2.txt', 'rb') as 
 
 with open('../2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
+
+
+#scaling dataframe to make all features to have zero mean and unit vector.
+df_ml_10 = scale_df(df_ml_10, list(range(14)), [14,15,16])
+df_ml_5 = scale_df(df_ml_5, list(range(14)), [14,15,16])
 
 
 x_10 = df_ml_10.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
@@ -86,11 +92,11 @@ ml_10_svm, x10_train, x10_test, y10_train, y10_test = svm_train(df_ml_10)
 ml_5_svm, x5_train, x5_test, y5_train, y5_test = svm_train(df_ml_5)
 
 
-with open('ml_models/svm_model_5.pk1', 'wb') as myFile:
-    pickle.dump(ml_5_svm, myFile)
+#with open('ml_models/svm_model_5.pk1', 'wb') as myFile:
+#    pickle.dump(ml_5_svm, myFile)
 
-with open('ml_models/svm_model_10.pk1', 'wb') as myFile:
-    pickle.dump(ml_10_svm, myFile)
+#with open('ml_models/svm_model_10.pk1', 'wb') as myFile:
+#    pickle.dump(ml_10_svm, myFile)
 
 
 # --------------- TESTING C PARAM ---------------
@@ -167,27 +173,27 @@ print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 
 #prediction probability plots
-#fig = pred_proba_plot(ml_10_svm, x_10, y_10, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_10)')
+fig = pred_proba_plot(ml_10_svm, x_10, y_10, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_10)')
 #fig.savefig('figures/ml_10_svm_pred_proba.png')
 
-#fig = pred_proba_plot(ml_5_svm, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_5)')
+fig = pred_proba_plot(ml_5_svm, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_5)')
 #fig.savefig('figures/ml_5_svm_pred_proba.png')
 
 
 #plot confusion matrix - modified to take cross-val results.
 plot_cross_val_confusion_matrix(ml_10_svm, x_10, y_10, display_labels=('team loses', 'draw', 'team wins'), title='Support Vector Machine Confusion Matrix ML10', cv=skf)
-plt.savefig('figures\ml_10_confusion_matrix_cross_val_svm.png')
+#plt.savefig('figures\ml_10_confusion_matrix_cross_val_svm.png')
 
 plot_cross_val_confusion_matrix(ml_5_svm, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Support Vector Machine Confusion Matrix ML5', cv=skf)
-plt.savefig('figures\ml_5_confusion_matrix_cross_val_svm.png')
+#plt.savefig('figures\ml_5_confusion_matrix_cross_val_svm.png')
 
 
 #plotting learning curves
 plot_learning_curve(ml_10_svm, x_10, y_10, training_set_size=10, x_max=160, title='Learning Curve - Support Vector Machine DF_10', leg_loc=1)
-plt.savefig('figures\ml_10_svm_learning_curve.png')
+#plt.savefig('figures\ml_10_svm_learning_curve.png')
 
 plot_learning_curve(ml_5_svm, x_5, y_5, training_set_size=10, x_max=230, title='Learning Curve - Support Vector Machine DF_5', leg_loc=1)
-plt.savefig('figures\ml_5_svm_learning_curve.png')
+#plt.savefig('figures\ml_5_svm_learning_curve.png')
 
 
     
