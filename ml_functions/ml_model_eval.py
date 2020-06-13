@@ -73,7 +73,7 @@ def pred_proba_plot(clf, X, y, cv=5, no_iter=5, no_bins=25, x_min=0.5, x_max=1, 
     ax.hist(incorrect_guess_pred, bins, alpha=0.5, edgecolor='#1E212A', color='red', label='Incorrect Prediction')
     ax.hist(correct_guess_pred, bins, alpha=0.5, edgecolor='#1E212A', color='green', label='Correct Prediction')
     ax.legend()
-    ax.set_title(f'{classifier} - Iterated {no_iter} Times', y=0.96, fontsize=16, fontweight='bold');
+    ax.set_title(f'{classifier} - Iterated {no_iter} Times', y=1, fontsize=16, fontweight='bold');
     ax.set(ylabel='Number of Occurences',
             xlabel='Prediction Probability')
     return fig
