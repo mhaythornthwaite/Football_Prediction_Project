@@ -19,6 +19,7 @@ sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
 
 from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix, plot_learning_curve
+from ml_functions.data_processing import scale_df
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,6 +41,11 @@ with open('../2019_prem_generated_clean/2019_prem_df_for_ml_5_v2.txt', 'rb') as 
 
 with open('../2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
+    
+    
+#scaling dataframe to make all features to have zero mean and unit vector.
+df_ml_10 = scale_df(df_ml_10, list(range(14)), [14,15,16])
+df_ml_5 = scale_df(df_ml_5, list(range(14)), [14,15,16])
 
 
 x_10 = df_ml_10.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
@@ -59,7 +65,7 @@ def rand_forest_train(df, print_result=True, print_result_label=''):
     y = df['Team Result Indicator']
     
     #instantiate the random forest class
-    clf = RandomForestClassifier(max_depth = 5)
+    clf = RandomForestClassifier(max_depth=4, max_features=4, n_estimators=120)
     
     #split into training data and test data
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
@@ -189,15 +195,16 @@ def test_rand_f_max_depth(X, y, iterations=5, max_depth=10, y_min=0.3, y_max=1.0
 
 # ----- GRID SEARCH -----
 
-param_grid_grad = [{'n_estimators':list(range(50,200,50)),'max_depth':list(range(1,5,1)),'max_features':list(range(2,5,1))}]
+#param_grid_grad = [{'n_estimators':list(range(50,200,50)),'max_depth':list(range(1,5,1)),'max_features':list(range(2,5,1))}]
+#param_grid_grad = [{'n_estimators':list(range(10,200,10))}]
 
 #random forest gridsearch 
-grid_search_grad = GridSearchCV(ml_10_rand_forest, param_grid_grad, cv=5, scoring = 'accuracy', return_train_score = True)
-grid_search_grad.fit(x_10, y_10)
+#grid_search_grad = GridSearchCV(ml_10_rand_forest, param_grid_grad, cv=5, scoring = 'accuracy', return_train_score = True)
+#grid_search_grad.fit(x_10, y_10)
 
 #Output best Cross Validation score and parameters from grid search
-print('\n', 'Gradient Best Params: ' , grid_search_grad.best_params_)
-print('Gradient Best Score: ' , grid_search_grad.best_score_ , '\n')
+#print('\n', 'Gradient Best Params: ' , grid_search_grad.best_params_)
+#print('Gradient Best Score: ' , grid_search_grad.best_score_ , '\n')
 
 
 
