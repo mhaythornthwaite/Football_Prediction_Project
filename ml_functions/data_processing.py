@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from sklearn import preprocessing
+import matplotlib.pyplot as plt
   
 
 #------------------------------- DATA PROCESSING ------------------------------
@@ -54,7 +55,7 @@ def scale_df(df, scale, unscale):
 
         
 
-def scree_plot(pca_percentages):
+def scree_plot(pca_percentages, y_max=40):
     '''
     Input principle component percentages list and returns scree plot
 
@@ -91,7 +92,7 @@ def scree_plot(pca_percentages):
     fig.suptitle('PCA Scree Plot', y=0.96, fontsize=16, fontweight='bold');
     ax.set(xlabel='Principle Components',
            ylabel='Percentage Variation');
-    ax.set_ylim([0,40])
+    ax.set_ylim([0,y_max])
     
     return fig
 
