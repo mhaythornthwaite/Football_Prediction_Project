@@ -19,6 +19,7 @@ sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
 
 from sklearn.decomposition import PCA
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 import pickle
 from ml_functions.data_processing import scale_df, scree_plot
 import matplotlib.pyplot as plt
@@ -27,7 +28,7 @@ import matplotlib.pyplot as plt
 plt.close('all')
 
 
-#------------------------PRINCIPLE COMPONENT ANALYSIS -------------------------
+#------------------------ PRINCIPLE COMPONENT ANALYSIS ------------------------
 
 
 with open('2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
@@ -76,6 +77,35 @@ ax.set_axisbelow(True)
 
 #save fig
 fig.savefig('figures/PC1_PC2_xplot_ml10.png')
+
+
+
+#------------------------ LINEAR DISCRIMINANT ANALYSIS ------------------------
+
+#instantiating and fitting LDA classifier, for the purpose of dimensionality reduction.
+clf = LinearDiscriminantAnalysis(n_components=2)
+clf.fit(x_10, y_10)
+
+
+# ----- X-plot LDA1 and LDA2 -----
+
+#creating variables
+lda_values = clf.fit_transform(x_10, y_10)
+
+#instantiating figure and plotting scatter
+fig, ax = plt.subplots()
+scat = ax.scatter(lda_values[:,0], lda_values[:,1], c=df_ml_10['Team Result Indicator'], cmap='winter');
+
+#fig plotting details
+fig.suptitle('LDA X-Plot', y=0.96, fontsize=16, fontweight='bold');
+ax.set(xlabel='LD1',
+       ylabel='LD2');
+ax.legend(*scat.legend_elements(), title='Target \n Team \n Result', loc='upper right', fontsize='small')
+ax.grid(color='xkcd:light grey')
+ax.set_axisbelow(True)
+
+#save fig
+fig.savefig('figures/LDA_xplot_ml10.png')
 
 
 
