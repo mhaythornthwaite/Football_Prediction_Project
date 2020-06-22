@@ -71,7 +71,7 @@ def req_prem_fixtures_id():
     return premier_league_fixtures_df
 
 
-#fixtures = req_prem_fixtures_id()
+fixtures = req_prem_fixtures_id()
     
 
 
@@ -80,6 +80,33 @@ def load_prem_fixtures_id():
     return premier_league_fixtures_df
 
 fixtures = load_prem_fixtures_id()
+
+
+
+#------------------------- MAKING CLEAN FIXTURE LIST --------------------------
+
+fixtures = pd.read_json('2019_prem_generated_clean/2019_premier_league_fixtures.json', orient='records')
+
+#creating clean past fixture list DataFrame       
+
+for i in fixtures.index:
+    x1 = str(fixtures['homeTeam'].iloc[i])[12:14]
+    x = int(x1)
+    fixtures.at[i, 'HomeTeamID'] = x
+
+for i in fixtures.index:
+    x1 = str(fixtures['awayTeam'].iloc[i])[12:14]
+    x = int(x1)
+    fixtures.at[i, 'AwayTeamID'] = x
+
+for i in fixtures.index:
+    x = str(fixtures['event_date'].iloc[i])[:10] 
+    fixtures.at[i, 'Game Date'] = x
+
+fixtures_clean = pd.DataFrame({'Fixture ID': fixtures['fixture_id'], 'Game Date': fixtures['Game Date'], 'Home Team ID': fixtures['HomeTeamID'], 'Away Team ID': fixtures['AwayTeamID'], 'Home Team Goals': fixtures['goalsHomeTeam'], 'Away Team Goals': fixtures['goalsAwayTeam']})
+
+fixtures_clean.to_csv('2019_prem_generated_clean/2019_premier_league_fixtures_df.csv', index=False)
+
 
 
 #-------------------------- REQUESTING SPECIFIC STATS -------------------------
@@ -95,7 +122,6 @@ def req_prem_stats(start_index, end_index):
             save_api_output('2019_prem_game_stats/' + fix_id, fixture_sliced)
     
 
-   
 #req_prem_stats(288, 300)
  
 

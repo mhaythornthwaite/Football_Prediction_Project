@@ -15,33 +15,11 @@ import pandas as pd
 import math
 import pickle
 
-#------------------------- MAKING CLEAN FIXTURE LIST --------------------------
-
-fixtures = pd.read_json('2019_prem_generated_clean/2019_premier_league_fixtures.json', orient='records')
-
-#creating clean past fixture list DataFrame       
-
-for i in fixtures.index:
-    x1 = str(fixtures['homeTeam'].iloc[i])[12:14]
-    x = int(x1)
-    fixtures.at[i, 'HomeTeamID'] = x
-
-for i in fixtures.index:
-    x1 = str(fixtures['awayTeam'].iloc[i])[12:14]
-    x = int(x1)
-    fixtures.at[i, 'AwayTeamID'] = x
-
-for i in fixtures.index:
-    x = str(fixtures['event_date'].iloc[i])[:10] 
-    fixtures.at[i, 'Game Date'] = x
-
-fixtures_clean = pd.DataFrame({'Fixture ID': fixtures['fixture_id'], 'Game Date': fixtures['Game Date'], 'Home Team ID': fixtures['HomeTeamID'], 'Away Team ID': fixtures['AwayTeamID'], 'Home Team Goals': fixtures['goalsHomeTeam'], 'Away Team Goals': fixtures['goalsAwayTeam']})
-
-fixtures_clean.to_csv('2019_prem_generated_clean/2019_premier_league_fixtures_df.csv', index=False)
-
 
 #---------------------------- CREATING DF PER TEAM ----------------------------
 #in this section we will create a nested dictionary containing the 20 teams, each with a value as another dictionary. In this dictionary we will have the game id along with the game dataframe.
+
+fixtures_clean = pd.read_csv('2019_prem_generated_clean/2019_premier_league_fixtures_df.csv')
 
 #creating the 'fixtures_clean' ID index which we will use to take data from this dataframe and add to each of our individual fixture stats dataframe.
 fixtures_clean_ID_index = pd.Index(fixtures_clean['Fixture ID'])
