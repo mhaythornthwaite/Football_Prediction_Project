@@ -13,6 +13,7 @@ print(' ---------------- START ---------------- \n')
 import requests
 import pandas as pd
 import math
+from os import listdir
 
 #IMPORTANT NOTE./ in this documentation all the examples are realized with the url provided for rapidApi, if you have subscribed directly with us you will have to replace https://api-football-v1.p.rapidapi.com/v2/ by https://v2.api-football.com/
 
@@ -92,9 +93,49 @@ def req_prem_stats(start_index, end_index):
             fixture_raw = get_api_data(base_url, '/statistics/fixture/' + fix_id + '/')
             fixture_sliced = slice_api(fixture_raw, 34, 2)
             save_api_output('2019_prem_game_stats/' + fix_id, fixture_sliced)
-        
+    
+
+   
 #req_prem_stats(288, 300)
  
+
+#----- AUTOMATING MISSING DATA COLLECTION -----
+
+#in this section we will search through our exisiting database (2019_prem_game_stats folder) and request the game data of any missing games that have been played since we last requested data.
+
+
+#listing the json data already collected
+existing_data_raw = listdir('2019_prem_game_stats/')
+
+#removing '.json' from the end of this list
+existing_data = []
+for i in existing_data_raw:
+    existing_data.append(int(i[:-5]))
+
+#creating a list with the missing     
+missing_data = []
+for i in fixtures_clean.index:
+    fix_id = fixtures_clean['Fixture ID'].iloc[i]
+    if fix_id not in existing_data:
+        if math.isnan(fixtures_clean['Home Team Goals'].iloc[i]) == False:
+            missing_data.append(fix_id)
+
+
+def req_prem_stats_list(missing_data):
+    if len(missing_data) > 100:
+        print('This request exceeds 100 request limit and has not been completed')
+    else:
+        if len(missing_data) > 0:
+            print('Data collected for the following fixtures:')
+        for i in missing_data:
+            print(i)
+            fix_id = str(i)
+            fixture_raw = get_api_data(base_url, '/statistics/fixture/' + fix_id + '/')
+            fixture_sliced = slice_api(fixture_raw, 34, 2)
+            save_api_output('2019_prem_game_stats/' + fix_id, fixture_sliced)
+
+
+req_prem_stats_list(missing_data)
 
 
 
