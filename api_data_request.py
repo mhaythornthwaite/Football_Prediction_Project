@@ -66,7 +66,7 @@ def req_prem_fixtures_id():
     save_api_output('2019_premier_league_fixtures', premier_league_fixtures_sliced, json_data_path = '2019_prem_generated_clean/')
 
     #loading the json file as a DataFrame
-    premier_league_fixtures_df = read_json_as_pd_df('2019_premier_league_fixtures.json', json_data_path='prem_seasons_fixture_id/')
+    premier_league_fixtures_df = read_json_as_pd_df('2019_premier_league_fixtures.json', json_data_path='2019_prem_generated_clean/')
     return premier_league_fixtures_df
 
 
@@ -93,7 +93,7 @@ def req_prem_stats(start_index, end_index):
             fixture_sliced = slice_api(fixture_raw, 34, 2)
             save_api_output('2019_prem_game_stats/' + fix_id, fixture_sliced)
         
-#req_prem_stats(300, 340)
+#req_prem_stats(288, 300)
  
 
 
