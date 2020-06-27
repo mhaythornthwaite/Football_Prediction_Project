@@ -1,0 +1,38 @@
+body{
+	background-color: rgba(144,203,91,0.3);
+}
+
+
+.game{
+	padding: 35px;
+}
+
+
+h2 {
+	display: inline;
+}
+
+
+h5 {
+	display: inline;
+}
+
+
+.pad {
+	padding-left: 77%
+}
+
+
+.win{
+	border-bottom: 20px solid Orange
+}
+
+
+.draw{
+	border-bottom: 20px solid LightGray
+}
+
+
+.loss{
+	border-bottom: 20px solid Tomato
+}
