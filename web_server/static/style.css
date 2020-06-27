@@ -8,69 +8,6 @@ body{
 }
 
 
-h2 {
-	display: inline;
-}
-
-
-h5 {
-	display: inline;
-}
-
-
-.pad {
-	padding-left: 77%
-}
-
-
-.win{
-	border-bottom: 20px solid Orange
-}
-
-
-.draw{
-	border-bottom: 20px solid LightGray
-}
-
-
-.loss{
-	border-bottom: 20px solid Tomato
-}
-
-
-
-
-.percent_row{
-	color: #252525;
-}
-
-.win2{
-	margin-bottom: 16px;
-	padding-left: 8px;
-	border-right: 2px solid #fff;
-	padding-top: 16px;
-	background-color: #2c7bb4;
-	display: inline-block;
-}
-
-.draw2{
-	margin-bottom: 16px;
-	padding-left: 8px;
-	border-right: 2px solid #fff;
-	padding-top: 16px;
-	background-color: #2c7bb4;
-	display: inline-block;
-	text-align="center";
-}
-
-.win2_annot{
-	color: #fff;
-	text-align="center";
-}
-
-
-
-
 .teamheading{
     box-sizing: border-box;
     white-space: nowrap;
@@ -79,12 +16,15 @@ h5 {
     padding-bottom: 10px;
 }
 
+
 .heading1{
 	width: 50%;
 	text-align: left;
 	box-sizing: border-box;
     display: inline-block;
 }
+
+
 .heading2{
 	width: 50%;
 	text-align: right;
@@ -93,46 +33,44 @@ h5 {
 }
 
 
-section {
+.probability_annot{
     box-sizing: border-box;
-    padding: 0px;
     white-space: nowrap;
 }
 
 
-.green {
+.win {
     background: lightgreen;
     box-sizing: border-box;
     display: inline-block;
     height: 20px;
     text-align: center;
-    width: calc(50% - 2px);
     box-sizing: border-box;
     padding-top: 20px;
     padding-bottom: 10px
     margin-top: 20px;
 }
 
-.blue {
+
+.draw {
     background: lightblue;
     box-sizing: border-box;
     display: inline-block;
     height: 20px;
     text-align: center;
-    width: calc(20% - 2px);
     box-sizing: border-box;
     padding-top: 20px;
     padding-bottom: 10px
     margin-top: 20px;
 }
 
-.tomato {
+
+.loss {
     background: Tomato;
     box-sizing: border-box;
     display: inline-block;
     height: 20px;
     text-align: center;
-    width: calc(30% - 2px);
     box-sizing: border-box;
     padding-top: 20px;
     padding-bottom: 10px
