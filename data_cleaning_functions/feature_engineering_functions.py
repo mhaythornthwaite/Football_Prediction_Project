@@ -174,13 +174,14 @@ def generate_ml_df(games_slide, team_list, team_fixture_id_dict, game_stats, mak
     df_ready_for_ml['Team Av Possession'] = t_posession
     df_ready_for_ml['Team Av Pass Accuracy'] = t_pass_accuracy
     df_ready_for_ml['Team Av Goals'] = t_goals
-    df_ready_for_ml['Opponent Av Shots'] = o_total_shots
-    df_ready_for_ml['Opponent Av Shots Inside Box'] = o_shots_inside_box
-    df_ready_for_ml['Opponent Av Fouls'] = o_fouls
-    df_ready_for_ml['Opponent Av Corners'] = o_corners
-    df_ready_for_ml['Opponent Av Possession'] = o_posession
-    df_ready_for_ml['Opponent Av Goals'] = o_goals
-    df_ready_for_ml['Opponent Av Pass Accuracy'] = o_pass_accuracy
+    if not making_predictions:
+        df_ready_for_ml['Opponent Av Shots'] = o_total_shots
+        df_ready_for_ml['Opponent Av Shots Inside Box'] = o_shots_inside_box
+        df_ready_for_ml['Opponent Av Fouls'] = o_fouls
+        df_ready_for_ml['Opponent Av Corners'] = o_corners
+        df_ready_for_ml['Opponent Av Possession'] = o_posession
+        df_ready_for_ml['Opponent Av Goals'] = o_goals
+        df_ready_for_ml['Opponent Av Pass Accuracy'] = o_pass_accuracy
     if not making_predictions:
         df_ready_for_ml['Team Goal Target'] = t_goals_target
         df_ready_for_ml['Opponent Goal Target'] = o_goals_target

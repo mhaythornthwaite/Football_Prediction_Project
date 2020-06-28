@@ -103,9 +103,29 @@ for i in fixtures.index:
     x = str(fixtures['event_date'].iloc[i])[:10] 
     fixtures.at[i, 'Game Date'] = x
 
-fixtures_clean = pd.DataFrame({'Fixture ID': fixtures['fixture_id'], 'Game Date': fixtures['Game Date'], 'Home Team ID': fixtures['HomeTeamID'], 'Away Team ID': fixtures['AwayTeamID'], 'Home Team Goals': fixtures['goalsHomeTeam'], 'Away Team Goals': fixtures['goalsAwayTeam']})
+for i in fixtures.index:
+    x = str(fixtures['homeTeam'][i]['team_name']) 
+    fixtures.at[i, 'Home Team'] = x
+    
+for i in fixtures.index:
+    x = str(fixtures['awayTeam'][i]['team_name']) 
+    fixtures.at[i, 'Away Team'] = x
+    
+for i in fixtures.index:
+    x = str(fixtures['homeTeam'][i]['logo']) 
+    fixtures.at[i, 'Home Team Logo'] = x
+    
+for i in fixtures.index:
+    x = str(fixtures['awayTeam'][i]['logo']) 
+    fixtures.at[i, 'Away Team Logo'] = x
+    
+
+fixtures_clean = pd.DataFrame({'Fixture ID': fixtures['fixture_id'], 'Game Date': fixtures['Game Date'], 'Home Team ID': fixtures['HomeTeamID'], 'Away Team ID': fixtures['AwayTeamID'], 'Home Team Goals': fixtures['goalsHomeTeam'], 'Away Team Goals': fixtures['goalsAwayTeam'], 'Venue': fixtures['venue'], 'Home Team': fixtures['Home Team'], 'Away Team': fixtures['Away Team'], 'Home Team Logo': fixtures['Home Team Logo'], 'Away Team Logo': fixtures['Away Team Logo']})
 
 fixtures_clean.to_csv('2019_prem_generated_clean/2019_premier_league_fixtures_df.csv', index=False)
+
+print(fixtures['homeTeam'][1]['team_name'])
+
 
 
 

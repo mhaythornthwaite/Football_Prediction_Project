@@ -1,381 +1,381 @@
-Fixture ID,Game Date,Home Team ID,Away Team ID,Home Team Goals,Away Team Goals
-157015,2019-08-09,40.0,71.0,4.0,1.0
-157016,2019-08-10,48.0,50.0,0.0,5.0
-157017,2019-08-10,35.0,62.0,1.0,1.0
-157018,2019-08-10,44.0,41.0,3.0,0.0
-157019,2019-08-10,52.0,45.0,0.0,0.0
-157021,2019-08-10,38.0,51.0,0.0,3.0
-157022,2019-08-10,47.0,66.0,3.0,1.0
-157020,2019-08-11,46.0,39.0,0.0,0.0
-157023,2019-08-11,34.0,42.0,0.0,1.0
-157024,2019-08-11,33.0,49.0,4.0,0.0
-157025,2019-08-17,42.0,44.0,2.0,1.0
-157026,2019-08-17,66.0,35.0,1.0,2.0
-157027,2019-08-17,51.0,48.0,1.0,1.0
-157029,2019-08-17,45.0,38.0,1.0,0.0
-157031,2019-08-17,71.0,34.0,3.0,1.0
-157033,2019-08-17,41.0,40.0,1.0,2.0
-157030,2019-08-17,50.0,47.0,2.0,2.0
-157032,2019-08-18,62.0,52.0,1.0,0.0
-157028,2019-08-18,49.0,46.0,1.0,1.0
-157034,2019-08-19,39.0,33.0,1.0,1.0
-157036,2019-08-23,66.0,45.0,2.0,0.0
-157040,2019-08-24,71.0,49.0,2.0,3.0
-157037,2019-08-24,51.0,41.0,0.0,2.0
-157039,2019-08-24,33.0,52.0,1.0,2.0
-157041,2019-08-24,62.0,46.0,1.0,2.0
-157043,2019-08-24,38.0,48.0,1.0,3.0
-157038,2019-08-24,40.0,42.0,3.0,1.0
-157035,2019-08-25,35.0,50.0,1.0,3.0
-157042,2019-08-25,47.0,34.0,0.0,1.0
-157044,2019-08-25,39.0,44.0,1.0,1.0
-157053,2019-08-31,41.0,33.0,1.0,1.0
-157048,2019-08-31,52.0,66.0,1.0,0.0
-157050,2019-08-31,46.0,35.0,3.0,1.0
-157051,2019-08-31,50.0,51.0,4.0,0.0
-157052,2019-08-31,34.0,38.0,1.0,1.0
-157054,2019-08-31,48.0,71.0,2.0,0.0
-157047,2019-08-31,49.0,62.0,2.0,2.0
-157046,2019-08-31,44.0,40.0,0.0,3.0
-157049,2019-09-01,45.0,39.0,3.0,2.0
-157045,2019-09-01,42.0,47.0,2.0,2.0
-157058,2019-09-14,40.0,34.0,3.0,1.0
-157057,2019-09-14,51.0,44.0,1.0,1.0
-157059,2019-09-14,33.0,46.0,1.0,0.0
-157061,2019-09-14,62.0,41.0,0.0,1.0
-157062,2019-09-14,47.0,52.0,4.0,0.0
-157064,2019-09-14,39.0,49.0,2.0,5.0
-157060,2019-09-14,71.0,50.0,3.0,2.0
-157055,2019-09-15,35.0,45.0,3.0,1.0
-157063,2019-09-15,38.0,42.0,2.0,2.0
-157056,2019-09-16,66.0,48.0,0.0,0.0
-157073,2019-09-20,41.0,35.0,1.0,3.0
-157070,2019-09-21,46.0,47.0,2.0,1.0
-157066,2019-09-21,44.0,71.0,2.0,0.0
-157069,2019-09-21,45.0,62.0,0.0,2.0
-157071,2019-09-21,50.0,38.0,8.0,0.0
-157072,2019-09-21,34.0,51.0,0.0,0.0
-157068,2019-09-22,52.0,39.0,1.0,1.0
-157074,2019-09-22,48.0,33.0,2.0,0.0
-157065,2019-09-22,42.0,66.0,3.0,2.0
-157067,2019-09-22,49.0,40.0,1.0,2.0
-157082,2019-09-28,62.0,40.0,0.0,1.0
-157075,2019-09-28,35.0,48.0,2.0,2.0
-157076,2019-09-28,66.0,44.0,2.0,2.0
-157077,2019-09-28,49.0,51.0,2.0,0.0
-157078,2019-09-28,52.0,71.0,2.0,0.0
-157083,2019-09-28,47.0,41.0,2.0,1.0
-157084,2019-09-28,39.0,38.0,2.0,0.0
-157079,2019-09-28,45.0,50.0,1.0,3.0
-157080,2019-09-29,46.0,34.0,5.0,0.0
-157081,2019-09-30,33.0,42.0,1.0,1.0
-157086,2019-10-05,51.0,47.0,3.0,0.0
-157087,2019-10-05,44.0,45.0,1.0,0.0
-157088,2019-10-05,40.0,46.0,2.0,1.0
-157091,2019-10-05,71.0,66.0,1.0,5.0
-157093,2019-10-05,38.0,62.0,0.0,0.0
-157094,2019-10-05,48.0,52.0,1.0,2.0
-157085,2019-10-06,42.0,35.0,1.0,0.0
-157089,2019-10-06,50.0,39.0,0.0,2.0
-157092,2019-10-06,41.0,49.0,1.0,4.0
-157090,2019-10-06,34.0,33.0,1.0,0.0
-157099,2019-10-19,45.0,48.0,2.0,0.0
-157095,2019-10-19,35.0,71.0,0.0,0.0
-157096,2019-10-19,66.0,51.0,2.0,1.0
-157097,2019-10-19,49.0,34.0,1.0,0.0
-157100,2019-10-19,46.0,44.0,2.0,1.0
-157103,2019-10-19,47.0,38.0,1.0,1.0
-157104,2019-10-19,39.0,41.0,1.0,1.0
-157098,2019-10-19,52.0,50.0,0.0,2.0
-157101,2019-10-20,33.0,40.0,1.0,1.0
-157102,2019-10-21,62.0,42.0,1.0,0.0
-157112,2019-10-25,41.0,46.0,0.0,9.0
-157109,2019-10-26,50.0,66.0,3.0,0.0
-157106,2019-10-26,51.0,45.0,3.0,2.0
-157113,2019-10-26,38.0,35.0,0.0,0.0
-157114,2019-10-26,48.0,62.0,1.0,1.0
-157107,2019-10-26,44.0,49.0,2.0,4.0
-157110,2019-10-27,34.0,39.0,1.0,1.0
-157105,2019-10-27,42.0,52.0,2.0,2.0
-157108,2019-10-27,40.0,47.0,2.0,1.0
-157111,2019-10-27,71.0,33.0,1.0,3.0
-157115,2019-11-02,35.0,33.0,1.0,0.0
-157116,2019-11-02,42.0,39.0,1.0,1.0
-157117,2019-11-02,66.0,40.0,1.0,2.0
-157118,2019-11-02,51.0,71.0,2.0,0.0
-157121,2019-11-02,50.0,41.0,2.0,1.0
-157122,2019-11-02,62.0,44.0,3.0,0.0
-157124,2019-11-02,48.0,34.0,2.0,3.0
-157123,2019-11-02,38.0,49.0,1.0,2.0
-157119,2019-11-03,52.0,46.0,0.0,2.0
-157120,2019-11-03,45.0,47.0,1.0,1.0
-157131,2019-11-08,71.0,38.0,0.0,2.0
-157126,2019-11-09,49.0,52.0,2.0,0.0
-157125,2019-11-09,44.0,48.0,3.0,0.0
-157130,2019-11-09,34.0,35.0,2.0,1.0
-157132,2019-11-09,41.0,45.0,1.0,2.0
-157133,2019-11-09,47.0,62.0,1.0,1.0
-157127,2019-11-09,46.0,42.0,2.0,0.0
-157129,2019-11-10,33.0,51.0,3.0,1.0
-157134,2019-11-10,39.0,66.0,2.0,1.0
-157128,2019-11-10,40.0,50.0,3.0,1.0
-157144,2019-11-23,48.0,47.0,2.0,3.0
-157135,2019-11-23,35.0,39.0,1.0,2.0
-157136,2019-11-23,42.0,41.0,2.0,2.0
-157138,2019-11-23,51.0,46.0,0.0,2.0
-157139,2019-11-23,52.0,40.0,1.0,2.0
-157140,2019-11-23,45.0,71.0,0.0,2.0
-157143,2019-11-23,38.0,44.0,0.0,3.0
-157141,2019-11-23,50.0,49.0,2.0,1.0
-157142,2019-11-24,62.0,33.0,3.0,3.0
-157137,2019-11-25,66.0,34.0,2.0,0.0
-157150,2019-11-30,34.0,50.0,2.0,2.0
-157145,2019-11-30,44.0,52.0,0.0,2.0
-157146,2019-11-30,49.0,48.0,0.0,1.0
-157148,2019-11-30,40.0,51.0,2.0,1.0
-157153,2019-11-30,47.0,35.0,3.0,2.0
-157152,2019-11-30,41.0,38.0,2.0,1.0
-157151,2019-12-01,71.0,42.0,2.0,2.0
-157154,2019-12-01,39.0,62.0,1.0,1.0
-157147,2019-12-01,46.0,45.0,2.0,1.0
-157149,2019-12-01,33.0,66.0,2.0,2.0
-157163,2019-12-03,52.0,35.0,1.0,0.0
-157156,2019-12-03,44.0,50.0,1.0,4.0
-157157,2019-12-04,46.0,38.0,2.0,0.0
-157159,2019-12-04,39.0,48.0,2.0,0.0
-157160,2019-12-04,33.0,47.0,2.0,1.0
-157161,2019-12-04,49.0,66.0,2.0,1.0
-157162,2019-12-04,41.0,71.0,2.0,1.0
-157164,2019-12-04,40.0,45.0,5.0,2.0
-157158,2019-12-05,62.0,34.0,0.0,2.0
-157155,2019-12-05,42.0,51.0,1.0,2.0
-157168,2019-12-07,45.0,49.0,3.0,1.0
-157165,2019-12-07,35.0,40.0,0.0,3.0
-157172,2019-12-07,47.0,44.0,5.0,0.0
-157173,2019-12-07,38.0,52.0,0.0,0.0
-157169,2019-12-07,50.0,33.0,1.0,2.0
-157166,2019-12-08,66.0,46.0,1.0,4.0
-157170,2019-12-08,34.0,41.0,2.0,1.0
-157171,2019-12-08,71.0,62.0,1.0,2.0
-157167,2019-12-08,51.0,39.0,2.0,2.0
-157174,2019-12-09,48.0,42.0,1.0,3.0
-157180,2019-12-14,40.0,38.0,2.0,0.0
-157176,2019-12-14,44.0,34.0,1.0,0.0
-157177,2019-12-14,49.0,35.0,0.0,1.0
-157179,2019-12-14,46.0,71.0,1.0,1.0
-157182,2019-12-14,62.0,66.0,2.0,0.0
-157183,2019-12-14,41.0,48.0,0.0,1.0
-157181,2019-12-15,33.0,45.0,1.0,1.0
-157184,2019-12-15,39.0,47.0,1.0,2.0
-157175,2019-12-15,42.0,50.0,0.0,3.0
-157178,2019-12-16,52.0,51.0,1.0,1.0
-157188,2019-12-21,45.0,42.0,0.0,0.0
-157185,2019-12-21,35.0,44.0,0.0,1.0
-157186,2019-12-21,66.0,41.0,1.0,3.0
-157187,2019-12-21,51.0,62.0,0.0,1.0
-157190,2019-12-21,34.0,52.0,1.0,0.0
-157191,2019-12-21,71.0,39.0,1.0,2.0
-157189,2019-12-21,50.0,46.0,3.0,1.0
-157193,2019-12-22,38.0,33.0,2.0,0.0
-157192,2019-12-22,47.0,49.0,0.0,2.0
-157203,2019-12-26,47.0,51.0,2.0,1.0
-157195,2019-12-26,35.0,42.0,1.0,1.0
-157196,2019-12-26,66.0,71.0,1.0,0.0
-157197,2019-12-26,49.0,41.0,0.0,2.0
-157198,2019-12-26,52.0,48.0,2.0,1.0
-157199,2019-12-26,45.0,44.0,1.0,0.0
-157202,2019-12-26,62.0,38.0,1.0,1.0
-157201,2019-12-26,33.0,34.0,4.0,1.0
-157200,2019-12-26,46.0,40.0,0.0,4.0
-157204,2019-12-27,39.0,50.0,3.0,2.0
-157206,2019-12-28,51.0,35.0,2.0,0.0
-157210,2019-12-28,34.0,45.0,1.0,2.0
-157212,2019-12-28,41.0,52.0,1.0,1.0
-157213,2019-12-28,38.0,66.0,3.0,0.0
-157211,2019-12-28,71.0,47.0,2.0,2.0
-157214,2019-12-28,48.0,46.0,1.0,2.0
-157207,2019-12-28,44.0,33.0,0.0,2.0
-157205,2019-12-29,42.0,49.0,1.0,2.0
-157208,2019-12-29,40.0,39.0,1.0,0.0
-157209,2019-12-29,50.0,62.0,2.0,0.0
-157216,2020-01-01,51.0,49.0,1.0,1.0
-157217,2020-01-01,44.0,66.0,1.0,2.0
-157220,2020-01-01,34.0,46.0,0.0,3.0
-157222,2020-01-01,41.0,47.0,1.0,0.0
-157223,2020-01-01,38.0,39.0,2.0,1.0
-157219,2020-01-01,50.0,45.0,2.0,1.0
-157221,2020-01-01,71.0,52.0,1.0,1.0
-157224,2020-01-01,48.0,35.0,4.0,0.0
-157215,2020-01-01,42.0,33.0,2.0,0.0
-157218,2020-01-02,40.0,62.0,2.0,0.0
-157232,2020-01-10,62.0,48.0,1.0,0.0
-157228,2020-01-11,52.0,42.0,1.0,1.0
-157227,2020-01-11,49.0,44.0,3.0,0.0
-157229,2020-01-11,45.0,51.0,1.0,0.0
-157230,2020-01-11,46.0,41.0,1.0,2.0
-157231,2020-01-11,33.0,71.0,4.0,0.0
-157234,2020-01-11,39.0,34.0,1.0,1.0
-157233,2020-01-11,47.0,40.0,0.0,1.0
-157225,2020-01-12,35.0,38.0,0.0,3.0
-157226,2020-01-12,66.0,50.0,1.0,6.0
-157243,2020-01-18,38.0,47.0,0.0,0.0
-157235,2020-01-18,42.0,62.0,1.0,1.0
-157236,2020-01-18,51.0,66.0,1.0,1.0
-157239,2020-01-18,50.0,52.0,2.0,2.0
-157241,2020-01-18,71.0,35.0,1.0,0.0
-157242,2020-01-18,41.0,39.0,2.0,3.0
-157244,2020-01-18,48.0,45.0,1.0,1.0
-157240,2020-01-18,34.0,49.0,1.0,0.0
-157237,2020-01-19,44.0,46.0,2.0,1.0
-157238,2020-01-19,40.0,33.0,2.0,0.0
-157245,2020-01-21,35.0,51.0,3.0,1.0
-157246,2020-01-21,66.0,38.0,2.0,1.0
-157247,2020-01-21,45.0,34.0,2.0,2.0
-157249,2020-01-21,62.0,50.0,0.0,1.0
-157254,2020-01-21,52.0,41.0,0.0,2.0
-157252,2020-01-21,49.0,42.0,2.0,2.0
-157248,2020-01-22,46.0,48.0,4.0,1.0
-157253,2020-01-22,47.0,71.0,2.0,1.0
-157251,2020-01-22,33.0,44.0,0.0,2.0
-157250,2020-01-23,39.0,40.0,1.0,2.0
-157194,2020-01-29,48.0,40.0,0.0,2.0
-157258,2020-02-01,46.0,49.0,2.0,2.0
-157255,2020-02-01,35.0,66.0,2.0,1.0
-157257,2020-02-01,52.0,62.0,0.0,1.0
-157259,2020-02-01,40.0,41.0,4.0,0.0
-157261,2020-02-01,34.0,71.0,0.0,0.0
-157263,2020-02-01,38.0,45.0,2.0,3.0
-157264,2020-02-01,48.0,51.0,3.0,3.0
-157260,2020-02-01,33.0,39.0,0.0,0.0
-157256,2020-02-02,44.0,42.0,0.0,0.0
-157262,2020-02-02,47.0,50.0,2.0,0.0
-157269,2020-02-08,45.0,52.0,3.0,1.0
-157267,2020-02-08,51.0,38.0,1.0,1.0
-157272,2020-02-09,62.0,35.0,2.0,1.0
-157274,2020-02-14,39.0,46.0,0.0,0.0
-157273,2020-02-15,41.0,44.0,1.0,2.0
-157271,2020-02-15,71.0,40.0,0.0,1.0
-157266,2020-02-16,66.0,47.0,2.0,3.0
-157265,2020-02-16,42.0,34.0,4.0,0.0
-157268,2020-02-17,49.0,33.0,0.0,2.0
-157270,2020-02-19,50.0,48.0,2.0,0.0
-157277,2020-02-22,49.0,47.0,2.0,1.0
-157276,2020-02-22,44.0,35.0,3.0,0.0
-157278,2020-02-22,52.0,34.0,1.0,0.0
-157282,2020-02-22,62.0,51.0,1.0,1.0
-157283,2020-02-22,41.0,66.0,2.0,0.0
-157279,2020-02-22,46.0,50.0,0.0,1.0
-157281,2020-02-23,33.0,38.0,3.0,0.0
-157284,2020-02-23,39.0,71.0,3.0,0.0
-157275,2020-02-23,42.0,45.0,3.0,2.0
-157280,2020-02-24,40.0,48.0,3.0,2.0
-157291,2020-02-28,71.0,46.0,1.0,0.0
-157287,2020-02-29,51.0,52.0,0.0,1.0
-157285,2020-02-29,35.0,49.0,2.0,2.0
-157290,2020-02-29,34.0,44.0,0.0,0.0
-157294,2020-02-29,48.0,41.0,3.0,1.0
-157293,2020-02-29,38.0,40.0,3.0,0.0
-157288,2020-03-01,45.0,33.0,1.0,1.0
-157292,2020-03-01,47.0,39.0,2.0,3.0
-157300,2020-03-07,40.0,35.0,2.0,1.0
-157304,2020-03-07,39.0,51.0,0.0,0.0
-157295,2020-03-07,42.0,48.0,1.0,0.0
-157298,2020-03-07,52.0,38.0,1.0,0.0
-157302,2020-03-07,62.0,71.0,1.0,0.0
-157303,2020-03-07,41.0,34.0,0.0,1.0
-157296,2020-03-07,44.0,47.0,1.0,1.0
-157297,2020-03-08,49.0,45.0,4.0,0.0
-157301,2020-03-08,33.0,50.0,2.0,0.0
-157299,2020-03-09,46.0,66.0,4.0,0.0
-157286,2020-06-17,66.0,62.0,0.0,0.0
-157289,2020-06-17,50.0,42.0,3.0,0.0
-157311,2020-06-19,71.0,41.0,0.0,3.0
-157312,2020-06-19,47.0,33.0,1.0,1.0
-157313,2020-06-20,38.0,46.0,1.0,1.0
-157307,2020-06-20,51.0,42.0,2.0,1.0
-157314,2020-06-20,48.0,39.0,0.0,2.0
-157305,2020-06-20,35.0,52.0,0.0,2.0
-157310,2020-06-21,34.0,62.0,3.0,0.0
-157306,2020-06-21,66.0,49.0,1.0,2.0
-157308,2020-06-21,45.0,40.0,0.0,0.0
-157309,2020-06-22,50.0,44.0,5.0,0.0
-157317,2020-06-23,46.0,51.0,0.0,0.0
-157323,2020-06-23,47.0,48.0,2.0,0.0
-157319,2020-06-24,33.0,62.0,3.0,0.0
-157320,2020-06-24,34.0,66.0,1.0,1.0
-157321,2020-06-24,71.0,45.0,0.0,1.0
-157324,2020-06-24,39.0,35.0,1.0,0.0
-157318,2020-06-24,40.0,52.0,4.0,0.0
-157315,2020-06-25,44.0,38.0,1.0,0.0
-157322,2020-06-25,41.0,42.0,0.0,2.0
-157316,2020-06-25,49.0,50.0,2.0,1.0
-157327,2020-06-27,66.0,39.0,0.0,1.0
-157333,2020-06-28,38.0,41.0,,
-157329,2020-06-29,52.0,44.0,,
-157328,2020-06-30,51.0,33.0,,
-157325,2020-07-01,35.0,34.0,,
-157326,2020-07-01,42.0,71.0,,
-157330,2020-07-01,45.0,46.0,,
-157334,2020-07-01,48.0,49.0,,
-157332,2020-07-02,62.0,47.0,,
-157331,2020-07-02,50.0,40.0,,
-157341,2020-07-04,71.0,51.0,,
-157337,2020-07-04,46.0,52.0,,
-157339,2020-07-04,33.0,35.0,,
-157344,2020-07-04,39.0,42.0,,
-157336,2020-07-04,49.0,38.0,,
-157335,2020-07-05,44.0,62.0,,
-157340,2020-07-05,34.0,48.0,,
-157338,2020-07-05,40.0,66.0,,
-157342,2020-07-05,41.0,50.0,,
-157343,2020-07-06,47.0,45.0,,
-157349,2020-07-07,52.0,49.0,,
-157353,2020-07-07,38.0,71.0,,
-157346,2020-07-07,42.0,46.0,,
-157351,2020-07-08,50.0,34.0,,
-157352,2020-07-08,62.0,39.0,,
-157354,2020-07-08,48.0,44.0,,
-157348,2020-07-08,51.0,40.0,,
-157345,2020-07-09,35.0,47.0,,
-157350,2020-07-09,45.0,41.0,,
-157347,2020-07-09,66.0,33.0,,
-157360,2020-07-11,71.0,48.0,,
-157363,2020-07-11,38.0,34.0,,
-157358,2020-07-11,40.0,44.0,,
-157361,2020-07-11,62.0,49.0,,
-157357,2020-07-11,51.0,50.0,,
-157364,2020-07-12,39.0,45.0,,
-157356,2020-07-12,66.0,52.0,,
-157362,2020-07-12,47.0,42.0,,
-157355,2020-07-12,35.0,46.0,,
-157359,2020-07-13,33.0,41.0,,
-157365,2020-07-15,42.0,40.0,,
-157366,2020-07-15,44.0,39.0,,
-157367,2020-07-15,49.0,71.0,,
-157368,2020-07-15,52.0,33.0,,
-157369,2020-07-15,45.0,66.0,,
-157370,2020-07-15,46.0,62.0,,
-157371,2020-07-15,50.0,35.0,,
-157372,2020-07-15,34.0,47.0,,
-157373,2020-07-15,41.0,51.0,,
-157374,2020-07-15,48.0,38.0,,
-157375,2020-07-18,35.0,41.0,,
-157376,2020-07-18,66.0,42.0,,
-157377,2020-07-18,51.0,34.0,,
-157378,2020-07-18,40.0,49.0,,
-157379,2020-07-18,33.0,48.0,,
-157380,2020-07-18,71.0,44.0,,
-157381,2020-07-18,62.0,45.0,,
-157382,2020-07-18,47.0,46.0,,
-157383,2020-07-18,38.0,50.0,,
-157384,2020-07-18,39.0,52.0,,
-157385,2020-07-26,42.0,38.0,,
-157386,2020-07-26,44.0,51.0,,
-157387,2020-07-26,49.0,39.0,,
-157388,2020-07-26,52.0,47.0,,
-157389,2020-07-26,45.0,35.0,,
-157390,2020-07-26,46.0,33.0,,
-157391,2020-07-26,50.0,71.0,,
-157392,2020-07-26,34.0,40.0,,
-157393,2020-07-26,41.0,62.0,,
-157394,2020-07-26,48.0,66.0,,
+Fixture ID,Game Date,Home Team ID,Away Team ID,Home Team Goals,Away Team Goals,Venue,Home Team,Away Team,Home Team Logo,Away Team Logo
+157015,2019-08-09,40.0,71.0,4.0,1.0,Anfield,Liverpool,Norwich,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/71.png
+157016,2019-08-10,48.0,50.0,0.0,5.0,London Stadium,West Ham,Manchester City,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/50.png
+157017,2019-08-10,35.0,62.0,1.0,1.0,Vitality Stadium,Bournemouth,Sheffield Utd,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/62.png
+157018,2019-08-10,44.0,41.0,3.0,0.0,Turf Moor,Burnley,Southampton,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/41.png
+157019,2019-08-10,52.0,45.0,0.0,0.0,Selhurst Park,Crystal Palace,Everton,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/45.png
+157021,2019-08-10,38.0,51.0,0.0,3.0,Vicarage Road,Watford,Brighton,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/51.png
+157022,2019-08-10,47.0,66.0,3.0,1.0,Tottenham Hotspur Stadium,Tottenham,Aston Villa,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/66.png
+157020,2019-08-11,46.0,39.0,0.0,0.0,King Power Stadium,Leicester,Wolves,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/39.png
+157023,2019-08-11,34.0,42.0,0.0,1.0,St. James' Park,Newcastle,Arsenal,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/42.png
+157024,2019-08-11,33.0,49.0,4.0,0.0,Old Trafford,Manchester United,Chelsea,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/49.png
+157025,2019-08-17,42.0,44.0,2.0,1.0,Emirates Stadium,Arsenal,Burnley,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/44.png
+157026,2019-08-17,66.0,35.0,1.0,2.0,Villa Park,Aston Villa,Bournemouth,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/35.png
+157027,2019-08-17,51.0,48.0,1.0,1.0,The American Express Community Stadium,Brighton,West Ham,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/48.png
+157029,2019-08-17,45.0,38.0,1.0,0.0,Goodison Park,Everton,Watford,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/38.png
+157031,2019-08-17,71.0,34.0,3.0,1.0,Carrow Road,Norwich,Newcastle,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/34.png
+157033,2019-08-17,41.0,40.0,1.0,2.0,St. Mary's Stadium,Southampton,Liverpool,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/40.png
+157030,2019-08-17,50.0,47.0,2.0,2.0,Etihad Stadium,Manchester City,Tottenham,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/47.png
+157032,2019-08-18,62.0,52.0,1.0,0.0,Bramall Lane,Sheffield Utd,Crystal Palace,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/52.png
+157028,2019-08-18,49.0,46.0,1.0,1.0,Stamford Bridge,Chelsea,Leicester,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/46.png
+157034,2019-08-19,39.0,33.0,1.0,1.0,Molineux Stadium,Wolves,Manchester United,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/33.png
+157036,2019-08-23,66.0,45.0,2.0,0.0,Villa Park,Aston Villa,Everton,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/45.png
+157040,2019-08-24,71.0,49.0,2.0,3.0,Carrow Road,Norwich,Chelsea,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/49.png
+157037,2019-08-24,51.0,41.0,0.0,2.0,The American Express Community Stadium,Brighton,Southampton,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/41.png
+157039,2019-08-24,33.0,52.0,1.0,2.0,Old Trafford,Manchester United,Crystal Palace,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/52.png
+157041,2019-08-24,62.0,46.0,1.0,2.0,Bramall Lane,Sheffield Utd,Leicester,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/46.png
+157043,2019-08-24,38.0,48.0,1.0,3.0,Vicarage Road,Watford,West Ham,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/48.png
+157038,2019-08-24,40.0,42.0,3.0,1.0,Anfield,Liverpool,Arsenal,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/42.png
+157035,2019-08-25,35.0,50.0,1.0,3.0,Vitality Stadium,Bournemouth,Manchester City,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/50.png
+157042,2019-08-25,47.0,34.0,0.0,1.0,Tottenham Hotspur Stadium,Tottenham,Newcastle,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/34.png
+157044,2019-08-25,39.0,44.0,1.0,1.0,Molineux Stadium,Wolves,Burnley,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/44.png
+157053,2019-08-31,41.0,33.0,1.0,1.0,St. Mary's Stadium,Southampton,Manchester United,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/33.png
+157048,2019-08-31,52.0,66.0,1.0,0.0,Selhurst Park,Crystal Palace,Aston Villa,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/66.png
+157050,2019-08-31,46.0,35.0,3.0,1.0,King Power Stadium,Leicester,Bournemouth,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/35.png
+157051,2019-08-31,50.0,51.0,4.0,0.0,Etihad Stadium,Manchester City,Brighton,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/51.png
+157052,2019-08-31,34.0,38.0,1.0,1.0,St. James' Park,Newcastle,Watford,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/38.png
+157054,2019-08-31,48.0,71.0,2.0,0.0,London Stadium,West Ham,Norwich,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/71.png
+157047,2019-08-31,49.0,62.0,2.0,2.0,Stamford Bridge,Chelsea,Sheffield Utd,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/62.png
+157046,2019-08-31,44.0,40.0,0.0,3.0,Turf Moor,Burnley,Liverpool,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/40.png
+157049,2019-09-01,45.0,39.0,3.0,2.0,Goodison Park,Everton,Wolves,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/39.png
+157045,2019-09-01,42.0,47.0,2.0,2.0,Emirates Stadium,Arsenal,Tottenham,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/47.png
+157058,2019-09-14,40.0,34.0,3.0,1.0,Anfield,Liverpool,Newcastle,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/34.png
+157057,2019-09-14,51.0,44.0,1.0,1.0,The American Express Community Stadium,Brighton,Burnley,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/44.png
+157059,2019-09-14,33.0,46.0,1.0,0.0,Old Trafford,Manchester United,Leicester,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/46.png
+157061,2019-09-14,62.0,41.0,0.0,1.0,Bramall Lane,Sheffield Utd,Southampton,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/41.png
+157062,2019-09-14,47.0,52.0,4.0,0.0,Tottenham Hotspur Stadium,Tottenham,Crystal Palace,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/52.png
+157064,2019-09-14,39.0,49.0,2.0,5.0,Molineux Stadium,Wolves,Chelsea,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/49.png
+157060,2019-09-14,71.0,50.0,3.0,2.0,Carrow Road,Norwich,Manchester City,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/50.png
+157055,2019-09-15,35.0,45.0,3.0,1.0,Vitality Stadium,Bournemouth,Everton,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/45.png
+157063,2019-09-15,38.0,42.0,2.0,2.0,Vicarage Road,Watford,Arsenal,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/42.png
+157056,2019-09-16,66.0,48.0,0.0,0.0,Villa Park,Aston Villa,West Ham,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/48.png
+157073,2019-09-20,41.0,35.0,1.0,3.0,St. Mary's Stadium,Southampton,Bournemouth,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/35.png
+157070,2019-09-21,46.0,47.0,2.0,1.0,King Power Stadium,Leicester,Tottenham,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/47.png
+157066,2019-09-21,44.0,71.0,2.0,0.0,Turf Moor,Burnley,Norwich,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/71.png
+157069,2019-09-21,45.0,62.0,0.0,2.0,Goodison Park,Everton,Sheffield Utd,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/62.png
+157071,2019-09-21,50.0,38.0,8.0,0.0,Etihad Stadium,Manchester City,Watford,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/38.png
+157072,2019-09-21,34.0,51.0,0.0,0.0,St. James' Park,Newcastle,Brighton,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/51.png
+157068,2019-09-22,52.0,39.0,1.0,1.0,Selhurst Park,Crystal Palace,Wolves,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/39.png
+157074,2019-09-22,48.0,33.0,2.0,0.0,London Stadium,West Ham,Manchester United,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/33.png
+157065,2019-09-22,42.0,66.0,3.0,2.0,Emirates Stadium,Arsenal,Aston Villa,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/66.png
+157067,2019-09-22,49.0,40.0,1.0,2.0,Stamford Bridge,Chelsea,Liverpool,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/40.png
+157082,2019-09-28,62.0,40.0,0.0,1.0,Bramall Lane,Sheffield Utd,Liverpool,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/40.png
+157075,2019-09-28,35.0,48.0,2.0,2.0,Vitality Stadium,Bournemouth,West Ham,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/48.png
+157076,2019-09-28,66.0,44.0,2.0,2.0,Villa Park,Aston Villa,Burnley,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/44.png
+157077,2019-09-28,49.0,51.0,2.0,0.0,Stamford Bridge,Chelsea,Brighton,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/51.png
+157078,2019-09-28,52.0,71.0,2.0,0.0,Selhurst Park,Crystal Palace,Norwich,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/71.png
+157083,2019-09-28,47.0,41.0,2.0,1.0,Tottenham Hotspur Stadium,Tottenham,Southampton,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/41.png
+157084,2019-09-28,39.0,38.0,2.0,0.0,Molineux Stadium,Wolves,Watford,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/38.png
+157079,2019-09-28,45.0,50.0,1.0,3.0,Goodison Park,Everton,Manchester City,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/50.png
+157080,2019-09-29,46.0,34.0,5.0,0.0,King Power Stadium,Leicester,Newcastle,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/34.png
+157081,2019-09-30,33.0,42.0,1.0,1.0,Old Trafford,Manchester United,Arsenal,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/42.png
+157086,2019-10-05,51.0,47.0,3.0,0.0,The American Express Community Stadium,Brighton,Tottenham,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/47.png
+157087,2019-10-05,44.0,45.0,1.0,0.0,Turf Moor,Burnley,Everton,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/45.png
+157088,2019-10-05,40.0,46.0,2.0,1.0,Anfield,Liverpool,Leicester,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/46.png
+157091,2019-10-05,71.0,66.0,1.0,5.0,Carrow Road,Norwich,Aston Villa,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/66.png
+157093,2019-10-05,38.0,62.0,0.0,0.0,Vicarage Road,Watford,Sheffield Utd,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/62.png
+157094,2019-10-05,48.0,52.0,1.0,2.0,London Stadium,West Ham,Crystal Palace,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/52.png
+157085,2019-10-06,42.0,35.0,1.0,0.0,Emirates Stadium,Arsenal,Bournemouth,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/35.png
+157089,2019-10-06,50.0,39.0,0.0,2.0,Etihad Stadium,Manchester City,Wolves,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/39.png
+157092,2019-10-06,41.0,49.0,1.0,4.0,St. Mary's Stadium,Southampton,Chelsea,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/49.png
+157090,2019-10-06,34.0,33.0,1.0,0.0,St. James' Park,Newcastle,Manchester United,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/33.png
+157099,2019-10-19,45.0,48.0,2.0,0.0,Goodison Park,Everton,West Ham,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/48.png
+157095,2019-10-19,35.0,71.0,0.0,0.0,Vitality Stadium,Bournemouth,Norwich,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/71.png
+157096,2019-10-19,66.0,51.0,2.0,1.0,Villa Park,Aston Villa,Brighton,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/51.png
+157097,2019-10-19,49.0,34.0,1.0,0.0,Stamford Bridge,Chelsea,Newcastle,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/34.png
+157100,2019-10-19,46.0,44.0,2.0,1.0,King Power Stadium,Leicester,Burnley,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/44.png
+157103,2019-10-19,47.0,38.0,1.0,1.0,Tottenham Hotspur Stadium,Tottenham,Watford,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/38.png
+157104,2019-10-19,39.0,41.0,1.0,1.0,Molineux Stadium,Wolves,Southampton,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/41.png
+157098,2019-10-19,52.0,50.0,0.0,2.0,Selhurst Park,Crystal Palace,Manchester City,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/50.png
+157101,2019-10-20,33.0,40.0,1.0,1.0,Old Trafford,Manchester United,Liverpool,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/40.png
+157102,2019-10-21,62.0,42.0,1.0,0.0,Bramall Lane,Sheffield Utd,Arsenal,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/42.png
+157112,2019-10-25,41.0,46.0,0.0,9.0,St. Mary's Stadium,Southampton,Leicester,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/46.png
+157109,2019-10-26,50.0,66.0,3.0,0.0,Etihad Stadium,Manchester City,Aston Villa,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/66.png
+157106,2019-10-26,51.0,45.0,3.0,2.0,The American Express Community Stadium,Brighton,Everton,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/45.png
+157113,2019-10-26,38.0,35.0,0.0,0.0,Vicarage Road,Watford,Bournemouth,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/35.png
+157114,2019-10-26,48.0,62.0,1.0,1.0,London Stadium,West Ham,Sheffield Utd,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/62.png
+157107,2019-10-26,44.0,49.0,2.0,4.0,Turf Moor,Burnley,Chelsea,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/49.png
+157110,2019-10-27,34.0,39.0,1.0,1.0,St. James' Park,Newcastle,Wolves,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/39.png
+157105,2019-10-27,42.0,52.0,2.0,2.0,Emirates Stadium,Arsenal,Crystal Palace,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/52.png
+157108,2019-10-27,40.0,47.0,2.0,1.0,Anfield,Liverpool,Tottenham,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/47.png
+157111,2019-10-27,71.0,33.0,1.0,3.0,Carrow Road,Norwich,Manchester United,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/33.png
+157115,2019-11-02,35.0,33.0,1.0,0.0,Vitality Stadium,Bournemouth,Manchester United,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/33.png
+157116,2019-11-02,42.0,39.0,1.0,1.0,Emirates Stadium,Arsenal,Wolves,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/39.png
+157117,2019-11-02,66.0,40.0,1.0,2.0,Villa Park,Aston Villa,Liverpool,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/40.png
+157118,2019-11-02,51.0,71.0,2.0,0.0,The American Express Community Stadium,Brighton,Norwich,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/71.png
+157121,2019-11-02,50.0,41.0,2.0,1.0,Etihad Stadium,Manchester City,Southampton,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/41.png
+157122,2019-11-02,62.0,44.0,3.0,0.0,Bramall Lane,Sheffield Utd,Burnley,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/44.png
+157124,2019-11-02,48.0,34.0,2.0,3.0,London Stadium,West Ham,Newcastle,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/34.png
+157123,2019-11-02,38.0,49.0,1.0,2.0,Vicarage Road,Watford,Chelsea,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/49.png
+157119,2019-11-03,52.0,46.0,0.0,2.0,Selhurst Park,Crystal Palace,Leicester,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/46.png
+157120,2019-11-03,45.0,47.0,1.0,1.0,Goodison Park,Everton,Tottenham,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/47.png
+157131,2019-11-08,71.0,38.0,0.0,2.0,Carrow Road,Norwich,Watford,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/38.png
+157126,2019-11-09,49.0,52.0,2.0,0.0,Stamford Bridge,Chelsea,Crystal Palace,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/52.png
+157125,2019-11-09,44.0,48.0,3.0,0.0,Turf Moor,Burnley,West Ham,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/48.png
+157130,2019-11-09,34.0,35.0,2.0,1.0,St. James' Park,Newcastle,Bournemouth,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/35.png
+157132,2019-11-09,41.0,45.0,1.0,2.0,St. Mary's Stadium,Southampton,Everton,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/45.png
+157133,2019-11-09,47.0,62.0,1.0,1.0,Tottenham Hotspur Stadium,Tottenham,Sheffield Utd,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/62.png
+157127,2019-11-09,46.0,42.0,2.0,0.0,King Power Stadium,Leicester,Arsenal,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/42.png
+157129,2019-11-10,33.0,51.0,3.0,1.0,Old Trafford,Manchester United,Brighton,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/51.png
+157134,2019-11-10,39.0,66.0,2.0,1.0,Molineux Stadium,Wolves,Aston Villa,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/66.png
+157128,2019-11-10,40.0,50.0,3.0,1.0,Anfield,Liverpool,Manchester City,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/50.png
+157144,2019-11-23,48.0,47.0,2.0,3.0,London Stadium,West Ham,Tottenham,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/47.png
+157135,2019-11-23,35.0,39.0,1.0,2.0,Vitality Stadium,Bournemouth,Wolves,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/39.png
+157136,2019-11-23,42.0,41.0,2.0,2.0,Emirates Stadium,Arsenal,Southampton,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/41.png
+157138,2019-11-23,51.0,46.0,0.0,2.0,The American Express Community Stadium,Brighton,Leicester,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/46.png
+157139,2019-11-23,52.0,40.0,1.0,2.0,Selhurst Park,Crystal Palace,Liverpool,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/40.png
+157140,2019-11-23,45.0,71.0,0.0,2.0,Goodison Park,Everton,Norwich,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/71.png
+157143,2019-11-23,38.0,44.0,0.0,3.0,Vicarage Road,Watford,Burnley,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/44.png
+157141,2019-11-23,50.0,49.0,2.0,1.0,Etihad Stadium,Manchester City,Chelsea,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/49.png
+157142,2019-11-24,62.0,33.0,3.0,3.0,Bramall Lane,Sheffield Utd,Manchester United,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/33.png
+157137,2019-11-25,66.0,34.0,2.0,0.0,Villa Park,Aston Villa,Newcastle,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/34.png
+157150,2019-11-30,34.0,50.0,2.0,2.0,St. James' Park,Newcastle,Manchester City,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/50.png
+157145,2019-11-30,44.0,52.0,0.0,2.0,Turf Moor,Burnley,Crystal Palace,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/52.png
+157146,2019-11-30,49.0,48.0,0.0,1.0,Stamford Bridge,Chelsea,West Ham,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/48.png
+157148,2019-11-30,40.0,51.0,2.0,1.0,Anfield,Liverpool,Brighton,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/51.png
+157153,2019-11-30,47.0,35.0,3.0,2.0,Tottenham Hotspur Stadium,Tottenham,Bournemouth,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/35.png
+157152,2019-11-30,41.0,38.0,2.0,1.0,St. Mary's Stadium,Southampton,Watford,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/38.png
+157151,2019-12-01,71.0,42.0,2.0,2.0,Carrow Road,Norwich,Arsenal,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/42.png
+157154,2019-12-01,39.0,62.0,1.0,1.0,Molineux Stadium,Wolves,Sheffield Utd,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/62.png
+157147,2019-12-01,46.0,45.0,2.0,1.0,King Power Stadium,Leicester,Everton,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/45.png
+157149,2019-12-01,33.0,66.0,2.0,2.0,Old Trafford,Manchester United,Aston Villa,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/66.png
+157163,2019-12-03,52.0,35.0,1.0,0.0,Selhurst Park,Crystal Palace,Bournemouth,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/35.png
+157156,2019-12-03,44.0,50.0,1.0,4.0,Turf Moor,Burnley,Manchester City,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/50.png
+157157,2019-12-04,46.0,38.0,2.0,0.0,King Power Stadium,Leicester,Watford,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/38.png
+157159,2019-12-04,39.0,48.0,2.0,0.0,Molineux Stadium,Wolves,West Ham,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/48.png
+157160,2019-12-04,33.0,47.0,2.0,1.0,Old Trafford,Manchester United,Tottenham,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/47.png
+157161,2019-12-04,49.0,66.0,2.0,1.0,Stamford Bridge,Chelsea,Aston Villa,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/66.png
+157162,2019-12-04,41.0,71.0,2.0,1.0,St. Mary's Stadium,Southampton,Norwich,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/71.png
+157164,2019-12-04,40.0,45.0,5.0,2.0,Anfield,Liverpool,Everton,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/45.png
+157158,2019-12-05,62.0,34.0,0.0,2.0,Bramall Lane,Sheffield Utd,Newcastle,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/34.png
+157155,2019-12-05,42.0,51.0,1.0,2.0,Emirates Stadium,Arsenal,Brighton,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/51.png
+157168,2019-12-07,45.0,49.0,3.0,1.0,Goodison Park,Everton,Chelsea,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/49.png
+157165,2019-12-07,35.0,40.0,0.0,3.0,Vitality Stadium,Bournemouth,Liverpool,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/40.png
+157172,2019-12-07,47.0,44.0,5.0,0.0,Tottenham Hotspur Stadium,Tottenham,Burnley,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/44.png
+157173,2019-12-07,38.0,52.0,0.0,0.0,Vicarage Road,Watford,Crystal Palace,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/52.png
+157169,2019-12-07,50.0,33.0,1.0,2.0,Etihad Stadium,Manchester City,Manchester United,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/33.png
+157166,2019-12-08,66.0,46.0,1.0,4.0,Villa Park,Aston Villa,Leicester,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/46.png
+157170,2019-12-08,34.0,41.0,2.0,1.0,St. James' Park,Newcastle,Southampton,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/41.png
+157171,2019-12-08,71.0,62.0,1.0,2.0,Carrow Road,Norwich,Sheffield Utd,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/62.png
+157167,2019-12-08,51.0,39.0,2.0,2.0,The American Express Community Stadium,Brighton,Wolves,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/39.png
+157174,2019-12-09,48.0,42.0,1.0,3.0,London Stadium,West Ham,Arsenal,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/42.png
+157180,2019-12-14,40.0,38.0,2.0,0.0,Anfield,Liverpool,Watford,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/38.png
+157176,2019-12-14,44.0,34.0,1.0,0.0,Turf Moor,Burnley,Newcastle,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/34.png
+157177,2019-12-14,49.0,35.0,0.0,1.0,Stamford Bridge,Chelsea,Bournemouth,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/35.png
+157179,2019-12-14,46.0,71.0,1.0,1.0,King Power Stadium,Leicester,Norwich,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/71.png
+157182,2019-12-14,62.0,66.0,2.0,0.0,Bramall Lane,Sheffield Utd,Aston Villa,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/66.png
+157183,2019-12-14,41.0,48.0,0.0,1.0,St. Mary's Stadium,Southampton,West Ham,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/48.png
+157181,2019-12-15,33.0,45.0,1.0,1.0,Old Trafford,Manchester United,Everton,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/45.png
+157184,2019-12-15,39.0,47.0,1.0,2.0,Molineux Stadium,Wolves,Tottenham,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/47.png
+157175,2019-12-15,42.0,50.0,0.0,3.0,Emirates Stadium,Arsenal,Manchester City,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/50.png
+157178,2019-12-16,52.0,51.0,1.0,1.0,Selhurst Park,Crystal Palace,Brighton,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/51.png
+157188,2019-12-21,45.0,42.0,0.0,0.0,Goodison Park,Everton,Arsenal,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/42.png
+157185,2019-12-21,35.0,44.0,0.0,1.0,Vitality Stadium,Bournemouth,Burnley,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/44.png
+157186,2019-12-21,66.0,41.0,1.0,3.0,Villa Park,Aston Villa,Southampton,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/41.png
+157187,2019-12-21,51.0,62.0,0.0,1.0,The American Express Community Stadium,Brighton,Sheffield Utd,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/62.png
+157190,2019-12-21,34.0,52.0,1.0,0.0,St. James' Park,Newcastle,Crystal Palace,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/52.png
+157191,2019-12-21,71.0,39.0,1.0,2.0,Carrow Road,Norwich,Wolves,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/39.png
+157189,2019-12-21,50.0,46.0,3.0,1.0,Etihad Stadium,Manchester City,Leicester,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/46.png
+157193,2019-12-22,38.0,33.0,2.0,0.0,Vicarage Road,Watford,Manchester United,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/33.png
+157192,2019-12-22,47.0,49.0,0.0,2.0,Tottenham Hotspur Stadium,Tottenham,Chelsea,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/49.png
+157203,2019-12-26,47.0,51.0,2.0,1.0,Tottenham Hotspur Stadium,Tottenham,Brighton,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/51.png
+157195,2019-12-26,35.0,42.0,1.0,1.0,Vitality Stadium,Bournemouth,Arsenal,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/42.png
+157196,2019-12-26,66.0,71.0,1.0,0.0,Villa Park,Aston Villa,Norwich,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/71.png
+157197,2019-12-26,49.0,41.0,0.0,2.0,Stamford Bridge,Chelsea,Southampton,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/41.png
+157198,2019-12-26,52.0,48.0,2.0,1.0,Selhurst Park,Crystal Palace,West Ham,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/48.png
+157199,2019-12-26,45.0,44.0,1.0,0.0,Goodison Park,Everton,Burnley,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/44.png
+157202,2019-12-26,62.0,38.0,1.0,1.0,Bramall Lane,Sheffield Utd,Watford,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/38.png
+157201,2019-12-26,33.0,34.0,4.0,1.0,Old Trafford,Manchester United,Newcastle,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/34.png
+157200,2019-12-26,46.0,40.0,0.0,4.0,King Power Stadium,Leicester,Liverpool,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/40.png
+157204,2019-12-27,39.0,50.0,3.0,2.0,Molineux Stadium,Wolves,Manchester City,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/50.png
+157206,2019-12-28,51.0,35.0,2.0,0.0,The American Express Community Stadium,Brighton,Bournemouth,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/35.png
+157210,2019-12-28,34.0,45.0,1.0,2.0,St. James' Park,Newcastle,Everton,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/45.png
+157212,2019-12-28,41.0,52.0,1.0,1.0,St. Mary's Stadium,Southampton,Crystal Palace,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/52.png
+157213,2019-12-28,38.0,66.0,3.0,0.0,Vicarage Road,Watford,Aston Villa,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/66.png
+157211,2019-12-28,71.0,47.0,2.0,2.0,Carrow Road,Norwich,Tottenham,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/47.png
+157214,2019-12-28,48.0,46.0,1.0,2.0,London Stadium,West Ham,Leicester,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/46.png
+157207,2019-12-28,44.0,33.0,0.0,2.0,Turf Moor,Burnley,Manchester United,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/33.png
+157205,2019-12-29,42.0,49.0,1.0,2.0,Emirates Stadium,Arsenal,Chelsea,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/49.png
+157208,2019-12-29,40.0,39.0,1.0,0.0,Anfield,Liverpool,Wolves,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/39.png
+157209,2019-12-29,50.0,62.0,2.0,0.0,Etihad Stadium,Manchester City,Sheffield Utd,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/62.png
+157216,2020-01-01,51.0,49.0,1.0,1.0,The American Express Community Stadium,Brighton,Chelsea,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/49.png
+157217,2020-01-01,44.0,66.0,1.0,2.0,Turf Moor,Burnley,Aston Villa,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/66.png
+157220,2020-01-01,34.0,46.0,0.0,3.0,St. James' Park,Newcastle,Leicester,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/46.png
+157222,2020-01-01,41.0,47.0,1.0,0.0,St. Mary's Stadium,Southampton,Tottenham,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/47.png
+157223,2020-01-01,38.0,39.0,2.0,1.0,Vicarage Road,Watford,Wolves,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/39.png
+157219,2020-01-01,50.0,45.0,2.0,1.0,Etihad Stadium,Manchester City,Everton,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/45.png
+157221,2020-01-01,71.0,52.0,1.0,1.0,Carrow Road,Norwich,Crystal Palace,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/52.png
+157224,2020-01-01,48.0,35.0,4.0,0.0,London Stadium,West Ham,Bournemouth,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/35.png
+157215,2020-01-01,42.0,33.0,2.0,0.0,Emirates Stadium,Arsenal,Manchester United,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/33.png
+157218,2020-01-02,40.0,62.0,2.0,0.0,Anfield,Liverpool,Sheffield Utd,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/62.png
+157232,2020-01-10,62.0,48.0,1.0,0.0,Bramall Lane,Sheffield Utd,West Ham,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/48.png
+157228,2020-01-11,52.0,42.0,1.0,1.0,Selhurst Park,Crystal Palace,Arsenal,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/42.png
+157227,2020-01-11,49.0,44.0,3.0,0.0,Stamford Bridge,Chelsea,Burnley,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/44.png
+157229,2020-01-11,45.0,51.0,1.0,0.0,Goodison Park,Everton,Brighton,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/51.png
+157230,2020-01-11,46.0,41.0,1.0,2.0,King Power Stadium,Leicester,Southampton,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/41.png
+157231,2020-01-11,33.0,71.0,4.0,0.0,Old Trafford,Manchester United,Norwich,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/71.png
+157234,2020-01-11,39.0,34.0,1.0,1.0,Molineux Stadium,Wolves,Newcastle,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/34.png
+157233,2020-01-11,47.0,40.0,0.0,1.0,Tottenham Hotspur Stadium,Tottenham,Liverpool,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/40.png
+157225,2020-01-12,35.0,38.0,0.0,3.0,Vitality Stadium,Bournemouth,Watford,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/38.png
+157226,2020-01-12,66.0,50.0,1.0,6.0,Villa Park,Aston Villa,Manchester City,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/50.png
+157243,2020-01-18,38.0,47.0,0.0,0.0,Vicarage Road,Watford,Tottenham,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/47.png
+157235,2020-01-18,42.0,62.0,1.0,1.0,Emirates Stadium,Arsenal,Sheffield Utd,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/62.png
+157236,2020-01-18,51.0,66.0,1.0,1.0,The American Express Community Stadium,Brighton,Aston Villa,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/66.png
+157239,2020-01-18,50.0,52.0,2.0,2.0,Etihad Stadium,Manchester City,Crystal Palace,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/52.png
+157241,2020-01-18,71.0,35.0,1.0,0.0,Carrow Road,Norwich,Bournemouth,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/35.png
+157242,2020-01-18,41.0,39.0,2.0,3.0,St. Mary's Stadium,Southampton,Wolves,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/39.png
+157244,2020-01-18,48.0,45.0,1.0,1.0,London Stadium,West Ham,Everton,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/45.png
+157240,2020-01-18,34.0,49.0,1.0,0.0,St. James' Park,Newcastle,Chelsea,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/49.png
+157237,2020-01-19,44.0,46.0,2.0,1.0,Turf Moor,Burnley,Leicester,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/46.png
+157238,2020-01-19,40.0,33.0,2.0,0.0,Anfield,Liverpool,Manchester United,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/33.png
+157245,2020-01-21,35.0,51.0,3.0,1.0,Vitality Stadium,Bournemouth,Brighton,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/51.png
+157246,2020-01-21,66.0,38.0,2.0,1.0,Villa Park,Aston Villa,Watford,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/38.png
+157247,2020-01-21,45.0,34.0,2.0,2.0,Goodison Park,Everton,Newcastle,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/34.png
+157249,2020-01-21,62.0,50.0,0.0,1.0,Bramall Lane,Sheffield Utd,Manchester City,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/50.png
+157254,2020-01-21,52.0,41.0,0.0,2.0,Selhurst Park,Crystal Palace,Southampton,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/41.png
+157252,2020-01-21,49.0,42.0,2.0,2.0,Stamford Bridge,Chelsea,Arsenal,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/42.png
+157248,2020-01-22,46.0,48.0,4.0,1.0,King Power Stadium,Leicester,West Ham,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/48.png
+157253,2020-01-22,47.0,71.0,2.0,1.0,Tottenham Hotspur Stadium,Tottenham,Norwich,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/71.png
+157251,2020-01-22,33.0,44.0,0.0,2.0,Old Trafford,Manchester United,Burnley,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/44.png
+157250,2020-01-23,39.0,40.0,1.0,2.0,Molineux Stadium,Wolves,Liverpool,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/40.png
+157194,2020-01-29,48.0,40.0,0.0,2.0,London Stadium,West Ham,Liverpool,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/40.png
+157258,2020-02-01,46.0,49.0,2.0,2.0,King Power Stadium,Leicester,Chelsea,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/49.png
+157255,2020-02-01,35.0,66.0,2.0,1.0,Vitality Stadium,Bournemouth,Aston Villa,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/66.png
+157257,2020-02-01,52.0,62.0,0.0,1.0,Selhurst Park,Crystal Palace,Sheffield Utd,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/62.png
+157259,2020-02-01,40.0,41.0,4.0,0.0,Anfield,Liverpool,Southampton,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/41.png
+157261,2020-02-01,34.0,71.0,0.0,0.0,St. James' Park,Newcastle,Norwich,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/71.png
+157263,2020-02-01,38.0,45.0,2.0,3.0,Vicarage Road,Watford,Everton,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/45.png
+157264,2020-02-01,48.0,51.0,3.0,3.0,London Stadium,West Ham,Brighton,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/51.png
+157260,2020-02-01,33.0,39.0,0.0,0.0,Old Trafford,Manchester United,Wolves,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/39.png
+157256,2020-02-02,44.0,42.0,0.0,0.0,Turf Moor,Burnley,Arsenal,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/42.png
+157262,2020-02-02,47.0,50.0,2.0,0.0,Tottenham Hotspur Stadium,Tottenham,Manchester City,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/50.png
+157269,2020-02-08,45.0,52.0,3.0,1.0,Goodison Park,Everton,Crystal Palace,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/52.png
+157267,2020-02-08,51.0,38.0,1.0,1.0,The American Express Community Stadium,Brighton,Watford,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/38.png
+157272,2020-02-09,62.0,35.0,2.0,1.0,Bramall Lane,Sheffield Utd,Bournemouth,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/35.png
+157274,2020-02-14,39.0,46.0,0.0,0.0,Molineux Stadium,Wolves,Leicester,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/46.png
+157273,2020-02-15,41.0,44.0,1.0,2.0,St. Mary's Stadium,Southampton,Burnley,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/44.png
+157271,2020-02-15,71.0,40.0,0.0,1.0,Carrow Road,Norwich,Liverpool,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/40.png
+157266,2020-02-16,66.0,47.0,2.0,3.0,Villa Park,Aston Villa,Tottenham,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/47.png
+157265,2020-02-16,42.0,34.0,4.0,0.0,Emirates Stadium,Arsenal,Newcastle,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/34.png
+157268,2020-02-17,49.0,33.0,0.0,2.0,Stamford Bridge,Chelsea,Manchester United,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/33.png
+157270,2020-02-19,50.0,48.0,2.0,0.0,Etihad Stadium,Manchester City,West Ham,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/48.png
+157277,2020-02-22,49.0,47.0,2.0,1.0,Stamford Bridge,Chelsea,Tottenham,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/47.png
+157276,2020-02-22,44.0,35.0,3.0,0.0,Turf Moor,Burnley,Bournemouth,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/35.png
+157278,2020-02-22,52.0,34.0,1.0,0.0,Selhurst Park,Crystal Palace,Newcastle,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/34.png
+157282,2020-02-22,62.0,51.0,1.0,1.0,Bramall Lane,Sheffield Utd,Brighton,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/51.png
+157283,2020-02-22,41.0,66.0,2.0,0.0,St. Mary's Stadium,Southampton,Aston Villa,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/66.png
+157279,2020-02-22,46.0,50.0,0.0,1.0,King Power Stadium,Leicester,Manchester City,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/50.png
+157281,2020-02-23,33.0,38.0,3.0,0.0,Old Trafford,Manchester United,Watford,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/38.png
+157284,2020-02-23,39.0,71.0,3.0,0.0,Molineux Stadium,Wolves,Norwich,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/71.png
+157275,2020-02-23,42.0,45.0,3.0,2.0,Emirates Stadium,Arsenal,Everton,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/45.png
+157280,2020-02-24,40.0,48.0,3.0,2.0,Anfield,Liverpool,West Ham,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/48.png
+157291,2020-02-28,71.0,46.0,1.0,0.0,Carrow Road,Norwich,Leicester,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/46.png
+157287,2020-02-29,51.0,52.0,0.0,1.0,The American Express Community Stadium,Brighton,Crystal Palace,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/52.png
+157285,2020-02-29,35.0,49.0,2.0,2.0,Vitality Stadium,Bournemouth,Chelsea,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/49.png
+157290,2020-02-29,34.0,44.0,0.0,0.0,St. James' Park,Newcastle,Burnley,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/44.png
+157294,2020-02-29,48.0,41.0,3.0,1.0,London Stadium,West Ham,Southampton,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/41.png
+157293,2020-02-29,38.0,40.0,3.0,0.0,Vicarage Road,Watford,Liverpool,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/40.png
+157288,2020-03-01,45.0,33.0,1.0,1.0,Goodison Park,Everton,Manchester United,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/33.png
+157292,2020-03-01,47.0,39.0,2.0,3.0,Tottenham Hotspur Stadium,Tottenham,Wolves,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/39.png
+157300,2020-03-07,40.0,35.0,2.0,1.0,Anfield,Liverpool,Bournemouth,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/35.png
+157304,2020-03-07,39.0,51.0,0.0,0.0,Molineux Stadium,Wolves,Brighton,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/51.png
+157295,2020-03-07,42.0,48.0,1.0,0.0,Emirates Stadium,Arsenal,West Ham,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/48.png
+157298,2020-03-07,52.0,38.0,1.0,0.0,Selhurst Park,Crystal Palace,Watford,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/38.png
+157302,2020-03-07,62.0,71.0,1.0,0.0,Bramall Lane,Sheffield Utd,Norwich,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/71.png
+157303,2020-03-07,41.0,34.0,0.0,1.0,St. Mary's Stadium,Southampton,Newcastle,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/34.png
+157296,2020-03-07,44.0,47.0,1.0,1.0,Turf Moor,Burnley,Tottenham,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/47.png
+157297,2020-03-08,49.0,45.0,4.0,0.0,Stamford Bridge,Chelsea,Everton,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/45.png
+157301,2020-03-08,33.0,50.0,2.0,0.0,Old Trafford,Manchester United,Manchester City,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/50.png
+157299,2020-03-09,46.0,66.0,4.0,0.0,King Power Stadium,Leicester,Aston Villa,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/66.png
+157286,2020-06-17,66.0,62.0,0.0,0.0,Villa Park,Aston Villa,Sheffield Utd,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/62.png
+157289,2020-06-17,50.0,42.0,3.0,0.0,Etihad Stadium,Manchester City,Arsenal,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/42.png
+157311,2020-06-19,71.0,41.0,0.0,3.0,Carrow Road,Norwich,Southampton,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/41.png
+157312,2020-06-19,47.0,33.0,1.0,1.0,Tottenham Hotspur Stadium,Tottenham,Manchester United,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/33.png
+157313,2020-06-20,38.0,46.0,1.0,1.0,Vicarage Road,Watford,Leicester,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/46.png
+157307,2020-06-20,51.0,42.0,2.0,1.0,The American Express Community Stadium,Brighton,Arsenal,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/42.png
+157314,2020-06-20,48.0,39.0,0.0,2.0,London Stadium,West Ham,Wolves,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/39.png
+157305,2020-06-20,35.0,52.0,0.0,2.0,Vitality Stadium,Bournemouth,Crystal Palace,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/52.png
+157310,2020-06-21,34.0,62.0,3.0,0.0,St. James' Park,Newcastle,Sheffield Utd,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/62.png
+157306,2020-06-21,66.0,49.0,1.0,2.0,Villa Park,Aston Villa,Chelsea,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/49.png
+157308,2020-06-21,45.0,40.0,0.0,0.0,Goodison Park,Everton,Liverpool,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/40.png
+157309,2020-06-22,50.0,44.0,5.0,0.0,Etihad Stadium,Manchester City,Burnley,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/44.png
+157317,2020-06-23,46.0,51.0,0.0,0.0,King Power Stadium,Leicester,Brighton,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/51.png
+157323,2020-06-23,47.0,48.0,2.0,0.0,Tottenham Hotspur Stadium,Tottenham,West Ham,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/48.png
+157319,2020-06-24,33.0,62.0,3.0,0.0,Old Trafford,Manchester United,Sheffield Utd,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/62.png
+157320,2020-06-24,34.0,66.0,1.0,1.0,St. James' Park,Newcastle,Aston Villa,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/66.png
+157321,2020-06-24,71.0,45.0,0.0,1.0,Carrow Road,Norwich,Everton,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/45.png
+157324,2020-06-24,39.0,35.0,1.0,0.0,Molineux Stadium,Wolves,Bournemouth,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/35.png
+157318,2020-06-24,40.0,52.0,4.0,0.0,Anfield,Liverpool,Crystal Palace,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/52.png
+157315,2020-06-25,44.0,38.0,1.0,0.0,Turf Moor,Burnley,Watford,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/38.png
+157322,2020-06-25,41.0,42.0,0.0,2.0,St. Mary's Stadium,Southampton,Arsenal,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/42.png
+157316,2020-06-25,49.0,50.0,2.0,1.0,Stamford Bridge,Chelsea,Manchester City,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/50.png
+157327,2020-06-27,66.0,39.0,0.0,1.0,Villa Park,Aston Villa,Wolves,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/39.png
+157333,2020-06-28,38.0,41.0,1.0,3.0,Vicarage Road,Watford,Southampton,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/41.png
+157329,2020-06-29,52.0,44.0,,,Selhurst Park,Crystal Palace,Burnley,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/44.png
+157328,2020-06-30,51.0,33.0,,,The American Express Community Stadium,Brighton,Manchester United,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/33.png
+157325,2020-07-01,35.0,34.0,,,Vitality Stadium,Bournemouth,Newcastle,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/34.png
+157326,2020-07-01,42.0,71.0,,,Emirates Stadium,Arsenal,Norwich,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/71.png
+157330,2020-07-01,45.0,46.0,,,Goodison Park,Everton,Leicester,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/46.png
+157334,2020-07-01,48.0,49.0,,,London Stadium,West Ham,Chelsea,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/49.png
+157332,2020-07-02,62.0,47.0,,,Bramall Lane,Sheffield Utd,Tottenham,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/47.png
+157331,2020-07-02,50.0,40.0,,,Etihad Stadium,Manchester City,Liverpool,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/40.png
+157341,2020-07-04,71.0,51.0,,,Carrow Road,Norwich,Brighton,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/51.png
+157337,2020-07-04,46.0,52.0,,,King Power Stadium,Leicester,Crystal Palace,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/52.png
+157339,2020-07-04,33.0,35.0,,,Old Trafford,Manchester United,Bournemouth,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/35.png
+157344,2020-07-04,39.0,42.0,,,Molineux Stadium,Wolves,Arsenal,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/42.png
+157336,2020-07-04,49.0,38.0,,,Stamford Bridge,Chelsea,Watford,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/38.png
+157335,2020-07-05,44.0,62.0,,,Turf Moor,Burnley,Sheffield Utd,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/62.png
+157340,2020-07-05,34.0,48.0,,,St. James' Park,Newcastle,West Ham,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/48.png
+157338,2020-07-05,40.0,66.0,,,Anfield,Liverpool,Aston Villa,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/66.png
+157342,2020-07-05,41.0,50.0,,,St. Mary's Stadium,Southampton,Manchester City,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/50.png
+157343,2020-07-06,47.0,45.0,,,Tottenham Hotspur Stadium,Tottenham,Everton,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/45.png
+157349,2020-07-07,52.0,49.0,,,Selhurst Park,Crystal Palace,Chelsea,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/49.png
+157353,2020-07-07,38.0,71.0,,,Vicarage Road,Watford,Norwich,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/71.png
+157346,2020-07-07,42.0,46.0,,,Emirates Stadium,Arsenal,Leicester,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/46.png
+157351,2020-07-08,50.0,34.0,,,Etihad Stadium,Manchester City,Newcastle,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/34.png
+157352,2020-07-08,62.0,39.0,,,Bramall Lane,Sheffield Utd,Wolves,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/39.png
+157354,2020-07-08,48.0,44.0,,,London Stadium,West Ham,Burnley,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/44.png
+157348,2020-07-08,51.0,40.0,,,The American Express Community Stadium,Brighton,Liverpool,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/40.png
+157345,2020-07-09,35.0,47.0,,,Vitality Stadium,Bournemouth,Tottenham,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/47.png
+157350,2020-07-09,45.0,41.0,,,Goodison Park,Everton,Southampton,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/41.png
+157347,2020-07-09,66.0,33.0,,,Villa Park,Aston Villa,Manchester United,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/33.png
+157360,2020-07-11,71.0,48.0,,,Carrow Road,Norwich,West Ham,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/48.png
+157363,2020-07-11,38.0,34.0,,,Vicarage Road,Watford,Newcastle,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/34.png
+157358,2020-07-11,40.0,44.0,,,Anfield,Liverpool,Burnley,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/44.png
+157361,2020-07-11,62.0,49.0,,,Bramall Lane,Sheffield Utd,Chelsea,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/49.png
+157357,2020-07-11,51.0,50.0,,,The American Express Community Stadium,Brighton,Manchester City,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/50.png
+157364,2020-07-12,39.0,45.0,,,Molineux Stadium,Wolves,Everton,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/45.png
+157356,2020-07-12,66.0,52.0,,,Villa Park,Aston Villa,Crystal Palace,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/52.png
+157362,2020-07-12,47.0,42.0,,,Tottenham Hotspur Stadium,Tottenham,Arsenal,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/42.png
+157355,2020-07-12,35.0,46.0,,,Vitality Stadium,Bournemouth,Leicester,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/46.png
+157359,2020-07-13,33.0,41.0,,,Old Trafford,Manchester United,Southampton,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/41.png
+157365,2020-07-15,42.0,40.0,,,Emirates Stadium,Arsenal,Liverpool,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/40.png
+157366,2020-07-15,44.0,39.0,,,Turf Moor,Burnley,Wolves,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/39.png
+157367,2020-07-15,49.0,71.0,,,Stamford Bridge,Chelsea,Norwich,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/71.png
+157368,2020-07-15,52.0,33.0,,,Selhurst Park,Crystal Palace,Manchester United,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/33.png
+157369,2020-07-15,45.0,66.0,,,Goodison Park,Everton,Aston Villa,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/66.png
+157370,2020-07-15,46.0,62.0,,,King Power Stadium,Leicester,Sheffield Utd,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/62.png
+157371,2020-07-15,50.0,35.0,,,Etihad Stadium,Manchester City,Bournemouth,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/35.png
+157372,2020-07-15,34.0,47.0,,,St. James' Park,Newcastle,Tottenham,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/47.png
+157373,2020-07-15,41.0,51.0,,,St. Mary's Stadium,Southampton,Brighton,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/51.png
+157374,2020-07-15,48.0,38.0,,,London Stadium,West Ham,Watford,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/38.png
+157375,2020-07-18,35.0,41.0,,,Vitality Stadium,Bournemouth,Southampton,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/41.png
+157376,2020-07-18,66.0,42.0,,,Villa Park,Aston Villa,Arsenal,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/42.png
+157377,2020-07-18,51.0,34.0,,,The American Express Community Stadium,Brighton,Newcastle,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/34.png
+157378,2020-07-18,40.0,49.0,,,Anfield,Liverpool,Chelsea,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/49.png
+157379,2020-07-18,33.0,48.0,,,Old Trafford,Manchester United,West Ham,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/48.png
+157380,2020-07-18,71.0,44.0,,,Carrow Road,Norwich,Burnley,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/44.png
+157381,2020-07-18,62.0,45.0,,,Bramall Lane,Sheffield Utd,Everton,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/45.png
+157382,2020-07-18,47.0,46.0,,,Tottenham Hotspur Stadium,Tottenham,Leicester,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/46.png
+157383,2020-07-18,38.0,50.0,,,Vicarage Road,Watford,Manchester City,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/50.png
+157384,2020-07-18,39.0,52.0,,,Molineux Stadium,Wolves,Crystal Palace,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/52.png
+157385,2020-07-26,42.0,38.0,,,Emirates Stadium,Arsenal,Watford,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/38.png
+157386,2020-07-26,44.0,51.0,,,Turf Moor,Burnley,Brighton,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/51.png
+157387,2020-07-26,49.0,39.0,,,Stamford Bridge,Chelsea,Wolves,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/39.png
+157388,2020-07-26,52.0,47.0,,,Selhurst Park,Crystal Palace,Tottenham,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/47.png
+157389,2020-07-26,45.0,35.0,,,Goodison Park,Everton,Bournemouth,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/35.png
+157390,2020-07-26,46.0,33.0,,,King Power Stadium,Leicester,Manchester United,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/33.png
+157391,2020-07-26,50.0,71.0,,,Etihad Stadium,Manchester City,Norwich,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/71.png
+157392,2020-07-26,34.0,40.0,,,St. James' Park,Newcastle,Liverpool,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/40.png
+157393,2020-07-26,41.0,62.0,,,St. Mary's Stadium,Southampton,Sheffield Utd,https://media.api-sports.io/football/teams/41.png,https://media.api-sports.io/football/teams/62.png
+157394,2020-07-26,48.0,66.0,,,London Stadium,West Ham,Aston Villa,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/66.png
