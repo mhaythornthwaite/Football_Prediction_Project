@@ -24,7 +24,7 @@ x = df_ml_10['Team Av Corners Diff'][45]
 
 @app.route('/')
 def hello_world():
-    x = round(df_ml_10['Team Av Corners Diff'][45], 2)
+    x = round(df_ml_10['Team Av Corners Diff'][45], 2) + 48
     return render_template('index.html', x=x)
 
 # =============================================================================
