@@ -141,6 +141,9 @@ predictions_raw = clf.predict_proba(df_for_predictions_r)
 
 predictions_df = pd.DataFrame(data=predictions_raw, index=range(0, len(predictions_raw)), columns=['Away Win', 'Draw', 'Home Win'])
 
+predictions_df[predictions_df.select_dtypes(include=['number']).columns] *= 100
+predictions_df = predictions_df.round(1)
+
 predictions = pd.concat([unplayed_games, predictions_df], axis=1, join='inner')
 
 re_order_cols = ['Home Team', 'Away Team', 'Home Win', 'Draw', 'Away Win', 'Game Date', 'Venue', 'Home Team Logo', 'Away Team Logo', 'Home Team ID', 'Away Team ID', 'Fixture ID', 'index']
