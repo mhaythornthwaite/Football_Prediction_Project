@@ -20,7 +20,7 @@ import pandas as pd
 import pickle
 import numpy as np
 import math
-from data_cleaning_functions.feature_engineering_functions import generate_ml_df, running_mean
+from data_cleaning_functions.feature_engineering_functions import generate_ml_df, mod_df, running_mean
 
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
@@ -51,7 +51,11 @@ for team in team_fixture_id_dict:
     sub_dict = {team:team_fixture_list_reduced}
     team_fixture_id_dict_reduced.update(sub_dict)
 
-df_10_upcom_fix = generate_ml_df(10, team_list, team_fixture_id_dict_reduced, game_stats, making_predictions=True)
+
+
+df_10_upcom_fix_e = generate_ml_df(10, team_list, team_fixture_id_dict_reduced, game_stats, making_predictions=True)
+df_10_upcom_fix = mod_df(df_10_upcom_fix_e, making_predictions=True)
+
 
 
 #loading fixtures dataframe, we will work with the clean version but it is good to be aware of what is available in the raw version.
@@ -67,6 +71,7 @@ for i in range(0, len(fixtures)):
   
 unplayed_games = fixtures_clean.drop(fixtures_clean.index[played_games])
 unplayed_games = unplayed_games.reset_index()
+unplayed_games = unplayed_games.drop(['Home Team Goals', 'Away Team Goals'], axis=1)
 
 
 #loading df for the labels 
@@ -95,11 +100,11 @@ df_for_predictions['Game Date'] = unplayed_games['Game Date']
 for i in range(0, len(unplayed_games)):
     #getting home team id and index
     home_team = unplayed_games['Home Team ID'].iloc[i]
-    home_team_index = df_10_upcom_fix[df_10_upcom_fix['team_id']==home_team].index.values
+    home_team_index = df_10_upcom_fix[df_10_upcom_fix['Team ID']==home_team].index.values
     
     #getting away team id and index
     away_team = unplayed_games['Away Team ID'].iloc[i]
-    away_team_index = df_10_upcom_fix[df_10_upcom_fix['team_id']==away_team].index.values    
+    away_team_index = df_10_upcom_fix[df_10_upcom_fix['Team ID']==away_team].index.values    
     
     #getting the home and away team stats given the index of the teams. This still a df. To replace in the df_for_predictions we need this to be a list. This turns out to be quite complex (steps 2 through to 5)
     h1 = df_10_upcom_fix.iloc[home_team_index]
@@ -126,9 +131,26 @@ for i in range(0, len(unplayed_games)):
     df_for_predictions.iloc[i, 7:14] = a5
 
 
+#--------------------------- MAKING THE PREDICTIONS ---------------------------
 
+clf = pickle.load(open('../ml_model_build_random_forest/ml_models/random_forest_model_10.pk1', 'rb'))
 
+df_for_predictions_r = df_for_predictions.drop(['Home Team ID', 'Away Team ID', 'Home Team', 'Away Team', 'Game Date'], axis=1)
+
+predictions_raw = clf.predict_proba(df_for_predictions_r)
+
+predictions_df = pd.DataFrame(data=predictions_raw, index=range(0, len(predictions_raw)), columns=['Away Win', 'Draw', 'Home Win'])
+
+predictions = pd.concat([unplayed_games, predictions_df], axis=1, join='inner')
+
+re_order_cols = ['Home Team', 'Away Team', 'Home Win', 'Draw', 'Away Win', 'Game Date', 'Venue', 'Home Team Logo', 'Away Team Logo', 'Home Team ID', 'Away Team ID', 'Fixture ID', 'index']
     
+predictions = predictions.loc[:, re_order_cols]
+
+with open('pl_predictions.csv', 'wb') as myFile:
+    pickle.dump(predictions, myFile)  
+
+
 # ----------------------------------- END -------------------------------------
 
 print(' ----------------- END ----------------- ')

@@ -86,12 +86,13 @@ ml_10_rand_forest, x10_train, x10_test, y10_train, y10_test = rand_forest_train(
 ml_5_rand_forest, x5_train, x5_test, y5_train, y5_test = rand_forest_train(df_ml_5, print_result_label='DF_ML_5')
 
 
-#with open('ml_models/random_forest_model_5.pk1', 'wb') as myFile:
-#    pickle.dump(ml_5_rand_forest, myFile)
+with open('ml_models/random_forest_model_5.pk1', 'wb') as myFile:
+    pickle.dump(ml_5_rand_forest, myFile)
 
-#with open('ml_models/random_forest_model_10.pk1', 'wb') as myFile:
-#    pickle.dump(ml_10_rand_forest, myFile)
-    
+with open('ml_models/random_forest_model_10.pk1', 'wb') as myFile:
+    pickle.dump(ml_10_rand_forest, myFile)
+
+   
 
 
 # ----- ENSEMBLE MODELLING -----
@@ -102,17 +103,21 @@ ml_5_rand_forest, x5_train, x5_test, y5_train, y5_test = rand_forest_train(df_ml
 df_ml_5_dropto10 = df_ml_5.drop(list(range(0,50)))
 ml_5_to10_rand_forest, x5_to10_train, x5_to10_test, y5_to10_train, y5_to10_test = rand_forest_train(df_ml_5_dropto10, print_result=False)
 
+
 #making predictions using the two df inputs independantly
 y_pred_ml10 = ml_10_rand_forest.predict(x10_test)
 y_pred_ml5to10 = ml_5_to10_rand_forest.predict(x10_test)
+
 
 #making probability predictions on each of the datasets independantly
 pred_proba_ml10 = ml_10_rand_forest.predict_proba(x10_test)
 pred_proba_ml5_10 = ml_5_to10_rand_forest.predict_proba(x10_test)
 
+
 #combining independant probabilities and creating combined class prediction
 pred_proba_ml5and10 = (np.array(pred_proba_ml10) + np.array(pred_proba_ml5_10)) / 2.0
 y_pred_ml5and10 = np.argmax(pred_proba_ml5and10, axis=1)
+
 
 #accuracy score variables
 y_pred_ml10_accuracy = round(accuracy_score(y10_test, y_pred_ml10), 3) * 100
@@ -218,26 +223,26 @@ print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 
 #prediction probability plots
-fig = pred_proba_plot(ml_10_rand_forest, x_10, y_10, no_iter=50, no_bins=36, x_min=0.3, classifier='Random Forest (ml_10)')
+#fig = pred_proba_plot(ml_10_rand_forest, x_10, y_10, no_iter=50, no_bins=36, x_min=0.3, classifier='Random Forest (ml_10)')
 #fig.savefig('figures/ml_10_random_forest_pred_proba.png')
 
-fig = pred_proba_plot(ml_5_rand_forest, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Random Forest (ml_5)')
+#fig = pred_proba_plot(ml_5_rand_forest, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Random Forest (ml_5)')
 #fig.savefig('figures/ml_5_random_forest_pred_proba.png')
 
 
 #plot confusion matrix - modified to take cross-val results.
-plot_cross_val_confusion_matrix(ml_10_rand_forest, x_10, y_10, display_labels=('team loses', 'draw', 'team wins'), title='Random Forest Confusion Matrix ML10', cv=skf)
+#plot_cross_val_confusion_matrix(ml_10_rand_forest, x_10, y_10, display_labels=('team loses', 'draw', 'team wins'), title='Random Forest Confusion Matrix ML10', cv=skf)
 #plt.savefig('figures\ml_10_confusion_matrix_cross_val_random_forest.png')
 
-plot_cross_val_confusion_matrix(ml_5_rand_forest, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Random Forest Confusion Matrix ML5', cv=skf)
+#plot_cross_val_confusion_matrix(ml_5_rand_forest, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Random Forest Confusion Matrix ML5', cv=skf)
 #plt.savefig('figures\ml_5_confusion_matrix_cross_val_random_forest.png')
 
 
 #plotting learning curves
-plot_learning_curve(ml_10_rand_forest, x_10, y_10, training_set_size=20, x_max=160, title='Learning Curve - Random Forest DF_10')
+#plot_learning_curve(ml_10_rand_forest, x_10, y_10, training_set_size=20, x_max=160, title='Learning Curve - Random Forest DF_10')
 #plt.savefig('figures\ml_10_random_forest_learning_curve.png')
 
-plot_learning_curve(ml_5_rand_forest, x_5, y_5, training_set_size=20, x_max=190, title='Learning Curve - Random Forest DF_5')
+#plot_learning_curve(ml_5_rand_forest, x_5, y_5, training_set_size=20, x_max=190, title='Learning Curve - Random Forest DF_5')
 #plt.savefig('figures\ml_5_random_forest_learning_curve.png')
 
 

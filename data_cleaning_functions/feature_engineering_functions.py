@@ -174,19 +174,18 @@ def generate_ml_df(games_slide, team_list, team_fixture_id_dict, game_stats, mak
     df_ready_for_ml['Team Av Possession'] = t_posession
     df_ready_for_ml['Team Av Pass Accuracy'] = t_pass_accuracy
     df_ready_for_ml['Team Av Goals'] = t_goals
-    if not making_predictions:
-        df_ready_for_ml['Opponent Av Shots'] = o_total_shots
-        df_ready_for_ml['Opponent Av Shots Inside Box'] = o_shots_inside_box
-        df_ready_for_ml['Opponent Av Fouls'] = o_fouls
-        df_ready_for_ml['Opponent Av Corners'] = o_corners
-        df_ready_for_ml['Opponent Av Possession'] = o_posession
-        df_ready_for_ml['Opponent Av Goals'] = o_goals
-        df_ready_for_ml['Opponent Av Pass Accuracy'] = o_pass_accuracy
-    if not making_predictions:
-        df_ready_for_ml['Team Goal Target'] = t_goals_target
-        df_ready_for_ml['Opponent Goal Target'] = o_goals_target
-        df_ready_for_ml['Target Fixture ID'] = fix_id
-        df_ready_for_ml['Result Indicator'] = result_indicator
+    df_ready_for_ml['Opponent Av Shots'] = o_total_shots
+    df_ready_for_ml['Opponent Av Shots Inside Box'] = o_shots_inside_box
+    df_ready_for_ml['Opponent Av Fouls'] = o_fouls
+    df_ready_for_ml['Opponent Av Corners'] = o_corners
+    df_ready_for_ml['Opponent Av Possession'] = o_posession
+    df_ready_for_ml['Opponent Av Goals'] = o_goals
+    df_ready_for_ml['Opponent Av Pass Accuracy'] = o_pass_accuracy
+
+    df_ready_for_ml['Team Goal Target'] = t_goals_target
+    df_ready_for_ml['Opponent Goal Target'] = o_goals_target
+    df_ready_for_ml['Target Fixture ID'] = fix_id
+    df_ready_for_ml['Result Indicator'] = result_indicator
     if making_predictions:
         df_ready_for_ml['team_id'] = o_team_ID 
     
@@ -195,7 +194,7 @@ def generate_ml_df(games_slide, team_list, team_fixture_id_dict, game_stats, mak
 
 
 
-def mod_df(df):
+def mod_df(df, making_predictions=False):
     df_sort = df.sort_values('Target Fixture ID')
     df_sort = df_sort.reset_index(drop=True)
     
@@ -208,8 +207,11 @@ def mod_df(df):
     df_output['Av Possession Diff'] = df_sort['Team Av Possession'] - df_sort['Opponent Av Possession']
     df_output['Av Pass Accuracy Diff'] = df_sort['Team Av Pass Accuracy'] - df_sort['Opponent Av Pass Accuracy']
     df_output['Av Goal Difference'] = df_sort['Team Av Goals'] - df_sort['Opponent Av Goals']
-    df_output['Fixture ID'] = df_sort['Target Fixture ID']
-    df_output['Result Indicator'] = df_sort['Result Indicator']
+    if not making_predictions:
+        df_output['Fixture ID'] = df_sort['Target Fixture ID']
+        df_output['Result Indicator'] = df_sort['Result Indicator']
+    if making_predictions:
+        df_output['Team ID'] = df_sort['team_id']
     
     return df_output
 
@@ -251,7 +253,7 @@ def combining_fixture_id(df):
     return df_output
 
 
-def creating_ml_df(df):
+def creating_ml_df(df, making_predictions=False):
     modified_df = mod_df(df)
     comb_df = combining_fixture_id(modified_df)
     return comb_df
