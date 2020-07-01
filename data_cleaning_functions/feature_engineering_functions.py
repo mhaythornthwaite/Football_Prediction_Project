@@ -16,14 +16,14 @@ import pickle
 #------------------------------- DATA PROCESSING ------------------------------
 
 
-#creating a running average function
+
 def running_mean(x, N):
     cumsum = np.cumsum(np.insert(x, 0, 0)) 
     return (cumsum[N:] - cumsum[:-N]) / float(N)
 
 
 
-def generate_ml_df(games_slide, team_list, team_fixture_id_dict, game_stats, making_predictions=False):
+def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, making_predictions=False):
     '''
     Output is a dataframe of averaged game stats. Included is a teams average stats over 'games_slide' number of games as well as the avergae opponent stats in those games.
 

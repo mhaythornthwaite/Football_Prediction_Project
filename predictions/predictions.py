@@ -20,7 +20,7 @@ import pandas as pd
 import pickle
 import numpy as np
 import math
-from data_cleaning_functions.feature_engineering_functions import generate_ml_df, mod_df, running_mean
+from data_cleaning_functions.feature_engineering_functions import average_stats_df, mod_df, running_mean
 
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
@@ -53,7 +53,7 @@ for team in team_fixture_id_dict:
 
 
 
-df_10_upcom_fix_e = generate_ml_df(10, team_list, team_fixture_id_dict_reduced, game_stats, making_predictions=True)
+df_10_upcom_fix_e = average_stats_df(10, team_list, team_fixture_id_dict_reduced, game_stats, making_predictions=True)
 df_10_upcom_fix = mod_df(df_10_upcom_fix_e, making_predictions=True)
 
 

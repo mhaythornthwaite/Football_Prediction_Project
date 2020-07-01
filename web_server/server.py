@@ -17,11 +17,6 @@ import pickle
 #------------------------------------ FLASK -----------------------------------
 
 
-with open('../2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
-    df_ml_10 = pickle.load(myFile)
-
-x = df_ml_10['Team Av Corners Diff'][45]
-
 with open('../predictions/pl_predictions.csv', 'rb') as myFile:
     pl_pred = pickle.load(myFile)
 
@@ -29,13 +24,12 @@ with open('../predictions/pl_predictions.csv', 'rb') as myFile:
 
 @app.route('/')
 def hello_world():
-    x = round(df_ml_10['Team Av Corners Diff'][45], 2) + 48
     g1_h = pl_pred['Home Team'][0]
     g1_a = pl_pred['Away Team'][0]
     g1_hw = pl_pred['Home Win'][0]
     g1_d = pl_pred['Draw'][0]
     g1_aw = pl_pred['Away Win'][0]
-    return render_template('index.html', x=x, g1_h=g1_h, g1_a=g1_a, g1_hw=g1_hw, g1_d=g1_d, g1_aw=g1_aw)
+    return render_template('index.html', g1_h=g1_h, g1_a=g1_a, g1_hw=g1_hw, g1_d=g1_d, g1_aw=g1_aw)
 
 # =============================================================================
 # @app.route('/')
