@@ -1,12 +1,30 @@
 body{
-	background-color: rgba(144,203,91,0.3);
+    background-color: rgba(144,203,91,0.3);
 }
 
 
 .game{
-	padding: 35px;
+    padding: 35px;
+    margin-bottom: 50px;
 }
 
+.logo_home{
+    float: left;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 6%;
+}
+
+.logo_away{
+    float: right;
+    padding-right: 2.5%;
+    padding-left: 3.5%;
+    width: 6%;
+}
+
+.logo_png{
+    width: 100%;
+}
 
 .teamheading{
     box-sizing: border-box;
@@ -18,17 +36,17 @@ body{
 
 
 .heading1{
-	width: 50%;
-	text-align: left;
-	box-sizing: border-box;
+    width: 50%;
+    text-align: left;
+    box-sizing: border-box;
     display: inline-block;
 }
 
 
 .heading2{
-	width: 50%;
-	text-align: right;
-	box-sizing: border-box;
+    width: 50%;
+    text-align: right;
+    box-sizing: border-box;
     display: inline-block;
 }
 
@@ -36,6 +54,9 @@ body{
 .probability_annot{
     box-sizing: border-box;
     white-space: nowrap;
+    padding-top: 7px;
+    float: left;
+    width: 76%;
 }
 
 
