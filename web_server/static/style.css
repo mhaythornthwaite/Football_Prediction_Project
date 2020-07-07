@@ -10,15 +10,15 @@ body{
 
 .logo_home{
     float: left;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2.5%;
+    padding-right: 3.5%;
     width: 6%;
 }
 
 .logo_away{
     float: right;
-    padding-right: 2.5%;
-    padding-left: 3.5%;
+    padding-right: 1.5%;
+    padding-left: 4.5%;
     width: 6%;
 }
 

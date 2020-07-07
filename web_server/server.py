@@ -112,15 +112,15 @@ g10_a_l = pl_pred['Away Team Logo'][9]
 def pass_game_1():
     return render_template('index.html', 
                            g1_h=g1_h, g1_a=g1_a, g1_hw=g1_hw, g1_d=g1_d, g1_aw=g1_aw, g1_h_l=g1_h_l, g1_a_l=g1_a_l,
-                           g2_h=g2_h, g2_a=g2_a, g2_hw=g2_hw, g2_d=g2_d, g2_aw=g2_aw,
-                           g3_h=g3_h, g3_a=g3_a, g3_hw=g3_hw, g3_d=g3_d, g3_aw=g3_aw,
-                           g4_h=g4_h, g4_a=g4_a, g4_hw=g4_hw, g4_d=g4_d, g4_aw=g4_aw,
-                           g5_h=g5_h, g5_a=g5_a, g5_hw=g5_hw, g5_d=g5_d, g5_aw=g5_aw,
-                           g6_h=g6_h, g6_a=g6_a, g6_hw=g6_hw, g6_d=g6_d, g6_aw=g6_aw,
-                           g7_h=g7_h, g7_a=g7_a, g7_hw=g7_hw, g7_d=g7_d, g7_aw=g7_aw,
-                           g8_h=g8_h, g8_a=g8_a, g8_hw=g8_hw, g8_d=g8_d, g8_aw=g8_aw,
-                           g9_h=g9_h, g9_a=g9_a, g9_hw=g9_hw, g9_d=g9_d, g9_aw=g9_aw,
-                           g10_h=g10_h, g10_a=g10_a, g10_hw=g10_hw, g10_d=g10_d, g10_aw=g10_aw)
+                           g2_h=g2_h, g2_a=g2_a, g2_hw=g2_hw, g2_d=g2_d, g2_aw=g2_aw, g2_h_l=g2_h_l, g2_a_l=g2_a_l,
+                           g3_h=g3_h, g3_a=g3_a, g3_hw=g3_hw, g3_d=g3_d, g3_aw=g3_aw, g3_h_l=g3_h_l, g3_a_l=g3_a_l,
+                           g4_h=g4_h, g4_a=g4_a, g4_hw=g4_hw, g4_d=g4_d, g4_aw=g4_aw, g4_h_l=g4_h_l, g4_a_l=g4_a_l,
+                           g5_h=g5_h, g5_a=g5_a, g5_hw=g5_hw, g5_d=g5_d, g5_aw=g5_aw, g5_h_l=g5_h_l, g5_a_l=g5_a_l,
+                           g6_h=g6_h, g6_a=g6_a, g6_hw=g6_hw, g6_d=g6_d, g6_aw=g6_aw, g6_h_l=g6_h_l, g6_a_l=g6_a_l,
+                           g7_h=g7_h, g7_a=g7_a, g7_hw=g7_hw, g7_d=g7_d, g7_aw=g7_aw, g7_h_l=g7_h_l, g7_a_l=g7_a_l,
+                           g8_h=g8_h, g8_a=g8_a, g8_hw=g8_hw, g8_d=g8_d, g8_aw=g8_aw, g8_h_l=g8_h_l, g8_a_l=g8_a_l,
+                           g9_h=g9_h, g9_a=g9_a, g9_hw=g9_hw, g9_d=g9_d, g9_aw=g9_aw, g9_h_l=g9_h_l, g9_a_l=g9_a_l,
+                           g10_h=g10_h, g10_a=g10_a, g10_hw=g10_hw, g10_d=g10_d, g10_aw=g10_aw, g10_h_l=g10_h_l, g10_a_l=g10_a_l)
 
 
 
