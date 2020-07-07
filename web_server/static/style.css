@@ -1,5 +1,18 @@
-body{
-    background-color: rgba(144,203,91,0.3);
+html { 
+    height: 100%;
+    margin:0px;
+    background: url(the-ball-488709_1920.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.container{
+    width: 90%;
+    margin: 5%;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 
@@ -12,14 +25,14 @@ body{
     float: left;
     padding-left: 2.5%;
     padding-right: 3.5%;
-    width: 6%;
+    width: 5%;
 }
 
 .logo_away{
     float: right;
     padding-right: 1.5%;
     padding-left: 4.5%;
-    width: 6%;
+    width: 5%;
 }
 
 .logo_png{
