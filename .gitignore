@@ -129,3 +129,4 @@ dmypy.json
 **/test_data/**
 **/misc/**
 **/backup_files/**
+**/venv/**
