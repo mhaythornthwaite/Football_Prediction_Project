@@ -14,8 +14,8 @@ print(' ---------------- START ---------------- \n')
 import pandas as pd
 import pickle
 import numpy as np
-from data_cleaning_functions.feature_engineering_functions import average_stats_df, running_mean
-from data_cleaning_functions.feature_engineering_functions import mod_df, combining_fixture_id, creating_ml_df
+from ml_functions.feature_engineering_functions import average_stats_df, running_mean
+from ml_functions.feature_engineering_functions import mod_df, combining_fixture_id, creating_ml_df
 
 #----------------------------- FEATURE ENGINEERING ----------------------------
 

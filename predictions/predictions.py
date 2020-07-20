@@ -20,7 +20,7 @@ import pandas as pd
 import pickle
 import numpy as np
 import math
-from data_cleaning_functions.feature_engineering_functions import average_stats_df, mod_df, running_mean
+from ml_functions.feature_engineering_functions import average_stats_df, mod_df, running_mean
 
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
