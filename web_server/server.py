@@ -17,7 +17,7 @@ import pickle
 #------------------------------------ FLASK -----------------------------------
 
 
-with open('../predictions/pl_predictions.csv', 'rb') as myFile:
+with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_predictions.csv', 'rb') as myFile:
     pl_pred = pickle.load(myFile)
 
 g1_h = pl_pred['Home Team'][0]
