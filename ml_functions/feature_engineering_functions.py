@@ -10,7 +10,6 @@ Created on Sun Jun 28 12:13:02 2020
 
 import numpy as np
 import pandas as pd
-import pickle
 
 
 #------------------------------- DATA PROCESSING ------------------------------
@@ -18,6 +17,22 @@ import pickle
 
 
 def running_mean(x, N):
+    '''
+    calculates sliding average of interval N, over list x,
+
+    Parameters
+    ----------
+    x : list
+        list of int or floats
+    N : int
+        sliding average interval
+
+    Returns
+    -------
+    list
+        sliding average list
+
+    '''
     cumsum = np.cumsum(np.insert(x, 0, 0)) 
     return (cumsum[N:] - cumsum[:-N]) / float(N)
 
@@ -195,10 +210,29 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
 
 
 def mod_df(df, making_predictions=False):
+    '''
+    This function requires the output from the function 'average_stats_df()'. It takes a team and their oppoents (in the last 10 games) average stats, and subtracts one from the other. The benefit of this is it provides a more useful metric for how well a team has been performing. If the 'Av Shots Diff' is positive, it means that team has, on average taken more shots than their opponent in the previous games. This is a useful feature for machine learning.  
+
+    Parameters
+    ----------
+    df : dataframe
+        game stats, outputted from the funtion: 'average_stats_df()'.
+    making_predictions : bool, optional, the default is False.
+        default is set to false, the output is appropriate for training a model. If set to true, the output is suitable for making predictions.
+        
+
+    Returns
+    -------
+    df_output : dataframe
+        modified averaged game stats
+
+    '''
+    
     df_sort = df.sort_values('Target Fixture ID')
     df_sort = df_sort.reset_index(drop=True)
     
     df_output = pd.DataFrame({})
+    
     #creating our desired features
     df_output['Av Shots Diff'] = df_sort['Team Av Shots'] - df_sort['Opponent Av Shots']
     df_output['Av Shots Inside Box Diff'] = df_sort['Team Av Shots Inside Box'] - df_sort['Opponent Av Shots Inside Box']
@@ -218,6 +252,21 @@ def mod_df(df, making_predictions=False):
 
 
 def combining_fixture_id(df):
+    '''
+    This function requires the output from the function 'mod_df()'. Currently this df contains the features for a single team with a target fixture. This function cobines the home and away team features into a single row per target fixture. This df is then complete with features for home and away teams and is therefore ready for model training.
+
+    Parameters
+    ----------
+    df : dataframe
+        game stats, outputted from the funtion: 'mod_df()'.
+
+    Returns
+    -------
+    df_output : dataframe
+        features for both home and away team with target fixture id. 
+
+    '''   
+    
     #iterating over each opponent row to add to the previous
     odd_list = []
     for x in range(1, len(df)+1, 2):
@@ -253,13 +302,28 @@ def combining_fixture_id(df):
     return df_output
 
 
+
 def creating_ml_df(df, making_predictions=False):
+    '''
+    This function requires the output from the function 'average_stats_df()'. It will process the average stats combining the two functions: mod_df() and combining_fixture_id() to create a df ready for model training.
+
+    Parameters
+    ----------
+    df : dataframe
+        game stats, outputted from the funtion: 'average_stats_df()'.
+    making_predictions : bool, optional, the default is False.
+        default is set to false, the output is appropriate for training a model. If set to true, the output is suitable for making predictions.
+
+    Returns
+    -------
+    df_output : dataframe
+        features for both home and away team with target fixture id. 
+
+    '''
+    
     modified_df = mod_df(df)
-    comb_df = combining_fixture_id(modified_df)
-    return comb_df
-
-
-
+    df_output = combining_fixture_id(modified_df)
+    return df_output
 
 
 
