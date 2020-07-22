@@ -152,6 +152,9 @@ predictions = predictions.loc[:, re_order_cols]
 
 with open('pl_predictions.csv', 'wb') as myFile:
     pickle.dump(predictions, myFile)  
+with open('../web_server/pl_predictions.csv', 'wb') as myFile:
+    pickle.dump(predictions, myFile)  
+
 
 
 # ----------------------------------- END -------------------------------------
