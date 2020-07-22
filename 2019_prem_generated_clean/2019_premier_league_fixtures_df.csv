@@ -362,12 +362,12 @@ Fixture ID,Game Date,Home Team ID,Away Team ID,Home Team Goals,Away Team Goals,V
 157380,2020-07-18,71.0,44.0,0.0,2.0,Carrow Road,Norwich,Burnley,https://media.api-sports.io/football/teams/71.png,https://media.api-sports.io/football/teams/44.png
 157375,2020-07-19,35.0,41.0,0.0,2.0,Vitality Stadium,Bournemouth,Southampton,https://media.api-sports.io/football/teams/35.png,https://media.api-sports.io/football/teams/41.png
 157382,2020-07-19,47.0,46.0,3.0,0.0,Tottenham Hotspur Stadium,Tottenham,Leicester,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/46.png
-157377,2020-07-20,51.0,34.0,,,The American Express Community Stadium,Brighton,Newcastle,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/34.png
-157381,2020-07-20,62.0,45.0,,,Bramall Lane,Sheffield Utd,Everton,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/45.png
-157384,2020-07-20,39.0,52.0,,,Molineux Stadium,Wolves,Crystal Palace,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/52.png
-157383,2020-07-21,38.0,50.0,,,Vicarage Road,Watford,Manchester City,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/50.png
-157376,2020-07-21,66.0,42.0,,,Villa Park,Aston Villa,Arsenal,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/42.png
-157379,2020-07-22,33.0,48.0,,,Old Trafford,Manchester United,West Ham,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/48.png
+157377,2020-07-20,51.0,34.0,0.0,0.0,The American Express Community Stadium,Brighton,Newcastle,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/34.png
+157381,2020-07-20,62.0,45.0,0.0,1.0,Bramall Lane,Sheffield Utd,Everton,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/45.png
+157384,2020-07-20,39.0,52.0,2.0,0.0,Molineux Stadium,Wolves,Crystal Palace,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/52.png
+157383,2020-07-21,38.0,50.0,0.0,4.0,Vicarage Road,Watford,Manchester City,https://media.api-sports.io/football/teams/38.png,https://media.api-sports.io/football/teams/50.png
+157376,2020-07-21,66.0,42.0,1.0,0.0,Villa Park,Aston Villa,Arsenal,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/42.png
+157379,2020-07-22,33.0,48.0,1.0,1.0,Old Trafford,Manchester United,West Ham,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/48.png
 157378,2020-07-22,40.0,49.0,,,Anfield,Liverpool,Chelsea,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/49.png
 157385,2020-07-26,42.0,38.0,,,Emirates Stadium,Arsenal,Watford,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/38.png
 157386,2020-07-26,44.0,51.0,,,Turf Moor,Burnley,Brighton,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/51.png

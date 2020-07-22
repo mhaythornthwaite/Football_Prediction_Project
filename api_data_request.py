@@ -124,8 +124,6 @@ fixtures_clean = pd.DataFrame({'Fixture ID': fixtures['fixture_id'], 'Game Date'
 
 fixtures_clean.to_csv('2019_prem_generated_clean/2019_premier_league_fixtures_df.csv', index=False)
 
-print(fixtures['homeTeam'][1]['team_name'])
-
 
 
 

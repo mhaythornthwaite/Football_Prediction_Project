@@ -11,11 +11,9 @@ print(' ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
-import pandas as pd
 import pickle
-import numpy as np
-from ml_functions.feature_engineering_functions import average_stats_df, running_mean
-from ml_functions.feature_engineering_functions import mod_df, combining_fixture_id, creating_ml_df
+from ml_functions.feature_engineering_functions import average_stats_df
+from ml_functions.feature_engineering_functions import creating_ml_df
 
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
@@ -71,3 +69,6 @@ with open('2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'wb') as my
 
 print(' ----------------- END ----------------- ')
 print('\n')
+
+
+

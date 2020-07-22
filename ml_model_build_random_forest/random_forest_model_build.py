@@ -42,6 +42,10 @@ with open('../2019_prem_generated_clean/2019_prem_df_for_ml_5_v2.txt', 'rb') as 
 with open('../2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
     
+    
+#scaling dataframe to make all features to have zero mean and unit vector.
+df_ml_10 = scale_df(df_ml_10, list(range(14)), [14,15,16])
+df_ml_5 = scale_df(df_ml_5, list(range(14)), [14,15,16])
 
 
 x_10 = df_ml_10.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
