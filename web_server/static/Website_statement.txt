@@ -1,0 +1,2 @@
+Smart Football Predictor is a simple Flask web application designed to display the predicitions of a machine learning project built in a python backend. Premier league game data has been collected from api-football, processed and used to train numerous experimental models, before being used to predict the outcome of future premier league fixtures. If you would like to learn moreplease visit my Github repository or contact me on linkedin.
+Matt Haythornthwaite
