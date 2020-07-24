@@ -4,6 +4,13 @@ html {
     background: url(the-ball-488709_1920.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.game_description{
+    font-size: 0.6em;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 
@@ -67,46 +74,46 @@ html {
 .probability_annot{
     box-sizing: border-box;
     white-space: nowrap;
-    padding-top: 7px;
+    padding-top: 15px;
     float: left;
-    width: 76%;
+    width: 78%;
 }
 
 
 .win {
-    background: lightgreen;
+    background: #00203FFF;
     box-sizing: border-box;
     display: inline-block;
-    height: 20px;
+    height: 15px;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 10px
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 
 .draw {
-    background: lightblue;
+    background: #ADEFD1FF;
     box-sizing: border-box;
     display: inline-block;
-    height: 20px;
+    height: 15px;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 10px
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 
 .loss {
-    background: Tomato;
+    background: #B1624EFF;
     box-sizing: border-box;
     display: inline-block;
-    height: 20px;
+    height: 15px;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 10px
-    margin-top: 20px;
+    margin-top: 25px;
 }
