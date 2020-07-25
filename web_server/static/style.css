@@ -7,6 +7,29 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+hr {
+    color: #333333;
+}
+
+.web_logo_container{
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    width: 40%;
+}
+
+.web_logo{
+    width: 100%;
+}
+
+.web_description{
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: -0.9em;
+}
+
+
 .game_description{
     font-size: 0.6em;
     padding-top: 7px;
