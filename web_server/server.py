@@ -10,18 +10,17 @@ Created on Sat Jun 27 12:11:31 2020
 #Access with: http://localhost:5000/
 
 from flask import Flask, render_template
-app = Flask(__name__)
 import pickle
-
+app = Flask(__name__, static_url_path='/static')
 
 #------------------------------------ FLASK -----------------------------------
 
 
-#with open('../predictions/pl_predictions.csv', 'rb') as myFile:
-#    pl_pred = pickle.load(myFile)
-
-with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_predictions.csv', 'rb') as myFile:
+with open('../predictions/pl_predictions.csv', 'rb') as myFile:
     pl_pred = pickle.load(myFile)
+
+#with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_predictions.csv', 'rb') as myFile:
+#    pl_pred = pickle.load(myFile)
 
 g1_h = pl_pred['Home Team'][0]
 g1_a = pl_pred['Away Team'][0]
