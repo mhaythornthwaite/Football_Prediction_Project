@@ -88,6 +88,11 @@ grid_search_grad.fit(x_10, y_10)
 print('\n', 'Gradient Best Params: ' , grid_search_grad.best_params_)
 print('Gradient Best Score: ' , grid_search_grad.best_score_ , '\n')
 
+print(grid_search_grad.cv_results_['mean_test_score']
+
+
+
+
 
     
 # ----------------------------------- END -------------------------------------
