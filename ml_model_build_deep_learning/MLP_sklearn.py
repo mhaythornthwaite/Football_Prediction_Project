@@ -19,7 +19,9 @@ sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 from ml_functions.data_processing import scale_df
 import pickle
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.model_selection import cross_val_score
@@ -59,7 +61,7 @@ print('\nMULTILAYER PERCEPTRON\n')
 x_train, x_test, y_train, y_test = train_test_split(x_10, y_10, test_size=0.2)
 
 #instantiate the MLP classifier, and fit to the data
-clf = MLPClassifier(hidden_layer_sizes=(18, 12), activation='logistic', random_state=0, max_iter=1000)
+clf = MLPClassifier(hidden_layer_sizes=(18, 12), activation='logistic', random_state=0, max_iter=2000)
 clf.fit(x_train, y_train)
 
 #printing the cross-validation accuracy score
@@ -88,13 +90,39 @@ grid_search_grad.fit(x_10, y_10)
 print('\n', 'Gradient Best Params: ' , grid_search_grad.best_params_)
 print('Gradient Best Score: ' , grid_search_grad.best_score_ , '\n')
 
-print(grid_search_grad.cv_results_['mean_test_score']
+print(grid_search_grad.cv_results_['mean_test_score'])
 
 
+#plotting the data
+
+#populating df with x, y, z data
+matrix_plot_data = pd.DataFrame({})
+matrix_plot_data['x'] = list(zip(*hidden_layer_test))[0]
+matrix_plot_data['y'] = list(zip(*hidden_layer_test))[1]
+matrix_plot_data['z'] = grid_search_grad.cv_results_['mean_test_score']
+
+#transforming z list into matrix format
+Z = matrix_plot_data.pivot_table(index='x', columns='y', values='z').T.values
+
+#getting x and y axis
+X_unique = np.sort(matrix_plot_data.x.unique())
+Y_unique = np.sort(matrix_plot_data.y.unique())
+
+#instantiating figure and plotting heatmap with seaborn
+fig, ax = plt.subplots()
+im = sns.heatmap(Z, annot=True,  linewidths=.5)
+
+#labelling x and y and title
+ax.set_xticklabels(X_unique)
+ax.set_yticklabels(Y_unique)
+ax.set(xlabel='Hidden Layer 1 Length',
+        ylabel='Hidden Layer 2 Length');
+fig.suptitle('Cross Val Accuracy', y=0.95, fontsize=16, fontweight='bold');
+
+#saving figure
+fig.savefig('figures/testing_hidden_layer_lengths.png')    
 
 
-
-    
 # ----------------------------------- END -------------------------------------
 
 print(' ----------------- END ----------------- ')
