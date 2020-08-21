@@ -21,9 +21,11 @@ from os import listdir
 #------------------------------ REQUEST FUNCTIONS -----------------------------
 
 
+api_key = (open('api_key.txt', mode='r')).read()
+
 def get_api_data(base_url, end_url):
     url = base_url + end_url
-    headers = {'X-RapidAPI-Key':'f6d8a1ef214463be7b6afa8fc8054b5b'}
+    headers = {'X-RapidAPI-Key': api_key}
     res = requests.get(url, headers=headers)
     if res.status_code != 200:
         raise RuntimeError(f'error {res.status_code}')
