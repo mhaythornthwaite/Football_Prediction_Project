@@ -19,10 +19,10 @@ plt.close('all')
 
 #-------------------------- PRE-ML DATA VISUALISATION -------------------------
 
-with open('2019_prem_generated_clean/2019_prem_df_for_ml_5_v2.txt', 'rb') as myFile:
+with open('prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_5_v2.txt', 'rb') as myFile:
     df_ml_5 = pickle.load(myFile)
 
-with open('2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
+with open('prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
 #standard variables for every figure

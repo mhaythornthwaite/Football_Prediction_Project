@@ -24,7 +24,7 @@ from ml_functions.feature_engineering_functions import average_stats_df, mod_df,
 
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
-with open('../2019_prem_generated_clean/2019_prem_all_stats_dict.txt', 'rb') as myFile:
+with open('../prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb') as myFile:
     game_stats = pickle.load(myFile)
     
     
@@ -59,8 +59,8 @@ df_10_upcom_fix = mod_df(df_10_upcom_fix_e, making_predictions=True)
 
 
 #loading fixtures dataframe, we will work with the clean version but it is good to be aware of what is available in the raw version.
-fixtures = pd.read_json('../2019_prem_generated_clean/2019_premier_league_fixtures.json', orient='records')
-fixtures_clean = pd.read_csv('../2019_prem_generated_clean/2019_premier_league_fixtures_df.csv')
+fixtures = pd.read_json('../prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures.json', orient='records')
+fixtures_clean = pd.read_csv('../prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures_df.csv')
 
 
 #creating a df with unplayed games only
@@ -75,7 +75,7 @@ unplayed_games = unplayed_games.drop(['Home Team Goals', 'Away Team Goals'], axi
 
 
 #loading df for the labels 
-with open('../2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
+with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
 column_list = df_ml_10.columns.tolist()

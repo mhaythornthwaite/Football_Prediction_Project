@@ -31,7 +31,7 @@ plt.close('all')
 #------------------------ PRINCIPLE COMPONENT ANALYSIS ------------------------
 
 
-with open('../2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
+with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
 #scaling dataframe to make all features to have zero mean and unit vector. This is essential prior to PCA as Euclidean distance is used.

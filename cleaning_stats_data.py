@@ -19,7 +19,7 @@ import pickle
 #---------------------------- CREATING DF PER TEAM ----------------------------
 #in this section we will create a nested dictionary containing the 20 teams, each with a value as another dictionary. In this dictionary we will have the game id along with the game dataframe.
 
-fixtures_clean = pd.read_csv('2019_prem_generated_clean/2019_premier_league_fixtures_df.csv')
+fixtures_clean = pd.read_csv('prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures_df.csv')
 
 #creating the 'fixtures_clean' ID index which we will use to take data from this dataframe and add to each of our individual fixture stats dataframe.
 fixtures_clean_ID_index = pd.Index(fixtures_clean['Fixture ID'])
@@ -111,10 +111,10 @@ for team in team_id_list:
 
 #saving our generated dictionary as a pickle file to import into a later python file.
 
-with open('2019_prem_generated_clean/2019_prem_all_stats_dict.txt', 'wb') as myFile:
+with open('prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'wb') as myFile:
     pickle.dump(all_stats_dict, myFile)
 
-with open('2019_prem_generated_clean/2019_prem_all_stats_dict.txt', 'rb') as myFile:
+with open('prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb') as myFile:
     loaded_dict_test = pickle.load(myFile)
 
 

@@ -18,7 +18,7 @@ from ml_functions.feature_engineering_functions import creating_ml_df
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
 
-with open('2019_prem_generated_clean/2019_prem_all_stats_dict.txt', 'rb') as myFile:
+with open('prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb') as myFile:
     game_stats = pickle.load(myFile)
 
 
@@ -56,12 +56,12 @@ df_ml_10 = average_stats_df(10, team_list, team_fixture_id_dict, game_stats)
     
 #creating and saving the ml dataframe with a 5 game sliding average.
 df_for_ml_5_v2 = creating_ml_df(df_ml_5)
-with open('2019_prem_generated_clean/2019_prem_df_for_ml_5_v2.txt', 'wb') as myFile:
+with open('prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_5_v2.txt', 'wb') as myFile:
     pickle.dump(df_for_ml_5_v2, myFile)
 
 #creating and saving the ml dataframe with a 10 game sliding average.
 df_for_ml_10_v2 = creating_ml_df(df_ml_10)
-with open('2019_prem_generated_clean/2019_prem_df_for_ml_10_v2.txt', 'wb') as myFile:
+with open('prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'wb') as myFile:
     pickle.dump(df_for_ml_10_v2, myFile)
 
 
