@@ -118,6 +118,29 @@ with open('prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb
     loaded_dict_test = pickle.load(myFile)
 
 
+# -------------------------------- NEW SEASON ---------------------------------
+
+#in this section we need to populate our nested dictionary with pseudo game data for the teams that have been newly promoted. The previous ten games from the 3 relegated, totaling 30 fixtures will be averaged to create a single game stats df. This will be replicated 10 times for each newly promoted team. As the early season progresses, genuine game data will be used instead for the predictions.
+
+relegated_id_1 = 35
+relegated_id_2 = 38
+relegated_id_3 = 71
+
+print(all_stats_dict[35][157389])
+
+relegated_id_1_fixtures = ([i for i in all_stats_dict[relegated_id_1]])
+relegated_id_1_fixtures.sort()
+relegated_id_1_fixtures = relegated_id_1_fixtures[-10:]
+
+relegated_id_2_fixtures = ([i for i in all_stats_dict[relegated_id_2]])
+relegated_id_2_fixtures.sort()
+relegated_id_2_fixtures = relegated_id_2_fixtures[-10:]
+
+relegated_id_3_fixtures = ([i for i in all_stats_dict[relegated_id_3]])
+relegated_id_3_fixtures.sort()
+relegated_id_3_fixtures = relegated_id_3_fixtures[-10:]
+
+
 
 # ----------------------------------- END -------------------------------------
 
