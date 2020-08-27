@@ -122,12 +122,12 @@ with open('prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb
 
 #in this section we need to populate our nested dictionary with pseudo game data for the teams that have been newly promoted. The previous ten games from the 3 relegated, totaling 30 fixtures will be averaged to create a single game stats df. This will be replicated 10 times for each newly promoted team. As the early season progresses, genuine game data will be used instead for the predictions.
 
+#specify the id of the relegated teams
 relegated_id_1 = 35
 relegated_id_2 = 38
 relegated_id_3 = 71
 
-print(all_stats_dict[35][157389])
-
+#listing the last 10 fixtures of each relegated team.
 relegated_id_1_fixtures = ([i for i in all_stats_dict[relegated_id_1]])
 relegated_id_1_fixtures.sort()
 relegated_id_1_fixtures = relegated_id_1_fixtures[-10:]
@@ -139,6 +139,33 @@ relegated_id_2_fixtures = relegated_id_2_fixtures[-10:]
 relegated_id_3_fixtures = ([i for i in all_stats_dict[relegated_id_3]])
 relegated_id_3_fixtures.sort()
 relegated_id_3_fixtures = relegated_id_3_fixtures[-10:]
+
+
+#instantiating the 'average_df' which will be used as the base in the following iterations.
+average_df = all_stats_dict[relegated_id_1][(relegated_id_1_fixtures[0])]
+average_df = average_df.set_index('Team Identifier')
+
+
+#iterating over each of the last 10 games each relegated team played. Each df is added to the average_df.
+for i in relegated_id_1_fixtures[1:]:
+    df = all_stats_dict[relegated_id_1][i]
+    df = df.set_index('Team Identifier')
+    average_df = average_df.add(df, fill_value=0)
+
+for i in relegated_id_2_fixtures:
+    df = all_stats_dict[relegated_id_2][i]
+    df = df.set_index('Team Identifier')
+    average_df = average_df.add(df, fill_value=0)
+    
+for i in relegated_id_3_fixtures:
+    df = all_stats_dict[relegated_id_3][i]
+    df = df.set_index('Team Identifier')
+    average_df = average_df.add(df, fill_value=0)
+
+
+#because we summed all 30 df's, we now need to divide by 30 to get an average df 
+average_df = average_df.drop('Game Date', axis=1)
+average_df = average_df.div(30)
 
 
 
