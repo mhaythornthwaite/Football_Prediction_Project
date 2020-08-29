@@ -60,17 +60,17 @@ df_10_upcom_fix = mod_df(df_10_upcom_fix_e, making_predictions=True)
 
 #loading fixtures dataframe, we will work with the clean version but it is good to be aware of what is available in the raw version.
 fixtures = pd.read_json('../prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures.json', orient='records')
-fixtures_clean = pd.read_csv('../prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures_df.csv')
+fixtures_clean = pd.read_csv('../prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv')
 
 
 #creating a df with unplayed games only
 played_games = []
-for i in range(0, len(fixtures)):
+for i in range(0, len(fixtures_clean)):
     if math.isnan(fixtures_clean['Home Team Goals'].iloc[i]) == False:
         played_games.append(i)
   
 unplayed_games = fixtures_clean.drop(fixtures_clean.index[played_games])
-unplayed_games = unplayed_games.reset_index()
+unplayed_games = unplayed_games.reset_index(drop=True)
 unplayed_games = unplayed_games.drop(['Home Team Goals', 'Away Team Goals'], axis=1)
 
 
@@ -95,6 +95,23 @@ df_for_predictions['Away Team'] = unplayed_games['Away Team']
 df_for_predictions['Game Date'] = unplayed_games['Game Date']
 
 
+#----- MODELLING MISSING GAME DATA -----
+#if our newly promoted team has not yet played 10 games we need to fill in this gap in order to make a prediction. Lets take the 3 relegated teams, avergae these and use that for all newly promoted teams. 
+
+relegated_id_1 = 35
+relegated_id_2 = 38
+relegated_id_3 = 71
+
+rel_1_df = (df_10_upcom_fix.loc[df_10_upcom_fix['Team ID'] == relegated_id_1]).reset_index(drop=True)
+rel_2_df = (df_10_upcom_fix.loc[df_10_upcom_fix['Team ID'] == relegated_id_2]).reset_index(drop=True)
+rel_3_df = (df_10_upcom_fix.loc[df_10_upcom_fix['Team ID'] == relegated_id_3]).reset_index(drop=True)
+
+average_df = rel_1_df.add(rel_2_df, fill_value=0)
+average_df = average_df.add(rel_3_df, fill_value=0)
+average_df = average_df.div(3)
+#-----
+
+
 #populating the df_for_predictions with stats
 
 for i in range(0, len(unplayed_games)):
@@ -106,9 +123,20 @@ for i in range(0, len(unplayed_games)):
     away_team = unplayed_games['Away Team ID'].iloc[i]
     away_team_index = df_10_upcom_fix[df_10_upcom_fix['Team ID']==away_team].index.values    
     
-    #getting the home and away team stats given the index of the teams. This still a df. To replace in the df_for_predictions we need this to be a list. This turns out to be quite complex (steps 2 through to 5)
-    h1 = df_10_upcom_fix.iloc[home_team_index]
-    a1 = df_10_upcom_fix.iloc[away_team_index]
+    #getting the home and away team stats given the index of the teams. This still a df. To replace in the df_for_predictions we need this to be a list. This turns out to be quite complex (steps 2 through to 5).
+    #if the team is newly promoted they will not have any stats in df_10_upcom_fix. If this is the case we need to replace the missing data with modelled data
+    team_ids = list(df_10_upcom_fix['Team ID'])
+    
+    if home_team in team_ids:
+        h1 = df_10_upcom_fix.iloc[home_team_index]
+    else:
+        h1 = average_df
+        
+    if away_team in team_ids:
+        a1 = df_10_upcom_fix.iloc[away_team_index]
+    else:
+        a1 = average_df
+    
     
     h2 = h1.T
     a2 = a1.T
