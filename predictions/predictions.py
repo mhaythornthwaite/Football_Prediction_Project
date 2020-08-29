@@ -20,7 +20,7 @@ import pandas as pd
 import pickle
 import numpy as np
 import math
-from ml_functions.feature_engineering_functions import average_stats_df, mod_df, running_mean
+from ml_functions.feature_engineering_functions import average_stats_df, mod_df
 
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
@@ -176,7 +176,7 @@ predictions = pd.concat([unplayed_games, predictions_df], axis=1, join='inner')
 
 re_order_cols = ['Home Team', 'Away Team', 'Home Win', 'Draw', 'Away Win', 'Game Date', 'Venue', 'Home Team Logo', 'Away Team Logo', 'Home Team ID', 'Away Team ID', 'Fixture ID', 'index']
     
-predictions = predictions.loc[:, re_order_cols]
+predictions = predictions.reindex(columns=re_order_cols)
 
 with open('pl_predictions.csv', 'wb') as myFile:
     pickle.dump(predictions, myFile)  
