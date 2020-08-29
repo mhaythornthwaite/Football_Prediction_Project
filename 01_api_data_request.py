@@ -27,7 +27,7 @@ YEAR_str = str(YEAR)
 
 request_league_ids = False
 request_fixtures = False
-request_missing_game_stats = True
+request_missing_game_stats = False
 
 
 #------------------------------ REQUEST FUNCTIONS -----------------------------
@@ -150,6 +150,19 @@ fixtures_clean = pd.DataFrame({'Fixture ID': fixtures['fixture_id'], 'Game Date'
 
 fixtures_clean.to_csv(f'prem_clean_fixtures_and_dataframes/{YEAR_str}_premier_league_fixtures_df.csv', index=False)
 
+
+#------------------------- STITCHINING CLEAN FIXTURE LIST --------------------------
+
+#in this section we simply load the 2019 fixtures and the 2020 fixtures and stitch the two dataframes together. 
+
+fixtures_clean_2019 = pd.read_csv(f'prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures_df.csv')
+
+fixtures_clean_2020 = pd.read_csv(f'prem_clean_fixtures_and_dataframes/2020_premier_league_fixtures_df.csv')
+
+fixtures_clean_combined = pd.concat([fixtures_clean_2019, fixtures_clean_2020])
+fixtures_clean_combined = fixtures_clean_combined.reset_index(drop=True)
+
+fixtures_clean_combined.to_csv(f'prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv', index=False)
 
 
 
