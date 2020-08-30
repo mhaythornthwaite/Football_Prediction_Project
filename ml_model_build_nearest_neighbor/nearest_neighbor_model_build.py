@@ -230,10 +230,10 @@ if create_final_model:
     ml_10_knn = KNeighborsClassifier(n_neighbors=11, weights='distance')
     ml_10_knn.fit(x_10, y_10)
     
-    with open('ml_models/mlp_model_5.pk1', 'wb') as myFile:
+    with open('ml_models/knn_model_5.pk1', 'wb') as myFile:
         pickle.dump(ml_5_knn, myFile)
 
-    with open('ml_models/mlp_model_10.pk1', 'wb') as myFile:
+    with open('ml_models/knn_model_10.pk1', 'wb') as myFile:
         pickle.dump(ml_10_knn, myFile)
 
    

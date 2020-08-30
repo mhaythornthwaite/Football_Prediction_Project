@@ -31,14 +31,34 @@ from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_
 plt.close('all')
 
 
+#------------------------------- INPUT VARIABLES ------------------------------
+
+df_5_saved_name = '2019_prem_df_for_ml_5_v2.txt'
+df_10_saved_name = '2019_prem_df_for_ml_10_v2.txt'
+
+pred_prob_plot_df10 = False
+save_pred_prob_plot_df10 = False
+
+pred_prob_plot_df5 = False
+save_pred_prob_plot_df5 = False
+
+save_conf_matrix_df10 = False
+save_conf_matrix_df5 = False
+
+save_learning_curve_df10 = False
+save_learning_curve_df5 = False
+
+create_final_model = True
+
+
 #------------------------------- ML MODEL BUILD -------------------------------
 
 #importing the data and creating the feature dataframe and target series
 
-with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_5_v2.txt', 'rb') as myFile:
+with open(f'../prem_clean_fixtures_and_dataframes/{df_5_saved_name}', 'rb') as myFile:
     df_ml_5 = pickle.load(myFile)
 
-with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
+with open(f'../prem_clean_fixtures_and_dataframes/{df_10_saved_name}', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
 #scaling dataframe to make all features to have zero mean and unit vector.
@@ -157,7 +177,7 @@ print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%')
 print(confusion_matrix(y10_test, y_pred_ml5and10), '\n\n')
 
 
-# ---------- MODEL EVALUATION ----------
+#------------------------------- MODEL EVALUATION -----------------------------
 
 #cross validation
 skf = StratifiedKFold(n_splits=5, shuffle=True)
@@ -169,30 +189,64 @@ cv_score_av = round(np.mean(cross_val_score(ml_5_svm, x_5, y_5, cv=skf))*100,1)
 print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 
 
-#prediction probability plots
-fig = pred_proba_plot(ml_10_svm, x_10, y_10, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_10)')
-#fig.savefig('figures/ml_10_svm_pred_proba.png')
+# ---------- PREDICTION PROBABILITY PLOTS ----------
 
-fig = pred_proba_plot(ml_5_svm, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_5)')
-#fig.savefig('figures/ml_5_svm_pred_proba.png')
+if pred_prob_plot_df10:
+    fig = pred_proba_plot(ml_10_svm, x_10, y_10, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_10)')
+    if save_pred_prob_plot_df10:
+        fig.savefig('figures/ml_10_svm_pred_proba.png')
 
+if pred_prob_plot_df5:
+    fig = pred_proba_plot(ml_5_svm, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_5)')
+    if save_pred_prob_plot_df5:
+        fig.savefig('figures/ml_5_svm_pred_proba.png')
+
+
+# ---------- CONFUSION MATRIX PLOTS ----------
 
 #plot confusion matrix - modified to take cross-val results.
+
 plot_cross_val_confusion_matrix(ml_10_svm, x_10, y_10, display_labels=('team loses', 'draw', 'team wins'), title='Support Vector Machine Confusion Matrix ML10', cv=skf)
-#plt.savefig('figures\ml_10_confusion_matrix_cross_val_svm.png')
+if save_conf_matrix_df10:
+    plt.savefig('figures\ml_10_confusion_matrix_cross_val_svm.png')
 
 plot_cross_val_confusion_matrix(ml_5_svm, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Support Vector Machine Confusion Matrix ML5', cv=skf)
-#plt.savefig('figures\ml_5_confusion_matrix_cross_val_svm.png')
+if save_conf_matrix_df5:
+    plt.savefig('figures\ml_5_confusion_matrix_cross_val_svm.png')
 
 
-#plotting learning curves
+# ---------- LEARNING CURVE PLOTS ----------
+
 plot_learning_curve(ml_10_svm, x_10, y_10, training_set_size=10, x_max=160, title='Learning Curve - Support Vector Machine DF_10', leg_loc=1)
-#plt.savefig('figures\ml_10_svm_learning_curve.png')
+if save_learning_curve_df10:
+    plt.savefig('figures\ml_10_svm_learning_curve.png')
 
 plot_learning_curve(ml_5_svm, x_5, y_5, training_set_size=10, x_max=230, title='Learning Curve - Support Vector Machine DF_5', leg_loc=1)
-#plt.savefig('figures\ml_5_svm_learning_curve.png')
+if save_learning_curve_df5:
+    plt.savefig('figures\ml_5_svm_learning_curve.png')
 
+
+#--------------------------------- FINAL MODEL --------------------------------
+
+#in this section we will take the learnings from the hyperparameter testing above and train a final model using 100% of the data. This model may then be used for predictions going forward.
+
+if create_final_model:
     
+    #intantiating and training the df_5 network
+    ml_5_svm = svm.SVC(kernel='rbf', C=3, probability=True)
+    ml_5_svm.fit(x_5, y_5)
+    
+    #intantiating and training the df_10 network
+    ml_10_svm = svm.SVC(kernel='rbf', C=3, probability=True)
+    ml_10_svm.fit(x_10, y_10)
+    
+    with open('ml_models/svm_model_5.pk1', 'wb') as myFile:
+        pickle.dump(ml_5_svm, myFile)
+
+    with open('ml_models/svm_model_10.pk1', 'wb') as myFile:
+        pickle.dump(ml_10_svm, myFile)
+
+  
 # ----------------------------------- END -------------------------------------
 
 print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
