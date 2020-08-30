@@ -5,6 +5,7 @@ Created on Mon Apr 13 20:33:10 2020
 @author: mhayt
 """
 
+
 print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
@@ -178,7 +179,7 @@ def req_prem_stats(start_index, end_index):
             fix_id = str(fixtures_clean['Fixture ID'].iloc[i])
             fixture_raw = get_api_data(base_url, '/statistics/fixture/' + fix_id + '/')
             fixture_sliced = slice_api(fixture_raw, 34, 2)
-            save_api_output('2019_prem_game_stats/' + fix_id, fixture_sliced)
+            save_api_output('prem_game_stats_json_files/' + fix_id, fixture_sliced)
     
 
 #req_prem_stats(288, 300)
@@ -186,11 +187,11 @@ def req_prem_stats(start_index, end_index):
 
 #----- AUTOMATING MISSING DATA COLLECTION -----
 
-#in this section we will search through our exisiting database (2019_prem_game_stats folder) and request the game data of any missing games that have been played since we last requested data.
+#in this section we will search through our exisiting database (prem_game_stats_json_files folder) and request the game data of any missing games that have been played since we last requested data.
 
 
 #listing the json data already collected
-existing_data_raw = listdir('2019_prem_game_stats/')
+existing_data_raw = listdir('prem_game_stats_json_files/')
 
 #removing '.json' from the end of this list
 existing_data = []
@@ -217,7 +218,7 @@ def req_prem_stats_list(missing_data):
             fix_id = str(i)
             fixture_raw = get_api_data(base_url, '/statistics/fixture/' + fix_id + '/')
             fixture_sliced = slice_api(fixture_raw, 34, 2)
-            save_api_output('2019_prem_game_stats/' + fix_id, fixture_sliced)
+            save_api_output('prem_game_stats_json_files/' + fix_id, fixture_sliced)
 
 if request_missing_game_stats:
     req_prem_stats_list(missing_data)

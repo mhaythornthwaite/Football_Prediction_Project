@@ -53,7 +53,7 @@ for team in team_id_list:
     all_stats_dict[team] = {}
     for j in team_fixture_list:
         #loading df
-        df = pd.read_json('2019_prem_game_stats/' + str(j) + '.json', orient='values')
+        df = pd.read_json('prem_game_stats_json_files/' + str(j) + '.json', orient='values')
         #removing percentage symbol in possession and passes and conv to int
         df['Ball Possession'] = df['Ball Possession'].str.replace('[\%]', '').astype(int)
         df['Passes %'] = df['Passes %'].str.replace('[\%]', '').astype(int)
@@ -90,7 +90,7 @@ for team in team_id_list:
                 team_fixture_list.append(fixtures_clean['Fixture ID'].iloc[i])
     for j in team_fixture_list:
         #loading df
-        df = pd.read_json('2019_prem_game_stats/' + str(j) + '.json', orient='values')
+        df = pd.read_json('prem_game_stats_json_files/' + str(j) + '.json', orient='values')
         #removing percentage symbol in possession and passes and conv to int
         df['Ball Possession'] = df['Ball Possession'].str.replace('[\%]', '').astype(int)
         df['Passes %'] = df['Passes %'].str.replace('[\%]', '').astype(int)
