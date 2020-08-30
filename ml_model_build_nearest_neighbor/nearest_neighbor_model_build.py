@@ -5,8 +5,8 @@ Created on Mon May 11 18:28:00 2020
 @author: mhayt
 """
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
+
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
@@ -15,6 +15,8 @@ from os.path import dirname, realpath, sep, pardir
 import sys
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
+import time
+start=time.time()
 
 from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix, plot_learning_curve
 from ml_functions.data_processing import scale_df
@@ -28,8 +30,8 @@ from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_
 from sklearn.ensemble import VotingClassifier
 import pandas as pd
 
-
 plt.close('all')
+
 
 #------------------------------- ML MODEL BUILD -------------------------------
 
@@ -40,7 +42,6 @@ with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_5_v2.txt', 
 
 with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
-
 
 #scaling dataframe to make all features to have zero mean and unit vector. This is essential as euclidean distance is used in the algorithm, therefore we wish to weight each feature equally.
 df_ml_10 = scale_df(df_ml_10, list(range(14)), [14,15,16])
@@ -54,7 +55,6 @@ x_5 = df_ml_5.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indi
 y_5 = df_ml_5['Team Result Indicator']
 
 
-print('\nK NEAREST NEIGHBORS\n')
 #----------------------------- K NEAREST NEIGHBORS ----------------------------
 
 
@@ -96,8 +96,8 @@ ml_5_knn, x5_train, x5_test, y5_train, y5_test = k_nearest_neighbor_train(df_ml_
 #   pickle.dump(ml_10_knn, myFile)
 
 
+# ---------- ENSEMBLE MODELLING ----------
 
-# ----- ENSEMBLE MODELLING -----
 #In this section we will combine the results of using the same algorithm but with different input data used to train the model. The features are still broadly the same but have been averaged over a different number of games df_ml_10 is 10 games, df_ml_5 is 5 games. 
 
 
@@ -131,8 +131,7 @@ print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%')
 print(confusion_matrix(y10_test, y_pred_ml5and10), '\n\n')
 
 
-
-# --------------- TESTING N_NEIGHBORS PARAM ---------------
+# ---------- TESTING N_NEIGHBORS PARAM ----------
 
 #the below code iterates over n neighbors, in the inner loop and i different train test splits in the outer loop. Increase the range of the outer loop to attain a more stable result
 
@@ -157,7 +156,7 @@ ax.legend(loc=4)
 #plt.savefig('figures\ml_10_testing_k_values_uniform.png')
 
 
-#---------- MODEL EVALUATION ----------
+# ---------- MODEL EVALUATION ----------
 
 #cross validation
 skf = StratifiedKFold(n_splits=5, shuffle=True)
@@ -192,9 +191,8 @@ plot_learning_curve(ml_10_knn, x_10, y_10, training_set_size=10, x_max=160, titl
 plot_learning_curve(ml_5_knn, x_5, y_5, training_set_size=10, x_max=230, title='Learning Curve - Nearest Neighbor DF_5', leg_loc=1)
 #plt.savefig('figures\ml_5_nearest_neighbor_learning_curve.png')
 
-
     
 # ----------------------------------- END -------------------------------------
 
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')

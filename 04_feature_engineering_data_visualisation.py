@@ -45,7 +45,6 @@ with open(f'prem_clean_fixtures_and_dataframes/{df_10_saved_name}', 'rb') as myF
 #standard variables for every figure
 
 
-
 #----------------------------------- FIGURE 1 ---------------------------------
 
 #figure 1 - setting up the wrapper
@@ -125,12 +124,9 @@ for ax in ax_iter:
     #ax.plot([a_min, a_max], [a_min+0.3*mult, a_max+0.3*mult], '--', color = '#FFCECE')
     #ax.plot([a_min, a_max], [a_min-0.3*mult, a_max-0.3*mult], '--', color = '#FFCECE')
 
-
 #saving figure
 if save_df_10_fig:
     fig.savefig('figures/average_10_games_team_target_result.png')
-
-
 
 
 #----------------------------------- FIGURE 2 ---------------------------------
@@ -212,11 +208,9 @@ for ax in ax_iter:
     #ax.plot([a_min, a_max], [a_min+0.3*mult, a_max+0.3*mult], '--', color = '#FFCECE')
     #ax.plot([a_min, a_max], [a_min-0.3*mult, a_max-0.3*mult], '--', color = '#FFCECE')
 
-
 #saving figure
 if save_df_5_fig:
     fig.savefig('figures/average_5_games_team_target_result.png')
-
 
 
 # ----------------------------------- END -------------------------------------

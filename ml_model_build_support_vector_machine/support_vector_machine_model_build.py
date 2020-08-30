@@ -5,8 +5,8 @@ Created on Mon May 11 18:28:28 2020
 @author: mhayt
 """
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
+
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
@@ -15,6 +15,8 @@ from os.path import dirname, realpath, sep, pardir
 import sys
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
+import time
+start=time.time()
 
 from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix, plot_learning_curve
 from ml_functions.data_processing import scale_df
@@ -28,6 +30,7 @@ from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_
 
 plt.close('all')
 
+
 #------------------------------- ML MODEL BUILD -------------------------------
 
 #importing the data and creating the feature dataframe and target series
@@ -38,11 +41,9 @@ with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_5_v2.txt', 
 with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
-
 #scaling dataframe to make all features to have zero mean and unit vector.
 df_ml_10 = scale_df(df_ml_10, list(range(14)), [14,15,16])
 df_ml_5 = scale_df(df_ml_5, list(range(14)), [14,15,16])
-
 
 x_10 = df_ml_10.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
 y_10 = df_ml_10['Team Result Indicator']
@@ -51,8 +52,6 @@ x_5 = df_ml_5.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indi
 y_5 = df_ml_5['Team Result Indicator']
 
 
-
-print('\nSUPPORT VECTOR MACHINES\n')
 #--------------------------- SUPPORT VECTOR MACHINE ---------------------------
 
 
@@ -91,7 +90,6 @@ def svm_train(df, print_result=True, print_result_label=''):
 ml_10_svm, x10_train, x10_test, y10_train, y10_test = svm_train(df_ml_10)
 ml_5_svm, x5_train, x5_test, y5_train, y5_test = svm_train(df_ml_5)
 
-
 #with open('ml_models/svm_model_5.pk1', 'wb') as myFile:
 #    pickle.dump(ml_5_svm, myFile)
 
@@ -99,7 +97,7 @@ ml_5_svm, x5_train, x5_test, y5_train, y5_test = svm_train(df_ml_5)
 #    pickle.dump(ml_10_svm, myFile)
 
 
-# --------------- TESTING C PARAM ---------------
+# ---------- TESTING C PARAM ----------
 
 expo_iter = np.square(np.arange(0.1, 10, 0.1))
 
@@ -125,9 +123,9 @@ fig, ax = plt.subplots()
 ax.plot(expo_iter, test_score_li)
     
 
-# ----- ENSEMBLE MODELLING -----
-#In this section we will combine the results of using the same algorithm but with different input data used to train the model. The features are still broadly the same but have been averaged over a different number of games df_ml_10 is 10 games, df_ml_5 is 5 games. 
+# ---------- ENSEMBLE MODELLING ----------
 
+#In this section we will combine the results of using the same algorithm but with different input data used to train the model. The features are still broadly the same but have been averaged over a different number of games df_ml_10 is 10 games, df_ml_5 is 5 games. 
 
 #reducing fixtures in df_ml_5 to contain only the fixtures within df_ml_10 and training that new dataset
 df_ml_5_dropto10 = df_ml_5.drop(list(range(0,50)))
@@ -159,8 +157,7 @@ print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%')
 print(confusion_matrix(y10_test, y_pred_ml5and10), '\n\n')
 
 
-
-#---------- MODEL EVALUATION ----------
+# ---------- MODEL EVALUATION ----------
 
 #cross validation
 skf = StratifiedKFold(n_splits=5, shuffle=True)
@@ -195,10 +192,9 @@ plot_learning_curve(ml_10_svm, x_10, y_10, training_set_size=10, x_max=160, titl
 plot_learning_curve(ml_5_svm, x_5, y_5, training_set_size=10, x_max=230, title='Learning Curve - Support Vector Machine DF_5', leg_loc=1)
 #plt.savefig('figures\ml_5_svm_learning_curve.png')
 
-
     
 # ----------------------------------- END -------------------------------------
 
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')
 

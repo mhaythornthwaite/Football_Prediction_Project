@@ -5,10 +5,8 @@ Created on Sun May 10 15:59:55 2020
 @author: mhayt
 """
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
-import time
-start=time.time()
+
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
@@ -17,6 +15,8 @@ from os.path import dirname, realpath, sep, pardir
 import sys
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
+import time
+start=time.time()
 
 from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix, plot_learning_curve
 from ml_functions.data_processing import scale_df
@@ -47,7 +47,6 @@ with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt',
 df_ml_10 = scale_df(df_ml_10, list(range(14)), [14,15,16])
 df_ml_5 = scale_df(df_ml_5, list(range(14)), [14,15,16])
 
-
 x_10 = df_ml_10.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
 y_10 = df_ml_10['Team Result Indicator']
 
@@ -55,7 +54,6 @@ x_5 = df_ml_5.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indi
 y_5 = df_ml_5['Team Result Indicator']
 
 
-print('\nRANDOM FOREST\n')
 #------------------------------- RANDOM FOREST --------------------------------
 
 
@@ -97,32 +95,26 @@ with open('ml_models/random_forest_model_5.pk1', 'wb') as myFile:
 with open('ml_models/random_forest_model_10.pk1', 'wb') as myFile:
     pickle.dump(ml_10_rand_forest, myFile)
 
-   
 
+# ---------- ENSEMBLE MODELLING ----------
 
-# ----- ENSEMBLE MODELLING -----
 #In this section we will combine the results of using the same algorithm but with different input data used to train the model. The features are still broadly the same but have been averaged over a different number of games df_ml_10 is 10 games, df_ml_5 is 5 games. 
-
 
 #reducing fixtures in df_ml_5 to contain only the fixtures within df_ml_10 and training that new dataset
 df_ml_5_dropto10 = df_ml_5.drop(list(range(0,50)))
 ml_5_to10_rand_forest, x5_to10_train, x5_to10_test, y5_to10_train, y5_to10_test = rand_forest_train(df_ml_5_dropto10, print_result=False)
 
-
 #making predictions using the two df inputs independantly
 y_pred_ml10 = ml_10_rand_forest.predict(x10_test)
 y_pred_ml5to10 = ml_5_to10_rand_forest.predict(x10_test)
-
 
 #making probability predictions on each of the datasets independantly
 pred_proba_ml10 = ml_10_rand_forest.predict_proba(x10_test)
 pred_proba_ml5_10 = ml_5_to10_rand_forest.predict_proba(x10_test)
 
-
 #combining independant probabilities and creating combined class prediction
 pred_proba_ml5and10 = (np.array(pred_proba_ml10) + np.array(pred_proba_ml5_10)) / 2.0
 y_pred_ml5and10 = np.argmax(pred_proba_ml5and10, axis=1)
-
 
 #accuracy score variables
 y_pred_ml10_accuracy = round(accuracy_score(y10_test, y_pred_ml10), 3) * 100
@@ -138,7 +130,7 @@ print(f'Accuracy of df_5 and df_10 combined = {y_pred_ml5and10_accuracy}%')
 print(confusion_matrix(y10_test, y_pred_ml5and10), '\n\n')
 
 
-# ----- TESTING MAX-DEPTH -----
+# ---------- TESTING MAX-DEPTH ----------
 
 
 def test_rand_f_max_depth(X, y, iterations=5, max_depth=10, y_min=0.3, y_max=1.02, title='', leg_loc=4):
@@ -199,8 +191,7 @@ def test_rand_f_max_depth(X, y, iterations=5, max_depth=10, y_min=0.3, y_max=1.0
 #plt.savefig('figures\ml_10_testing_max_depth_random_forest.png')
 
 
-
-# ----- GRID SEARCH -----
+# ---------- GRID SEARCH ----------
 
 #param_grid_grad = [{'n_estimators':list(range(50,200,50)),'max_depth':list(range(1,5,1)),'max_features':list(range(2,5,1))}]
 #param_grid_grad = [{'n_estimators':list(range(10,200,10))}]
@@ -214,8 +205,7 @@ def test_rand_f_max_depth(X, y, iterations=5, max_depth=10, y_min=0.3, y_max=1.0
 #print('Gradient Best Score: ' , grid_search_grad.best_score_ , '\n')
 
 
-
-#---------- MODEL EVALUATION ----------
+# ---------- MODEL EVALUATION ----------
 
 #cross validation
 skf = StratifiedKFold(n_splits=5, shuffle=True)
@@ -259,6 +249,5 @@ fi_ml_5 = pd.DataFrame({'feature': list(x5_train.columns),'importance': ml_5_ran
 
 # ----------------------------------- END -------------------------------------
 
-print('\n', 'Script runtime:', (time.time()-start)/60)
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')

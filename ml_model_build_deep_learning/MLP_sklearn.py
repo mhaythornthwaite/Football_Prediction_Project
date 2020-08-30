@@ -5,8 +5,8 @@ Created on Mon May 11 18:28:28 2020
 @author: mhayt
 """
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
+
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
@@ -15,6 +15,8 @@ from os.path import dirname, realpath, sep, pardir
 import sys
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
+import time
+start=time.time()
 
 from ml_functions.data_processing import scale_df
 import pickle
@@ -26,8 +28,14 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.model_selection import cross_val_score
 
-
 plt.close('all')
+
+
+#------------------------------- INPUT VARIABLES ------------------------------
+
+df_5_saved_name = '2019_prem_df_for_ml_5_v2.txt'
+df_10_saved_name = '2019_prem_df_for_ml_10_v2.txt'
+
 
 #------------------------------- ML MODEL BUILD -------------------------------
 
@@ -52,10 +60,7 @@ x_5 = df_ml_5.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indi
 y_5 = df_ml_5['Team Result Indicator']
 
 
-
-print('\nMULTILAYER PERCEPTRON\n')
 #---------------------------- MULTILAYER PERCEPTRON ---------------------------
-
 
 #split into training data and test data
 x_train, x_test, y_train, y_test = train_test_split(x_10, y_10, test_size=0.2)
@@ -69,8 +74,7 @@ cv_score_av = round(np.mean(cross_val_score(clf, x_10, y_10))*100,1)
 print('Cross-Validation Accuracy Score ML10: ', cv_score_av, '%\n')
 
 
-
-# ----- GRID SEARCH -----
+#--------------------------------- GRID SEARCH --------------------------------
 
 #creating the list of tuples to test the length of hidden layers
 hidden_layer_test = []
@@ -93,7 +97,7 @@ print('Gradient Best Score: ' , grid_search_grad.best_score_ , '\n')
 print(grid_search_grad.cv_results_['mean_test_score'])
 
 
-#plotting the data
+# ---------- PLOTTING THE DATA ----------
 
 #populating df with x, y, z data
 matrix_plot_data = pd.DataFrame({})
@@ -125,6 +129,6 @@ fig.savefig('figures/testing_hidden_layer_lengths.png')
 
 # ----------------------------------- END -------------------------------------
 
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')
 

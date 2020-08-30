@@ -35,8 +35,8 @@ request_missing_game_stats = False
 
 #------------------------------ REQUEST FUNCTIONS -----------------------------
 
-
 api_key = (open('api_key.txt', mode='r')).read()
+
 
 def get_api_data(base_url, end_url):
     url = base_url + end_url
@@ -66,11 +66,9 @@ def read_json_as_pd_df(json_data, json_data_path='', orient_def='records'):
     return output
   
     
-
 #---------------------------- REQUESTING BASIC DATA ---------------------------
 
 base_url = 'https://v2.api-football.com/'
-
 
 
 def req_prem_fixtures_id(season_code, year=YEAR_str):
@@ -108,8 +106,8 @@ def load_prem_fixtures_id(year=YEAR_str):
     premier_league_fixtures_df = read_json_as_pd_df(f'{year}_premier_league_fixtures.json', json_data_path='prem_clean_fixtures_and_dataframes/')
     return premier_league_fixtures_df
 
-fixtures = load_prem_fixtures_id()
 
+fixtures = load_prem_fixtures_id()
 
 
 #------------------------- MAKING CLEAN FIXTURE LIST --------------------------
@@ -147,8 +145,7 @@ for i in fixtures.index:
 for i in fixtures.index:
     x = str(fixtures['awayTeam'][i]['logo']) 
     fixtures.at[i, 'Away Team Logo'] = x
-    
-
+ 
 fixtures_clean = pd.DataFrame({'Fixture ID': fixtures['fixture_id'], 'Game Date': fixtures['Game Date'], 'Home Team ID': fixtures['HomeTeamID'], 'Away Team ID': fixtures['AwayTeamID'], 'Home Team Goals': fixtures['goalsHomeTeam'], 'Away Team Goals': fixtures['goalsAwayTeam'], 'Venue': fixtures['venue'], 'Home Team': fixtures['Home Team'], 'Away Team': fixtures['Away Team'], 'Home Team Logo': fixtures['Home Team Logo'], 'Away Team Logo': fixtures['Away Team Logo']})
 
 fixtures_clean.to_csv(f'prem_clean_fixtures_and_dataframes/{YEAR_str}_premier_league_fixtures_df.csv', index=False)
@@ -168,11 +165,11 @@ fixtures_clean_combined = fixtures_clean_combined.reset_index(drop=True)
 fixtures_clean_combined.to_csv(f'prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv', index=False)
 
 
-
 #-------------------------- REQUESTING SPECIFIC STATS -------------------------
 
 fixtures_clean = pd.read_csv(f'prem_clean_fixtures_and_dataframes/{YEAR_str}_premier_league_fixtures_df.csv')
     
+
 def req_prem_stats(start_index, end_index):
     for i in fixtures_clean.index[start_index:end_index]:
         if math.isnan(fixtures_clean['Home Team Goals'].iloc[i]) == False:
@@ -188,7 +185,6 @@ def req_prem_stats(start_index, end_index):
 #----- AUTOMATING MISSING DATA COLLECTION -----
 
 #in this section we will search through our exisiting database (prem_game_stats_json_files folder) and request the game data of any missing games that have been played since we last requested data.
-
 
 #listing the json data already collected
 existing_data_raw = listdir('prem_game_stats_json_files/')
@@ -220,9 +216,9 @@ def req_prem_stats_list(missing_data):
             fixture_sliced = slice_api(fixture_raw, 34, 2)
             save_api_output('prem_game_stats_json_files/' + fix_id, fixture_sliced)
 
+
 if request_missing_game_stats:
     req_prem_stats_list(missing_data)
-
 
 
 # ----------------------------------- END -------------------------------------

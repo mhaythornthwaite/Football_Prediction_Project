@@ -26,8 +26,8 @@ fixtures_saved_name = '2019_premier_league_fixtures_df.csv'
 stats_dict_output_name = '2019_prem_all_stats_dict.txt'
 
 
-
 #---------------------------- CREATING DF PER TEAM ----------------------------
+
 #in this section we will create a nested dictionary containing the 20 teams, each with a value as another dictionary. In this dictionary we will have the game id along with the game dataframe.
 
 fixtures_clean = pd.read_csv(f'prem_clean_fixtures_and_dataframes/{fixtures_saved_name}')
@@ -127,7 +127,6 @@ with open(f'prem_clean_fixtures_and_dataframes/{stats_dict_output_name}', 'wb') 
 
 with open(f'prem_clean_fixtures_and_dataframes/{stats_dict_output_name}', 'rb') as myFile:
     loaded_dict_test = pickle.load(myFile)
-
 
 
 # ----------------------------------- END -------------------------------------

@@ -5,8 +5,8 @@ Created on Sun Jun 28 11:45:42 2020
 @author: mhayt
 """
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
+
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
@@ -15,6 +15,8 @@ from os.path import dirname, realpath, sep, pardir
 import sys
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
+import time
+start=time.time()
 
 import pandas as pd
 import pickle
@@ -22,11 +24,11 @@ import numpy as np
 import math
 from ml_functions.feature_engineering_functions import average_stats_df, mod_df
 
+
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
 with open('../prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb') as myFile:
     game_stats = pickle.load(myFile)
-    
     
 #creating a list with the team id in
 team_list = []
@@ -51,17 +53,12 @@ for team in team_fixture_id_dict:
     sub_dict = {team:team_fixture_list_reduced}
     team_fixture_id_dict_reduced.update(sub_dict)
 
-
-
 df_10_upcom_fix_e = average_stats_df(10, team_list, team_fixture_id_dict_reduced, game_stats, making_predictions=True)
 df_10_upcom_fix = mod_df(df_10_upcom_fix_e, making_predictions=True)
-
-
 
 #loading fixtures dataframe, we will work with the clean version but it is good to be aware of what is available in the raw version.
 fixtures = pd.read_json('../prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures.json', orient='records')
 fixtures_clean = pd.read_csv('../prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv')
-
 
 #creating a df with unplayed games only
 played_games = []
@@ -73,7 +70,6 @@ unplayed_games = fixtures_clean.drop(fixtures_clean.index[played_games])
 unplayed_games = unplayed_games.reset_index(drop=True)
 unplayed_games = unplayed_games.drop(['Home Team Goals', 'Away Team Goals'], axis=1)
 
-
 #loading df for the labels 
 with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
@@ -83,7 +79,6 @@ column_list = df_ml_10.columns.tolist()
 #instatiating the df for predictions with zeros
 df_for_predictions = pd.DataFrame(np.zeros((68, 14)))
 df_for_predictions.columns = column_list[:14]
-
 
 #adding the home and away team id
 df_for_predictions = pd.DataFrame(np.zeros((len(unplayed_games), 14)))
@@ -95,7 +90,7 @@ df_for_predictions['Away Team'] = unplayed_games['Away Team']
 df_for_predictions['Game Date'] = unplayed_games['Game Date']
 
 
-#----- MODELLING MISSING GAME DATA -----
+# ---------- MODELLING MISSING GAME DATA ----------
 #if our newly promoted team has not yet played 10 games we need to fill in this gap in order to make a prediction. Lets take the 3 relegated teams, avergae these and use that for all newly promoted teams. 
 
 relegated_id_1 = 35
@@ -109,10 +104,9 @@ rel_3_df = (df_10_upcom_fix.loc[df_10_upcom_fix['Team ID'] == relegated_id_3]).r
 average_df = rel_1_df.add(rel_2_df, fill_value=0)
 average_df = average_df.add(rel_3_df, fill_value=0)
 average_df = average_df.div(3)
-#-----
 
 
-#populating the df_for_predictions with stats
+# ---------- POPULATING 'df_for_predictions' WITH STATS ----------
 
 for i in range(0, len(unplayed_games)):
     #getting home team id and index
@@ -184,8 +178,7 @@ with open('../web_server/pl_predictions.csv', 'wb') as myFile:
     pickle.dump(predictions, myFile)  
 
 
-
 # ----------------------------------- END -------------------------------------
 
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')

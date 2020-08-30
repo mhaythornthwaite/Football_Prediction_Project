@@ -5,10 +5,8 @@ Created on Sun Jun 14 14:25:15 2020
 @author: mhayt
 """
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
-import time
-start=time.time()
+
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
 
@@ -17,6 +15,8 @@ from os.path import dirname, realpath, sep, pardir
 import sys
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep)
 
+import time
+start=time.time()
 
 from sklearn.decomposition import PCA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
@@ -24,12 +24,10 @@ import pickle
 from ml_functions.data_processing import scale_df, scree_plot
 import matplotlib.pyplot as plt
 
-
 plt.close('all')
 
 
 #------------------------ PRINCIPLE COMPONENT ANALYSIS ------------------------
-
 
 with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
@@ -52,13 +50,12 @@ pca_percentages = [element * 100 for element in pca_percentages]
 for i in range(0, n_components, 1):
     print(f'PCA{i+1}:', round(pca_percentages[i], 2), '%')
 
-
 #plotting scree plot
 fig = scree_plot(pca_percentages)
 fig.savefig('figures/PCA_Scree_Plot_ml10.png')
 
 
-# ----- X-plot PC1 and PCA2 -----
+# ---------- X-plot PC1 and PCA2 ----------
 
 #creating variables
 pca_values = pca.fit_transform(x_10)
@@ -79,7 +76,6 @@ ax.set_axisbelow(True)
 fig.savefig('figures/PC1_PC2_xplot_ml10.png')
 
 
-
 #------------------------ LINEAR DISCRIMINANT ANALYSIS ------------------------
 
 #instantiating and fitting LDA classifier, for the purpose of dimensionality reduction.
@@ -87,7 +83,7 @@ clf = LinearDiscriminantAnalysis(n_components=2)
 clf.fit(x_10, y_10)
 
 
-# ----- X-plot LDA1 and LDA2 -----
+# ---------- X-plot LDA1 and LDA2 ----------
 
 #creating variables
 lda_values = clf.fit_transform(x_10, y_10)
@@ -108,9 +104,7 @@ ax.set_axisbelow(True)
 fig.savefig('figures/LDA_xplot_ml10.png')
 
 
-
 #------------------------------------ END -------------------------------------
 
-print('\n', 'Script runtime:', (time.time()-start)/60)
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')
