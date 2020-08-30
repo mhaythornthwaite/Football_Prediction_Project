@@ -51,15 +51,15 @@ with open(f'../prem_clean_fixtures_and_dataframes/{df_5_saved_name}', 'rb') as m
 with open(f'../prem_clean_fixtures_and_dataframes/{df_10_saved_name}', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
-
 #scaling dataframe to make all features to have zero mean and unit vector.
 df_ml_10 = scale_df(df_ml_10, list(range(14)), [14,15,16])
 df_ml_5 = scale_df(df_ml_5, list(range(14)), [14,15,16])
 
-
+#creating feautes and labels df for df_10
 x_10 = df_ml_10.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
 y_10 = df_ml_10['Team Result Indicator']
 
+#creating feautes and labels df for df_5
 x_5 = df_ml_5.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
 y_5 = df_ml_5['Team Result Indicator']
 

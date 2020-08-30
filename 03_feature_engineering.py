@@ -76,6 +76,3 @@ with open(f'prem_clean_fixtures_and_dataframes/{df_10_output_name}', 'wb') as my
 
 print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
 print(' ----------------- END ----------------- \n')
-
-
-

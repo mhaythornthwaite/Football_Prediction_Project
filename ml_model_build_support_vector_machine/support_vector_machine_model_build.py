@@ -197,4 +197,3 @@ plot_learning_curve(ml_5_svm, x_5, y_5, training_set_size=10, x_max=230, title='
 
 print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
 print(' ----------------- END ----------------- \n')
-
