@@ -6,20 +6,31 @@ Created on Sat Apr 18 14:31:13 2020
 """
 
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
+
+import time
+start=time.time()
 
 import pandas as pd
 import math
 import pickle
 
 
+#------------------------------- INPUT VARIABLES ------------------------------
+
+#Please state the name of the fixtures DataFrame we want to generate our dictionary, as well as the name of the saved output file (nested stats dictionary).
+
+fixtures_saved_name = '2019_premier_league_fixtures_df.csv'
+stats_dict_output_name = '2019_prem_all_stats_dict.txt'
+
+
+
 #---------------------------- CREATING DF PER TEAM ----------------------------
 #in this section we will create a nested dictionary containing the 20 teams, each with a value as another dictionary. In this dictionary we will have the game id along with the game dataframe.
 
-fixtures_clean = pd.read_csv('prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures_df.csv')
+fixtures_clean = pd.read_csv(f'prem_clean_fixtures_and_dataframes/{fixtures_saved_name}')
 
 #creating the 'fixtures_clean' ID index which we will use to take data from this dataframe and add to each of our individual fixture stats dataframe.
 fixtures_clean_ID_index = pd.Index(fixtures_clean['Fixture ID'])
@@ -111,15 +122,15 @@ for team in team_id_list:
 
 #saving our generated dictionary as a pickle file to import into a later python file.
 
-with open('prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'wb') as myFile:
+with open(f'prem_clean_fixtures_and_dataframes/{stats_dict_output_name}', 'wb') as myFile:
     pickle.dump(all_stats_dict, myFile)
 
-with open('prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb') as myFile:
+with open(f'prem_clean_fixtures_and_dataframes/{stats_dict_output_name}', 'rb') as myFile:
     loaded_dict_test = pickle.load(myFile)
 
 
 
 # ----------------------------------- END -------------------------------------
 
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')

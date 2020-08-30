@@ -6,19 +6,33 @@ Created on Tue Apr 21 18:23:13 2020
 """
 
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
+
+import time
+start=time.time()
 
 import pickle
 from ml_functions.feature_engineering_functions import average_stats_df
 from ml_functions.feature_engineering_functions import creating_ml_df
 
+
+#------------------------------- INPUT VARIABLES ------------------------------
+
+#Please state the name of the saved nested dictionary generated with '02_cleaning_stats_data.py', as well as the name of the saved output files (stats DataFrame).
+
+stats_dict_saved_name = '2019_prem_all_stats_dict.txt'
+
+df_5_output_name = '2019_prem_df_for_ml_5_v2.txt'
+df_10_output_name = '2019_prem_df_for_ml_10_v2.txt'
+
+
+
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
 
-with open('prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb') as myFile:
+with open(f'prem_clean_fixtures_and_dataframes/{stats_dict_saved_name}', 'rb') as myFile:
     game_stats = pickle.load(myFile)
 
 
@@ -56,19 +70,19 @@ df_ml_10 = average_stats_df(10, team_list, team_fixture_id_dict, game_stats)
     
 #creating and saving the ml dataframe with a 5 game sliding average.
 df_for_ml_5_v2 = creating_ml_df(df_ml_5)
-with open('prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_5_v2.txt', 'wb') as myFile:
+with open(f'prem_clean_fixtures_and_dataframes/{df_5_output_name}', 'wb') as myFile:
     pickle.dump(df_for_ml_5_v2, myFile)
 
 #creating and saving the ml dataframe with a 10 game sliding average.
 df_for_ml_10_v2 = creating_ml_df(df_ml_10)
-with open('prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'wb') as myFile:
+with open(f'prem_clean_fixtures_and_dataframes/{df_10_output_name}', 'wb') as myFile:
     pickle.dump(df_for_ml_10_v2, myFile)
 
 
 # ----------------------------------- END -------------------------------------
 
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')
 
 
 

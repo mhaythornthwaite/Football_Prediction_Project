@@ -5,10 +5,12 @@ Created on Mon Apr 13 20:33:10 2020
 @author: mhayt
 """
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
+
+import time
+start=time.time()
 
 import requests
 import pandas as pd
@@ -224,5 +226,5 @@ if request_missing_game_stats:
 
 # ----------------------------------- END -------------------------------------
 
-print(' ----------------- END ----------------- ')
-print('\n')
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')

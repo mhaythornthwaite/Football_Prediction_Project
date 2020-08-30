@@ -5,10 +5,12 @@ Created on Sat May  2 13:21:32 2020
 @author: mhayt
 """
 
-print('\n\n')
-print(' ---------------- START ---------------- \n')
+print('\n\n ---------------- START ---------------- \n')
 
 #-------------------------------- API-FOOTBALL --------------------------------
+
+import time
+start=time.time()
 
 import pandas as pd
 import pickle
@@ -17,16 +19,29 @@ import matplotlib.pyplot as plt
 
 plt.close('all')
 
+
+#------------------------------- INPUT VARIABLES ------------------------------
+
+#Please state the name of the saved stats DataFrames generated with '03_feature_engineering.py'. Also state whether figures should be saved and the colour theme of the figures.
+
+df_5_saved_name = '2019_prem_df_for_ml_5_v2.txt'
+df_10_saved_name = '2019_prem_df_for_ml_10_v2.txt'
+
+save_df_10_fig = True
+save_df_5_fig = True
+
+colourbar = 'winter'
+
+
 #-------------------------- PRE-ML DATA VISUALISATION -------------------------
 
-with open('prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_5_v2.txt', 'rb') as myFile:
+with open(f'prem_clean_fixtures_and_dataframes/{df_5_saved_name}', 'rb') as myFile:
     df_ml_5 = pickle.load(myFile)
 
-with open('prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
+with open(f'prem_clean_fixtures_and_dataframes/{df_10_saved_name}', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
 #standard variables for every figure
-colourbar = 'winter'
 
 
 
@@ -111,7 +126,8 @@ for ax in ax_iter:
 
 
 #saving figure
-fig.savefig('figures/average_10_games_team_target_result.png')
+if save_df_10_fig:
+    fig.savefig('figures/average_10_games_team_target_result.png')
 
 
 
@@ -197,12 +213,12 @@ for ax in ax_iter:
 
 
 #saving figure
-fig.savefig('figures/average_5_games_team_target_result.png')
+if save_df_5_fig:
+    fig.savefig('figures/average_5_games_team_target_result.png')
 
 
 
+# ----------------------------------- END -------------------------------------
 
-
-
-
-
+print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
+print(' ----------------- END ----------------- \n')

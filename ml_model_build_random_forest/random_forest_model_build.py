@@ -29,8 +29,8 @@ from sklearn.metrics import classification_report, confusion_matrix, plot_confus
 from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_predict
 import pandas as pd
 
-
 plt.close('all')
+
 
 #------------------------------- ML MODEL BUILD -------------------------------
 
@@ -57,6 +57,7 @@ y_5 = df_ml_5['Team Result Indicator']
 
 print('\nRANDOM FOREST\n')
 #------------------------------- RANDOM FOREST --------------------------------
+
 
 def rand_forest_train(df, print_result=True, print_result_label=''):
 
