@@ -29,7 +29,7 @@ from ml_functions.feature_engineering_functions import average_stats_df, mod_df
 
 fixtures_saved_name = '2019_2020_premier_league_fixtures_df.csv'
 
-stats_dict_saved_name = '2019_prem_all_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_prem_all_stats_dict.txt'
 
 df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
 

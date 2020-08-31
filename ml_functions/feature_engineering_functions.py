@@ -94,6 +94,10 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
     for team_id in team_list[:]:
         team = game_stats[team_id] #team dictionary
         
+        #skipping over teams which have less games played that the 'games_slide'
+        if len(team_fixture_id_dict[team_id]) < games_slide:
+            continue
+        
         #creating the initial features - it is important these get overwritten with each iteration
         team_total_shots = []
         team_shots_inside_box = []     
