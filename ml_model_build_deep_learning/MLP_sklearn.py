@@ -70,7 +70,10 @@ y_5 = df_ml_5['Team Result Indicator']
 x_train, x_test, y_train, y_test = train_test_split(x_10, y_10, test_size=0.2)
 
 #instantiate the MLP classifier, and fit to the data
-clf = MLPClassifier(hidden_layer_sizes=(18, 12), activation='logistic', random_state=0, max_iter=5000)
+clf = MLPClassifier(hidden_layer_sizes=(18, 12), 
+                    activation='logistic', 
+                    random_state=0, 
+                    max_iter=5000)
 clf.fit(x_train, y_train)
 
 #printing the cross-validation accuracy score
@@ -92,7 +95,11 @@ if grid_search:
     param_grid_grad = [{'hidden_layer_sizes':hidden_layer_test}]
     
     #mlp gridsearch 
-    grid_search_grad = GridSearchCV(clf, param_grid_grad, cv=5, scoring = 'accuracy', return_train_score = True)
+    grid_search_grad = GridSearchCV(clf, 
+                                    param_grid_grad, 
+                                    cv=5, 
+                                    scoring = 'accuracy', 
+                                    return_train_score = True)
     grid_search_grad.fit(x_10, y_10)
 
     #Output best Cross Validation score and parameters from grid search
@@ -140,11 +147,17 @@ if grid_search:
 if create_final_model:
     
     #intantiating and training the df_5 network
-    ml_5_mlp = MLPClassifier(hidden_layer_sizes=(18, 12), activation='relu', random_state=0, max_iter=5000)
+    ml_5_mlp = MLPClassifier(hidden_layer_sizes=(18, 12), 
+                             activation='logistic', 
+                             random_state=0, 
+                             max_iter=5000)
     ml_5_mlp.fit(x_5, y_5)
     
     #intantiating and training the df_10 network
-    ml_10_mlp = MLPClassifier(hidden_layer_sizes=(18, 12), activation='relu', random_state=0, max_iter=5000)
+    ml_10_mlp = MLPClassifier(hidden_layer_sizes=(18, 12), 
+                              activation='logistic', 
+                              random_state=0, 
+                              max_iter=5000)
     ml_10_mlp.fit(x_10, y_10)
     
     with open('ml_models/mlp_model_5.pk1', 'wb') as myFile:

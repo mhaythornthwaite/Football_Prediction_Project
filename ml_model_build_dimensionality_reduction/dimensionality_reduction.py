@@ -78,13 +78,18 @@ if xplot_pc1_pc2:
     
     #instantiating figure and plotting scatter
     fig, ax = plt.subplots()
-    scat = ax.scatter(pca_values[:,0], pca_values[:,1], c=df_ml_10['Team Result Indicator'], cmap='winter');
+    scat = ax.scatter(pca_values[:,0], 
+                      pca_values[:,1], 
+                      c=df_ml_10['Team Result Indicator'], 
+                      cmap='winter');
     
     #fig plotting details
     fig.suptitle('PCA X-Plot', y=0.96, fontsize=16, fontweight='bold');
-    ax.set(xlabel='PC1',
-           ylabel='PC2');
-    ax.legend(*scat.legend_elements(), title='Target \n Team \n Result', loc='upper right', fontsize='small')
+    ax.set(xlabel='PC1', ylabel='PC2');
+    ax.legend(*scat.legend_elements(), 
+              title='Target \n Team \n Result', 
+              loc='upper right', 
+              fontsize='small')
     ax.grid(color='xkcd:light grey')
     ax.set_axisbelow(True)
     
@@ -108,13 +113,19 @@ if xplot_ld1_ld2:
     
     #instantiating figure and plotting scatter
     fig, ax = plt.subplots()
-    scat = ax.scatter(lda_values[:,0], lda_values[:,1], c=df_ml_10['Team Result Indicator'], cmap='winter');
+    scat = ax.scatter(lda_values[:,0], 
+                      lda_values[:,1], 
+                      c=df_ml_10['Team Result Indicator'], 
+                      cmap='winter');
     
     #fig plotting details
     fig.suptitle('LDA X-Plot', y=0.96, fontsize=16, fontweight='bold');
-    ax.set(xlabel='LD1',
-           ylabel='LD2');
-    ax.legend(*scat.legend_elements(), title='Target \n Team \n Result', loc='upper right', fontsize='small')
+    ax.set(xlabel='LD1', ylabel='LD2');
+    ax.legend(*scat.legend_elements(), 
+              title='Target \n Team \n Result', 
+              loc='upper right', 
+              fontsize='small')
+    
     ax.grid(color='xkcd:light grey')
     ax.set_axisbelow(True)
     

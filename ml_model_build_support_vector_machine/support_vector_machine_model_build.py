@@ -25,8 +25,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, confusion_matrix, plot_confusion_matrix, accuracy_score
-from sklearn.model_selection import StratifiedKFold, cross_val_score, cross_val_predict
+from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.model_selection import StratifiedKFold, cross_val_score
 
 plt.close('all')
 
@@ -38,7 +38,6 @@ df_10_saved_name = '2019_prem_df_for_ml_10_v2.txt'
 
 pred_prob_plot_df10 = False
 save_pred_prob_plot_df10 = False
-
 pred_prob_plot_df5 = False
 save_pred_prob_plot_df5 = False
 
@@ -109,12 +108,6 @@ def svm_train(df, print_result=True, print_result_label=''):
 
 ml_10_svm, x10_train, x10_test, y10_train, y10_test = svm_train(df_ml_10)
 ml_5_svm, x5_train, x5_test, y5_train, y5_test = svm_train(df_ml_5)
-
-#with open('ml_models/svm_model_5.pk1', 'wb') as myFile:
-#    pickle.dump(ml_5_svm, myFile)
-
-#with open('ml_models/svm_model_10.pk1', 'wb') as myFile:
-#    pickle.dump(ml_10_svm, myFile)
 
 
 # ---------- TESTING C PARAM ----------
@@ -192,12 +185,24 @@ print('Cross-Validation Accuracy Score ML5: ', cv_score_av, '%\n')
 # ---------- PREDICTION PROBABILITY PLOTS ----------
 
 if pred_prob_plot_df10:
-    fig = pred_proba_plot(ml_10_svm, x_10, y_10, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_10)')
+    fig = pred_proba_plot(ml_10_svm, 
+                          x_10, 
+                          y_10, 
+                          no_iter=50, 
+                          no_bins=35, 
+                          x_min=0.3, 
+                          classifier='Support Vector Machine (ml_10)')
     if save_pred_prob_plot_df10:
         fig.savefig('figures/ml_10_svm_pred_proba.png')
 
 if pred_prob_plot_df5:
-    fig = pred_proba_plot(ml_5_svm, x_5, y_5, no_iter=50, no_bins=35, x_min=0.3, classifier='Support Vector Machine (ml_5)')
+    fig = pred_proba_plot(ml_5_svm, 
+                          x_5, 
+                          y_5, 
+                          no_iter=50, 
+                          no_bins=35, 
+                          x_min=0.3, 
+                          classifier='Support Vector Machine (ml_5)')
     if save_pred_prob_plot_df5:
         fig.savefig('figures/ml_5_svm_pred_proba.png')
 
@@ -206,22 +211,44 @@ if pred_prob_plot_df5:
 
 #plot confusion matrix - modified to take cross-val results.
 
-plot_cross_val_confusion_matrix(ml_10_svm, x_10, y_10, display_labels=('team loses', 'draw', 'team wins'), title='Support Vector Machine Confusion Matrix ML10', cv=skf)
+plot_cross_val_confusion_matrix(ml_10_svm, 
+                                x_10, 
+                                y_10, 
+                                display_labels=('team loses', 'draw', 'team wins'), 
+                                title='Support Vector Machine Confusion Matrix ML10', 
+                                cv=skf)
 if save_conf_matrix_df10:
     plt.savefig('figures\ml_10_confusion_matrix_cross_val_svm.png')
 
-plot_cross_val_confusion_matrix(ml_5_svm, x_5, y_5, display_labels=('team loses', 'draw', 'team wins'), title='Support Vector Machine Confusion Matrix ML5', cv=skf)
+plot_cross_val_confusion_matrix(ml_5_svm, 
+                                x_5, 
+                                y_5, 
+                                display_labels=('team loses', 'draw', 'team wins'), 
+                                title='Support Vector Machine Confusion Matrix ML5', 
+                                cv=skf)
 if save_conf_matrix_df5:
     plt.savefig('figures\ml_5_confusion_matrix_cross_val_svm.png')
 
 
 # ---------- LEARNING CURVE PLOTS ----------
 
-plot_learning_curve(ml_10_svm, x_10, y_10, training_set_size=10, x_max=160, title='Learning Curve - Support Vector Machine DF_10', leg_loc=1)
+plot_learning_curve(ml_10_svm, 
+                    x_10, 
+                    y_10, 
+                    training_set_size=10, 
+                    x_max=160, 
+                    title='Learning Curve - Support Vector Machine DF_10', 
+                    leg_loc=1)
 if save_learning_curve_df10:
     plt.savefig('figures\ml_10_svm_learning_curve.png')
 
-plot_learning_curve(ml_5_svm, x_5, y_5, training_set_size=10, x_max=230, title='Learning Curve - Support Vector Machine DF_5', leg_loc=1)
+plot_learning_curve(ml_5_svm, 
+                    x_5, 
+                    y_5, 
+                    training_set_size=10, 
+                    x_max=230, 
+                    title='Learning Curve - Support Vector Machine DF_5', 
+                    leg_loc=1)
 if save_learning_curve_df5:
     plt.savefig('figures\ml_5_svm_learning_curve.png')
 
