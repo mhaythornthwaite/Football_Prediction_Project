@@ -22,10 +22,10 @@ from ml_functions.feature_engineering_functions import creating_ml_df
 
 #Please state the name of the saved nested dictionary generated with '02_cleaning_stats_data.py', as well as the name of the saved output files (stats DataFrame).
 
-stats_dict_saved_name = '2019_prem_all_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_prem_all_stats_dict.txt'
 
-df_5_output_name = '2019_prem_df_for_ml_5_v2.txt'
-df_10_output_name = '2019_prem_df_for_ml_10_v2.txt'
+df_5_output_name = '2019_2020_prem_df_for_ml_5_v2.txt'
+df_10_output_name = '2019_2020_prem_df_for_ml_10_v2.txt'
 
 
 #----------------------------- FEATURE ENGINEERING ----------------------------

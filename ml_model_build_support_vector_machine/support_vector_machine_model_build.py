@@ -33,8 +33,8 @@ plt.close('all')
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-df_5_saved_name = '2019_prem_df_for_ml_5_v2.txt'
-df_10_saved_name = '2019_prem_df_for_ml_10_v2.txt'
+df_5_saved_name = '2019_2020_prem_df_for_ml_5_v2.txt'
+df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
 
 pred_prob_plot_df10 = False
 save_pred_prob_plot_df10 = False

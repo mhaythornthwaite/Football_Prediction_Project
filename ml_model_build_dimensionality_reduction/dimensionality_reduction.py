@@ -29,7 +29,7 @@ plt.close('all')
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-df_10_saved_name = '2019_prem_df_for_ml_10_v2.txt'
+df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
 
 plot_scree_plot = True
 save_scree_plot = False

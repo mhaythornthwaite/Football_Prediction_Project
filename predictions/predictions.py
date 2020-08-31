@@ -25,9 +25,20 @@ import math
 from ml_functions.feature_engineering_functions import average_stats_df, mod_df
 
 
+#------------------------------- INPUT VARIABLES ------------------------------
+
+fixtures_saved_name = '2019_2020_premier_league_fixtures_df.csv'
+
+stats_dict_saved_name = '2019_prem_all_stats_dict.txt'
+
+df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
+
+path_to_model = '/ml_model_build_random_forest/ml_models/random_forest_model_10.pk1'
+
+
 #----------------------------- FEATURE ENGINEERING ----------------------------
 
-with open('../prem_clean_fixtures_and_dataframes/2019_prem_all_stats_dict.txt', 'rb') as myFile:
+with open(f'../prem_clean_fixtures_and_dataframes/{stats_dict_saved_name}', 'rb') as myFile:
     game_stats = pickle.load(myFile)
     
 #creating a list with the team id in
@@ -56,9 +67,8 @@ for team in team_fixture_id_dict:
 df_10_upcom_fix_e = average_stats_df(10, team_list, team_fixture_id_dict_reduced, game_stats, making_predictions=True)
 df_10_upcom_fix = mod_df(df_10_upcom_fix_e, making_predictions=True)
 
-#loading fixtures dataframe, we will work with the clean version but it is good to be aware of what is available in the raw version.
-fixtures = pd.read_json('../prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures.json', orient='records')
-fixtures_clean = pd.read_csv('../prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv')
+#loading fixtures dataframe, we will work with the clean version.
+fixtures_clean = pd.read_csv(f'../prem_clean_fixtures_and_dataframes/{fixtures_saved_name}')
 
 #creating a df with unplayed games only
 played_games = []
@@ -71,7 +81,7 @@ unplayed_games = unplayed_games.reset_index(drop=True)
 unplayed_games = unplayed_games.drop(['Home Team Goals', 'Away Team Goals'], axis=1)
 
 #loading df for the labels 
-with open('../prem_clean_fixtures_and_dataframes/2019_prem_df_for_ml_10_v2.txt', 'rb') as myFile:
+with open(f'../prem_clean_fixtures_and_dataframes/{df_10_saved_name}', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
 column_list = df_ml_10.columns.tolist()
@@ -155,7 +165,7 @@ for i in range(0, len(unplayed_games)):
 
 #--------------------------- MAKING THE PREDICTIONS ---------------------------
 
-clf = pickle.load(open('../ml_model_build_random_forest/ml_models/random_forest_model_10.pk1', 'rb'))
+clf = pickle.load(open(f'..{path_to_model}', 'rb'))
 
 df_for_predictions_r = df_for_predictions.drop(['Home Team ID', 'Away Team ID', 'Home Team', 'Away Team', 'Game Date'], axis=1)
 
