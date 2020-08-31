@@ -171,7 +171,9 @@ df_for_predictions_r = df_for_predictions.drop(['Home Team ID', 'Away Team ID', 
 
 predictions_raw = clf.predict_proba(df_for_predictions_r)
 
-predictions_df = pd.DataFrame(data=predictions_raw, index=range(0, len(predictions_raw)), columns=['Away Win', 'Draw', 'Home Win'])
+predictions_df = pd.DataFrame(data=predictions_raw, 
+                              index=range(0, len(predictions_raw)), 
+                              columns=['Away Win', 'Draw', 'Home Win'])
 
 predictions_df[predictions_df.select_dtypes(include=['number']).columns] *= 100
 predictions_df = predictions_df.round(1)
