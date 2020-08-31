@@ -9,21 +9,29 @@ Created on Mon Aug 31 14:22:55 2020
 
 #The website supporting this project is currently being hosted on pythonanywhere. Currently only a single script may be scheduled and therefore we need to commbine multiple scripts which generate API calls, and re-generate the predictions based on upcoming games. We also need to adhere to the absolute paths requirired by pythonanywhere. This script will result in automatic updates of the predictions website every midnight.
 
+
+print('\n\n')
+print(' ---------------- START ---------------- \n')
+
+#-------------------------------- API-FOOTBALL --------------------------------
+
 import requests
 import pandas as pd
 import math
 from os import listdir
+
+#Note from the API./ 'in this documentation all the examples are realized with the url provided for rapidApi, if you have subscribed directly with us you will have to replace https://api-football-v1.p.rapidapi.com/v2/ by https://v2.api-football.com/'
 
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
 #Please state the year of investigation.
 
-YEAR = 2020
+YEAR = 2019
 YEAR_str = str(YEAR)
 
 request_league_ids = False
-request_fixtures = True
+request_fixtures = False
 request_missing_game_stats = True
 
 
@@ -65,6 +73,8 @@ def read_json_as_pd_df(json_data, json_data_path='', orient_def='records'):
 
 base_url = 'https://v2.api-football.com/'
 
+
+
 def req_prem_fixtures_id(season_code, year=YEAR_str):
     #request to the api for the data
     premier_league_fixtures_raw = get_api_data(base_url, f'/fixtures/league/{season_code}/')
@@ -100,8 +110,8 @@ def load_prem_fixtures_id(year=YEAR_str):
     premier_league_fixtures_df = read_json_as_pd_df(f'{year}_premier_league_fixtures.json', json_data_path='/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/')
     return premier_league_fixtures_df
 
-
 fixtures = load_prem_fixtures_id()
+
 
 
 #------------------------- MAKING CLEAN FIXTURE LIST --------------------------
@@ -160,9 +170,26 @@ fixtures_clean_combined = fixtures_clean_combined.reset_index(drop=True)
 fixtures_clean_combined.to_csv(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv', index=False)
 
 
+
+#-------------------------- REQUESTING SPECIFIC STATS -------------------------
+
+fixtures_clean = pd.read_csv(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/{YEAR_str}_premier_league_fixtures_df.csv')
+
+def req_prem_stats(start_index, end_index):
+    for i in fixtures_clean.index[start_index:end_index]:
+        if math.isnan(fixtures_clean['Home Team Goals'].iloc[i]) == False:
+            fix_id = str(fixtures_clean['Fixture ID'].iloc[i])
+            fixture_raw = get_api_data(base_url, '/statistics/fixture/' + fix_id + '/')
+            fixture_sliced = slice_api(fixture_raw, 34, 2)
+            save_api_output('2019_prem_game_stats/' + fix_id, fixture_sliced)
+
+
+#req_prem_stats(288, 300)
+
+
 #----- AUTOMATING MISSING DATA COLLECTION -----
 
-#in this section we will search through our exisiting database (prem_game_stats_json_files folder) and request the game data of any missing games that have been played since we last requested data.
+#in this section we will search through our exisiting database (2019_prem_game_stats folder) and request the game data of any missing games that have been played since we last requested data.
 
 
 #listing the json data already collected
@@ -197,6 +224,7 @@ def req_prem_stats_list(missing_data):
 
 if request_missing_game_stats:
     req_prem_stats_list(missing_data)
+
 
 
 
