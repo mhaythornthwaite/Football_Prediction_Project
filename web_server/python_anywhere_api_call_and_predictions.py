@@ -31,14 +31,14 @@ YEAR = 2019
 YEAR_str = str(YEAR)
 
 request_league_ids = False
-request_fixtures = False
+request_fixtures = True
 request_missing_game_stats = True
 
 
 #------------------------------ REQUEST FUNCTIONS -----------------------------
 
 
-api_key = ''
+api_key = 'f6d8a1ef214463be7b6afa8fc8054b5b'
 
 def get_api_data(base_url, end_url):
     url = base_url + end_url
@@ -83,10 +83,10 @@ def req_prem_fixtures_id(season_code, year=YEAR_str):
     premier_league_fixtures_sliced = slice_api(premier_league_fixtures_raw, 33, 2)
 
     #saving the clean data as a json file
-    save_api_output(f'/home/matthaythornthwaite/Football_Prediction_Project/{year}_premier_league_fixtures', premier_league_fixtures_sliced, json_data_path = '/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/')
+    save_api_output(f'{year}_premier_league_fixtures', premier_league_fixtures_sliced, json_data_path = '/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/')
 
     #loading the json file as a DataFrame
-    premier_league_fixtures_df = read_json_as_pd_df(f'/home/matthaythornthwaite/Football_Prediction_Project/{year}_premier_league_fixtures.json', json_data_path='/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/')
+    premier_league_fixtures_df = read_json_as_pd_df(f'{year}_premier_league_fixtures.json', json_data_path='/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/')
     return premier_league_fixtures_df
 
 
@@ -251,7 +251,7 @@ def running_mean(x, N):
         sliding average list
 
     '''
-    cumsum = np.cumsum(np.insert(x, 0, 0)) 
+    cumsum = np.cumsum(np.insert(x, 0, 0))
     return (cumsum[N:] - cumsum[:-N]) / float(N)
 
 
@@ -269,7 +269,7 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
     team_fixture_id_dict : dict
         key: team ID, value: list of fixture ID
     game_stats : nested dict
-        key: team id, second-key: fixtue ID, value: stats dataframe 
+        key: team id, second-key: fixtue ID, value: stats dataframe
     making_predictions: bool
         default = False. Set to true if creating a prediction dataframe
 
@@ -279,7 +279,7 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
         averaged game stats
 
     '''
-    
+
     if making_predictions:
         x = games_slide
         xx = 1
@@ -287,10 +287,10 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
         x = -1
         xx = 0
 
-  
+
     #creating final features which will be appended
     t_total_shots = []
-    t_shots_inside_box = []     
+    t_shots_inside_box = []
     t_fouls = []
     t_corners = []
     t_posession = []
@@ -298,7 +298,7 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
     t_goals = []
     t_goals_target = []
     o_total_shots = []
-    o_shots_inside_box = []     
+    o_shots_inside_box = []
     o_fouls = []
     o_corners = []
     o_posession = []
@@ -308,39 +308,39 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
     fix_id = []
     result_indicator = []
     o_team_ID = []
-    
+
     for team_id in team_list[:]:
         team = game_stats[team_id] #team dictionary
-        
+
         #skipping over teams which have less games played that the 'games_slide'
         if len(team_fixture_id_dict[team_id]) < games_slide:
             continue
-        
+
         #creating the initial features - it is important these get overwritten with each iteration
         team_total_shots = []
-        team_shots_inside_box = []     
+        team_shots_inside_box = []
         team_fouls = []
         team_corners = []
         team_posession = []
         team_pass_accuracy = []
         team_goals = []
         opponent_total_shots = []
-        opponent_shots_inside_box = []     
+        opponent_shots_inside_box = []
         opponent_fouls = []
         opponent_corners = []
         opponent_posession = []
         opponent_pass_accuracy = []
         opponent_goals = []
         result_indicator_raw = []
-        
-        
+
+
         #iterating over the fixture id to create feature lists
         for game_id in team_fixture_id_dict[team_id]:
             game = team[game_id] #game df
             temp_index = pd.Index(game['Team Identifier'])
             team_ind = temp_index.get_loc(1)
             opponent_ind = temp_index.get_loc(2)
-            
+
             #team and opponent pseudo features: list of raw feature data for each game
             team_total_shots.append(game['Total Shots'][team_ind])
             team_shots_inside_box.append(game['Shots insidebox'][team_ind])
@@ -348,7 +348,7 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
             team_corners.append(game['Corner Kicks'][team_ind])
             team_posession.append(game['Ball Possession'][team_ind])
             team_pass_accuracy.append(game['Passes %'][team_ind])
-            team_goals.append(game['Goals'][team_ind])     
+            team_goals.append(game['Goals'][team_ind])
             opponent_total_shots.append(game['Total Shots'][opponent_ind])
             opponent_shots_inside_box.append(game['Shots insidebox'][opponent_ind])
             opponent_fouls.append(game['Fouls'][opponent_ind])
@@ -357,8 +357,8 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
             opponent_pass_accuracy.append(game['Passes %'][opponent_ind])
             opponent_goals.append(game['Goals'][opponent_ind])
             result_indicator_raw.append(game['Points'][team_ind])
-             
-        
+
+
         #sliding average of the raw feature lists above to create the final features
         team_total_shots_slide = running_mean(team_total_shots, games_slide)[:x]
         team_shots_inside_box_slide = running_mean(team_shots_inside_box, games_slide)[:x]
@@ -379,7 +379,7 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
         fix_id_slide = team_fixture_id_dict[team_id][games_slide-xx:]
         result_indicator_slide = result_indicator_raw[games_slide-xx:]
 
-    
+
         #appending over the iterables, the above variables will be overwritten with each iteration
         t_total_shots.extend(team_total_shots_slide)
         t_shots_inside_box.extend(team_shots_inside_box_slide)
@@ -401,9 +401,9 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
         result_indicator.extend(result_indicator_slide)
         o_team_ID.append(team_id)
 
-    
-    #piecing together the results into a dataframe   
-    df_ready_for_ml = pd.DataFrame({})  
+
+    #piecing together the results into a dataframe
+    df_ready_for_ml = pd.DataFrame({})
     df_ready_for_ml['Team Av Shots'] = t_total_shots
     df_ready_for_ml['Team Av Shots Inside Box'] = t_shots_inside_box
     df_ready_for_ml['Team Av Fouls'] = t_fouls
@@ -424,8 +424,8 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
     df_ready_for_ml['Target Fixture ID'] = fix_id
     df_ready_for_ml['Result Indicator'] = result_indicator
     if making_predictions:
-        df_ready_for_ml['team_id'] = o_team_ID 
-    
+        df_ready_for_ml['team_id'] = o_team_ID
+
     #returning the dataframe
     return df_ready_for_ml
 
@@ -433,7 +433,7 @@ def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, m
 
 def mod_df(df, making_predictions=False):
     '''
-    This function requires the output from the function 'average_stats_df()'. It takes a team and their oppoents (in the last 10 games) average stats, and subtracts one from the other. The benefit of this is it provides a more useful metric for how well a team has been performing. If the 'Av Shots Diff' is positive, it means that team has, on average taken more shots than their opponent in the previous games. This is a useful feature for machine learning.  
+    This function requires the output from the function 'average_stats_df()'. It takes a team and their oppoents (in the last 10 games) average stats, and subtracts one from the other. The benefit of this is it provides a more useful metric for how well a team has been performing. If the 'Av Shots Diff' is positive, it means that team has, on average taken more shots than their opponent in the previous games. This is a useful feature for machine learning.
 
     Parameters
     ----------
@@ -441,7 +441,7 @@ def mod_df(df, making_predictions=False):
         game stats, outputted from the funtion: 'average_stats_df()'.
     making_predictions : bool, optional, the default is False.
         default is set to false, the output is appropriate for training a model. If set to true, the output is suitable for making predictions.
-        
+
 
     Returns
     -------
@@ -449,12 +449,12 @@ def mod_df(df, making_predictions=False):
         modified averaged game stats
 
     '''
-    
+
     df_sort = df.sort_values('Target Fixture ID')
     df_sort = df_sort.reset_index(drop=True)
-    
+
     df_output = pd.DataFrame({})
-    
+
     #creating our desired features
     df_output['Av Shots Diff'] = df_sort['Team Av Shots'] - df_sort['Opponent Av Shots']
     df_output['Av Shots Inside Box Diff'] = df_sort['Team Av Shots Inside Box'] - df_sort['Opponent Av Shots Inside Box']
@@ -468,7 +468,7 @@ def mod_df(df, making_predictions=False):
         df_output['Result Indicator'] = df_sort['Result Indicator']
     if making_predictions:
         df_output['Team ID'] = df_sort['team_id']
-    
+
     return df_output
 
 
@@ -548,7 +548,7 @@ df_for_predictions['Game Date'] = unplayed_games['Game Date']
 
 
 # ---------- MODELLING MISSING GAME DATA ----------
-#if our newly promoted team has not yet played 10 games we need to fill in this gap in order to make a prediction. Lets take the 3 relegated teams, avergae these and use that for all newly promoted teams. 
+#if our newly promoted team has not yet played 10 games we need to fill in this gap in order to make a prediction. Lets take the 3 relegated teams, avergae these and use that for all newly promoted teams.
 
 relegated_id_1 = 35
 relegated_id_2 = 38
@@ -635,3 +635,5 @@ with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_p
 
 
 # ----------------------------------- END -------------------------------------
+
+print(' ----------------- END ----------------- \n')

@@ -29,8 +29,8 @@ YEAR = 2019
 YEAR_str = str(YEAR)
 
 request_league_ids = False
-request_fixtures = False
-request_missing_game_stats = False
+request_fixtures = True
+request_missing_game_stats = True
 
 
 #------------------------------ REQUEST FUNCTIONS -----------------------------
