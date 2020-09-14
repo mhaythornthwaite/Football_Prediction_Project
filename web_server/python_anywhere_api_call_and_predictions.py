@@ -37,8 +37,8 @@ request_missing_game_stats = True
 
 #------------------------------ REQUEST FUNCTIONS -----------------------------
 
+api_key = (open('/home/matthaythornthwaite/Football_Prediction_Project/api_key.txt', mode='r')).read()
 
-api_key = 'f6d8a1ef214463be7b6afa8fc8054b5b'
 
 def get_api_data(base_url, end_url):
     url = base_url + end_url
@@ -632,6 +632,26 @@ with open('/home/matthaythornthwaite/Football_Prediction_Project/predictions/pl_
     pickle.dump(predictions, myFile)
 with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_predictions.csv', 'wb') as myFile:
     pickle.dump(predictions, myFile)
+
+
+#----------------------------- REFRESHING WEBPAGE -----------------------------
+
+#https://www.pythonanywhere.com/forums/topic/27634/
+
+username = 'matthaythornthwaite'
+token = (open('/home/matthaythornthwaite/Football_Prediction_Project/api_key_python_anywhere.txt', mode='r')).read()
+domain_name = "matthaythornthwaite.pythonanywhere.com"
+
+response = requests.get(
+    'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain_name}/reload/'.format(
+        username=username, domain_name=domain_name
+    ),
+    headers={'Authorization': 'Token {token}'.format(token=token)}
+)
+if response.status_code == 200:
+    print('reloaded OK')
+else:
+    print('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
 
 
 # ----------------------------------- END -------------------------------------

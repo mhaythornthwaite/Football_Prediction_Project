@@ -131,3 +131,4 @@ dmypy.json
 **/backup_files/**
 **/venv/**
 api_key.txt
+api_key_python_anywhere.txt
