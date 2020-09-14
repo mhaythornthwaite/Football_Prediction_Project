@@ -235,9 +235,35 @@ def mod_df(df, making_predictions=False):
     df_sort = df.sort_values('Target Fixture ID')
     df_sort = df_sort.reset_index(drop=True)
     
-    df_output = pd.DataFrame({})
+    #in our input dataframe (df) we have removed data from teams that have played less than 5 or 10 games. However, we havent removed data from the oposing team which has played more than 5 or 10 games. In the input df we have two rows for each fixture, one for each teams stats. The code below removes the data of all games that only have a single teams stats available, as this is not useful for training the model. This was not done at an earlier stage because this data is still useful in making future predictions.
+    
+    index_to_remove = []
+    
+    for i in range(0, len(df_sort)-1):
+        if i == 0:
+            continue
+    
+        elif i == len(df_sort)-1:
+            target_m1 = df_sort['Target Fixture ID'].loc[i-1]
+            target = df_sort['Target Fixture ID'].loc[i]
+            if target != target_m1:
+                index_to_remove.append(i)
+              
+        else:
+            target_m1 = df_sort['Target Fixture ID'].loc[i-1]
+            target = df_sort['Target Fixture ID'].loc[i]
+            target_p1 = df_sort['Target Fixture ID'].loc[i+1]
+            if (target != target_m1) and (target != target_p1):
+                index_to_remove.append(i)
+            else:
+                continue
+            
+    df_sort = df_sort.drop(df_sort.index[index_to_remove])    
+    
     
     #creating our desired features
+    df_output = pd.DataFrame({})
+    
     df_output['Av Shots Diff'] = df_sort['Team Av Shots'] - df_sort['Opponent Av Shots']
     df_output['Av Shots Inside Box Diff'] = df_sort['Team Av Shots Inside Box'] - df_sort['Opponent Av Shots Inside Box']
     df_output['Av Fouls Diff'] = df_sort['Team Av Fouls'] - df_sort['Opponent Av Fouls']
@@ -257,7 +283,7 @@ def mod_df(df, making_predictions=False):
 
 def combining_fixture_id(df):
     '''
-    This function requires the output from the function 'mod_df()'. Currently this df contains the features for a single team with a target fixture. This function cobines the home and away team features into a single row per target fixture. This df is then complete with features for home and away teams and is therefore ready for model training.
+    This function requires the output from the function 'mod_df()'. Currently this df contains the features for a single team with a target fixture. This function combines the home and away team features into a single row per target fixture. This df is then complete with features for home and away teams and is therefore ready for model training.
 
     Parameters
     ----------
