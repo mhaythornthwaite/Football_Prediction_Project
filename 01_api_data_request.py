@@ -25,7 +25,7 @@ from os import listdir
 
 #Please state the year of investigation. 
 
-YEAR = 2019
+YEAR = 2020
 YEAR_str = str(YEAR)
 
 request_league_ids = False

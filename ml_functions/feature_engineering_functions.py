@@ -237,28 +237,30 @@ def mod_df(df, making_predictions=False):
     
     #in our input dataframe (df) we have removed data from teams that have played less than 5 or 10 games. However, we havent removed data from the oposing team which has played more than 5 or 10 games. In the input df we have two rows for each fixture, one for each teams stats. The code below removes the data of all games that only have a single teams stats available, as this is not useful for training the model. This was not done at an earlier stage because this data is still useful in making future predictions.
     
-    index_to_remove = []
+    if not making_predictions:
     
-    for i in range(0, len(df_sort)-1):
-        if i == 0:
-            continue
-    
-        elif i == len(df_sort)-1:
-            target_m1 = df_sort['Target Fixture ID'].loc[i-1]
-            target = df_sort['Target Fixture ID'].loc[i]
-            if target != target_m1:
-                index_to_remove.append(i)
-              
-        else:
-            target_m1 = df_sort['Target Fixture ID'].loc[i-1]
-            target = df_sort['Target Fixture ID'].loc[i]
-            target_p1 = df_sort['Target Fixture ID'].loc[i+1]
-            if (target != target_m1) and (target != target_p1):
-                index_to_remove.append(i)
-            else:
+        index_to_remove = []
+        
+        for i in range(0, len(df_sort)-1):
+            if i == 0:
                 continue
-            
-    df_sort = df_sort.drop(df_sort.index[index_to_remove])    
+        
+            elif i == len(df_sort)-1:
+                target_m1 = df_sort['Target Fixture ID'].loc[i-1]
+                target = df_sort['Target Fixture ID'].loc[i]
+                if target != target_m1:
+                    index_to_remove.append(i)
+                  
+            else:
+                target_m1 = df_sort['Target Fixture ID'].loc[i-1]
+                target = df_sort['Target Fixture ID'].loc[i]
+                target_p1 = df_sort['Target Fixture ID'].loc[i+1]
+                if (target != target_m1) and (target != target_p1):
+                    index_to_remove.append(i)
+                else:
+                    continue
+                
+        df_sort = df_sort.drop(df_sort.index[index_to_remove])    
     
     
     #creating our desired features
