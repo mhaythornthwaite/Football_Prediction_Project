@@ -642,7 +642,7 @@ username = 'matthaythornthwaite'
 token = (open('/home/matthaythornthwaite/Football_Prediction_Project/api_key_python_anywhere.txt', mode='r')).read()
 domain_name = "matthaythornthwaite.pythonanywhere.com"
 
-response = requests.get(
+response = requests.post(
     'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain_name}/reload/'.format(
         username=username, domain_name=domain_name
     ),
