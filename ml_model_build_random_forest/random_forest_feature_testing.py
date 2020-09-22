@@ -21,6 +21,7 @@ start=time.time()
 import pickle
 import numpy as np
 import pandas as pd
+from ml_functions.ml_model_eval import pred_proba_plot, plot_cross_val_confusion_matrix, plot_learning_curve
 from sklearn.ensemble import RandomForestClassifier
 from ml_functions.data_processing import scale_df
 from sklearn.model_selection import train_test_split, GridSearchCV
@@ -58,49 +59,52 @@ y_10 = alt_df['Team Result Indicator']
 
 #------------------------------- ML MODEL BUILD -------------------------------
 
-def rand_forest_train(df, print_result=True, print_result_label=''):
+x = alt_df
+y = alt_df['Team Result Indicator']
 
-    #create features matrix
-    x = df.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
-    y = df['Team Result Indicator']
-    
-    #instantiate the random forest class
-    clf = RandomForestClassifier(max_depth=4, max_features=4, n_estimators=120)
-    
-    #split into training data and test data
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
-    
-    #train the model
-    clf.fit(x_train, y_train)
-    
-    if print_result:
-        print(print_result_label)
-        #training data
-        train_data_score = round(clf.score(x_train, y_train) * 100, 1)
-        print(f'Training data score = {train_data_score}%')
-        
-        #test data
-        test_data_score = round(clf.score(x_test, y_test) * 100, 1)
-        print(f'Test data score = {test_data_score}% \n')
-    
-    return clf, x_train, x_test, y_train, y_test
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+
+x_fixture_id = x_test['Fixture ID']
+
+x_train = x_train.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
+x_test = x_test.drop(['Fixture ID', 'Team Result Indicator', 'Opponent Result Indicator'], axis=1)
 
 
-ml_10_rand_forest, x10_train, x10_test, y10_train, y10_test = rand_forest_train(alt_df, print_result_label='DF_ML_10')
+ml_alt_df = RandomForestClassifier(max_depth=4, max_features=4, n_estimators=120)
+ml_alt_df.fit(x_train, y_train)
+
+ml_df_10 = RandomForestClassifier(max_depth=4, max_features=4, n_estimators=120)
+ml_df_10.fit(x_train, y_train)
 
 
 # ---------- CROSS VALIDATION ----------
 
 skf = StratifiedKFold(n_splits=5, shuffle=True)
 
-cv_score_av = round(np.mean(cross_val_score(ml_10_rand_forest, x_10, y_10, cv=skf))*100,1)
+cv_score_av = round(np.mean(cross_val_score(ml_alt_df, x_10, y_10, cv=skf))*100,1)
 print('Cross-Validation Accuracy Score ML10: ', cv_score_av, '%\n')
 
 
 # ---------- FEATURE IMPORTANCE ----------
 
-fi_ml_10 = pd.DataFrame({'feature': list(x10_train.columns),
-                         'importance': ml_10_rand_forest.feature_importances_}).sort_values('importance', ascending = False)
+fi_ml_10 = pd.DataFrame({'feature': list(x_train.columns),
+                         'importance': ml_alt_df.feature_importances_}).sort_values('importance', ascending = False)
+
+
+# ---------- CONFUSION MATRIX PLOTS ----------
+
+#modified to take cross-val results.
+
+plot_cross_val_confusion_matrix(ml_alt_df, 
+                                x_10, 
+                                y_10, 
+                                display_labels=('team loses', 'draw', 'team wins'), 
+                                title='Random Forest Confusion Matrix ML10', 
+                                cv=skf)
+
+
+predictions_alt_df = ml_alt_df.predict_proba(x_test)
+predictions_df_ml_10 = ml_df_10.predict_proba(x_test)
 
 
 # ----------------------------------- END -------------------------------------

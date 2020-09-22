@@ -132,3 +132,5 @@ dmypy.json
 **/venv/**
 api_key.txt
 api_key_python_anywhere.txt
+/ml_model_build_random_forest/difference_between_models.xlsx
+/ml_model_build_random_forest/~$difference_between_models.xlsx
