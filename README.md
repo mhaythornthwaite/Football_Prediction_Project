@@ -16,8 +16,7 @@
 * [Aims and Objectives](#Aims-and-Objectives)
 * [Dataset](#Dataset)
 * [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)
-* [Feature Engineering](#Feature-Engineering)
-* [Data Visualisation](#Data-Visualisation)
+* [Feature Engineering and Data Visualisation](#Feature-Engineering-and-Data-Visualisation)
 * [Model Selection and Training](#Model-Selection-and-Training)
 * [Evaluation](#Evaluation)
 * [Improvements](#Improvements)
@@ -42,9 +41,28 @@ The data was collected directly from an API:<a href="https://www.api-football.co
 
 ## Data Cleaning and Preparation
 
-## Feature Engineering
+Data was initially collected from the 2019-2020 premier league season, in the form of a single json file per fixture containing a range of stats (e.g. number of shots, possession etc.) These json files were loaded into a Pandas DataFrame, and organised into a nested dictionary in the following form: `{team ID: {fixture_id: stats_df}}` 
 
-## Data Visualisation
+Execution of `01_api_data_request.py` and `02_cleaning_stats_data.py` will update the database with recently played fixtures and add these DataFrames directly to the nested dictionary described above. 
+
+## Feature Engineering and Data Visualisation
+
+In order to utilise as much previous match data as possible, whilst minimising the number of features, match data was averaged over the previous 10 games to predict an upcoming fixture. To understand how well a single team is performing, their average stats were subtracted from their opponent’s average stats, to produce a difference metric e.g. number of shots difference. A team with `number_of_shots_diff = 2` has taken on average 2 more shots than their opponent in the previous 10 games. Seven 'difference' features were chosen:
+
+- Goal Difference
+- Shot Difference
+- Shots Inside The Box Difference
+- Posession Difference
+- Pass Accuracy Difference
+- Corners Difference
+- Fouls Difference
+
+The above describes the features for a single team, hence the number of features is doubled to 14 when predicting a match. Like-for-like features were visualised in the following cross-plot, and demonstate that the chosen features have some influence on the outcome of a match.
+
+<img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/average_10_games_team_target_result.png" alt="Figure 1">
+
+<em>Figure 1. Green dots indicate a 'team' win and blue dots indicate an opponent win. Dots in the bottom left quadrant indicate a poor quality team and opponent, top left: low quality team and high quality opponent, top right: high quality team and opponent, bottom right: high quality team and low quality opponent.</em>
+
 
 ## Model Selection and Training
 
