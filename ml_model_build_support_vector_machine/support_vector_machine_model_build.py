@@ -236,7 +236,7 @@ plot_learning_curve(ml_10_svm,
                     x_10, 
                     y_10, 
                     training_set_size=10, 
-                    x_max=160, 
+                    x_max=240, 
                     title='Learning Curve - Support Vector Machine DF_10', 
                     leg_loc=1)
 if save_learning_curve_df10:
@@ -246,7 +246,7 @@ plot_learning_curve(ml_5_svm,
                     x_5, 
                     y_5, 
                     training_set_size=10, 
-                    x_max=230, 
+                    x_max=280, 
                     title='Learning Curve - Support Vector Machine DF_5', 
                     leg_loc=1)
 if save_learning_curve_df5:

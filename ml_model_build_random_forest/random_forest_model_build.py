@@ -231,7 +231,7 @@ plot_learning_curve(ml_10_rand_forest,
                     x_10, 
                     y_10, 
                     training_set_size=20, 
-                    x_max=160, 
+                    x_max=240, 
                     title='Learning Curve - Random Forest DF_10')
 if save_learning_curve_df10:
     plt.savefig('figures\ml_10_random_forest_learning_curve.png')
@@ -240,7 +240,7 @@ plot_learning_curve(ml_5_rand_forest,
                     x_5, 
                     y_5, 
                     training_set_size=20, 
-                    x_max=190, 
+                    x_max=280, 
                     title='Learning Curve - Random Forest DF_5')
 if save_learning_curve_df5:
     plt.savefig('figures\ml_5_random_forest_learning_curve.png')
