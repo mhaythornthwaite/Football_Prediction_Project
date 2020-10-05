@@ -28,10 +28,13 @@ plt.close('all')
 df_5_saved_name = '2019_2020_prem_df_for_ml_5_v2.txt'
 df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
 
-save_df_10_fig = True
-save_df_5_fig = True
+save_df_10_fig = False
+save_df_5_fig = False
 
 colourbar = 'winter'
+
+#including 0 will plot team losses, 1 will include draws and 2 will plot team wins. Can choose any combination
+plot_results = [1] 
 
 
 #-------------------------- PRE-ML DATA VISUALISATION -------------------------
@@ -42,7 +45,27 @@ with open(f'prem_clean_fixtures_and_dataframes/{df_5_saved_name}', 'rb') as myFi
 with open(f'prem_clean_fixtures_and_dataframes/{df_10_saved_name}', 'rb') as myFile:
     df_ml_10 = pickle.load(myFile)
 
-#standard variables for every figure
+
+#---------- DATA PREP ----------
+
+#in this section we remove the fixture outcomes we do not wish to plot, as governed by plot_results
+
+for i in range(0, len(df_ml_10)):
+    if df_ml_10['Team Result Indicator'].loc[i] in plot_results:
+        continue
+    else:
+        df_ml_10 = df_ml_10.drop([i], axis=0)
+
+df_ml_10 = df_ml_10.reset_index(drop=True)
+
+
+for i in range(0, len(df_ml_5)):
+    if df_ml_5['Team Result Indicator'].loc[i] in plot_results:
+        continue
+    else:
+        df_ml_5 = df_ml_5.drop([i], axis=0)
+
+df_ml_5 = df_ml_5.reset_index(drop=True)
 
 
 #----------------------------------- FIGURE 1 ---------------------------------
