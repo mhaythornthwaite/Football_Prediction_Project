@@ -57,7 +57,7 @@ In order to utilise as much previous match data as possible, whilst minimising t
 - Corners Difference
 - Fouls Difference
 
-The above describes the features for a single team, hence the number of features is doubled to 14 when predicting a match. Like-for-like features were visualised in the following cross-plot, and demonstate that the chosen features have some influence on the outcome of a match.
+The above describes the features for a single team, hence the number of features is doubled to 14 when predicting a match. Like-for-like features were visualised in the following cross-plot, and demonstate that the chosen features have some influence on the outcome of a match, with the execption of number of fouls, which appears to have little correlation with the target result.
 
 <img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/average_10_games_team_target_result.png" alt="Figure 1">
 
@@ -66,7 +66,17 @@ The above describes the features for a single team, hence the number of features
 
 ## Model Selection and Training
 
+A range of algorithms were selected and tested from the module scikit-learn. All models were optimised using a grid search with a 5-fold cross-validation accuracy metric. The top 3 performing algorithms explored in this report are:
+- Decision Trees
+- Support Vector Machine
+- K-Nearest Neighbour
+
+
+
+
 ## Evaluation
+
+
 
 ## Improvements
 
