@@ -72,9 +72,20 @@ A range of algorithms were selected and tested from the module scikit-learn. All
 - K-Nearest Neighbour
 
 
-
-
 ## Evaluation
+
+Along with cross-validation accuracy, confusion matrices were initially used to evaluate model performance, displayed in figure 2 below.
+
+<img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/all_conf_matrix.PNG" alt="Figure 2">
+
+<em>Figure 2. (a) Confusion matrix of the random forest model, (b) confusion matrix of the nearest neighbour model, (c) confusion matrix of the SVM model </em>
+
+Immediate inspection of these matrices shows all three models are performing poorly when predicting a draw. Both nearest neighbour and SVM are more incorrect that correct when predicting a draw and the random forest classifier only predicts a single draw from nearly 300 fixtures. To understand why this was occurring, the features as displayed in figure 1 were re-plotted to display only draws. It was hypothesised that equally matched teams would draw more often and therefore data clusters were expected around the dashed red line denoting equally matched teams. It is clear however, that in this database, containing results from 2019 and 2020, that the distribution of drawn matches appears somewhat randomly. Given the relative infrequency of draws (approx. 1 in 5 matches) and the random nature of the outcome in this database, itis no surprise the models do a poor job of predicting them.
+
+<img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/average_10_games_only_draws.png" alt="Figure 3">
+
+<em>Figure 3. Cross-plotted features only where the outcome was a draw. Notice the seemingly random nature of the distribution</em>
+
 
 
 
