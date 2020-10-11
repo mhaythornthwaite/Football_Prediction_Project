@@ -74,11 +74,11 @@ A range of algorithms were selected and tested from the module scikit-learn. All
 
 ## Evaluation
 
-Along with cross-validation accuracy, confusion matrices were initially used to evaluate model performance, displayed in figure 2 below.
+Along with cross-validation accuracy, confusion matrices plotting the results of 5-fold cross-validation were initially used to evaluate model performance, displayed in figure 2 below.
 
 <img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/all_conf_matrix.PNG" alt="Figure 2">
 
-<em>Figure 2. (a) Confusion matrix of the random forest model - 49.5%, (b) confusion matrix of the nearest neighbour model, 49.8%, (c) confusion matrix of the SVM model, 46.4% </em>
+<em>Figure 2. (a) Confusion matrix of the random forest model - 50.8%, (b) confusion matrix of the SVM model, 46.4% (c) confusion matrix of the nearest neighbour model, 51.5% </em>
 
 Immediate inspection of these matrices shows all three models are performing poorly when predicting a draw. Both nearest neighbour and SVM are more incorrect that correct when predicting a draw and the random forest classifier only predicts a single draw from nearly 300 fixtures. To understand why this was occurring, the features as displayed in figure 1 were re-plotted to display only draws. It was hypothesised that equally matched teams would draw more often and therefore data clusters were expected around the dashed red line denoting equally matched teams. It is clear however, that in this database containing results from 2019 and 2020, the distribution of drawn matches appears somewhat randomly. Given the relative infrequency of draws (approx. 1 in 5 matches) and the random nature of the outcome in this database, it is no surprise the models do a poor job of predicting them.
 
@@ -86,6 +86,13 @@ Immediate inspection of these matrices shows all three models are performing poo
 
 <em>Figure 3. Cross-plotted features only where the outcome was a draw. Notice the seemingly random nature of the distribution</em>
 
+Both the random forest and nearest neighbour model satisfy the first aim of the study - achieve a test accuracy of 50%. As the SVM model did not satisfy this objective, the model was no longer considered for further analysis. 
+
+In order to satisfy the second objective, the model's probabilities need to be reliable. This was studied in figure 4, showing a histogram of correct and incorrect predictions given a predictions probability. A good quality model should output probabilities that are reliable and consistent with the outcome e.g. 60% probability should be correct 60% of the time. This appears to be the case with the random forest model however, the nearest neighbour model has some anomalous results. For example, predictions with a probability of 80% - 82.5% appear to be more incorrect than they are correct. It is for this reason; the random forest model was preferred over the nearest neighbour model.
+
+<img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/pred_probability_rf_knn.PNG" alt="Figure 4">
+
+<em>Figure 4. Histogram of both correct (green) and incorrect (red) predictions given a predictions probability (note, the colour fill is transparent to show overlap). In order to achieve a stable result, 50 iterations of model building using random train-test splits were completed. </em>
 
 
 
