@@ -301,7 +301,7 @@ def combining_fixture_id(df):
     
     #iterating over each opponent row to add to the previous
     odd_list = []
-    for x in range(1, len(df)+1, 2):
+    for x in range(1, len(df), 2):
         odd_list.append(x)
     even_list = []
     for x in range(0, len(df)-1, 2):
