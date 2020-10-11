@@ -78,7 +78,7 @@ Along with cross-validation accuracy, confusion matrices plotting the results of
 
 <img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/all_conf_matrix.PNG" alt="Figure 2">
 
-<em>Figure 2. (a) Confusion matrix of the random forest model - 50.8%, (b) confusion matrix of the SVM model, 46.4% (c) confusion matrix of the nearest neighbour model, 51.5% </em>
+<em>Figure 2. (a) Confusion matrix of the random forest model - 50.8% accuracy (b) confusion matrix of the SVM model - 46.4% accuracy (c) confusion matrix of the nearest neighbour model - 51.5% accuracy</em>
 
 Immediate inspection of these matrices shows all three models are performing poorly when predicting a draw. Both nearest neighbour and SVM are more incorrect that correct when predicting a draw and the random forest classifier only predicts a single draw from nearly 300 fixtures. To understand why this was occurring, the features as displayed in figure 1 were re-plotted to display only draws. It was hypothesised that equally matched teams would draw more often and therefore data clusters were expected around the dashed red line denoting equally matched teams. It is clear however, that in this database containing results from 2019 and 2020, the distribution of drawn matches appears somewhat randomly. Given the relative infrequency of draws (approx. 1 in 5 matches) and the random nature of the outcome in this database, it is no surprise the models do a poor job of predicting them.
 
