@@ -186,8 +186,8 @@ if pred_prob_plot_df10:
     fig = pred_proba_plot(ml_10_knn, 
                           x_10, 
                           y_10, 
-                          no_iter=50, 
-                          no_bins=18, 
+                          no_iter=5, 
+                          no_bins=36, 
                           x_min=0.3, 
                           classifier='Nearest Neighbor (ml_10)')
     if save_pred_prob_plot_df10:
@@ -198,7 +198,7 @@ if pred_prob_plot_df5:
                           x_5, 
                           y_5, 
                           no_iter=50, 
-                          no_bins=18, 
+                          no_bins=36, 
                           x_min=0.3, 
                           classifier='Nearest Neighbor (ml_5)')
     if save_pred_prob_plot_df10:
