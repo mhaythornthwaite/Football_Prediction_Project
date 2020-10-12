@@ -25,7 +25,7 @@
 
 ## Aims and Objectives
 
-Through collection of past football data, a model was to be built that satisfied the following two objectives, one quantitative and one qualitative:
+The aim of this study was to build a model that could accurately predict the outcome of future premier league football matches. Sucess was judged using the following two objectives, one quantitative and one qualitative:
 
 - Achieve a test accuracy of greater than 50%, with a stretch target of 60%.
 - Output probabilities that appear sensible/realistic, that are comparable to odds offered on popular betting websites.
@@ -35,15 +35,15 @@ Through collection of past football data, a model was to be built that satisfied
 
 The data was collected directly from an API:<a href="https://www.api-football.com/" target="_blank"> api-football</a>. This was preferred over a static database that can be readily found online, due to the following:
 
-- API calls can be made daily, refreshing the database with the most recent statistics and results, to consistently retrain the model on up-to-date information.
-- The API not only provides past game data but information on upcoming games, essential to make predictions which feed into the web application.
+- API calls can be made daily, refreshing the database with the most recent statistics and results, allowing the model to consistently be retrained on up-to-date information.
+- The API not only provides past game data but also information on upcoming games, essential to make predictions which feed into the web application.
 
 
 ## Data Cleaning and Preparation
 
 Data was initially collected from the 2019-2020 premier league season, in the form of a single json file per fixture containing a range of stats (e.g. number of shots, possession etc.) These json files were loaded into a Pandas DataFrame, and organised into a nested dictionary in the following form: `{team ID: {fixture_id: stats_df}}` 
 
-Execution of `01_api_data_request.py` and `02_cleaning_stats_data.py` will update the database with recently played fixtures and add these DataFrames directly to the nested dictionary described above. 
+Execution of `01_api_data_request.py` and `02_cleaning_stats_data.py` will update the database with recently played fixtures not already stored within the databse and add these DataFrames directly to the nested dictionary described above. 
 
 ## Feature Engineering and Data Visualisation
 
