@@ -19,7 +19,7 @@
 * [Feature Engineering and Data Visualisation](#Feature-Engineering-and-Data-Visualisation)
 * [Model Selection and Training](#Model-Selection-and-Training)
 * [Evaluation](#Evaluation)
-* [Improvements](#Improvements)
+* [Further Work and Improvements](#Further-Work-and-Improvements)
 <!--te-->
 
 
@@ -57,7 +57,7 @@ In order to utilise as much previous match data as possible, whilst minimising t
 - Corners Difference
 - Fouls Difference
 
-The above describes the features for a single team, hence the number of features is doubled to 14 when predicting a match. Like-for-like features were visualised in the following cross-plot, and demonstate that the chosen features have some influence on the outcome of a match, with the execption of number of fouls, which appears to have little correlation with the target result.
+The above describes the features for a single team, hence the number of features is doubled to 14 when predicting the outcome of a match. Like-for-like features were visualised in figure 1, and demonstate that the chosen the features have some influence on the outcome of a match, with the execption of number of fouls, which appears to have little correlation with the target result.
 
 <img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/average_10_games_team_target_result.png" alt="Figure 1">
 
@@ -66,7 +66,7 @@ The above describes the features for a single team, hence the number of features
 
 ## Model Selection and Training
 
-A range of algorithms were selected and tested from the module scikit-learn. All models were optimised using a grid search with a 5-fold cross-validation accuracy metric. The top 3 performing algorithms explored in this report are:
+A range of algorithms were selected and tested from the library: scikit-learn. All models were optimised using a grid search with a 5-fold cross-validation accuracy metric. The top 3 performing algorithms explored in this report are:
 - Decision Trees
 - Support Vector Machine
 - K-Nearest Neighbour
@@ -74,13 +74,13 @@ A range of algorithms were selected and tested from the module scikit-learn. All
 
 ## Evaluation
 
-Along with cross-validation accuracy, confusion matrices plotting the results of 5-fold cross-validation were initially used to evaluate model performance, displayed in figure 2 below.
+Along with accuracy, confusion matrices plotting the results of 5-fold cross-validation were initially used to evaluate model performance, displayed in figure 2 below.
 
 <img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/all_conf_matrix.PNG" alt="Figure 2">
 
 <em>Figure 2. (a) Confusion matrix of the random forest model - 50.8% accuracy (b) confusion matrix of the SVM model - 46.4% accuracy (c) confusion matrix of the nearest neighbour model - 51.5% accuracy</em>
 
-Immediate inspection of these matrices shows all three models are performing poorly when predicting a draw. Both nearest neighbour and SVM are more incorrect that correct when predicting a draw and the random forest classifier only predicts a single draw from nearly 300 fixtures. To understand why this was occurring, the features as displayed in figure 1 were re-plotted to display only draws. It was hypothesised that equally matched teams would draw more often and therefore data clusters were expected around the dashed red line denoting equally matched teams. It is clear however, that in this database containing results from 2019 and 2020, the distribution of drawn matches appears somewhat randomly. Given the relative infrequency of draws (approx. 1 in 5 matches) and the random nature of the outcome in this database, it is no surprise the models do a poor job of predicting them.
+Immediate inspection of these matrices shows all three models are performing poorly when predicting a draw. Both nearest neighbour and SVM are more incorrect that correct when predicting a draw and the random forest classifier only predicts 5 draws from nearly 300 fixtures. To understand why this was occurring, the features, as displayed in figure 1 were re-plotted to display only draws. It was hypothesised that equally matched teams would draw more often and therefore data clusters were expected around the dashed red lines denoting equally matched teams. It is clear however, that in this database containing results from 2019 and 2020, the distribution of drawn matches appears somewhat randomly. Given the relative infrequency of draws (approx. 1 in 5 matches) and the random nature of the outcome in this database, it is no surprise the models do a poor job of predicting them.
 
 <img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/average_10_games_only_draws.png" alt="Figure 3">
 
@@ -88,7 +88,7 @@ Immediate inspection of these matrices shows all three models are performing poo
 
 Both the random forest and nearest neighbour model satisfy the first aim of the study - achieve a test accuracy of 50%. As the SVM model did not satisfy this objective, the model was no longer considered for further analysis. 
 
-In order to satisfy the second objective, the model's probabilities need to be reliable. This was studied in figure 4, showing a histogram of correct and incorrect predictions given a predictions probability. A good quality model should output probabilities that are reliable and consistent with the outcome e.g. 60% probability should be correct 60% of the time. This appears to be the case with the random forest model however, the nearest neighbour model has some anomalous results. For example, predictions with a probability of 80% - 82.5% appear to be more incorrect than they are correct. It is for this reason; the random forest model was preferred over the nearest neighbour model.
+In order to satisfy the second objective, the model's probabilities need to be reliable. This was studied in figure 4, showing a histogram of correct and incorrect predictions given a predictions probability. A good quality model should output probabilities that are reliable and consistent with the outcome e.g. 60% probability should be correct 60% of the time. This appears to be the case with the random forest model however, the nearest neighbour model has some anomalous results. For example, predictions with a probability of 80% - 82.5% are more often incorrect than they are correct. It is for this reason; the random forest model was preferred over the nearest neighbour model.
 
 <img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/pred_probability_rf_knn.PNG" alt="Figure 4">
 
@@ -96,8 +96,15 @@ In order to satisfy the second objective, the model's probabilities need to be r
 
 
 
-## Improvements
+## Further Work and Improvements
 
+Several areas of further work are suggested to improve the predictions made in this study. These include:
+
+- Collect additional data: <a href="https://www.api-football.com/" target="_blank"> api-football</a> can supply numerous seasons of data prior to that collected in this study. It is postulated additional data collected will result in better clustering, especially those fixtures counted as a draw.
+
+- Incorporate additional unused stats. Stats stored within each JSON file (such as blocked shots, total number of passes etc.) were omitted to reduce feature and model complexity however, they should be incorporated into model building and compared with the performance of the existing model.
+
+- Test alternative approaches to feature engineering. Currently, in order to reduce the number of features, game data over the past 10 fixtures are averaged. Dimensionality reduction techniques (PCA, LDA) should be tested on this raw data, with the top 20 components used for model building. These results may then be compared with the existing model.
 
 
 ## License
