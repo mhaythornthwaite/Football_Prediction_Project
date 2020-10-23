@@ -39,16 +39,16 @@ Fixture ID,Game Date,Home Team ID,Away Team ID,Home Team Goals,Away Team Goals,V
 592180,2020-10-04,39.0,36.0,1.0,0.0,Molineux Stadium,Wolves,Fulham,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/36.png
 592177,2020-10-04,33.0,47.0,1.0,6.0,Old Trafford,Manchester United,Tottenham,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/47.png
 592172,2020-10-04,66.0,40.0,7.0,2.0,Villa Park,Aston Villa,Liverpool,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/40.png
-592183,2020-10-17,45.0,40.0,,,Goodison Park,Everton,Liverpool,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/40.png
-592181,2020-10-17,49.0,41.0,,,Stamford Bridge,Chelsea,Southampton,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/41.png
-592190,2020-10-17,60.0,44.0,,,The Hawthorns,West Brom,Burnley,https://media.api-sports.io/football/teams/60.png,https://media.api-sports.io/football/teams/44.png
-592186,2020-10-17,50.0,42.0,,,Etihad Stadium,Manchester City,Arsenal,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/42.png
-592187,2020-10-17,34.0,33.0,,,St. James' Park,Newcastle,Manchester United,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/33.png
-592188,2020-10-18,62.0,36.0,,,Bramall Lane,Sheffield Utd,Fulham,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/36.png
-592182,2020-10-18,52.0,51.0,,,Selhurst Park,Crystal Palace,Brighton,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/51.png
-592189,2020-10-18,47.0,48.0,,,Tottenham Hotspur Stadium,Tottenham,West Ham,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/48.png
-592185,2020-10-18,46.0,66.0,,,King Power Stadium,Leicester,Aston Villa,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/66.png
-592184,2020-10-19,63.0,39.0,,,Elland Road,Leeds,Wolves,https://media.api-sports.io/football/teams/63.png,https://media.api-sports.io/football/teams/39.png
+592183,2020-10-17,45.0,40.0,2.0,2.0,Goodison Park,Everton,Liverpool,https://media.api-sports.io/football/teams/45.png,https://media.api-sports.io/football/teams/40.png
+592181,2020-10-17,49.0,41.0,3.0,3.0,Stamford Bridge,Chelsea,Southampton,https://media.api-sports.io/football/teams/49.png,https://media.api-sports.io/football/teams/41.png
+592186,2020-10-17,50.0,42.0,1.0,0.0,Etihad Stadium,Manchester City,Arsenal,https://media.api-sports.io/football/teams/50.png,https://media.api-sports.io/football/teams/42.png
+592187,2020-10-17,34.0,33.0,1.0,4.0,St. James' Park,Newcastle,Manchester United,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/33.png
+592188,2020-10-18,62.0,36.0,1.0,1.0,Bramall Lane,Sheffield Utd,Fulham,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/36.png
+592182,2020-10-18,52.0,51.0,1.0,1.0,Selhurst Park,Crystal Palace,Brighton,https://media.api-sports.io/football/teams/52.png,https://media.api-sports.io/football/teams/51.png
+592189,2020-10-18,47.0,48.0,3.0,3.0,Tottenham Hotspur Stadium,Tottenham,West Ham,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/48.png
+592185,2020-10-18,46.0,66.0,0.0,1.0,King Power Stadium,Leicester,Aston Villa,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/66.png
+592190,2020-10-19,60.0,44.0,0.0,0.0,The Hawthorns,West Brom,Burnley,https://media.api-sports.io/football/teams/60.png,https://media.api-sports.io/football/teams/44.png
+592184,2020-10-19,63.0,39.0,0.0,1.0,Elland Road,Leeds,Wolves,https://media.api-sports.io/football/teams/63.png,https://media.api-sports.io/football/teams/39.png
 592192,2020-10-23,66.0,63.0,,,Villa Park,Aston Villa,Leeds,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/63.png
 592199,2020-10-24,48.0,50.0,,,London Stadium,West Ham,Manchester City,https://media.api-sports.io/football/teams/48.png,https://media.api-sports.io/football/teams/50.png
 592195,2020-10-24,36.0,52.0,,,Craven Cottage,Fulham,Crystal Palace,https://media.api-sports.io/football/teams/36.png,https://media.api-sports.io/football/teams/52.png
@@ -59,15 +59,15 @@ Fixture ID,Game Date,Home Team ID,Away Team ID,Home Team Goals,Away Team Goals,V
 592191,2020-10-25,42.0,46.0,,,Emirates Stadium,Arsenal,Leicester,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/46.png
 592193,2020-10-26,51.0,60.0,,,The American Express Community Stadium,Brighton,West Brom,https://media.api-sports.io/football/teams/51.png,https://media.api-sports.io/football/teams/60.png
 592194,2020-10-26,44.0,47.0,,,Turf Moor,Burnley,Tottenham,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/47.png
+592210,2020-10-30,39.0,52.0,,,Molineux Stadium,Wolves,Crystal Palace,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/52.png
 592208,2020-10-31,62.0,50.0,,,Bramall Lane,Sheffield Utd,Manchester City,https://media.api-sports.io/football/teams/62.png,https://media.api-sports.io/football/teams/50.png
-592201,2020-10-31,66.0,41.0,,,Villa Park,Aston Villa,Southampton,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/41.png
 592202,2020-10-31,44.0,49.0,,,Turf Moor,Burnley,Chelsea,https://media.api-sports.io/football/teams/44.png,https://media.api-sports.io/football/teams/49.png
-592203,2020-10-31,36.0,60.0,,,Craven Cottage,Fulham,West Brom,https://media.api-sports.io/football/teams/36.png,https://media.api-sports.io/football/teams/60.png
-592209,2020-10-31,47.0,51.0,,,Tottenham Hotspur Stadium,Tottenham,Brighton,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/51.png
-592210,2020-10-31,39.0,52.0,,,Molineux Stadium,Wolves,Crystal Palace,https://media.api-sports.io/football/teams/39.png,https://media.api-sports.io/football/teams/52.png
 592205,2020-10-31,40.0,48.0,,,Anfield,Liverpool,West Ham,https://media.api-sports.io/football/teams/40.png,https://media.api-sports.io/football/teams/48.png
+592201,2020-11-01,66.0,41.0,,,Villa Park,Aston Villa,Southampton,https://media.api-sports.io/football/teams/66.png,https://media.api-sports.io/football/teams/41.png
 592207,2020-11-01,34.0,45.0,,,St. James' Park,Newcastle,Everton,https://media.api-sports.io/football/teams/34.png,https://media.api-sports.io/football/teams/45.png
 592206,2020-11-01,33.0,42.0,,,Old Trafford,Manchester United,Arsenal,https://media.api-sports.io/football/teams/33.png,https://media.api-sports.io/football/teams/42.png
+592209,2020-11-01,47.0,51.0,,,Tottenham Hotspur Stadium,Tottenham,Brighton,https://media.api-sports.io/football/teams/47.png,https://media.api-sports.io/football/teams/51.png
+592203,2020-11-02,36.0,60.0,,,Craven Cottage,Fulham,West Brom,https://media.api-sports.io/football/teams/36.png,https://media.api-sports.io/football/teams/60.png
 592204,2020-11-02,63.0,46.0,,,Elland Road,Leeds,Leicester,https://media.api-sports.io/football/teams/63.png,https://media.api-sports.io/football/teams/46.png
 592211,2020-11-07,42.0,66.0,,,Emirates Stadium,Arsenal,Aston Villa,https://media.api-sports.io/football/teams/42.png,https://media.api-sports.io/football/teams/66.png
 592216,2020-11-07,46.0,39.0,,,King Power Stadium,Leicester,Wolves,https://media.api-sports.io/football/teams/46.png,https://media.api-sports.io/football/teams/39.png
