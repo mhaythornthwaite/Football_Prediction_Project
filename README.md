@@ -1,7 +1,7 @@
 
 <a href="http://matthaythornthwaite.pythonanywhere.com/"><img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/web_server/static/images/Smart_Football_Predictor_Github_Logo_v2.png" alt="Smart Football Predictor" alt="Smart Football Predictor"></a>
 
-<h4 align="center">View the Predictions Displayed in Simple Web Application <a href="http://matthaythornthwaite.pythonanywhere.com/" target="_blank">here</a>.
+<h4 align="center">View live predictions displayed in simple web application <a href="http://matthaythornthwaite.pythonanywhere.com/" target="_blank">here</a>.
 </h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
