@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Smart Football Predictor</title>
 	<link rel="stylesheet" type="text/css" href="static/style.css">
@@ -10,9 +11,7 @@
 
 </head>
 <body>
-
-	<script type="text/javascript" src="static/script.js"></script>
-
+	
 	<div class='container'>
 
 		<div class='media_links'>
@@ -56,9 +55,19 @@
 					<img class='logo_png' src={{pl_pred['Away Team Logo'][n]}}> 
 				</a>
             </div>
+            <div class='collapsible_heading'>
+              <button type="button" class="collapsible">Detailed Stats</button>
+              <div class="content">
+                <p>Some collapsible content. Click the button to toggle between showing and hiding the collapsible content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
 		</div>
 		{% endfor %}
 	</div>
 
+<script type="text/javascript" src="static/script.js"></script>
+
 </body>
 </html>
+
+

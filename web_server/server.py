@@ -17,11 +17,11 @@ app = Flask(__name__, static_url_path='/static')
 #------------------------------------ FLASK -----------------------------------
 
 
-#with open('../predictions/pl_predictions.csv', 'rb') as myFile:
-#    pl_pred = pickle.load(myFile)
-
-with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_predictions.csv', 'rb') as myFile:
+with open('../predictions/pl_predictions.csv', 'rb') as myFile:
     pl_pred = pickle.load(myFile)
+
+#with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_predictions.csv', 'rb') as myFile:
+#    pl_pred = pickle.load(myFile)
 
 #creating our iterator that we will use in the for loop in our index file.
 max_display_games = 50

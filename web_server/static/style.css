@@ -162,3 +162,42 @@ a {
     padding-bottom: 10px
     margin-top: 25px;
 }
+
+.collapsible_heading {
+    font-size: 150%;
+
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: rgba(135,186,99,0);
+  color: #444;
+  cursor: pointer;
+  padding: 4px;
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.7em;
+  border-radius: 10px 10px 0px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 9px;
+  display: none;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.45);
+  border-radius: 0px 0px 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6em;
+}
