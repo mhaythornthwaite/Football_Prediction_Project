@@ -33,240 +33,32 @@
 		<div class='web_description'>Smart Football Predictor is a simple Flask web application designed to display machine learning predictions built in a python backend. Premier league game data has been collected from api-football, processed and used to train numerous experimental models, before being used to predict the outcome of future premier league fixtures. If you would like to learn more, please visit my Github repository or contact me on linkedin.</div>
 
 		<br> <hr class="line" width='65%'>
-
-
+				
+		{% for n in iterator %}
 		<div class='game'>
 			<div class='teamheading'>
-			    <div class='heading1'>{{g1_h}}</div>
-			    <div class='heading2'>{{g1_a}}</div>
-			    <div class='game_description'> Date: {{g1_gd}} &nbsp Venue: {{g1_v}} </div>
+			    <div class='heading1'>{{pl_pred['Home Team'][n]}}</div>
+			    <div class='heading2'>{{pl_pred['Away Team'][n]}}</div>
+			    <div class='game_description'> Date: {{pl_pred['Game Date'][n]}} &nbsp Venue: {{pl_pred['Venue'][n]}} </div>
 			</div>
 			<div class='logo_home'>
 				<a> 
-					<img class='logo_png' src={{g1_h_l}}> 
+					<img class='logo_png' src={{pl_pred['Home Team Logo'][n]}}> 
 				</a>
             </div>
 			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g1_hw}}% - 2px)">{{g1_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g1_d}}% - 2px)">{{g1_d}}%</div>
-	    		<div class="loss" style="width: calc({{g1_aw}}% - 2px)">{{g1_aw}}%</div>
+	    		<div class="win" style="width: calc({{pl_pred['Home Win'][n]}}% - 2px)">{{pl_pred['Home Win'][n]}}%</div>
+	    		<div class="draw" style="width: calc({{pl_pred['Draw'][n]}}% - 2px)">{{pl_pred['Draw'][n]}}%</div>
+	    		<div class="loss" style="width: calc({{pl_pred['Away Win'][n]}}% - 2px)">{{pl_pred['Away Win'][n]}}%</div>
 			</section>
 			<div class='logo_away'>
 				<a> 
-					<img class='logo_png' src={{g1_a_l}}> 
+					<img class='logo_png' src={{pl_pred['Away Team Logo'][n]}}> 
 				</a>
             </div>
 		</div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g2_h}}</div>
-			    <div class='heading2'>{{g2_a}}</div>
-			    <div class='game_description'> Date: {{g2_gd}} &nbsp Venue: {{g2_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g2_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g2_hw}}% - 2px)">{{g2_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g2_d}}% - 2px)">{{g2_d}}%</div>
-	    		<div class="loss" style="width: calc({{g2_aw}}% - 2px)">{{g2_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g2_a_l}}> 
-				</a>
-            </div>
-		</div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g3_h}}</div>
-			    <div class='heading2'>{{g3_a}}</div>
-			    <div class='game_description'> Date: {{g3_gd}} &nbsp Venue: {{g3_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g3_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g3_hw}}% - 2px)">{{g3_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g3_d}}% - 2px)">{{g3_d}}%</div>
-	    		<div class="loss" style="width: calc({{g3_aw}}% - 2px)">{{g3_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g3_a_l}}> 
-				</a>
-            </div>
-		</div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g4_h}}</div>
-			    <div class='heading2'>{{g4_a}}</div>
-			    <div class='game_description'> Date: {{g4_gd}} &nbsp Venue: {{g4_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g4_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g4_hw}}% - 2px)">{{g4_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g4_d}}% - 2px)">{{g4_d}}%</div>
-	    		<div class="loss" style="width: calc({{g4_aw}}% - 2px)">{{g4_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g4_a_l}}> 
-				</a>
-            </div>
-		</div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g5_h}}</div>
-			    <div class='heading2'>{{g5_a}}</div>
-			    <div class='game_description'> Date: {{g5_gd}} &nbsp Venue: {{g5_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g5_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g5_hw}}% - 2px)">{{g5_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g5_d}}% - 2px)">{{g5_d}}%</div>
-	    		<div class="loss" style="width: calc({{g5_aw}}% - 2px)">{{g5_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g5_a_l}}> 
-				</a>
-            </div>
-		</div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g6_h}}</div>
-			    <div class='heading2'>{{g6_a}}</div>
-			    <div class='game_description'> Date: {{g6_gd}} &nbsp Venue: {{g6_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g6_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g6_hw}}% - 2px)">{{g6_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g6_d}}% - 2px)">{{g6_d}}%</div>
-	    		<div class="loss" style="width: calc({{g6_aw}}% - 2px)">{{g6_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g6_a_l}}> 
-				</a>
-            </div>
-		</div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g7_h}}</div>
-			    <div class='heading2'>{{g7_a}}</div>
-			    <div class='game_description'> Date: {{g7_gd}} &nbsp Venue: {{g7_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g7_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g7_hw}}% - 2px)">{{g7_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g7_d}}% - 2px)">{{g7_d}}%</div>
-	    		<div class="loss" style="width: calc({{g7_aw}}% - 2px)">{{g7_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g7_a_l}}> 
-				</a>
-            </div>
-		</div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g8_h}}</div>
-			    <div class='heading2'>{{g8_a}}</div>
-			    <div class='game_description'> Date: {{g8_gd}} &nbsp Venue: {{g8_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g8_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g8_hw}}% - 2px)">{{g8_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g8_d}}% - 2px)">{{g8_d}}%</div>
-	    		<div class="loss" style="width: calc({{g8_aw}}% - 2px)">{{g8_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g8_a_l}}> 
-				</a>
-            </div>
-        </div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g9_h}}</div>
-			    <div class='heading2'>{{g9_a}}</div>
-			    <div class='game_description'> Date: {{g9_gd}} &nbsp Venue: {{g9_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g9_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g9_hw}}% - 2px)">{{g9_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g9_d}}% - 2px)">{{g9_d}}%</div>
-	    		<div class="loss" style="width: calc({{g9_aw}}% - 2px)">{{g9_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g9_a_l}}> 
-				</a>
-            </div>
-		</div>
-
-		<div class='game'>
-			<div class='teamheading'>
-			    <div class='heading1'>{{g10_h}}</div>
-			    <div class='heading2'>{{g10_a}}</div>
-			    <div class='game_description'> Date: {{g10_gd}} &nbsp Venue: {{g10_v}} </div>
-			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{g10_h_l}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{g10_hw}}% - 2px)">{{g10_hw}}%</div>
-	    		<div class="draw" style="width: calc({{g10_d}}% - 2px)">{{g10_d}}%</div>
-	    		<div class="loss" style="width: calc({{g10_aw}}% - 2px)">{{g10_aw}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{g10_a_l}}> 
-				</a>
-            </div>
-		</div>
+		{% endfor %}
 	</div>
 
 </body>
 </html>
-
-<!-- https://uxengineer.com/inline-block-elements-100-percent-width/ -->
