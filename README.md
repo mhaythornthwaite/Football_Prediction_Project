@@ -4,11 +4,21 @@
 <h4 align="center">View live predictions displayed in simple web application <a href="http://matthaythornthwaite.pythonanywhere.com/" target="_blank">here</a>.
 </h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![Python](https://img.shields.io/badge/python-v3.7+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-yellow.svg)
-![Last Commit](https://img.shields.io/github/last-commit/mhaythornthwaite/Football_Prediction_Project/master)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+<p align="center">
+    <a href="https://www.python.org/doc/" alt="Python 3.7">
+        <img src="https://img.shields.io/badge/python-v3.7+-blue.svg" />
+    </a>
+    <a href="https://github.com/mhaythornthwaite/Football_Prediction_Project/blob/master/LICENSE" alt="Licence">
+        <img src="https://img.shields.io/badge/license-MIT-yellow.svg" />
+    </a>
+    <a href="https://github.com/mhaythornthwaite/Football_Prediction_Project/commits/master" alt="Commits">
+        <img src="https://img.shields.io/github/last-commit/mhaythornthwaite/Football_Prediction_Project/master" />
+    </a>
+    <a href="https://github.com/mhaythornthwaite/Football_Prediction_Project" alt="Activity">
+        <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" />
+    </a>
+</p>
+
 
 ## Table of Contents
 
