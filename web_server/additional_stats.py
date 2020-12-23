@@ -59,9 +59,9 @@ test = team_data(teams_df, 50, 'Team')
 
 #---------- DF MANIPULATION ----------
 
-df = pd.DataFrame(columns=['Fixture_ID', 'Date', 'Home_Team_ID','Away_Team_ID','Home_Team','Away_Team','Home_Team_Score','Away_Team_Score','Home_Team_Logo','Away_Team_Logo'])
+df = pd.DataFrame(columns=['Fixture_ID', 'Date', 'Home_Team_ID','Away_Team_ID','Home_Team','Away_Team','Home_Team_Score','Away_Team_Score','Result','Home_Team_Logo','Away_Team_Logo'])
 
-dic = game_stats[33]
+dic = game_stats[34]
 fixture_id = list(dic.keys())
 
 game = dic[fixture_id[1]]
@@ -76,6 +76,7 @@ home_team_score = []
 away_team_score = []
 home_team_logo = []
 away_team_logo = []
+results = []
 
 
 for i, fix_id in enumerate(fixture_id):
@@ -116,6 +117,36 @@ df['Away_Team_Logo'] = away_team_logo
 
 df = df.sort_values(by='Date')
 df = df.reset_index(drop=True)
+
+for i, home_team_ID in enumerate(df['Home_Team_ID']):
+    if home_team_ID == 34:
+        home = True
+    else:
+        home = False
+    
+    home_score = df['Home_Team_Score'].iloc[i]
+    away_score = df['Away_Team_Score'].iloc[i]
+    
+    if home:
+        if home_score > away_score:
+            result = 'W'
+        elif home_score == away_score:
+            result = 'D'
+        elif home_score < away_score:
+            result = 'L'
+    
+    if home==False:
+        if home_score < away_score:
+            result = 'W'
+        elif home_score == away_score:
+            result = 'D'
+        elif home_score > away_score:
+            result = 'L'        
+        
+    results.append(result)
+    
+df['Result'] = results
+
 
 
 
