@@ -19,6 +19,10 @@ app = Flask(__name__, static_url_path='/static')
 
 with open('../predictions/pl_predictions.csv', 'rb') as myFile:
     pl_pred = pickle.load(myFile)
+    
+with open('../prem_clean_fixtures_and_dataframes/2019_2020_additional_stats_dict.txt', 'rb') as myFile:
+    additional_stats_dict = pickle.load(myFile)    
+
 
 #with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_predictions.csv', 'rb') as myFile:
 #    pl_pred = pickle.load(myFile)
@@ -43,7 +47,8 @@ pl_pred = pl_pred.reset_index(drop=True)
 def pass_game_1():
     return render_template('index.html',
                            pl_pred=pl_pred, 
-                           iterator=iterator)
+                           iterator=iterator,
+                           additional_stats_dict=additional_stats_dict)
 
 
 

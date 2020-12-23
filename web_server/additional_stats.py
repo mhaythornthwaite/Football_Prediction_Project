@@ -124,7 +124,7 @@ for team in teams:
     df['Home_Team_Logo'] = home_team_logo
     df['Away_Team_Logo'] = away_team_logo
     
-    df = df.sort_values(by='Date')
+    df = df.sort_values(by='Date', ascending=False)
     df = df.reset_index(drop=True)
     
     
@@ -163,6 +163,8 @@ for team in teams:
     
 with open(f'../prem_clean_fixtures_and_dataframes/{results_dict_saved_name}', 'wb') as myFile:
     pickle.dump(results_dict, myFile)
+
+print(results_dict[34]['Result'].iloc[0])
 
 
 # ----------------------------------- END -------------------------------------
