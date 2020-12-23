@@ -23,6 +23,8 @@ stats_dict_saved_name = '2019_2020_prem_all_stats_dict.txt'
 
 fixtures_saved_name = '2019_2020_premier_league_fixtures_df.csv'
 
+results_dict_saved_name = '2019_2020_additional_stats_dict.txt'
+
 
 #------------------------------ ADDITIONAL STATS ------------------------------
 
@@ -59,95 +61,108 @@ test = team_data(teams_df, 50, 'Team')
 
 #---------- DF MANIPULATION ----------
 
-df = pd.DataFrame(columns=['Fixture_ID', 'Date', 'Home_Team_ID','Away_Team_ID','Home_Team','Away_Team','Home_Team_Score','Away_Team_Score','Result','Home_Team_Logo','Away_Team_Logo'])
+#in this section we will create a df for each team, containing all the basic information on all past games. This can then be used as a display in the web application. This will then be placed into a dictionary, with the key being the team ID.
 
-dic = game_stats[34]
-fixture_id = list(dic.keys())
+#instantiating dictionary and team ID's
+results_dict = {}
+teams = teams_df['Team ID']
 
-game = dic[fixture_id[1]]
-
-
-date = []
-home_team_id = []
-away_team_id = []
-home_team = []
-away_team = []
-home_team_score = []
-away_team_score = []
-home_team_logo = []
-away_team_logo = []
-results = []
-
-
-for i, fix_id in enumerate(fixture_id):
-    game = dic[fix_id]
+for team in teams:
     
-    date.append(game['Game Date'].iloc[0])
-    home_team_id.append(game['Team ID'].iloc[0])
-    away_team_id.append(game['Team ID'].iloc[1])
-    home_team_score.append(game['Goals'].iloc[0])
-    away_team_score.append(game['Goals'].iloc[1])
+    df = pd.DataFrame(columns=['Fixture_ID', 'Date', 'Home_Team_ID','Away_Team_ID','Home_Team','Away_Team','Home_Team_Score','Away_Team_Score','Result','Home_Team_Logo','Away_Team_Logo'])
+    
+    dic = game_stats[team]
+    fixture_id = list(dic.keys())
+    
+    game = dic[fixture_id[1]]
+    
+    date = []
+    home_team_id = []
+    away_team_id = []
+    home_team = []
+    away_team = []
+    home_team_score = []
+    away_team_score = []
+    home_team_logo = []
+    away_team_logo = []
+    results = []
     
     
-df['Fixture_ID'] = fixture_id
-df['Date'] = date
-df['Home_Team_ID'] = home_team_id
-df['Away_Team_ID'] = away_team_id
-df['Home_Team_Score'] = home_team_score
-df['Away_Team_Score'] = away_team_score
-    
-
-for i, home_team_ID in enumerate(df['Home_Team_ID']):
-    home_team_str = team_data(teams_df, home_team_ID, 'Team')
-    home_team_logo_str = team_data(teams_df, home_team_ID, 'Team Logo')
-    home_team.append(home_team_str)
-    home_team_logo.append(home_team_logo_str)
-
-for i, away_team_ID in enumerate(df['Away_Team_ID']):
-    away_team_str = team_data(teams_df, away_team_ID, 'Team')
-    away_team_logo_str = team_data(teams_df, away_team_ID, 'Team Logo')
-    away_team.append(away_team_str)
-    away_team_logo.append(away_team_logo_str)
-
-
-df['Home_Team'] = home_team
-df['Away_Team'] = away_team
-df['Home_Team_Logo'] = home_team_logo
-df['Away_Team_Logo'] = away_team_logo
-
-df = df.sort_values(by='Date')
-df = df.reset_index(drop=True)
-
-for i, home_team_ID in enumerate(df['Home_Team_ID']):
-    if home_team_ID == 34:
-        home = True
-    else:
-        home = False
-    
-    home_score = df['Home_Team_Score'].iloc[i]
-    away_score = df['Away_Team_Score'].iloc[i]
-    
-    if home:
-        if home_score > away_score:
-            result = 'W'
-        elif home_score == away_score:
-            result = 'D'
-        elif home_score < away_score:
-            result = 'L'
-    
-    if home==False:
-        if home_score < away_score:
-            result = 'W'
-        elif home_score == away_score:
-            result = 'D'
-        elif home_score > away_score:
-            result = 'L'        
+    for i, fix_id in enumerate(fixture_id):
+        game = dic[fix_id]
         
-    results.append(result)
+        date.append(game['Game Date'].iloc[0])
+        home_team_id.append(game['Team ID'].iloc[0])
+        away_team_id.append(game['Team ID'].iloc[1])
+        home_team_score.append(game['Goals'].iloc[0])
+        away_team_score.append(game['Goals'].iloc[1])
+        
+        
+    df['Fixture_ID'] = fixture_id
+    df['Date'] = date
+    df['Home_Team_ID'] = home_team_id
+    df['Away_Team_ID'] = away_team_id
+    df['Home_Team_Score'] = home_team_score
+    df['Away_Team_Score'] = away_team_score
+        
     
-df['Result'] = results
-
-
+    for i, home_team_ID in enumerate(df['Home_Team_ID']):
+        home_team_str = team_data(teams_df, home_team_ID, 'Team')
+        home_team_logo_str = team_data(teams_df, home_team_ID, 'Team Logo')
+        home_team.append(home_team_str)
+        home_team_logo.append(home_team_logo_str)
+    
+    for i, away_team_ID in enumerate(df['Away_Team_ID']):
+        away_team_str = team_data(teams_df, away_team_ID, 'Team')
+        away_team_logo_str = team_data(teams_df, away_team_ID, 'Team Logo')
+        away_team.append(away_team_str)
+        away_team_logo.append(away_team_logo_str)
+    
+    
+    df['Home_Team'] = home_team
+    df['Away_Team'] = away_team
+    df['Home_Team_Logo'] = home_team_logo
+    df['Away_Team_Logo'] = away_team_logo
+    
+    df = df.sort_values(by='Date')
+    df = df.reset_index(drop=True)
+    
+    
+    for i, home_team_ID in enumerate(df['Home_Team_ID']):
+        
+        if home_team_ID == team:
+            home = True
+        else:
+            home = False
+        
+        home_score = df['Home_Team_Score'].iloc[i]
+        away_score = df['Away_Team_Score'].iloc[i]
+        
+        if home:
+            if home_score > away_score:
+                result = 'W'
+            elif home_score == away_score:
+                result = 'D'
+            elif home_score < away_score:
+                result = 'L'
+        
+        if home==False:
+            if home_score < away_score:
+                result = 'W'
+            elif home_score == away_score:
+                result = 'D'
+            elif home_score > away_score:
+                result = 'L'        
+            
+        results.append(result)
+        
+    df['Result'] = results
+      
+    results_dict[team] = df
+    
+    
+with open(f'../prem_clean_fixtures_and_dataframes/{results_dict_saved_name}', 'wb') as myFile:
+    pickle.dump(results_dict, myFile)
 
 
 # ----------------------------------- END -------------------------------------
