@@ -121,7 +121,7 @@ a {
     text-align: left;
     box-sizing: border-box;
     display: inline-block; 
-    padding: 5px 2%;
+    padding: 5px 1%;
 }
 
 
@@ -130,9 +130,16 @@ a {
     text-align: right;
     box-sizing: border-box;
     display: inline-block;
-    padding: 5px 2%;
+    padding: 5px 1%;
 }
 
+
+.past_perform_result{
+    width: 8%;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+}
 
 .probability_annot{
     box-sizing: border-box;

@@ -62,17 +62,24 @@
 
 	                {% for i in iterator2 %}	
 	                <div class='past_perform_home'>
-		                {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Result'].iloc[i]}}
+
+	                	<div class='past_perform_result'>
+		                	<b>{{additional_stats_dict[pl_pred['Home Team ID'][n]]['Result'].iloc[i]}}</b>
+		                </div>
 
 		                {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Home_Team'].iloc[i]}} {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Home_Team_Score'].iloc[i]|int}} - {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Away_Team_Score'].iloc[i]|int}} {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Away_Team'].iloc[i]}} 
 		                <br>
 		            </div>
 	                
-	                
-	                <div class='past_perform_away'>
-		                {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Result'].iloc[i]}}
 
-		                {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Home_Team'].iloc[i]}} {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Home_Team_Score'].iloc[i]|int}} - {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Away_Team_Score'].iloc[i]|int}} {{additional_stats_dict[pl_pred['Home Team ID'][n]]['Away_Team'].iloc[i]}} 
+	                <div class='past_perform_away'>
+
+		                {{additional_stats_dict[pl_pred['Away Team ID'][n]]['Home_Team'].iloc[i]}} {{additional_stats_dict[pl_pred['Away Team ID'][n]]['Home_Team_Score'].iloc[i]|int}} - {{additional_stats_dict[pl_pred['Away Team ID'][n]]['Away_Team_Score'].iloc[i]|int}} {{additional_stats_dict[pl_pred['Away Team ID'][n]]['Away_Team'].iloc[i]}} 
+
+		                <div class='past_perform_result'>
+		                	<b>{{additional_stats_dict[pl_pred['Away Team ID'][n]]['Result'].iloc[i]}}</b>
+		                </div>
+
 		                <br>
 		            </div>
 	                {% endfor %}                
