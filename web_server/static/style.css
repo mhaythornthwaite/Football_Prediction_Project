@@ -116,6 +116,24 @@ a {
 }
 
 
+.past_perform_home{
+    width: 49.75%;
+    text-align: left;
+    box-sizing: border-box;
+    display: inline-block; 
+    padding: 5px 2%;
+}
+
+
+.past_perform_away{
+    width: 49.75%;
+    text-align: right;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 5px 2%;
+}
+
+
 .probability_annot{
     box-sizing: border-box;
     white-space: nowrap;
@@ -193,7 +211,6 @@ a {
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-  padding: 0 9px;
   display: none;
   overflow: hidden;
   background-color: rgba(255,255,255,0.45);

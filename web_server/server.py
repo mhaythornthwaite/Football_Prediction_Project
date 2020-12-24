@@ -34,6 +34,13 @@ if iterator_len > max_display_games:
     iterator_len = max_display_games
 iterator = range(iterator_len)
 
+#creating our iterator that we will use in the for loop in our index file.
+max_display_games = 5
+iterator_len = len(pl_pred) - 1
+if iterator_len > max_display_games:
+    iterator_len = max_display_games
+iterator2 = range(iterator_len)
+
 #removing all past predictions if they still exist in the predictions df
 current_date = datetime.today().strftime('%Y-%m-%d')
 for i in range(len(pl_pred)):
@@ -48,6 +55,7 @@ def pass_game_1():
     return render_template('index.html',
                            pl_pred=pl_pred, 
                            iterator=iterator,
+                           iterator2=iterator2,
                            additional_stats_dict=additional_stats_dict)
 
 
