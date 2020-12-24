@@ -121,7 +121,7 @@ a {
     text-align: left;
     box-sizing: border-box;
     display: inline-block; 
-    padding: 5px 1%;
+    padding: 6px 2px;
 }
 
 
@@ -130,7 +130,7 @@ a {
     text-align: right;
     box-sizing: border-box;
     display: inline-block;
-    padding: 5px 1%;
+    padding: 6px 2px;
 }
 
 

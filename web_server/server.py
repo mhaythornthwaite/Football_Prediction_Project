@@ -34,12 +34,17 @@ if iterator_len > max_display_games:
     iterator_len = max_display_games
 iterator = range(iterator_len)
 
-#creating our iterator that we will use in the for loop in our index file.
-max_display_games = 5
-iterator_len = len(pl_pred) - 1
-if iterator_len > max_display_games:
-    iterator_len = max_display_games
-iterator2 = range(iterator_len)
+#creating our iterator that we will use in the for loop in our index file. Checking first that there is enough data.
+max_additional_display_games = 5
+dict_keys = list(additional_stats_dict.keys())
+min_length = 100
+for i in dict_keys:
+    df_len = len(additional_stats_dict[i])
+    if df_len < min_length:
+        min_length = df_len
+if max_additional_display_games > min_length:
+    max_additional_display_games = min_length
+iterator2 = range(max_additional_display_games)
 
 #removing all past predictions if they still exist in the predictions df
 current_date = datetime.today().strftime('%Y-%m-%d')
