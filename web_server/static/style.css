@@ -55,7 +55,7 @@ a {
 .game_description{
     font-size: 0.6em;
     padding-top: 7px;
-    padding-bottom: 7px;
+    padding-bottom: 2px;
 }
 
 
@@ -96,7 +96,7 @@ a {
     white-space: nowrap;
     font-weight: bold;
     font-size: 150%;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 
 
@@ -196,23 +196,24 @@ a {
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
   background-color: rgba(135,186,99,0);
-  color: #444;
   cursor: pointer;
-  padding: 4px;
-  margin-top: 10px;
+  margin-top: 0px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 0.7em;
   border-radius: 10px 10px 0px 0px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  font-size: 0.6em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 4px
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color: #ccc;
+  background-color: #c7e0c7;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -224,4 +225,13 @@ a {
   border-radius: 0px 0px 10px 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6em;
+}
+
+.game_probability {
+    margin-top: 20px
+}
+
+.dropdown_img {
+    height: 15px;
+    padding-top: 2px;
 }

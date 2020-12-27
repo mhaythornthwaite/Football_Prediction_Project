@@ -38,25 +38,10 @@
 			<div class='teamheading'>
 			    <div class='heading1'>{{pl_pred['Home Team'][n]}}</div>
 			    <div class='heading2'>{{pl_pred['Away Team'][n]}}</div>
-			    <div class='game_description'> Date: {{pl_pred['Game Date'][n]}} &nbsp Venue: {{pl_pred['Venue'][n]}} </div>
+			    <div class='game_description'> Date: {{pl_pred['Game Date'][n]}} &nbsp Venue: {{pl_pred['Venue'][n]}} </div>	    
 			</div>
-			<div class='logo_home'>
-				<a> 
-					<img class='logo_png' src={{pl_pred['Home Team Logo'][n]}}> 
-				</a>
-            </div>
-			<section class='probability_annot'>
-	    		<div class="win" style="width: calc({{pl_pred['Home Win'][n]}}% - 2px)">{{pl_pred['Home Win'][n]}}%</div>
-	    		<div class="draw" style="width: calc({{pl_pred['Draw'][n]}}% - 2px)">{{pl_pred['Draw'][n]}}%</div>
-	    		<div class="loss" style="width: calc({{pl_pred['Away Win'][n]}}% - 2px)">{{pl_pred['Away Win'][n]}}%</div>
-			</section>
-			<div class='logo_away'>
-				<a> 
-					<img class='logo_png' src={{pl_pred['Away Team Logo'][n]}}> 
-				</a>
-            </div>
             <div class='collapsible_heading'>
-              <button type="button" class="collapsible">Past Performance</button>
+              <button type="button" class="collapsible"> <img class='dropdown_img' src='/static/images/dropdown_arrow.png'> Form </button>
 
                 <div class="content">
 
@@ -85,6 +70,23 @@
 	                {% endfor %}                
 
                 </div>
+            </div>
+            	<div class='game_probability'>
+					<div class='logo_home'>
+						<a> 
+							<img class='logo_png' src={{pl_pred['Home Team Logo'][n]}}> 
+						</a>
+		            </div>
+					<section class='probability_annot'>
+			    		<div class="win" style="width: calc({{pl_pred['Home Win'][n]}}% - 2px)">{{pl_pred['Home Win'][n]}}%</div>
+			    		<div class="draw" style="width: calc({{pl_pred['Draw'][n]}}% - 2px)">{{pl_pred['Draw'][n]}}%</div>
+			    		<div class="loss" style="width: calc({{pl_pred['Away Win'][n]}}% - 2px)">{{pl_pred['Away Win'][n]}}%</div>
+					</section>
+					<div class='logo_away'>
+						<a> 
+							<img class='logo_png' src={{pl_pred['Away Team Logo'][n]}}> 
+						</a>
+			    </div>
             </div>
 		</div>
 		{% endfor %}
