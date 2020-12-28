@@ -20,9 +20,7 @@ import pandas as pd
 #------------------------------- INPUT VARIABLES ------------------------------
 
 stats_dict_saved_name = '2019_2020_prem_all_stats_dict.txt'
-
 fixtures_saved_name = '2019_2020_premier_league_fixtures_df.csv'
-
 results_dict_saved_name = '2019_2020_additional_stats_dict.txt'
 
 
@@ -163,8 +161,6 @@ for team in teams:
     
 with open(f'../prem_clean_fixtures_and_dataframes/{results_dict_saved_name}', 'wb') as myFile:
     pickle.dump(results_dict, myFile)
-
-print(results_dict[34]['Result'].iloc[0])
 
 
 # ----------------------------------- END -------------------------------------
