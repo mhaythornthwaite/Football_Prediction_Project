@@ -114,6 +114,8 @@ Several areas of further work are suggested to improve the predictions made in t
 
 - Incorporate additional unused stats. Stats stored within each JSON file (such as blocked shots, total number of passes etc.) were omitted to reduce feature and model complexity however, they should be incorporated into model building and compared with the performance of the existing model.
 
+- Currently the model is built on short term data, and specific in game statistics - like number of shots. More generic features regarding a club’s size and quality could also be added such as: average points per game, current league position, past season(s) league positions etc. This may add some context to the heavily form driven model. 
+
 - Test alternative approaches to feature engineering. Currently, in order to reduce the number of features, game data over the past 10 fixtures are averaged. Dimensionality reduction techniques (PCA, LDA) should be tested on this raw data, with the top 20 components used for model building. These results may then be compared with the existing model.
 
 
