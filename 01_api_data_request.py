@@ -209,9 +209,13 @@ def req_prem_stats_list(missing_data):
     else:
         if len(missing_data) > 0:
             print('Data collected for the following fixtures:')
-        for i in missing_data:
-            print(i)
-            fix_id = str(i)
+        for i, dat in enumerate(missing_data):
+            pause_points = [(i*10)-1 for i in range(10)]
+            if i in pause_points:
+                print('sleeping for 1 minute - API only allows 10 requests per minute')
+                time.sleep(60)
+            print(dat)
+            fix_id = str(dat)
             fixture_raw = get_api_data(base_url, '/statistics/fixture/' + fix_id + '/')
             fixture_sliced = slice_api(fixture_raw, 34, 2)
             save_api_output('prem_game_stats_json_files/' + fix_id, fixture_sliced)
