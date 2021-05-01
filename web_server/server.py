@@ -27,8 +27,17 @@ with open('../prem_clean_fixtures_and_dataframes/2019_2020_additional_stats_dict
 #with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_predictions.csv', 'rb') as myFile:
 #    pl_pred = pickle.load(myFile)
 
+#removing all past predictions if they still exist in the predictions df
+current_date = datetime.today().strftime('%Y-%m-%d')
+for j in range(len(pl_pred)):
+    game_date = pl_pred['Game Date'].loc[j]
+    if game_date < current_date:
+        pl_pred = pl_pred.drop([j], axis=0)
+pl_pred = pl_pred.reset_index(drop=True)        
+
+
 #creating our iterator that we will use in the for loop in our index file.
-max_display_games = 50
+max_display_games = 40
 iterator_len = len(pl_pred) - 1
 if iterator_len > max_display_games:
     iterator_len = max_display_games
@@ -45,14 +54,6 @@ for i in dict_keys:
 if max_additional_display_games > min_length:
     max_additional_display_games = min_length
 iterator2 = range(max_additional_display_games)
-
-#removing all past predictions if they still exist in the predictions df
-current_date = datetime.today().strftime('%Y-%m-%d')
-for i in range(len(pl_pred)):
-    game_date = pl_pred['Game Date'].loc[i]
-    if game_date < current_date:
-        pl_pred = pl_pred.drop([i], axis=0)
-pl_pred = pl_pred.reset_index(drop=True)        
 
 
 @app.route('/')
