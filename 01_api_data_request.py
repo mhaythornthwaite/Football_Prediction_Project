@@ -94,6 +94,8 @@ if YEAR == 2019:
     season_id = 524
 elif YEAR == 2020:
     season_id = 2790
+elif YEAR == 2021:
+    season_id = 3456
 else:
     print('please lookup season id and specify this as season_id variable')
 
