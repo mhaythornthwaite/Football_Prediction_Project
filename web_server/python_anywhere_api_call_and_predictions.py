@@ -18,6 +18,7 @@ print(' ---------------- START ---------------- \n')
 import requests
 import pandas as pd
 import math
+import time
 from os import listdir
 
 #Note from the API./ 'in this documentation all the examples are realized with the url provided for rapidApi, if you have subscribed directly with us you will have to replace https://api-football-v1.p.rapidapi.com/v2/ by https://v2.api-football.com/'
@@ -27,7 +28,7 @@ from os import listdir
 
 #Please state the year of investigation.
 
-YEAR = 2019
+YEAR = 2021
 YEAR_str = str(YEAR)
 
 request_league_ids = False
@@ -68,11 +69,9 @@ def read_json_as_pd_df(json_data, json_data_path='', orient_def='records'):
     return output
 
 
-
 #---------------------------- REQUESTING BASIC DATA ---------------------------
 
 base_url = 'https://v2.api-football.com/'
-
 
 
 def req_prem_fixtures_id(season_code, year=YEAR_str):
@@ -98,6 +97,8 @@ if YEAR == 2019:
     season_id = 524
 elif YEAR == 2020:
     season_id = 2790
+elif YEAR == 2021:
+    season_id = 3456
 else:
     print('please lookup season id and specify this as season_id variable')
 
@@ -111,7 +112,6 @@ def load_prem_fixtures_id(year=YEAR_str):
     return premier_league_fixtures_df
 
 fixtures = load_prem_fixtures_id()
-
 
 
 #------------------------- MAKING CLEAN FIXTURE LIST --------------------------
@@ -160,14 +160,14 @@ fixtures_clean.to_csv(f'/home/matthaythornthwaite/Football_Prediction_Project/pr
 
 #in this section we simply load the 2019 fixtures and the 2020 fixtures and stitch the two dataframes together.
 
-fixtures_clean_2019 = pd.read_csv(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures_df.csv')
+fixtures_clean_2019_2020 = pd.read_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv')
 
-fixtures_clean_2020 = pd.read_csv(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2020_premier_league_fixtures_df.csv')
+fixtures_clean_2021 = pd.read_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2021_premier_league_fixtures_df.csv')
 
-fixtures_clean_combined = pd.concat([fixtures_clean_2019, fixtures_clean_2020])
+fixtures_clean_combined = pd.concat([fixtures_clean_2019_2020, fixtures_clean_2021])
 fixtures_clean_combined = fixtures_clean_combined.reset_index(drop=True)
 
-fixtures_clean_combined.to_csv(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv', index=False)
+fixtures_clean_combined.to_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_2020_2021_premier_league_fixtures_df.csv', index=False)
 
 
 
@@ -215,9 +215,13 @@ def req_prem_stats_list(missing_data):
     else:
         if len(missing_data) > 0:
             print('Data collected for the following fixtures:')
-        for i in missing_data:
-            print(i)
-            fix_id = str(i)
+        for i, dat in enumerate(missing_data):
+            pause_points = [(i*10)-1 for i in range(10)]
+            if i in pause_points:
+                print('sleeping for 1 minute - API only allows 10 requests per minute')
+                time.sleep(60)
+            print(dat)
+            fix_id = str(dat)
             fixture_raw = get_api_data(base_url, '/statistics/fixture/' + fix_id + '/')
             fixture_sliced = slice_api(fixture_raw, 34, 2)
             save_api_output('/home/matthaythornthwaite/Football_Prediction_Project/prem_game_stats_json_files/' + fix_id, fixture_sliced)
@@ -474,11 +478,11 @@ def mod_df(df, making_predictions=False):
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-fixtures_saved_name = '2019_2020_premier_league_fixtures_df.csv'
+fixtures_saved_name = '2019_2020_2021_premier_league_fixtures_df.csv'
 
-stats_dict_saved_name = '2019_2020_prem_all_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_2021_prem_all_stats_dict.txt'
 
-df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
+df_10_saved_name = '2019_2020_2021_prem_df_for_ml_10_v2.txt'
 
 path_to_model = '/home/matthaythornthwaite/Football_Prediction_Project/ml_model_build_random_forest/ml_models/random_forest_model_10.pk1'
 
@@ -640,8 +644,8 @@ with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_p
 
 #Please state the name of the fixtures DataFrame we want to generate our dictionary, as well as the name of the saved output file (nested stats dictionary).
 
-fixtures_saved_name = '2019_2020_premier_league_fixtures_df.csv'
-stats_dict_output_name = '2019_2020_prem_all_stats_dict.txt'
+fixtures_saved_name = '2019_2020_2021_premier_league_fixtures_df.csv'
+stats_dict_output_name = '2019_2020_2021_prem_all_stats_dict.txt'
 
 
 #---------- CREATING DF PER TEAM ----------
@@ -661,7 +665,7 @@ all_stats_dict = {}
 
 #nested for loop to create nested dictionary, first key by team id, second key by fixture id.
 for team in team_id_list:
-    
+
     #working the home teams
     team_fixture_list = []
     for i in fixtures_clean.index[:]:
@@ -699,9 +703,9 @@ for team in team_id_list:
         #adding this modified df to nested dictionary
         sub_dict_1 = {j:df}
         all_stats_dict[team].update(sub_dict_1)
-        
-    #working the away teams    
-    team_fixture_list = []    
+
+    #working the away teams
+    team_fixture_list = []
     for i in fixtures_clean.index[:]:
         if fixtures_clean['Away Team ID'].iloc[i] == team:
             if math.isnan(fixtures_clean['Away Team Goals'].iloc[i]) == False:
@@ -727,7 +731,7 @@ for team in team_id_list:
         else:
             df['Points'] = ['nan', 'nan']
         #adding home-away identifier to df
-        df['Team Identifier'] = [2,1]       
+        df['Team Identifier'] = [2,1]
         #adding team id
         df['Team ID'] = [fixtures_clean['Home Team ID'].iloc[temp_index], team]
         #adding game date
@@ -736,7 +740,7 @@ for team in team_id_list:
         #adding this modified df to nested dictionary
         sub_dict_1 = {j:df}
         all_stats_dict[team].update(sub_dict_1)
-        
+
 
 #saving our generated dictionary as a pickle file to import into a later python file.
 
@@ -749,16 +753,16 @@ with open(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fix
 #in this section we will load our already generated stats dictionary and apply some slight transforms to get a df per team which has the past results and the teams played. This will then be used in the 'more information' dropdown / collapsible on our website
 
 
-stats_dict_saved_name = '2019_2020_prem_all_stats_dict.txt'
-fixtures_saved_name = '2019_2020_premier_league_fixtures_df.csv'
-results_dict_saved_name = '2019_2020_additional_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_2021_prem_all_stats_dict.txt'
+fixtures_saved_name = '2019_2020_2021_premier_league_fixtures_df.csv'
+results_dict_saved_name = '2019_2020_2021_additional_stats_dict.txt'
 
 
 #---------- LOADING DATA ----------
 
 with open(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/{stats_dict_saved_name}', 'rb') as myFile:
     game_stats = pickle.load(myFile)
-    
+
 fixtures_clean = pd.read_csv(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/{fixtures_saved_name}')
 
 
@@ -791,14 +795,30 @@ results_dict = {}
 teams = teams_df['Team ID']
 
 for team in teams:
-    
+
     df = pd.DataFrame(columns=['Fixture_ID', 'Date', 'Home_Team_ID','Away_Team_ID','Home_Team','Away_Team','Home_Team_Score','Away_Team_Score','Result','Home_Team_Logo','Away_Team_Logo'])
-    
+
     dic = game_stats[team]
     fixture_id = list(dic.keys())
-    
+
+    if len(dic) == 0:
+        nan_df = results_dict[33]
+        nan_df['Home_Team'] = 'N/A'
+        nan_df['Away_Team'] = 'N/A'
+        nan_df['Home_Team_Score'] = 0
+        nan_df['Away_Team_Score'] = 0
+        nan_df['Fixture_ID'] = 'N/A'
+        #nan_df['Date'] = 'N/A'
+        nan_df['Home_Team_ID'] = 'N/A'
+        nan_df['Away_Team_ID'] = 'N/A'
+        nan_df['Home_Team_Logo'] = 'N/A'
+        nan_df['Away_Team_Logo'] = 'N/A'
+        nan_df['Result'] = 'N/A'
+        results_dict[team] = nan_df
+        continue
+
     game = dic[fixture_id[1]]
-    
+
     date = []
     home_team_id = []
     away_team_id = []
@@ -809,58 +829,58 @@ for team in teams:
     home_team_logo = []
     away_team_logo = []
     results = []
-    
-    
+
+
     for i, fix_id in enumerate(fixture_id):
         game = dic[fix_id]
-        
+
         date.append(game['Game Date'].iloc[0])
         home_team_id.append(game['Team ID'].iloc[0])
         away_team_id.append(game['Team ID'].iloc[1])
         home_team_score.append(game['Goals'].iloc[0])
         away_team_score.append(game['Goals'].iloc[1])
-        
-        
+
+
     df['Fixture_ID'] = fixture_id
     df['Date'] = date
     df['Home_Team_ID'] = home_team_id
     df['Away_Team_ID'] = away_team_id
     df['Home_Team_Score'] = home_team_score
     df['Away_Team_Score'] = away_team_score
-        
-    
+
+
     for i, home_team_ID in enumerate(df['Home_Team_ID']):
         home_team_str = team_data(teams_df, home_team_ID, 'Team')
         home_team_logo_str = team_data(teams_df, home_team_ID, 'Team Logo')
         home_team.append(home_team_str)
         home_team_logo.append(home_team_logo_str)
-    
+
     for i, away_team_ID in enumerate(df['Away_Team_ID']):
         away_team_str = team_data(teams_df, away_team_ID, 'Team')
         away_team_logo_str = team_data(teams_df, away_team_ID, 'Team Logo')
         away_team.append(away_team_str)
         away_team_logo.append(away_team_logo_str)
-    
-    
+
+
     df['Home_Team'] = home_team
     df['Away_Team'] = away_team
     df['Home_Team_Logo'] = home_team_logo
     df['Away_Team_Logo'] = away_team_logo
-    
+
     df = df.sort_values(by='Date', ascending=False)
     df = df.reset_index(drop=True)
-    
-    
+
+
     for i, home_team_ID in enumerate(df['Home_Team_ID']):
-        
+
         if home_team_ID == team:
             home = True
         else:
             home = False
-        
+
         home_score = df['Home_Team_Score'].iloc[i]
         away_score = df['Away_Team_Score'].iloc[i]
-        
+
         if home:
             if home_score > away_score:
                 result = 'W'
@@ -868,22 +888,22 @@ for team in teams:
                 result = 'D'
             elif home_score < away_score:
                 result = 'L'
-        
+
         if home==False:
             if home_score < away_score:
                 result = 'W'
             elif home_score == away_score:
                 result = 'D'
             elif home_score > away_score:
-                result = 'L'        
-            
+                result = 'L'
+
         results.append(result)
-        
+
     df['Result'] = results
-      
+
     results_dict[team] = df
-    
-    
+
+
 with open(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/{results_dict_saved_name}', 'wb') as myFile:
     pickle.dump(results_dict, myFile)
 
