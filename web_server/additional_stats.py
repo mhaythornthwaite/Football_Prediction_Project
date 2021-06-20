@@ -19,9 +19,9 @@ import pandas as pd
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-stats_dict_saved_name = '2019_2020_prem_all_stats_dict.txt'
-fixtures_saved_name = '2019_2020_premier_league_fixtures_df.csv'
-results_dict_saved_name = '2019_2020_additional_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_2021_prem_all_stats_dict.txt'
+fixtures_saved_name = '2019_2020_2021_premier_league_fixtures_df.csv'
+results_dict_saved_name = '2019_2020_2021_additional_stats_dict.txt'
 
 
 #------------------------------ ADDITIONAL STATS ------------------------------
@@ -71,6 +71,22 @@ for team in teams:
     
     dic = game_stats[team]
     fixture_id = list(dic.keys())
+    
+    if len(dic) == 0:
+        nan_df = results_dict[33]
+        nan_df['Home_Team'] = 'N/A'
+        nan_df['Away_Team'] = 'N/A'
+        nan_df['Home_Team_Score'] = 0
+        nan_df['Away_Team_Score'] = 0
+        nan_df['Fixture_ID'] = 'N/A'
+        #nan_df['Date'] = 'N/A'
+        nan_df['Home_Team_ID'] = 'N/A'
+        nan_df['Away_Team_ID'] = 'N/A'
+        nan_df['Home_Team_Logo'] = 'N/A'
+        nan_df['Away_Team_Logo'] = 'N/A'
+        nan_df['Result'] = 'N/A'
+        results_dict[team] = nan_df
+        continue
     
     game = dic[fixture_id[1]]
     
@@ -157,7 +173,8 @@ for team in teams:
     df['Result'] = results
       
     results_dict[team] = df
-    
+
+
     
 with open(f'../prem_clean_fixtures_and_dataframes/{results_dict_saved_name}', 'wb') as myFile:
     pickle.dump(results_dict, myFile)

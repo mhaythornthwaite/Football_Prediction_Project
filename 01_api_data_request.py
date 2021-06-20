@@ -25,7 +25,7 @@ from os import listdir
 
 #Please state the year of investigation. 
 
-YEAR = 2020
+YEAR = 2021
 YEAR_str = str(YEAR)
 
 request_league_ids = False
@@ -155,16 +155,16 @@ fixtures_clean.to_csv(f'prem_clean_fixtures_and_dataframes/{YEAR_str}_premier_le
 
 #------------------------- STITCHINING CLEAN FIXTURE LIST --------------------------
 
-#in this section we simply load the 2019 fixtures and the 2020 fixtures and stitch the two dataframes together. 
+#in this section we simply load the 2019+2020 fixtures and the 2021 fixtures and stitch the two dataframes together. 
 
-fixtures_clean_2019 = pd.read_csv(f'prem_clean_fixtures_and_dataframes/2019_premier_league_fixtures_df.csv')
+fixtures_clean_2019_2020 = pd.read_csv('prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv')
 
-fixtures_clean_2020 = pd.read_csv(f'prem_clean_fixtures_and_dataframes/2020_premier_league_fixtures_df.csv')
+fixtures_clean_2021 = pd.read_csv('prem_clean_fixtures_and_dataframes/2021_premier_league_fixtures_df.csv')
 
-fixtures_clean_combined = pd.concat([fixtures_clean_2019, fixtures_clean_2020])
+fixtures_clean_combined = pd.concat([fixtures_clean_2019_2020, fixtures_clean_2021])
 fixtures_clean_combined = fixtures_clean_combined.reset_index(drop=True)
 
-fixtures_clean_combined.to_csv(f'prem_clean_fixtures_and_dataframes/2019_2020_premier_league_fixtures_df.csv', index=False)
+fixtures_clean_combined.to_csv('prem_clean_fixtures_and_dataframes/2019_2020_2021_premier_league_fixtures_df.csv', index=False)
 
 
 #-------------------------- REQUESTING SPECIFIC STATS -------------------------
