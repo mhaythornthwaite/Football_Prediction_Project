@@ -88,7 +88,7 @@ for team in teams:
         results_dict[team] = nan_df
         continue
     
-    game = dic[fixture_id[1]]
+    game = dic[fixture_id[0]]
     
     date = []
     home_team_id = []
