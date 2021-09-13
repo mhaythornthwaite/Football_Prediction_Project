@@ -34,8 +34,8 @@ plt.close('all')
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-df_5_saved_name = '2019_2020_prem_df_for_ml_5_v2.txt'
-df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
+df_5_saved_name = '2019_2020_2021_prem_df_for_ml_5_v2.txt'
+df_10_saved_name = '2019_2020_2021_prem_df_for_ml_10_v2.txt'
 
 grid_search = False
 
@@ -231,7 +231,7 @@ plot_learning_curve(ml_10_rand_forest,
                     x_10, 
                     y_10, 
                     training_set_size=20, 
-                    x_max=240, 
+                    x_max=500, 
                     title='Learning Curve - Random Forest DF_10')
 if save_learning_curve_df10:
     plt.savefig('figures\ml_10_random_forest_learning_curve.png')
@@ -240,7 +240,7 @@ plot_learning_curve(ml_5_rand_forest,
                     x_5, 
                     y_5, 
                     training_set_size=20, 
-                    x_max=280, 
+                    x_max=580, 
                     title='Learning Curve - Random Forest DF_5')
 if save_learning_curve_df5:
     plt.savefig('figures\ml_5_random_forest_learning_curve.png')
