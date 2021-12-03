@@ -121,6 +121,7 @@ Several areas of further work are suggested to improve the predictions made in t
 
 - Test alternative approaches to feature engineering. Currently, in order to reduce the number of features, game data over the past 10 fixtures are averaged. Dimensionality reduction techniques (PCA, LDA) should be tested on this raw data, with the top 20 components used for model building. These results may then be compared with the existing model.
 
+- Gradient boosting applied to decision trees should be tested as an additional algorithm for consideration. This approach has been cited to 'strictly outperform random forests most of the time whilst having similar properties' (Chollet, 2021).
 
 ## License
 
