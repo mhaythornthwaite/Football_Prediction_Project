@@ -33,8 +33,8 @@ plt.close('all')
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-df_5_saved_name = '2019_2020_prem_df_for_ml_5_v2.txt'
-df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
+df_5_saved_name = '2019_2020_2021_prem_df_for_ml_5_v2.txt'
+df_10_saved_name = '2019_2020_2021_prem_df_for_ml_10_v2.txt'
 
 pred_prob_plot_df10 = False
 save_pred_prob_plot_df10 = False
@@ -236,7 +236,7 @@ plot_learning_curve(ml_10_svm,
                     x_10, 
                     y_10, 
                     training_set_size=10, 
-                    x_max=240, 
+                    x_max=600, 
                     title='Learning Curve - Support Vector Machine DF_10', 
                     leg_loc=1)
 if save_learning_curve_df10:
@@ -246,7 +246,7 @@ plot_learning_curve(ml_5_svm,
                     x_5, 
                     y_5, 
                     training_set_size=10, 
-                    x_max=280, 
+                    x_max=600, 
                     title='Learning Curve - Support Vector Machine DF_5', 
                     leg_loc=1)
 if save_learning_curve_df5:

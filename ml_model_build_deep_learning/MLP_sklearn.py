@@ -33,10 +33,10 @@ plt.close('all')
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-df_5_saved_name = '2019_2020_prem_df_for_ml_5_v2.txt'
-df_10_saved_name = '2019_2020_prem_df_for_ml_10_v2.txt'
+df_5_saved_name = '2019_2020_2021_prem_df_for_ml_5_v2.txt'
+df_10_saved_name = '2019_2020_2021_prem_df_for_ml_10_v2.txt'
 
-grid_search = False
+grid_search = True
 save_grid_search_fig = False
 
 create_final_model = True
@@ -70,7 +70,7 @@ y_5 = df_ml_5['Team Result Indicator']
 x_train, x_test, y_train, y_test = train_test_split(x_10, y_10, test_size=0.2)
 
 #instantiate the MLP classifier, and fit to the data
-clf = MLPClassifier(hidden_layer_sizes=(18, 12), 
+clf = MLPClassifier(hidden_layer_sizes=(6, 16), 
                     activation='logistic', 
                     random_state=0, 
                     max_iter=5000)
