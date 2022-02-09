@@ -38,7 +38,7 @@
 
 ## Aims and Objectives
 
-The aim of this study was to build a model that could accurately predict the outcome of future premier league football matches. Sucess was judged using the following two objectives, one quantitative and one qualitative:
+The aim of this study was to build a model that could accurately predict the outcome of future premier league football matches. Success was judged using the following two objectives, one quantitative and one qualitative:
 
 - Achieve a test accuracy of greater than 50%, with a stretch target of 60%.
 - Output probabilities that appear sensible/realistic, that are comparable to odds offered on popular betting websites.
@@ -56,7 +56,7 @@ The data was collected directly from an API:<a href="https://www.api-football.co
 
 Data was initially collected from the 2019-2020 premier league season, in the form of a single json file per fixture containing a range of stats (e.g. number of shots, possession etc.) These json files were loaded into a Pandas DataFrame, and organised into a nested dictionary in the following form: `{team ID: {fixture_id: stats_df}}` 
 
-Execution of `01_api_data_request.py` and `02_cleaning_stats_data.py` will update the database with recently played fixtures not already stored within the databse and add these DataFrames directly to the nested dictionary described above. 
+Execution of `01_api_data_request.py` and `02_cleaning_stats_data.py` will update the database with recently played fixtures not already stored within the database and add these DataFrames directly to the nested dictionary described above. 
 
 ## Feature Engineering and Data Visualisation
 
@@ -65,12 +65,12 @@ In order to utilise as much previous match data as possible, whilst minimising t
 - Goal Difference
 - Shot Difference
 - Shots Inside The Box Difference
-- Posession Difference
+- Possession Difference
 - Pass Accuracy Difference
 - Corners Difference
 - Fouls Difference
 
-The above describes the features for a single team, hence the number of features is doubled to 14 when predicting the outcome of a match. Like-for-like features were visualised in figure 1, and demonstate that the chosen features have some influence on the outcome of a match, with the execption of number of fouls, which appears to have little correlation with the target result.
+The above describes the features for a single team, hence the number of features is doubled to 14 when predicting the outcome of a match. Like-for-like features were visualised in figure 1, and demonstrate that the chosen features have some influence on the outcome of a match, with the exception of number of fouls, which appears to have little correlation with the target result.
 
 <img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/figures/average_10_games_team_target_result.png" alt="Figure 1">
 
@@ -125,4 +125,5 @@ Several areas of further work are suggested to improve the predictions made in t
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
