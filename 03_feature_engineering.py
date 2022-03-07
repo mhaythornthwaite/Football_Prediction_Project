@@ -72,6 +72,11 @@ with open(f'prem_clean_fixtures_and_dataframes/{df_10_output_name}', 'wb') as my
     pickle.dump(df_for_ml_10_v2, myFile)
 
 
+#for Power BI
+df_for_ml_10_v2.to_csv('prem_clean_fixtures_and_dataframes/df_for_powerbi.csv', index='False')
+
+
+
 # ----------------------------------- END -------------------------------------
 
 print('\n', 'Script runtime:', round(((time.time()-start)/60), 2), 'minutes')
