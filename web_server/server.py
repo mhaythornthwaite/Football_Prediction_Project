@@ -20,7 +20,7 @@ app = Flask(__name__, static_url_path='/static')
 with open('../predictions/pl_predictions.csv', 'rb') as myFile:
     pl_pred = pickle.load(myFile)
     
-with open('../prem_clean_fixtures_and_dataframes/2019_2020_2021_additional_stats_dict.txt', 'rb') as myFile:
+with open('../prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_additional_stats_dict.txt', 'rb') as myFile:
     additional_stats_dict = pickle.load(myFile)    
 
 
