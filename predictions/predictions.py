@@ -27,11 +27,11 @@ from ml_functions.feature_engineering_functions import average_stats_df, mod_df
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-fixtures_saved_name = '2019_2020_2021_2022_premier_league_fixtures_df.csv'
+fixtures_saved_name = '2019_2020_2021_2022_2023_premier_league_fixtures_df.csv'
 
-stats_dict_saved_name = '2019_2020_2021_2022_prem_all_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_2021_2022_2023_prem_all_stats_dict.txt'
 
-df_10_saved_name = '2019_2020_2021_2022_prem_df_for_ml_10_v2.txt'
+df_10_saved_name = '2019_2020_2021_2022_2023_prem_df_for_ml_10_v2.txt'
 
 path_to_model = '/ml_model_build_random_forest/ml_models/random_forest_model_10.pk1'
 

@@ -22,8 +22,8 @@ import pickle
 
 #Please state the name of the fixtures DataFrame we want to generate our dictionary, as well as the name of the saved output file (nested stats dictionary).
 
-fixtures_saved_name = '2019_2020_2021_2022_premier_league_fixtures_df.csv'
-stats_dict_output_name = '2019_2020_2021_2022_prem_all_stats_dict.txt'
+fixtures_saved_name = '2019_2020_2021_2022_2023_premier_league_fixtures_df.csv'
+stats_dict_output_name = '2019_2020_2021_2022_2023_prem_all_stats_dict.txt'
 
 
 #---------------------------- CREATING DF PER TEAM ----------------------------
