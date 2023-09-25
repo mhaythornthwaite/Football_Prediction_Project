@@ -1519,383 +1519,383 @@ Fixture ID,Game Date,Home Team ID,Away Team ID,Home Team Goals,Away Team Goals,V
 868323,2023-05-28,46.0,48.0,2.0,1.0,King Power Stadium,Leicester,West Ham,https://media-2.api-sports.io/football/teams/46.png,https://media-2.api-sports.io/football/teams/48.png
 868324,2023-05-28,33.0,36.0,2.0,1.0,Old Trafford,Manchester United,Fulham,https://media-1.api-sports.io/football/teams/33.png,https://media-3.api-sports.io/football/teams/36.png
 868325,2023-05-28,41.0,40.0,4.0,4.0,St. Mary's Stadium,Southampton,Liverpool,https://media-3.api-sports.io/football/teams/41.png,https://media-2.api-sports.io/football/teams/40.png
-1035037,2023-08-11,44.0,50.0,,,Turf Moor,Burnley,Manchester City,https://media-2.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/50.png
-1035038,2023-08-12,42.0,65.0,,,Emirates Stadium,Arsenal,Nottingham Forest,https://media-1.api-sports.io/football/teams/42.png,https://media-3.api-sports.io/football/teams/65.png
-1035039,2023-08-12,35.0,48.0,,,Vitality Stadium,Bournemouth,West Ham,https://media-1.api-sports.io/football/teams/35.png,https://media-1.api-sports.io/football/teams/48.png
-1035040,2023-08-12,51.0,13.0,,,The American Express Community Stadium,Brighton,Luton,https://media-1.api-sports.io/football/teams/51.png,https://media-1.api-sports.io/football/teams/1359.png
-1035041,2023-08-12,45.0,36.0,,,Goodison Park,Everton,Fulham,https://media-2.api-sports.io/football/teams/45.png,https://media-2.api-sports.io/football/teams/36.png
-1035042,2023-08-12,62.0,52.0,,,Bramall Lane,Sheffield Utd,Crystal Palace,https://media-2.api-sports.io/football/teams/62.png,https://media-1.api-sports.io/football/teams/52.png
-1035043,2023-08-12,34.0,66.0,,,St. James' Park,Newcastle,Aston Villa,https://media-2.api-sports.io/football/teams/34.png,https://media-1.api-sports.io/football/teams/66.png
-1035044,2023-08-13,55.0,47.0,,,Gtech Community Stadium,Brentford,Tottenham,https://media-2.api-sports.io/football/teams/55.png,https://media-2.api-sports.io/football/teams/47.png
-1035045,2023-08-13,49.0,40.0,,,Stamford Bridge,Chelsea,Liverpool,https://media-1.api-sports.io/football/teams/49.png,https://media-2.api-sports.io/football/teams/40.png
-1035046,2023-08-14,33.0,39.0,,,Old Trafford,Manchester United,Wolves,https://media-1.api-sports.io/football/teams/33.png,https://media-3.api-sports.io/football/teams/39.png
-1035047,2023-08-19,66.0,45.0,,,Villa Park,Aston Villa,Everton,https://media-1.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/45.png
-1035048,2023-08-19,52.0,42.0,,,Selhurst Park,Crystal Palace,Arsenal,https://media-2.api-sports.io/football/teams/52.png,https://media-2.api-sports.io/football/teams/42.png
-1035049,2023-08-19,36.0,55.0,,,Craven Cottage,Fulham,Brentford,https://media-1.api-sports.io/football/teams/36.png,https://media-3.api-sports.io/football/teams/55.png
-1035050,2023-08-19,40.0,35.0,,,Anfield,Liverpool,Bournemouth,https://media-3.api-sports.io/football/teams/40.png,https://media-1.api-sports.io/football/teams/35.png
-1035051,2023-08-19,13.0,44.0,,,Kenilworth Road,Luton,Burnley,https://media-3.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/44.png
-1035052,2023-08-19,50.0,34.0,,,Etihad Stadium,Manchester City,Newcastle,https://media-3.api-sports.io/football/teams/50.png,https://media-3.api-sports.io/football/teams/34.png
-1035053,2023-08-19,65.0,62.0,,,The City Ground,Nottingham Forest,Sheffield Utd,https://media-2.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/62.png
-1035054,2023-08-19,47.0,33.0,,,Tottenham Hotspur Stadium,Tottenham,Manchester United,https://media-2.api-sports.io/football/teams/47.png,https://media-2.api-sports.io/football/teams/33.png
-1035055,2023-08-19,48.0,49.0,,,London Stadium,West Ham,Chelsea,https://media-3.api-sports.io/football/teams/48.png,https://media-2.api-sports.io/football/teams/49.png
-1035056,2023-08-19,39.0,51.0,,,Molineux Stadium,Wolves,Brighton,https://media-3.api-sports.io/football/teams/39.png,https://media-1.api-sports.io/football/teams/51.png
-1035057,2023-08-26,35.0,47.0,,,Vitality Stadium,Bournemouth,Tottenham,https://media-1.api-sports.io/football/teams/35.png,https://media-2.api-sports.io/football/teams/47.png
-1035058,2023-08-26,42.0,36.0,,,Emirates Stadium,Arsenal,Fulham,https://media-3.api-sports.io/football/teams/42.png,https://media-2.api-sports.io/football/teams/36.png
-1035059,2023-08-26,55.0,52.0,,,Gtech Community Stadium,Brentford,Crystal Palace,https://media-3.api-sports.io/football/teams/55.png,https://media-1.api-sports.io/football/teams/52.png
-1035060,2023-08-26,51.0,48.0,,,The American Express Community Stadium,Brighton,West Ham,https://media-3.api-sports.io/football/teams/51.png,https://media-1.api-sports.io/football/teams/48.png
-1035061,2023-08-26,44.0,66.0,,,Turf Moor,Burnley,Aston Villa,https://media-2.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/66.png
-1035062,2023-08-26,49.0,13.0,,,Stamford Bridge,Chelsea,Luton,https://media-1.api-sports.io/football/teams/49.png,https://media-3.api-sports.io/football/teams/1359.png
-1035063,2023-08-26,45.0,39.0,,,Goodison Park,Everton,Wolves,https://media-1.api-sports.io/football/teams/45.png,https://media-2.api-sports.io/football/teams/39.png
-1035064,2023-08-26,33.0,65.0,,,Old Trafford,Manchester United,Nottingham Forest,https://media-1.api-sports.io/football/teams/33.png,https://media-3.api-sports.io/football/teams/65.png
-1035065,2023-08-26,34.0,40.0,,,St. James' Park,Newcastle,Liverpool,https://media-3.api-sports.io/football/teams/34.png,https://media-1.api-sports.io/football/teams/40.png
-1035066,2023-08-26,62.0,50.0,,,Bramall Lane,Sheffield Utd,Manchester City,https://media-1.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/50.png
-1035067,2023-09-02,42.0,33.0,,,Emirates Stadium,Arsenal,Manchester United,https://media-3.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/33.png
-1035068,2023-09-02,55.0,35.0,,,Gtech Community Stadium,Brentford,Bournemouth,https://media-2.api-sports.io/football/teams/55.png,https://media-3.api-sports.io/football/teams/35.png
-1035069,2023-09-02,51.0,34.0,,,The American Express Community Stadium,Brighton,Newcastle,https://media-3.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/34.png
-1035070,2023-09-02,44.0,47.0,,,Turf Moor,Burnley,Tottenham,https://media-3.api-sports.io/football/teams/44.png,https://media-3.api-sports.io/football/teams/47.png
-1035071,2023-09-02,49.0,65.0,,,Stamford Bridge,Chelsea,Nottingham Forest,https://media-3.api-sports.io/football/teams/49.png,https://media-2.api-sports.io/football/teams/65.png
-1035072,2023-09-02,52.0,39.0,,,Selhurst Park,Crystal Palace,Wolves,https://media-3.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/39.png
-1035073,2023-09-02,40.0,66.0,,,Anfield,Liverpool,Aston Villa,https://media-2.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/66.png
-1035074,2023-09-02,13.0,48.0,,,Kenilworth Road,Luton,West Ham,https://media-1.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/48.png
-1035075,2023-09-02,50.0,36.0,,,Etihad Stadium,Manchester City,Fulham,https://media-2.api-sports.io/football/teams/50.png,https://media-3.api-sports.io/football/teams/36.png
-1035076,2023-09-02,62.0,45.0,,,Bramall Lane,Sheffield Utd,Everton,https://media-3.api-sports.io/football/teams/62.png,https://media-3.api-sports.io/football/teams/45.png
-1035077,2023-09-16,35.0,49.0,,,Vitality Stadium,Bournemouth,Chelsea,https://media-1.api-sports.io/football/teams/35.png,https://media-1.api-sports.io/football/teams/49.png
-1035078,2023-09-16,66.0,52.0,,,Villa Park,Aston Villa,Crystal Palace,https://media-3.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/52.png
-1035079,2023-09-16,45.0,42.0,,,Goodison Park,Everton,Arsenal,https://media-2.api-sports.io/football/teams/45.png,https://media-3.api-sports.io/football/teams/42.png
-1035080,2023-09-16,36.0,13.0,,,Craven Cottage,Fulham,Luton,https://media-2.api-sports.io/football/teams/36.png,https://media-1.api-sports.io/football/teams/1359.png
-1035081,2023-09-16,33.0,51.0,,,Old Trafford,Manchester United,Brighton,https://media-2.api-sports.io/football/teams/33.png,https://media-2.api-sports.io/football/teams/51.png
-1035082,2023-09-16,34.0,55.0,,,St. James' Park,Newcastle,Brentford,https://media-2.api-sports.io/football/teams/34.png,https://media-3.api-sports.io/football/teams/55.png
-1035083,2023-09-16,65.0,44.0,,,The City Ground,Nottingham Forest,Burnley,https://media-3.api-sports.io/football/teams/65.png,https://media-2.api-sports.io/football/teams/44.png
-1035084,2023-09-16,47.0,62.0,,,Tottenham Hotspur Stadium,Tottenham,Sheffield Utd,https://media-3.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/62.png
-1035085,2023-09-16,48.0,50.0,,,London Stadium,West Ham,Manchester City,https://media-1.api-sports.io/football/teams/48.png,https://media-3.api-sports.io/football/teams/50.png
-1035086,2023-09-16,39.0,40.0,,,Molineux Stadium,Wolves,Liverpool,https://media-1.api-sports.io/football/teams/39.png,https://media-1.api-sports.io/football/teams/40.png
-1035087,2023-09-23,42.0,47.0,,,Emirates Stadium,Arsenal,Tottenham,https://media-2.api-sports.io/football/teams/42.png,https://media-3.api-sports.io/football/teams/47.png
-1035088,2023-09-23,55.0,45.0,,,Gtech Community Stadium,Brentford,Everton,https://media-3.api-sports.io/football/teams/55.png,https://media-1.api-sports.io/football/teams/45.png
-1035089,2023-09-23,51.0,35.0,,,The American Express Community Stadium,Brighton,Bournemouth,https://media-3.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/35.png
-1035090,2023-09-23,44.0,33.0,,,Turf Moor,Burnley,Manchester United,https://media-2.api-sports.io/football/teams/44.png,https://media-3.api-sports.io/football/teams/33.png
-1035091,2023-09-23,49.0,66.0,,,Stamford Bridge,Chelsea,Aston Villa,https://media-1.api-sports.io/football/teams/49.png,https://media-1.api-sports.io/football/teams/66.png
-1035092,2023-09-23,52.0,36.0,,,Selhurst Park,Crystal Palace,Fulham,https://media-3.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/36.png
-1035093,2023-09-23,40.0,48.0,,,Anfield,Liverpool,West Ham,https://media-2.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/48.png
-1035094,2023-09-23,13.0,39.0,,,Kenilworth Road,Luton,Wolves,https://media-1.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/39.png
-1035095,2023-09-23,50.0,65.0,,,Etihad Stadium,Manchester City,Nottingham Forest,https://media-3.api-sports.io/football/teams/50.png,https://media-3.api-sports.io/football/teams/65.png
-1035096,2023-09-23,62.0,34.0,,,Bramall Lane,Sheffield Utd,Newcastle,https://media-3.api-sports.io/football/teams/62.png,https://media-3.api-sports.io/football/teams/34.png
-1035097,2023-09-30,35.0,42.0,,,Vitality Stadium,Bournemouth,Arsenal,https://media-2.api-sports.io/football/teams/35.png,https://media-1.api-sports.io/football/teams/42.png
-1035098,2023-09-30,66.0,51.0,,,Villa Park,Aston Villa,Brighton,https://media-2.api-sports.io/football/teams/66.png,https://media-1.api-sports.io/football/teams/51.png
-1035099,2023-09-30,45.0,13.0,,,Goodison Park,Everton,Luton,https://media-1.api-sports.io/football/teams/45.png,https://media-2.api-sports.io/football/teams/1359.png
-1035100,2023-09-30,36.0,49.0,,,Craven Cottage,Fulham,Chelsea,https://media-1.api-sports.io/football/teams/36.png,https://media-3.api-sports.io/football/teams/49.png
-1035101,2023-09-30,33.0,52.0,,,Old Trafford,Manchester United,Crystal Palace,https://media-3.api-sports.io/football/teams/33.png,https://media-1.api-sports.io/football/teams/52.png
-1035102,2023-09-30,34.0,44.0,,,St. James' Park,Newcastle,Burnley,https://media-2.api-sports.io/football/teams/34.png,https://media-3.api-sports.io/football/teams/44.png
-1035103,2023-09-30,65.0,55.0,,,The City Ground,Nottingham Forest,Brentford,https://media-3.api-sports.io/football/teams/65.png,https://media-2.api-sports.io/football/teams/55.png
-1035104,2023-09-30,47.0,40.0,,,Tottenham Hotspur Stadium,Tottenham,Liverpool,https://media-2.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/40.png
-1035105,2023-09-30,48.0,62.0,,,London Stadium,West Ham,Sheffield Utd,https://media-3.api-sports.io/football/teams/48.png,https://media-3.api-sports.io/football/teams/62.png
-1035106,2023-09-30,39.0,50.0,,,Molineux Stadium,Wolves,Manchester City,https://media-2.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/50.png
-1035107,2023-10-07,42.0,50.0,,,Emirates Stadium,Arsenal,Manchester City,https://media-2.api-sports.io/football/teams/42.png,https://media-2.api-sports.io/football/teams/50.png
-1035108,2023-10-07,51.0,40.0,,,The American Express Community Stadium,Brighton,Liverpool,https://media-3.api-sports.io/football/teams/51.png,https://media-2.api-sports.io/football/teams/40.png
-1035109,2023-10-07,44.0,49.0,,,Turf Moor,Burnley,Chelsea,https://media-1.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/49.png
-1035110,2023-10-07,52.0,65.0,,,Selhurst Park,Crystal Palace,Nottingham Forest,https://media-3.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/65.png
-1035111,2023-10-07,45.0,35.0,,,Goodison Park,Everton,Bournemouth,https://media-3.api-sports.io/football/teams/45.png,https://media-2.api-sports.io/football/teams/35.png
-1035112,2023-10-07,36.0,62.0,,,Craven Cottage,Fulham,Sheffield Utd,https://media-3.api-sports.io/football/teams/36.png,https://media-2.api-sports.io/football/teams/62.png
-1035113,2023-10-07,13.0,47.0,,,Kenilworth Road,Luton,Tottenham,https://media-2.api-sports.io/football/teams/1359.png,https://media-2.api-sports.io/football/teams/47.png
-1035114,2023-10-07,33.0,55.0,,,Old Trafford,Manchester United,Brentford,https://media-2.api-sports.io/football/teams/33.png,https://media-1.api-sports.io/football/teams/55.png
-1035115,2023-10-07,48.0,34.0,,,London Stadium,West Ham,Newcastle,https://media-1.api-sports.io/football/teams/48.png,https://media-1.api-sports.io/football/teams/34.png
-1035116,2023-10-07,39.0,66.0,,,Molineux Stadium,Wolves,Aston Villa,https://media-1.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/66.png
-1035117,2023-10-21,35.0,39.0,,,Vitality Stadium,Bournemouth,Wolves,https://media-1.api-sports.io/football/teams/35.png,https://media-2.api-sports.io/football/teams/39.png
-1035118,2023-10-21,66.0,48.0,,,Villa Park,Aston Villa,West Ham,https://media-2.api-sports.io/football/teams/66.png,https://media-1.api-sports.io/football/teams/48.png
-1035119,2023-10-21,55.0,44.0,,,Gtech Community Stadium,Brentford,Burnley,https://media-3.api-sports.io/football/teams/55.png,https://media-2.api-sports.io/football/teams/44.png
-1035120,2023-10-21,49.0,42.0,,,Stamford Bridge,Chelsea,Arsenal,https://media-3.api-sports.io/football/teams/49.png,https://media-3.api-sports.io/football/teams/42.png
-1035121,2023-10-21,40.0,45.0,,,Anfield,Liverpool,Everton,https://media-1.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/45.png
-1035122,2023-10-21,50.0,51.0,,,Etihad Stadium,Manchester City,Brighton,https://media-3.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/51.png
-1035123,2023-10-21,34.0,52.0,,,St. James' Park,Newcastle,Crystal Palace,https://media-2.api-sports.io/football/teams/34.png,https://media-3.api-sports.io/football/teams/52.png
-1035124,2023-10-21,65.0,13.0,,,The City Ground,Nottingham Forest,Luton,https://media-3.api-sports.io/football/teams/65.png,https://media-1.api-sports.io/football/teams/1359.png
-1035125,2023-10-21,62.0,33.0,,,Bramall Lane,Sheffield Utd,Manchester United,https://media-3.api-sports.io/football/teams/62.png,https://media-1.api-sports.io/football/teams/33.png
-1035126,2023-10-21,47.0,36.0,,,Tottenham Hotspur Stadium,Tottenham,Fulham,https://media-2.api-sports.io/football/teams/47.png,https://media-2.api-sports.io/football/teams/36.png
-1035127,2023-10-28,35.0,44.0,,,Vitality Stadium,Bournemouth,Burnley,https://media-2.api-sports.io/football/teams/35.png,https://media-2.api-sports.io/football/teams/44.png
-1035128,2023-10-28,42.0,62.0,,,Emirates Stadium,Arsenal,Sheffield Utd,https://media-1.api-sports.io/football/teams/42.png,https://media-3.api-sports.io/football/teams/62.png
-1035129,2023-10-28,66.0,13.0,,,Villa Park,Aston Villa,Luton,https://media-1.api-sports.io/football/teams/66.png,https://media-2.api-sports.io/football/teams/1359.png
-1035130,2023-10-28,51.0,36.0,,,The American Express Community Stadium,Brighton,Fulham,https://media-3.api-sports.io/football/teams/51.png,https://media-1.api-sports.io/football/teams/36.png
-1035131,2023-10-28,49.0,55.0,,,Stamford Bridge,Chelsea,Brentford,https://media-1.api-sports.io/football/teams/49.png,https://media-3.api-sports.io/football/teams/55.png
-1035132,2023-10-28,52.0,47.0,,,Selhurst Park,Crystal Palace,Tottenham,https://media-2.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/47.png
-1035133,2023-10-28,40.0,65.0,,,Anfield,Liverpool,Nottingham Forest,https://media-2.api-sports.io/football/teams/40.png,https://media-1.api-sports.io/football/teams/65.png
-1035134,2023-10-28,33.0,50.0,,,Old Trafford,Manchester United,Manchester City,https://media-1.api-sports.io/football/teams/33.png,https://media-3.api-sports.io/football/teams/50.png
-1035135,2023-10-28,48.0,45.0,,,London Stadium,West Ham,Everton,https://media-2.api-sports.io/football/teams/48.png,https://media-3.api-sports.io/football/teams/45.png
-1035136,2023-10-28,39.0,34.0,,,Molineux Stadium,Wolves,Newcastle,https://media-3.api-sports.io/football/teams/39.png,https://media-1.api-sports.io/football/teams/34.png
-1035137,2023-11-04,55.0,48.0,,,Gtech Community Stadium,Brentford,West Ham,https://media-2.api-sports.io/football/teams/55.png,https://media-3.api-sports.io/football/teams/48.png
-1035138,2023-11-04,44.0,52.0,,,Turf Moor,Burnley,Crystal Palace,https://media-3.api-sports.io/football/teams/44.png,https://media-1.api-sports.io/football/teams/52.png
-1035139,2023-11-04,45.0,51.0,,,Goodison Park,Everton,Brighton,https://media-2.api-sports.io/football/teams/45.png,https://media-2.api-sports.io/football/teams/51.png
-1035140,2023-11-04,36.0,33.0,,,Craven Cottage,Fulham,Manchester United,https://media-1.api-sports.io/football/teams/36.png,https://media-1.api-sports.io/football/teams/33.png
-1035141,2023-11-04,13.0,40.0,,,Kenilworth Road,Luton,Liverpool,https://media-1.api-sports.io/football/teams/1359.png,https://media-3.api-sports.io/football/teams/40.png
-1035142,2023-11-04,50.0,35.0,,,Etihad Stadium,Manchester City,Bournemouth,https://media-1.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/35.png
-1035143,2023-11-04,34.0,42.0,,,St. James' Park,Newcastle,Arsenal,https://media-2.api-sports.io/football/teams/34.png,https://media-2.api-sports.io/football/teams/42.png
-1035144,2023-11-04,65.0,66.0,,,The City Ground,Nottingham Forest,Aston Villa,https://media-3.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/66.png
-1035145,2023-11-04,62.0,39.0,,,Bramall Lane,Sheffield Utd,Wolves,https://media-2.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/39.png
-1035146,2023-11-04,47.0,49.0,,,Tottenham Hotspur Stadium,Tottenham,Chelsea,https://media-1.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/49.png
-1035147,2023-11-11,35.0,34.0,,,Vitality Stadium,Bournemouth,Newcastle,https://media-2.api-sports.io/football/teams/35.png,https://media-2.api-sports.io/football/teams/34.png
-1035148,2023-11-11,42.0,44.0,,,Emirates Stadium,Arsenal,Burnley,https://media-3.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/44.png
-1035149,2023-11-11,66.0,36.0,,,Villa Park,Aston Villa,Fulham,https://media-3.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/36.png
-1035150,2023-11-11,51.0,62.0,,,The American Express Community Stadium,Brighton,Sheffield Utd,https://media-2.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/62.png
-1035151,2023-11-11,49.0,50.0,,,Stamford Bridge,Chelsea,Manchester City,https://media-2.api-sports.io/football/teams/49.png,https://media-1.api-sports.io/football/teams/50.png
-1035152,2023-11-11,52.0,45.0,,,Selhurst Park,Crystal Palace,Everton,https://media-2.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/45.png
-1035153,2023-11-11,40.0,55.0,,,Anfield,Liverpool,Brentford,https://media-1.api-sports.io/football/teams/40.png,https://media-3.api-sports.io/football/teams/55.png
-1035154,2023-11-11,33.0,13.0,,,Old Trafford,Manchester United,Luton,https://media-3.api-sports.io/football/teams/33.png,https://media-3.api-sports.io/football/teams/1359.png
-1035155,2023-11-11,48.0,65.0,,,London Stadium,West Ham,Nottingham Forest,https://media-1.api-sports.io/football/teams/48.png,https://media-2.api-sports.io/football/teams/65.png
-1035156,2023-11-11,39.0,47.0,,,Molineux Stadium,Wolves,Tottenham,https://media-1.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/47.png
-1035294,2023-11-25,55.0,42.0,,,Gtech Community Stadium,Brentford,Arsenal,https://media-2.api-sports.io/football/teams/55.png,https://media-1.api-sports.io/football/teams/42.png
-1035295,2023-11-25,44.0,48.0,,,Turf Moor,Burnley,West Ham,https://media-3.api-sports.io/football/teams/44.png,https://media-1.api-sports.io/football/teams/48.png
-1035296,2023-11-25,45.0,33.0,,,Goodison Park,Everton,Manchester United,https://media-3.api-sports.io/football/teams/45.png,https://media-2.api-sports.io/football/teams/33.png
-1035297,2023-11-25,36.0,39.0,,,Craven Cottage,Fulham,Wolves,https://media-3.api-sports.io/football/teams/36.png,https://media-2.api-sports.io/football/teams/39.png
-1035298,2023-11-25,13.0,52.0,,,Kenilworth Road,Luton,Crystal Palace,https://media-3.api-sports.io/football/teams/1359.png,https://media-2.api-sports.io/football/teams/52.png
-1035299,2023-11-25,50.0,40.0,,,Etihad Stadium,Manchester City,Liverpool,https://media-2.api-sports.io/football/teams/50.png,https://media-3.api-sports.io/football/teams/40.png
-1035300,2023-11-25,34.0,49.0,,,St. James' Park,Newcastle,Chelsea,https://media-3.api-sports.io/football/teams/34.png,https://media-1.api-sports.io/football/teams/49.png
-1035301,2023-11-25,65.0,51.0,,,The City Ground,Nottingham Forest,Brighton,https://media-2.api-sports.io/football/teams/65.png,https://media-2.api-sports.io/football/teams/51.png
-1035302,2023-11-25,62.0,35.0,,,Bramall Lane,Sheffield Utd,Bournemouth,https://media-3.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/35.png
-1035303,2023-11-25,47.0,66.0,,,Tottenham Hotspur Stadium,Tottenham,Aston Villa,https://media-2.api-sports.io/football/teams/47.png,https://media-2.api-sports.io/football/teams/66.png
-1035304,2023-12-02,35.0,66.0,,,Vitality Stadium,Bournemouth,Aston Villa,https://media-1.api-sports.io/football/teams/35.png,https://media-2.api-sports.io/football/teams/66.png
-1035305,2023-12-02,42.0,39.0,,,Emirates Stadium,Arsenal,Wolves,https://media-1.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/39.png
-1035306,2023-12-02,55.0,13.0,,,Gtech Community Stadium,Brentford,Luton,https://media-1.api-sports.io/football/teams/55.png,https://media-1.api-sports.io/football/teams/1359.png
-1035307,2023-12-02,44.0,62.0,,,Turf Moor,Burnley,Sheffield Utd,https://media-3.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/62.png
-1035308,2023-12-02,49.0,51.0,,,Stamford Bridge,Chelsea,Brighton,https://media-2.api-sports.io/football/teams/49.png,https://media-3.api-sports.io/football/teams/51.png
-1035309,2023-12-02,40.0,36.0,,,Anfield,Liverpool,Fulham,https://media-2.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/36.png
-1035310,2023-12-02,50.0,47.0,,,Etihad Stadium,Manchester City,Tottenham,https://media-1.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/47.png
-1035311,2023-12-02,34.0,33.0,,,St. James' Park,Newcastle,Manchester United,https://media-2.api-sports.io/football/teams/34.png,https://media-1.api-sports.io/football/teams/33.png
-1035312,2023-12-02,65.0,45.0,,,The City Ground,Nottingham Forest,Everton,https://media-3.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/45.png
-1035313,2023-12-02,48.0,52.0,,,London Stadium,West Ham,Crystal Palace,https://media-3.api-sports.io/football/teams/48.png,https://media-2.api-sports.io/football/teams/52.png
-1035314,2023-12-05,66.0,50.0,,,Villa Park,Aston Villa,Manchester City,https://media-1.api-sports.io/football/teams/66.png,https://media-2.api-sports.io/football/teams/50.png
-1035315,2023-12-05,51.0,55.0,,,The American Express Community Stadium,Brighton,Brentford,https://media-3.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/55.png
-1035316,2023-12-05,45.0,34.0,,,Goodison Park,Everton,Newcastle,https://media-1.api-sports.io/football/teams/45.png,https://media-1.api-sports.io/football/teams/34.png
-1035317,2023-12-05,36.0,65.0,,,Craven Cottage,Fulham,Nottingham Forest,https://media-3.api-sports.io/football/teams/36.png,https://media-2.api-sports.io/football/teams/65.png
-1035318,2023-12-05,13.0,42.0,,,Kenilworth Road,Luton,Arsenal,https://media-1.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/42.png
-1035319,2023-12-05,62.0,40.0,,,Bramall Lane,Sheffield Utd,Liverpool,https://media-1.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/40.png
-1035320,2023-12-05,47.0,48.0,,,Tottenham Hotspur Stadium,Tottenham,West Ham,https://media-2.api-sports.io/football/teams/47.png,https://media-3.api-sports.io/football/teams/48.png
-1035321,2023-12-05,39.0,44.0,,,Molineux Stadium,Wolves,Burnley,https://media-1.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/44.png
-1035322,2023-12-05,52.0,35.0,,,Selhurst Park,Crystal Palace,Bournemouth,https://media-1.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/35.png
-1035323,2023-12-06,33.0,49.0,,,Old Trafford,Manchester United,Chelsea,https://media-3.api-sports.io/football/teams/33.png,https://media-2.api-sports.io/football/teams/49.png
-1035324,2023-12-09,66.0,42.0,,,Villa Park,Aston Villa,Arsenal,https://media-1.api-sports.io/football/teams/66.png,https://media-2.api-sports.io/football/teams/42.png
-1035325,2023-12-09,51.0,44.0,,,The American Express Community Stadium,Brighton,Burnley,https://media-1.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/44.png
-1035326,2023-12-09,52.0,40.0,,,Selhurst Park,Crystal Palace,Liverpool,https://media-2.api-sports.io/football/teams/52.png,https://media-2.api-sports.io/football/teams/40.png
-1035327,2023-12-09,45.0,49.0,,,Goodison Park,Everton,Chelsea,https://media-1.api-sports.io/football/teams/45.png,https://media-2.api-sports.io/football/teams/49.png
-1035328,2023-12-09,36.0,48.0,,,Craven Cottage,Fulham,West Ham,https://media-3.api-sports.io/football/teams/36.png,https://media-3.api-sports.io/football/teams/48.png
-1035329,2023-12-09,13.0,50.0,,,Kenilworth Road,Luton,Manchester City,https://media-3.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/50.png
-1035330,2023-12-09,33.0,35.0,,,Old Trafford,Manchester United,Bournemouth,https://media-1.api-sports.io/football/teams/33.png,https://media-1.api-sports.io/football/teams/35.png
-1035331,2023-12-09,62.0,55.0,,,Bramall Lane,Sheffield Utd,Brentford,https://media-1.api-sports.io/football/teams/62.png,https://media-3.api-sports.io/football/teams/55.png
-1035332,2023-12-09,47.0,34.0,,,Tottenham Hotspur Stadium,Tottenham,Newcastle,https://media-1.api-sports.io/football/teams/47.png,https://media-3.api-sports.io/football/teams/34.png
-1035333,2023-12-09,39.0,65.0,,,Molineux Stadium,Wolves,Nottingham Forest,https://media-1.api-sports.io/football/teams/39.png,https://media-1.api-sports.io/football/teams/65.png
-1035334,2023-12-16,35.0,13.0,,,Vitality Stadium,Bournemouth,Luton,https://media-2.api-sports.io/football/teams/35.png,https://media-3.api-sports.io/football/teams/1359.png
-1035335,2023-12-16,42.0,51.0,,,Emirates Stadium,Arsenal,Brighton,https://media-1.api-sports.io/football/teams/42.png,https://media-2.api-sports.io/football/teams/51.png
-1035336,2023-12-16,55.0,66.0,,,Gtech Community Stadium,Brentford,Aston Villa,https://media-1.api-sports.io/football/teams/55.png,https://media-2.api-sports.io/football/teams/66.png
-1035337,2023-12-16,44.0,45.0,,,Turf Moor,Burnley,Everton,https://media-2.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/45.png
-1035338,2023-12-16,49.0,62.0,,,Stamford Bridge,Chelsea,Sheffield Utd,https://media-3.api-sports.io/football/teams/49.png,https://media-2.api-sports.io/football/teams/62.png
-1035339,2023-12-16,40.0,33.0,,,Anfield,Liverpool,Manchester United,https://media-2.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/33.png
-1035340,2023-12-16,50.0,52.0,,,Etihad Stadium,Manchester City,Crystal Palace,https://media-3.api-sports.io/football/teams/50.png,https://media-3.api-sports.io/football/teams/52.png
-1035341,2023-12-16,34.0,36.0,,,St. James' Park,Newcastle,Fulham,https://media-1.api-sports.io/football/teams/34.png,https://media-3.api-sports.io/football/teams/36.png
-1035342,2023-12-16,65.0,47.0,,,The City Ground,Nottingham Forest,Tottenham,https://media-2.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/47.png
-1035343,2023-12-16,48.0,39.0,,,London Stadium,West Ham,Wolves,https://media-2.api-sports.io/football/teams/48.png,https://media-1.api-sports.io/football/teams/39.png
-1035344,2023-12-23,66.0,62.0,,,Villa Park,Aston Villa,Sheffield Utd,https://media-1.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/62.png
-1035345,2023-12-23,52.0,51.0,,,Selhurst Park,Crystal Palace,Brighton,https://media-3.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/51.png
-1035346,2023-12-23,36.0,44.0,,,Craven Cottage,Fulham,Burnley,https://media-1.api-sports.io/football/teams/36.png,https://media-2.api-sports.io/football/teams/44.png
-1035347,2023-12-23,40.0,42.0,,,Anfield,Liverpool,Arsenal,https://media-3.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/42.png
-1035348,2023-12-23,13.0,34.0,,,Kenilworth Road,Luton,Newcastle,https://media-3.api-sports.io/football/teams/1359.png,https://media-2.api-sports.io/football/teams/34.png
-1035349,2023-12-23,50.0,55.0,,,Etihad Stadium,Manchester City,Brentford,https://media-1.api-sports.io/football/teams/50.png,https://media-3.api-sports.io/football/teams/55.png
-1035350,2023-12-23,65.0,35.0,,,The City Ground,Nottingham Forest,Bournemouth,https://media-1.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/35.png
-1035351,2023-12-23,47.0,45.0,,,Tottenham Hotspur Stadium,Tottenham,Everton,https://media-1.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/45.png
-1035352,2023-12-23,48.0,33.0,,,London Stadium,West Ham,Manchester United,https://media-2.api-sports.io/football/teams/48.png,https://media-2.api-sports.io/football/teams/33.png
-1035353,2023-12-23,39.0,49.0,,,Molineux Stadium,Wolves,Chelsea,https://media-1.api-sports.io/football/teams/39.png,https://media-1.api-sports.io/football/teams/49.png
-1035354,2023-12-26,35.0,36.0,,,Vitality Stadium,Bournemouth,Fulham,https://media-1.api-sports.io/football/teams/35.png,https://media-3.api-sports.io/football/teams/36.png
-1035355,2023-12-26,42.0,48.0,,,Emirates Stadium,Arsenal,West Ham,https://media-2.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/48.png
-1035356,2023-12-26,55.0,39.0,,,Gtech Community Stadium,Brentford,Wolves,https://media-1.api-sports.io/football/teams/55.png,https://media-3.api-sports.io/football/teams/39.png
-1035357,2023-12-26,51.0,47.0,,,The American Express Community Stadium,Brighton,Tottenham,https://media-2.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/47.png
-1035358,2023-12-26,44.0,40.0,,,Turf Moor,Burnley,Liverpool,https://media-2.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/40.png
-1035359,2023-12-26,49.0,52.0,,,Stamford Bridge,Chelsea,Crystal Palace,https://media-3.api-sports.io/football/teams/49.png,https://media-1.api-sports.io/football/teams/52.png
-1035360,2023-12-26,45.0,50.0,,,Goodison Park,Everton,Manchester City,https://media-3.api-sports.io/football/teams/45.png,https://media-1.api-sports.io/football/teams/50.png
-1035361,2023-12-26,33.0,66.0,,,Old Trafford,Manchester United,Aston Villa,https://media-2.api-sports.io/football/teams/33.png,https://media-1.api-sports.io/football/teams/66.png
-1035362,2023-12-26,34.0,65.0,,,St. James' Park,Newcastle,Nottingham Forest,https://media-1.api-sports.io/football/teams/34.png,https://media-2.api-sports.io/football/teams/65.png
-1035363,2023-12-26,62.0,13.0,,,Bramall Lane,Sheffield Utd,Luton,https://media-2.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/1359.png
-1035364,2023-12-30,66.0,44.0,,,Villa Park,Aston Villa,Burnley,https://media-2.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/44.png
-1035365,2023-12-30,52.0,55.0,,,Selhurst Park,Crystal Palace,Brentford,https://media-1.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/55.png
-1035366,2023-12-30,36.0,42.0,,,Craven Cottage,Fulham,Arsenal,https://media-1.api-sports.io/football/teams/36.png,https://media-1.api-sports.io/football/teams/42.png
-1035367,2023-12-30,40.0,34.0,,,Anfield,Liverpool,Newcastle,https://media-1.api-sports.io/football/teams/40.png,https://media-1.api-sports.io/football/teams/34.png
-1035368,2023-12-30,13.0,49.0,,,Kenilworth Road,Luton,Chelsea,https://media-1.api-sports.io/football/teams/1359.png,https://media-3.api-sports.io/football/teams/49.png
-1035369,2023-12-30,50.0,62.0,,,Etihad Stadium,Manchester City,Sheffield Utd,https://media-1.api-sports.io/football/teams/50.png,https://media-2.api-sports.io/football/teams/62.png
-1035370,2023-12-30,65.0,33.0,,,The City Ground,Nottingham Forest,Manchester United,https://media-1.api-sports.io/football/teams/65.png,https://media-2.api-sports.io/football/teams/33.png
-1035371,2023-12-30,47.0,35.0,,,Tottenham Hotspur Stadium,Tottenham,Bournemouth,https://media-3.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/35.png
-1035372,2023-12-30,48.0,51.0,,,London Stadium,West Ham,Brighton,https://media-3.api-sports.io/football/teams/48.png,https://media-3.api-sports.io/football/teams/51.png
-1035373,2023-12-30,39.0,45.0,,,Molineux Stadium,Wolves,Everton,https://media-1.api-sports.io/football/teams/39.png,https://media-3.api-sports.io/football/teams/45.png
-1035374,2024-01-13,35.0,40.0,,,Vitality Stadium,Bournemouth,Liverpool,https://media-2.api-sports.io/football/teams/35.png,https://media-3.api-sports.io/football/teams/40.png
-1035375,2024-01-13,42.0,52.0,,,Emirates Stadium,Arsenal,Crystal Palace,https://media-3.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/52.png
-1035376,2024-01-13,55.0,65.0,,,Gtech Community Stadium,Brentford,Nottingham Forest,https://media-3.api-sports.io/football/teams/55.png,https://media-3.api-sports.io/football/teams/65.png
-1035377,2024-01-13,51.0,39.0,,,The American Express Community Stadium,Brighton,Wolves,https://media-1.api-sports.io/football/teams/51.png,https://media-2.api-sports.io/football/teams/39.png
-1035378,2024-01-13,44.0,13.0,,,Turf Moor,Burnley,Luton,https://media-3.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/1359.png
-1035379,2024-01-13,49.0,36.0,,,Stamford Bridge,Chelsea,Fulham,https://media-1.api-sports.io/football/teams/49.png,https://media-1.api-sports.io/football/teams/36.png
-1035380,2024-01-13,45.0,66.0,,,Goodison Park,Everton,Aston Villa,https://media-3.api-sports.io/football/teams/45.png,https://media-1.api-sports.io/football/teams/66.png
-1035381,2024-01-13,33.0,47.0,,,Old Trafford,Manchester United,Tottenham,https://media-2.api-sports.io/football/teams/33.png,https://media-1.api-sports.io/football/teams/47.png
-1035382,2024-01-13,34.0,50.0,,,St. James' Park,Newcastle,Manchester City,https://media-1.api-sports.io/football/teams/34.png,https://media-1.api-sports.io/football/teams/50.png
-1035383,2024-01-13,62.0,48.0,,,Bramall Lane,Sheffield Utd,West Ham,https://media-3.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/48.png
-1035384,2024-01-30,66.0,34.0,,,Villa Park,Aston Villa,Newcastle,https://media-1.api-sports.io/football/teams/66.png,https://media-2.api-sports.io/football/teams/34.png
-1035385,2024-01-30,36.0,45.0,,,Craven Cottage,Fulham,Everton,https://media-1.api-sports.io/football/teams/36.png,https://media-3.api-sports.io/football/teams/45.png
-1035386,2024-01-30,13.0,51.0,,,Kenilworth Road,Luton,Brighton,https://media-1.api-sports.io/football/teams/1359.png,https://media-2.api-sports.io/football/teams/51.png
-1035387,2024-01-30,65.0,42.0,,,The City Ground,Nottingham Forest,Arsenal,https://media-2.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/42.png
-1035388,2024-01-30,47.0,55.0,,,Tottenham Hotspur Stadium,Tottenham,Brentford,https://media-3.api-sports.io/football/teams/47.png,https://media-2.api-sports.io/football/teams/55.png
-1035389,2024-01-30,48.0,35.0,,,London Stadium,West Ham,Bournemouth,https://media-2.api-sports.io/football/teams/48.png,https://media-2.api-sports.io/football/teams/35.png
-1035390,2024-01-30,39.0,33.0,,,Molineux Stadium,Wolves,Manchester United,https://media-1.api-sports.io/football/teams/39.png,https://media-1.api-sports.io/football/teams/33.png
-1035391,2024-01-30,52.0,62.0,,,Selhurst Park,Crystal Palace,Sheffield Utd,https://media-2.api-sports.io/football/teams/52.png,https://media-2.api-sports.io/football/teams/62.png
-1035392,2024-01-31,40.0,49.0,,,Anfield,Liverpool,Chelsea,https://media-2.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/49.png
-1035393,2024-01-31,50.0,44.0,,,Etihad Stadium,Manchester City,Burnley,https://media-2.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/44.png
-1035394,2024-02-03,35.0,65.0,,,Vitality Stadium,Bournemouth,Nottingham Forest,https://media-3.api-sports.io/football/teams/35.png,https://media-1.api-sports.io/football/teams/65.png
-1035395,2024-02-03,42.0,40.0,,,Emirates Stadium,Arsenal,Liverpool,https://media-3.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/40.png
-1035396,2024-02-03,55.0,50.0,,,Gtech Community Stadium,Brentford,Manchester City,https://media-1.api-sports.io/football/teams/55.png,https://media-1.api-sports.io/football/teams/50.png
-1035397,2024-02-03,51.0,52.0,,,The American Express Community Stadium,Brighton,Crystal Palace,https://media-3.api-sports.io/football/teams/51.png,https://media-2.api-sports.io/football/teams/52.png
-1035398,2024-02-03,44.0,36.0,,,Turf Moor,Burnley,Fulham,https://media-2.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/36.png
-1035399,2024-02-03,49.0,39.0,,,Stamford Bridge,Chelsea,Wolves,https://media-1.api-sports.io/football/teams/49.png,https://media-3.api-sports.io/football/teams/39.png
-1035400,2024-02-03,45.0,47.0,,,Goodison Park,Everton,Tottenham,https://media-1.api-sports.io/football/teams/45.png,https://media-3.api-sports.io/football/teams/47.png
-1035401,2024-02-03,33.0,48.0,,,Old Trafford,Manchester United,West Ham,https://media-3.api-sports.io/football/teams/33.png,https://media-2.api-sports.io/football/teams/48.png
-1035402,2024-02-03,34.0,13.0,,,St. James' Park,Newcastle,Luton,https://media-2.api-sports.io/football/teams/34.png,https://media-1.api-sports.io/football/teams/1359.png
-1035403,2024-02-03,62.0,66.0,,,Bramall Lane,Sheffield Utd,Aston Villa,https://media-2.api-sports.io/football/teams/62.png,https://media-3.api-sports.io/football/teams/66.png
-1035404,2024-02-10,66.0,33.0,,,Villa Park,Aston Villa,Manchester United,https://media-2.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/33.png
-1035405,2024-02-10,52.0,49.0,,,Selhurst Park,Crystal Palace,Chelsea,https://media-1.api-sports.io/football/teams/52.png,https://media-1.api-sports.io/football/teams/49.png
-1035406,2024-02-10,36.0,35.0,,,Craven Cottage,Fulham,Bournemouth,https://media-3.api-sports.io/football/teams/36.png,https://media-1.api-sports.io/football/teams/35.png
-1035407,2024-02-10,40.0,44.0,,,Anfield,Liverpool,Burnley,https://media-3.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/44.png
-1035408,2024-02-10,13.0,62.0,,,Kenilworth Road,Luton,Sheffield Utd,https://media-1.api-sports.io/football/teams/1359.png,https://media-3.api-sports.io/football/teams/62.png
-1035409,2024-02-10,50.0,45.0,,,Etihad Stadium,Manchester City,Everton,https://media-3.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/45.png
-1035410,2024-02-10,65.0,34.0,,,The City Ground,Nottingham Forest,Newcastle,https://media-2.api-sports.io/football/teams/65.png,https://media-2.api-sports.io/football/teams/34.png
-1035411,2024-02-10,47.0,51.0,,,Tottenham Hotspur Stadium,Tottenham,Brighton,https://media-1.api-sports.io/football/teams/47.png,https://media-2.api-sports.io/football/teams/51.png
-1035412,2024-02-10,48.0,42.0,,,London Stadium,West Ham,Arsenal,https://media-2.api-sports.io/football/teams/48.png,https://media-2.api-sports.io/football/teams/42.png
-1035413,2024-02-10,39.0,55.0,,,Molineux Stadium,Wolves,Brentford,https://media-1.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/55.png
-1035414,2024-02-17,55.0,40.0,,,Gtech Community Stadium,Brentford,Liverpool,https://media-2.api-sports.io/football/teams/55.png,https://media-2.api-sports.io/football/teams/40.png
-1035415,2024-02-17,44.0,42.0,,,Turf Moor,Burnley,Arsenal,https://media-3.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/42.png
-1035416,2024-02-17,45.0,52.0,,,Goodison Park,Everton,Crystal Palace,https://media-2.api-sports.io/football/teams/45.png,https://media-3.api-sports.io/football/teams/52.png
-1035417,2024-02-17,36.0,66.0,,,Craven Cottage,Fulham,Aston Villa,https://media-1.api-sports.io/football/teams/36.png,https://media-2.api-sports.io/football/teams/66.png
-1035418,2024-02-17,13.0,33.0,,,Kenilworth Road,Luton,Manchester United,https://media-3.api-sports.io/football/teams/1359.png,https://media-2.api-sports.io/football/teams/33.png
-1035419,2024-02-17,50.0,49.0,,,Etihad Stadium,Manchester City,Chelsea,https://media-1.api-sports.io/football/teams/50.png,https://media-2.api-sports.io/football/teams/49.png
-1035420,2024-02-17,34.0,35.0,,,St. James' Park,Newcastle,Bournemouth,https://media-2.api-sports.io/football/teams/34.png,https://media-3.api-sports.io/football/teams/35.png
-1035421,2024-02-17,65.0,48.0,,,The City Ground,Nottingham Forest,West Ham,https://media-3.api-sports.io/football/teams/65.png,https://media-2.api-sports.io/football/teams/48.png
-1035422,2024-02-17,62.0,51.0,,,Bramall Lane,Sheffield Utd,Brighton,https://media-2.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/51.png
-1035423,2024-02-17,47.0,39.0,,,Tottenham Hotspur Stadium,Tottenham,Wolves,https://media-3.api-sports.io/football/teams/47.png,https://media-3.api-sports.io/football/teams/39.png
-1035424,2024-02-24,35.0,50.0,,,Vitality Stadium,Bournemouth,Manchester City,https://media-1.api-sports.io/football/teams/35.png,https://media-1.api-sports.io/football/teams/50.png
-1035425,2024-02-24,42.0,34.0,,,Emirates Stadium,Arsenal,Newcastle,https://media-2.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/34.png
-1035426,2024-02-24,66.0,65.0,,,Villa Park,Aston Villa,Nottingham Forest,https://media-2.api-sports.io/football/teams/66.png,https://media-1.api-sports.io/football/teams/65.png
-1035427,2024-02-24,51.0,45.0,,,The American Express Community Stadium,Brighton,Everton,https://media-2.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/45.png
-1035428,2024-02-24,49.0,47.0,,,Stamford Bridge,Chelsea,Tottenham,https://media-2.api-sports.io/football/teams/49.png,https://media-2.api-sports.io/football/teams/47.png
-1035429,2024-02-24,52.0,44.0,,,Selhurst Park,Crystal Palace,Burnley,https://media-2.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/44.png
-1035430,2024-02-24,40.0,13.0,,,Anfield,Liverpool,Luton,https://media-3.api-sports.io/football/teams/40.png,https://media-1.api-sports.io/football/teams/1359.png
-1035431,2024-02-24,33.0,36.0,,,Old Trafford,Manchester United,Fulham,https://media-1.api-sports.io/football/teams/33.png,https://media-2.api-sports.io/football/teams/36.png
-1035432,2024-02-24,48.0,55.0,,,London Stadium,West Ham,Brentford,https://media-3.api-sports.io/football/teams/48.png,https://media-3.api-sports.io/football/teams/55.png
-1035433,2024-02-24,39.0,62.0,,,Molineux Stadium,Wolves,Sheffield Utd,https://media-3.api-sports.io/football/teams/39.png,https://media-3.api-sports.io/football/teams/62.png
-1035434,2024-03-02,55.0,49.0,,,Gtech Community Stadium,Brentford,Chelsea,https://media-2.api-sports.io/football/teams/55.png,https://media-1.api-sports.io/football/teams/49.png
-1035435,2024-03-02,44.0,35.0,,,Turf Moor,Burnley,Bournemouth,https://media-2.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/35.png
-1035436,2024-03-02,45.0,48.0,,,Goodison Park,Everton,West Ham,https://media-2.api-sports.io/football/teams/45.png,https://media-3.api-sports.io/football/teams/48.png
-1035437,2024-03-02,36.0,51.0,,,Craven Cottage,Fulham,Brighton,https://media-1.api-sports.io/football/teams/36.png,https://media-3.api-sports.io/football/teams/51.png
-1035438,2024-03-02,13.0,66.0,,,Kenilworth Road,Luton,Aston Villa,https://media-3.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/66.png
-1035439,2024-03-02,50.0,33.0,,,Etihad Stadium,Manchester City,Manchester United,https://media-1.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/33.png
-1035440,2024-03-02,34.0,39.0,,,St. James' Park,Newcastle,Wolves,https://media-1.api-sports.io/football/teams/34.png,https://media-3.api-sports.io/football/teams/39.png
-1035441,2024-03-02,65.0,40.0,,,The City Ground,Nottingham Forest,Liverpool,https://media-1.api-sports.io/football/teams/65.png,https://media-1.api-sports.io/football/teams/40.png
-1035442,2024-03-02,62.0,42.0,,,Bramall Lane,Sheffield Utd,Arsenal,https://media-3.api-sports.io/football/teams/62.png,https://media-1.api-sports.io/football/teams/42.png
-1035443,2024-03-02,47.0,52.0,,,Tottenham Hotspur Stadium,Tottenham,Crystal Palace,https://media-1.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/52.png
-1035444,2024-03-09,35.0,62.0,,,Vitality Stadium,Bournemouth,Sheffield Utd,https://media-1.api-sports.io/football/teams/35.png,https://media-2.api-sports.io/football/teams/62.png
-1035445,2024-03-09,42.0,55.0,,,Emirates Stadium,Arsenal,Brentford,https://media-1.api-sports.io/football/teams/42.png,https://media-2.api-sports.io/football/teams/55.png
-1035446,2024-03-09,66.0,47.0,,,Villa Park,Aston Villa,Tottenham,https://media-2.api-sports.io/football/teams/66.png,https://media-1.api-sports.io/football/teams/47.png
-1035447,2024-03-09,51.0,65.0,,,The American Express Community Stadium,Brighton,Nottingham Forest,https://media-3.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/65.png
-1035448,2024-03-09,49.0,34.0,,,Stamford Bridge,Chelsea,Newcastle,https://media-1.api-sports.io/football/teams/49.png,https://media-2.api-sports.io/football/teams/34.png
-1035449,2024-03-09,52.0,13.0,,,Selhurst Park,Crystal Palace,Luton,https://media-3.api-sports.io/football/teams/52.png,https://media-2.api-sports.io/football/teams/1359.png
-1035450,2024-03-09,40.0,50.0,,,Anfield,Liverpool,Manchester City,https://media-3.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/50.png
-1035451,2024-03-09,33.0,45.0,,,Old Trafford,Manchester United,Everton,https://media-1.api-sports.io/football/teams/33.png,https://media-1.api-sports.io/football/teams/45.png
-1035452,2024-03-09,48.0,44.0,,,London Stadium,West Ham,Burnley,https://media-1.api-sports.io/football/teams/48.png,https://media-3.api-sports.io/football/teams/44.png
-1035453,2024-03-09,39.0,36.0,,,Molineux Stadium,Wolves,Fulham,https://media-2.api-sports.io/football/teams/39.png,https://media-1.api-sports.io/football/teams/36.png
-1035454,2024-03-16,42.0,49.0,,,Emirates Stadium,Arsenal,Chelsea,https://media-2.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/49.png
-1035455,2024-03-16,51.0,50.0,,,The American Express Community Stadium,Brighton,Manchester City,https://media-1.api-sports.io/football/teams/51.png,https://media-1.api-sports.io/football/teams/50.png
-1035456,2024-03-16,44.0,55.0,,,Turf Moor,Burnley,Brentford,https://media-1.api-sports.io/football/teams/44.png,https://media-3.api-sports.io/football/teams/55.png
-1035457,2024-03-16,52.0,34.0,,,Selhurst Park,Crystal Palace,Newcastle,https://media-1.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/34.png
-1035458,2024-03-16,45.0,40.0,,,Goodison Park,Everton,Liverpool,https://media-2.api-sports.io/football/teams/45.png,https://media-1.api-sports.io/football/teams/40.png
-1035459,2024-03-16,36.0,47.0,,,Craven Cottage,Fulham,Tottenham,https://media-3.api-sports.io/football/teams/36.png,https://media-1.api-sports.io/football/teams/47.png
-1035460,2024-03-16,13.0,65.0,,,Kenilworth Road,Luton,Nottingham Forest,https://media-1.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/65.png
-1035461,2024-03-16,33.0,62.0,,,Old Trafford,Manchester United,Sheffield Utd,https://media-2.api-sports.io/football/teams/33.png,https://media-2.api-sports.io/football/teams/62.png
-1035462,2024-03-16,48.0,66.0,,,London Stadium,West Ham,Aston Villa,https://media-1.api-sports.io/football/teams/48.png,https://media-2.api-sports.io/football/teams/66.png
-1035463,2024-03-16,39.0,35.0,,,Molineux Stadium,Wolves,Bournemouth,https://media-2.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/35.png
-1035464,2024-03-30,35.0,45.0,,,Vitality Stadium,Bournemouth,Everton,https://media-1.api-sports.io/football/teams/35.png,https://media-2.api-sports.io/football/teams/45.png
-1035465,2024-03-30,66.0,39.0,,,Villa Park,Aston Villa,Wolves,https://media-2.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/39.png
-1035466,2024-03-30,55.0,33.0,,,Gtech Community Stadium,Brentford,Manchester United,https://media-2.api-sports.io/football/teams/55.png,https://media-3.api-sports.io/football/teams/33.png
-1035467,2024-03-30,49.0,44.0,,,Stamford Bridge,Chelsea,Burnley,https://media-1.api-sports.io/football/teams/49.png,https://media-1.api-sports.io/football/teams/44.png
-1035468,2024-03-30,40.0,51.0,,,Anfield,Liverpool,Brighton,https://media-2.api-sports.io/football/teams/40.png,https://media-1.api-sports.io/football/teams/51.png
-1035469,2024-03-30,50.0,42.0,,,Etihad Stadium,Manchester City,Arsenal,https://media-1.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/42.png
-1035470,2024-03-30,34.0,48.0,,,St. James' Park,Newcastle,West Ham,https://media-1.api-sports.io/football/teams/34.png,https://media-2.api-sports.io/football/teams/48.png
-1035471,2024-03-30,65.0,52.0,,,The City Ground,Nottingham Forest,Crystal Palace,https://media-2.api-sports.io/football/teams/65.png,https://media-1.api-sports.io/football/teams/52.png
-1035472,2024-03-30,62.0,36.0,,,Bramall Lane,Sheffield Utd,Fulham,https://media-3.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/36.png
-1035473,2024-03-30,47.0,13.0,,,Tottenham Hotspur Stadium,Tottenham,Luton,https://media-1.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/1359.png
-1035474,2024-04-02,35.0,52.0,,,Vitality Stadium,Bournemouth,Crystal Palace,https://media-3.api-sports.io/football/teams/35.png,https://media-3.api-sports.io/football/teams/52.png
-1035475,2024-04-02,42.0,13.0,,,Emirates Stadium,Arsenal,Luton,https://media-2.api-sports.io/football/teams/42.png,https://media-2.api-sports.io/football/teams/1359.png
-1035476,2024-04-02,55.0,51.0,,,Gtech Community Stadium,Brentford,Brighton,https://media-3.api-sports.io/football/teams/55.png,https://media-3.api-sports.io/football/teams/51.png
-1035477,2024-04-02,44.0,39.0,,,Turf Moor,Burnley,Wolves,https://media-2.api-sports.io/football/teams/44.png,https://media-1.api-sports.io/football/teams/39.png
-1035478,2024-04-02,65.0,36.0,,,The City Ground,Nottingham Forest,Fulham,https://media-2.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/36.png
-1035479,2024-04-02,48.0,47.0,,,London Stadium,West Ham,Tottenham,https://media-1.api-sports.io/football/teams/48.png,https://media-1.api-sports.io/football/teams/47.png
-1035480,2024-04-03,49.0,33.0,,,Stamford Bridge,Chelsea,Manchester United,https://media-3.api-sports.io/football/teams/49.png,https://media-2.api-sports.io/football/teams/33.png
-1035481,2024-04-03,34.0,45.0,,,St. James' Park,Newcastle,Everton,https://media-2.api-sports.io/football/teams/34.png,https://media-2.api-sports.io/football/teams/45.png
-1035482,2024-04-03,40.0,62.0,,,Anfield,Liverpool,Sheffield Utd,https://media-1.api-sports.io/football/teams/40.png,https://media-1.api-sports.io/football/teams/62.png
-1035483,2024-04-03,50.0,66.0,,,Etihad Stadium,Manchester City,Aston Villa,https://media-1.api-sports.io/football/teams/50.png,https://media-3.api-sports.io/football/teams/66.png
-1035484,2024-04-06,66.0,55.0,,,Villa Park,Aston Villa,Brentford,https://media-1.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/55.png
-1035485,2024-04-06,51.0,42.0,,,The American Express Community Stadium,Brighton,Arsenal,https://media-3.api-sports.io/football/teams/51.png,https://media-1.api-sports.io/football/teams/42.png
-1035486,2024-04-06,52.0,50.0,,,Selhurst Park,Crystal Palace,Manchester City,https://media-3.api-sports.io/football/teams/52.png,https://media-1.api-sports.io/football/teams/50.png
-1035487,2024-04-06,45.0,44.0,,,Goodison Park,Everton,Burnley,https://media-3.api-sports.io/football/teams/45.png,https://media-1.api-sports.io/football/teams/44.png
-1035488,2024-04-06,36.0,34.0,,,Craven Cottage,Fulham,Newcastle,https://media-2.api-sports.io/football/teams/36.png,https://media-1.api-sports.io/football/teams/34.png
-1035489,2024-04-06,13.0,35.0,,,Kenilworth Road,Luton,Bournemouth,https://media-3.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/35.png
-1035490,2024-04-06,33.0,40.0,,,Old Trafford,Manchester United,Liverpool,https://media-3.api-sports.io/football/teams/33.png,https://media-3.api-sports.io/football/teams/40.png
-1035491,2024-04-06,62.0,49.0,,,Bramall Lane,Sheffield Utd,Chelsea,https://media-1.api-sports.io/football/teams/62.png,https://media-3.api-sports.io/football/teams/49.png
-1035492,2024-04-06,47.0,65.0,,,Tottenham Hotspur Stadium,Tottenham,Nottingham Forest,https://media-1.api-sports.io/football/teams/47.png,https://media-3.api-sports.io/football/teams/65.png
-1035493,2024-04-06,39.0,48.0,,,Molineux Stadium,Wolves,West Ham,https://media-1.api-sports.io/football/teams/39.png,https://media-3.api-sports.io/football/teams/48.png
-1035494,2024-04-13,35.0,33.0,,,Vitality Stadium,Bournemouth,Manchester United,https://media-1.api-sports.io/football/teams/35.png,https://media-2.api-sports.io/football/teams/33.png
-1035495,2024-04-13,42.0,66.0,,,Emirates Stadium,Arsenal,Aston Villa,https://media-2.api-sports.io/football/teams/42.png,https://media-3.api-sports.io/football/teams/66.png
-1035496,2024-04-13,55.0,62.0,,,Gtech Community Stadium,Brentford,Sheffield Utd,https://media-2.api-sports.io/football/teams/55.png,https://media-1.api-sports.io/football/teams/62.png
-1035497,2024-04-13,44.0,51.0,,,Turf Moor,Burnley,Brighton,https://media-1.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/51.png
-1035498,2024-04-13,49.0,45.0,,,Stamford Bridge,Chelsea,Everton,https://media-1.api-sports.io/football/teams/49.png,https://media-3.api-sports.io/football/teams/45.png
-1035499,2024-04-13,40.0,52.0,,,Anfield,Liverpool,Crystal Palace,https://media-2.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/52.png
-1035500,2024-04-13,50.0,13.0,,,Etihad Stadium,Manchester City,Luton,https://media-1.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/1359.png
-1035501,2024-04-13,34.0,47.0,,,St. James' Park,Newcastle,Tottenham,https://media-1.api-sports.io/football/teams/34.png,https://media-2.api-sports.io/football/teams/47.png
-1035502,2024-04-13,65.0,39.0,,,The City Ground,Nottingham Forest,Wolves,https://media-2.api-sports.io/football/teams/65.png,https://media-1.api-sports.io/football/teams/39.png
-1035503,2024-04-13,48.0,36.0,,,London Stadium,West Ham,Fulham,https://media-1.api-sports.io/football/teams/48.png,https://media-3.api-sports.io/football/teams/36.png
-1035504,2024-04-20,66.0,35.0,,,Villa Park,Aston Villa,Bournemouth,https://media-1.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/35.png
-1035505,2024-04-20,51.0,49.0,,,The American Express Community Stadium,Brighton,Chelsea,https://media-2.api-sports.io/football/teams/51.png,https://media-1.api-sports.io/football/teams/49.png
-1035506,2024-04-20,52.0,48.0,,,Selhurst Park,Crystal Palace,West Ham,https://media-3.api-sports.io/football/teams/52.png,https://media-3.api-sports.io/football/teams/48.png
-1035507,2024-04-20,45.0,65.0,,,Goodison Park,Everton,Nottingham Forest,https://media-1.api-sports.io/football/teams/45.png,https://media-1.api-sports.io/football/teams/65.png
-1035508,2024-04-20,36.0,40.0,,,Craven Cottage,Fulham,Liverpool,https://media-2.api-sports.io/football/teams/36.png,https://media-3.api-sports.io/football/teams/40.png
-1035509,2024-04-20,13.0,55.0,,,Kenilworth Road,Luton,Brentford,https://media-1.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/55.png
-1035510,2024-04-20,33.0,34.0,,,Old Trafford,Manchester United,Newcastle,https://media-3.api-sports.io/football/teams/33.png,https://media-3.api-sports.io/football/teams/34.png
-1035511,2024-04-20,62.0,44.0,,,Bramall Lane,Sheffield Utd,Burnley,https://media-3.api-sports.io/football/teams/62.png,https://media-3.api-sports.io/football/teams/44.png
-1035512,2024-04-20,47.0,50.0,,,Tottenham Hotspur Stadium,Tottenham,Manchester City,https://media-3.api-sports.io/football/teams/47.png,https://media-3.api-sports.io/football/teams/50.png
-1035513,2024-04-20,39.0,42.0,,,Molineux Stadium,Wolves,Arsenal,https://media-2.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/42.png
-1035514,2024-04-27,35.0,51.0,,,Vitality Stadium,Bournemouth,Brighton,https://media-1.api-sports.io/football/teams/35.png,https://media-3.api-sports.io/football/teams/51.png
-1035515,2024-04-27,66.0,49.0,,,Villa Park,Aston Villa,Chelsea,https://media-2.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/49.png
-1035516,2024-04-27,45.0,55.0,,,Goodison Park,Everton,Brentford,https://media-2.api-sports.io/football/teams/45.png,https://media-3.api-sports.io/football/teams/55.png
-1035517,2024-04-27,36.0,52.0,,,Craven Cottage,Fulham,Crystal Palace,https://media-1.api-sports.io/football/teams/36.png,https://media-3.api-sports.io/football/teams/52.png
-1035518,2024-04-27,33.0,44.0,,,Old Trafford,Manchester United,Burnley,https://media-3.api-sports.io/football/teams/33.png,https://media-2.api-sports.io/football/teams/44.png
-1035519,2024-04-27,34.0,62.0,,,St. James' Park,Newcastle,Sheffield Utd,https://media-2.api-sports.io/football/teams/34.png,https://media-3.api-sports.io/football/teams/62.png
-1035520,2024-04-27,65.0,50.0,,,The City Ground,Nottingham Forest,Manchester City,https://media-3.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/50.png
-1035521,2024-04-27,47.0,42.0,,,Tottenham Hotspur Stadium,Tottenham,Arsenal,https://media-1.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/42.png
-1035522,2024-04-27,48.0,40.0,,,London Stadium,West Ham,Liverpool,https://media-1.api-sports.io/football/teams/48.png,https://media-3.api-sports.io/football/teams/40.png
-1035523,2024-04-27,39.0,13.0,,,Molineux Stadium,Wolves,Luton,https://media-1.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/1359.png
-1035524,2024-05-04,42.0,35.0,,,Emirates Stadium,Arsenal,Bournemouth,https://media-2.api-sports.io/football/teams/42.png,https://media-3.api-sports.io/football/teams/35.png
-1035525,2024-05-04,55.0,36.0,,,Gtech Community Stadium,Brentford,Fulham,https://media-1.api-sports.io/football/teams/55.png,https://media-3.api-sports.io/football/teams/36.png
-1035526,2024-05-04,51.0,66.0,,,The American Express Community Stadium,Brighton,Aston Villa,https://media-2.api-sports.io/football/teams/51.png,https://media-3.api-sports.io/football/teams/66.png
-1035527,2024-05-04,44.0,34.0,,,Turf Moor,Burnley,Newcastle,https://media-1.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/34.png
-1035528,2024-05-04,49.0,48.0,,,Stamford Bridge,Chelsea,West Ham,https://media-3.api-sports.io/football/teams/49.png,https://media-2.api-sports.io/football/teams/48.png
-1035529,2024-05-04,52.0,33.0,,,Selhurst Park,Crystal Palace,Manchester United,https://media-3.api-sports.io/football/teams/52.png,https://media-2.api-sports.io/football/teams/33.png
-1035530,2024-05-04,40.0,47.0,,,Anfield,Liverpool,Tottenham,https://media-2.api-sports.io/football/teams/40.png,https://media-2.api-sports.io/football/teams/47.png
-1035531,2024-05-04,13.0,45.0,,,Kenilworth Road,Luton,Everton,https://media-2.api-sports.io/football/teams/1359.png,https://media-3.api-sports.io/football/teams/45.png
-1035532,2024-05-04,50.0,39.0,,,Etihad Stadium,Manchester City,Wolves,https://media-2.api-sports.io/football/teams/50.png,https://media-1.api-sports.io/football/teams/39.png
-1035533,2024-05-04,62.0,65.0,,,Bramall Lane,Sheffield Utd,Nottingham Forest,https://media-1.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/65.png
-1035534,2024-05-11,35.0,55.0,,,Vitality Stadium,Bournemouth,Brentford,https://media-3.api-sports.io/football/teams/35.png,https://media-3.api-sports.io/football/teams/55.png
-1035535,2024-05-11,66.0,40.0,,,Villa Park,Aston Villa,Liverpool,https://media-3.api-sports.io/football/teams/66.png,https://media-3.api-sports.io/football/teams/40.png
-1035536,2024-05-11,45.0,62.0,,,Goodison Park,Everton,Sheffield Utd,https://media-1.api-sports.io/football/teams/45.png,https://media-2.api-sports.io/football/teams/62.png
-1035537,2024-05-11,36.0,50.0,,,Craven Cottage,Fulham,Manchester City,https://media-3.api-sports.io/football/teams/36.png,https://media-3.api-sports.io/football/teams/50.png
-1035538,2024-05-11,33.0,42.0,,,Old Trafford,Manchester United,Arsenal,https://media-1.api-sports.io/football/teams/33.png,https://media-1.api-sports.io/football/teams/42.png
-1035539,2024-05-11,34.0,51.0,,,St. James' Park,Newcastle,Brighton,https://media-3.api-sports.io/football/teams/34.png,https://media-2.api-sports.io/football/teams/51.png
-1035540,2024-05-11,65.0,49.0,,,The City Ground,Nottingham Forest,Chelsea,https://media-1.api-sports.io/football/teams/65.png,https://media-3.api-sports.io/football/teams/49.png
-1035541,2024-05-11,47.0,44.0,,,Tottenham Hotspur Stadium,Tottenham,Burnley,https://media-3.api-sports.io/football/teams/47.png,https://media-1.api-sports.io/football/teams/44.png
-1035542,2024-05-11,48.0,13.0,,,London Stadium,West Ham,Luton,https://media-3.api-sports.io/football/teams/48.png,https://media-1.api-sports.io/football/teams/1359.png
-1035543,2024-05-11,39.0,52.0,,,Molineux Stadium,Wolves,Crystal Palace,https://media-1.api-sports.io/football/teams/39.png,https://media-2.api-sports.io/football/teams/52.png
-1035544,2024-05-19,42.0,45.0,,,Emirates Stadium,Arsenal,Everton,https://media-1.api-sports.io/football/teams/42.png,https://media-1.api-sports.io/football/teams/45.png
-1035545,2024-05-19,55.0,34.0,,,Gtech Community Stadium,Brentford,Newcastle,https://media-2.api-sports.io/football/teams/55.png,https://media-1.api-sports.io/football/teams/34.png
-1035546,2024-05-19,51.0,33.0,,,The American Express Community Stadium,Brighton,Manchester United,https://media-1.api-sports.io/football/teams/51.png,https://media-2.api-sports.io/football/teams/33.png
-1035547,2024-05-19,44.0,65.0,,,Turf Moor,Burnley,Nottingham Forest,https://media-1.api-sports.io/football/teams/44.png,https://media-2.api-sports.io/football/teams/65.png
-1035548,2024-05-19,49.0,35.0,,,Stamford Bridge,Chelsea,Bournemouth,https://media-1.api-sports.io/football/teams/49.png,https://media-1.api-sports.io/football/teams/35.png
-1035549,2024-05-19,52.0,66.0,,,Selhurst Park,Crystal Palace,Aston Villa,https://media-1.api-sports.io/football/teams/52.png,https://media-1.api-sports.io/football/teams/66.png
-1035550,2024-05-19,40.0,39.0,,,Anfield,Liverpool,Wolves,https://media-3.api-sports.io/football/teams/40.png,https://media-1.api-sports.io/football/teams/39.png
-1035551,2024-05-19,13.0,36.0,,,Kenilworth Road,Luton,Fulham,https://media-3.api-sports.io/football/teams/1359.png,https://media-1.api-sports.io/football/teams/36.png
-1035552,2024-05-19,50.0,48.0,,,Etihad Stadium,Manchester City,West Ham,https://media-1.api-sports.io/football/teams/50.png,https://media-2.api-sports.io/football/teams/48.png
-1035553,2024-05-19,62.0,47.0,,,Bramall Lane,Sheffield Utd,Tottenham,https://media-1.api-sports.io/football/teams/62.png,https://media-2.api-sports.io/football/teams/47.png
+1035037,2023-08-11,44.0,50.0,0.0,3.0,Turf Moor,Burnley,Manchester City,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/50.png
+1035038,2023-08-12,42.0,65.0,2.0,1.0,Emirates Stadium,Arsenal,Nottingham Forest,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/65.png
+1035039,2023-08-12,35.0,48.0,1.0,1.0,Vitality Stadium,Bournemouth,West Ham,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/48.png
+1035040,2023-08-12,51.0,13.0,4.0,1.0,The American Express Community Stadium,Brighton,Luton,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/1359.png
+1035041,2023-08-12,45.0,36.0,0.0,1.0,Goodison Park,Everton,Fulham,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/36.png
+1035042,2023-08-12,62.0,52.0,0.0,1.0,Bramall Lane,Sheffield Utd,Crystal Palace,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/52.png
+1035043,2023-08-12,34.0,66.0,5.0,1.0,St. James' Park,Newcastle,Aston Villa,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/66.png
+1035044,2023-08-13,55.0,47.0,2.0,2.0,Gtech Community Stadium,Brentford,Tottenham,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/47.png
+1035045,2023-08-13,49.0,40.0,1.0,1.0,Stamford Bridge,Chelsea,Liverpool,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/40.png
+1035046,2023-08-14,33.0,39.0,1.0,0.0,Old Trafford,Manchester United,Wolves,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/39.png
+1035053,2023-08-18,65.0,62.0,2.0,1.0,The City Ground,Nottingham Forest,Sheffield Utd,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/62.png
+1035049,2023-08-19,36.0,55.0,0.0,3.0,Craven Cottage,Fulham,Brentford,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/55.png
+1035050,2023-08-19,40.0,35.0,3.0,1.0,Anfield,Liverpool,Bournemouth,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/35.png
+1035056,2023-08-19,39.0,51.0,1.0,4.0,Molineux Stadium,Wolves,Brighton,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/51.png
+1035054,2023-08-19,47.0,33.0,2.0,0.0,Tottenham Hotspur Stadium,Tottenham,Manchester United,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/33.png
+1035052,2023-08-19,50.0,34.0,1.0,0.0,Etihad Stadium,Manchester City,Newcastle,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/34.png
+1035047,2023-08-20,66.0,45.0,4.0,0.0,Villa Park,Aston Villa,Everton,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/45.png
+1035055,2023-08-20,48.0,49.0,3.0,1.0,London Stadium,West Ham,Chelsea,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/49.png
+1035048,2023-08-21,52.0,42.0,0.0,1.0,Selhurst Park,Crystal Palace,Arsenal,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/42.png
+1035062,2023-08-25,49.0,13.0,3.0,0.0,Stamford Bridge,Chelsea,Luton,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/1359.png
+1035057,2023-08-26,35.0,47.0,0.0,2.0,Vitality Stadium,Bournemouth,Tottenham,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/47.png
+1035058,2023-08-26,42.0,36.0,2.0,2.0,Emirates Stadium,Arsenal,Fulham,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/36.png
+1035059,2023-08-26,55.0,52.0,1.0,1.0,Gtech Community Stadium,Brentford,Crystal Palace,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/52.png
+1035063,2023-08-26,45.0,39.0,0.0,1.0,Goodison Park,Everton,Wolves,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/39.png
+1035064,2023-08-26,33.0,65.0,3.0,2.0,Old Trafford,Manchester United,Nottingham Forest,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/65.png
+1035060,2023-08-26,51.0,48.0,1.0,3.0,The American Express Community Stadium,Brighton,West Ham,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/48.png
+1035061,2023-08-27,44.0,66.0,1.0,3.0,Turf Moor,Burnley,Aston Villa,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/66.png
+1035066,2023-08-27,62.0,50.0,1.0,2.0,Bramall Lane,Sheffield Utd,Manchester City,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/50.png
+1035065,2023-08-27,34.0,40.0,1.0,2.0,St. James' Park,Newcastle,Liverpool,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/40.png
+1035074,2023-09-01,13.0,48.0,1.0,2.0,Kenilworth Road,Luton,West Ham,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/48.png
+1035076,2023-09-02,62.0,45.0,2.0,2.0,Bramall Lane,Sheffield Utd,Everton,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/45.png
+1035068,2023-09-02,55.0,35.0,2.0,2.0,Gtech Community Stadium,Brentford,Bournemouth,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/35.png
+1035070,2023-09-02,44.0,47.0,2.0,5.0,Turf Moor,Burnley,Tottenham,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/47.png
+1035071,2023-09-02,49.0,65.0,0.0,1.0,Stamford Bridge,Chelsea,Nottingham Forest,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/65.png
+1035075,2023-09-02,50.0,36.0,5.0,1.0,Etihad Stadium,Manchester City,Fulham,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/36.png
+1035069,2023-09-02,51.0,34.0,3.0,1.0,The American Express Community Stadium,Brighton,Newcastle,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/34.png
+1035072,2023-09-03,52.0,39.0,3.0,2.0,Selhurst Park,Crystal Palace,Wolves,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/39.png
+1035073,2023-09-03,40.0,66.0,3.0,0.0,Anfield,Liverpool,Aston Villa,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/66.png
+1035067,2023-09-03,42.0,33.0,3.0,1.0,Emirates Stadium,Arsenal,Manchester United,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/33.png
+1035086,2023-09-16,39.0,40.0,1.0,3.0,Molineux Stadium,Wolves,Liverpool,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/40.png
+1035078,2023-09-16,66.0,52.0,3.0,1.0,Villa Park,Aston Villa,Crystal Palace,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/52.png
+1035080,2023-09-16,36.0,13.0,1.0,0.0,Craven Cottage,Fulham,Luton,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/1359.png
+1035081,2023-09-16,33.0,51.0,1.0,3.0,Old Trafford,Manchester United,Brighton,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/51.png
+1035084,2023-09-16,47.0,62.0,2.0,1.0,Tottenham Hotspur Stadium,Tottenham,Sheffield Utd,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/62.png
+1035085,2023-09-16,48.0,50.0,1.0,3.0,London Stadium,West Ham,Manchester City,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/50.png
+1035082,2023-09-16,34.0,55.0,1.0,0.0,St. James' Park,Newcastle,Brentford,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/55.png
+1035077,2023-09-17,35.0,49.0,0.0,0.0,Vitality Stadium,Bournemouth,Chelsea,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/49.png
+1035079,2023-09-17,45.0,42.0,0.0,1.0,Goodison Park,Everton,Arsenal,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/42.png
+1035083,2023-09-18,65.0,44.0,1.0,1.0,The City Ground,Nottingham Forest,Burnley,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/44.png
+1035092,2023-09-23,52.0,36.0,0.0,0.0,Selhurst Park,Crystal Palace,Fulham,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/36.png
+1035094,2023-09-23,13.0,39.0,1.0,1.0,Kenilworth Road,Luton,Wolves,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/39.png
+1035095,2023-09-23,50.0,65.0,2.0,0.0,Etihad Stadium,Manchester City,Nottingham Forest,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/65.png
+1035088,2023-09-23,55.0,45.0,1.0,3.0,Gtech Community Stadium,Brentford,Everton,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/45.png
+1035090,2023-09-23,44.0,33.0,0.0,1.0,Turf Moor,Burnley,Manchester United,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/33.png
+1035087,2023-09-24,42.0,47.0,2.0,2.0,Emirates Stadium,Arsenal,Tottenham,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/47.png
+1035089,2023-09-24,51.0,35.0,3.0,1.0,The American Express Community Stadium,Brighton,Bournemouth,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/35.png
+1035091,2023-09-24,49.0,66.0,0.0,1.0,Stamford Bridge,Chelsea,Aston Villa,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/66.png
+1035093,2023-09-24,40.0,48.0,3.0,1.0,Anfield,Liverpool,West Ham,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/48.png
+1035096,2023-09-24,62.0,34.0,0.0,8.0,Bramall Lane,Sheffield Utd,Newcastle,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/34.png
+1035098,2023-09-30,66.0,51.0,,,Villa Park,Aston Villa,Brighton,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/51.png
+1035097,2023-09-30,35.0,42.0,,,Vitality Stadium,Bournemouth,Arsenal,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/42.png
+1035099,2023-09-30,45.0,13.0,,,Goodison Park,Everton,Luton,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/1359.png
+1035101,2023-09-30,33.0,52.0,,,Old Trafford,Manchester United,Crystal Palace,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/52.png
+1035102,2023-09-30,34.0,44.0,,,St. James' Park,Newcastle,Burnley,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/44.png
+1035105,2023-09-30,48.0,62.0,,,London Stadium,West Ham,Sheffield Utd,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/62.png
+1035106,2023-09-30,39.0,50.0,,,Molineux Stadium,Wolves,Manchester City,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/50.png
+1035104,2023-09-30,47.0,40.0,,,Tottenham Hotspur Stadium,Tottenham,Liverpool,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/40.png
+1035103,2023-10-01,65.0,55.0,,,The City Ground,Nottingham Forest,Brentford,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/55.png
+1035100,2023-10-02,36.0,49.0,,,Craven Cottage,Fulham,Chelsea,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/49.png
+1035051,2023-10-03,13.0,44.0,,,Kenilworth Road,Luton,Burnley,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/44.png
+1035113,2023-10-07,13.0,47.0,,,Kenilworth Road,Luton,Tottenham,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/47.png
+1035109,2023-10-07,44.0,49.0,,,Turf Moor,Burnley,Chelsea,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/49.png
+1035111,2023-10-07,45.0,35.0,,,Goodison Park,Everton,Bournemouth,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/35.png
+1035112,2023-10-07,36.0,62.0,,,Craven Cottage,Fulham,Sheffield Utd,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/62.png
+1035114,2023-10-07,33.0,55.0,,,Old Trafford,Manchester United,Brentford,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/55.png
+1035110,2023-10-07,52.0,65.0,,,Selhurst Park,Crystal Palace,Nottingham Forest,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/65.png
+1035108,2023-10-08,51.0,40.0,,,The American Express Community Stadium,Brighton,Liverpool,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/40.png
+1035115,2023-10-08,48.0,34.0,,,London Stadium,West Ham,Newcastle,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/34.png
+1035116,2023-10-08,39.0,66.0,,,Molineux Stadium,Wolves,Aston Villa,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/66.png
+1035107,2023-10-08,42.0,50.0,,,Emirates Stadium,Arsenal,Manchester City,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/50.png
+1035121,2023-10-21,40.0,45.0,,,Anfield,Liverpool,Everton,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/45.png
+1035117,2023-10-21,35.0,39.0,,,Vitality Stadium,Bournemouth,Wolves,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/39.png
+1035119,2023-10-21,55.0,44.0,,,Gtech Community Stadium,Brentford,Burnley,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/44.png
+1035122,2023-10-21,50.0,51.0,,,Etihad Stadium,Manchester City,Brighton,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/51.png
+1035123,2023-10-21,34.0,52.0,,,St. James' Park,Newcastle,Crystal Palace,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/52.png
+1035124,2023-10-21,65.0,13.0,,,The City Ground,Nottingham Forest,Luton,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/1359.png
+1035120,2023-10-21,49.0,42.0,,,Stamford Bridge,Chelsea,Arsenal,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/42.png
+1035125,2023-10-21,62.0,33.0,,,Bramall Lane,Sheffield Utd,Manchester United,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/33.png
+1035118,2023-10-22,66.0,48.0,,,Villa Park,Aston Villa,West Ham,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/48.png
+1035126,2023-10-23,47.0,36.0,,,Tottenham Hotspur Stadium,Tottenham,Fulham,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/36.png
+1035132,2023-10-27,52.0,47.0,,,Selhurst Park,Crystal Palace,Tottenham,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/47.png
+1035131,2023-10-28,49.0,55.0,,,Stamford Bridge,Chelsea,Brentford,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/55.png
+1035127,2023-10-28,35.0,44.0,,,Vitality Stadium,Bournemouth,Burnley,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/44.png
+1035128,2023-10-28,42.0,62.0,,,Emirates Stadium,Arsenal,Sheffield Utd,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/62.png
+1035136,2023-10-28,39.0,34.0,,,Molineux Stadium,Wolves,Newcastle,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/34.png
+1035135,2023-10-29,48.0,45.0,,,London Stadium,West Ham,Everton,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/45.png
+1035129,2023-10-29,66.0,13.0,,,Villa Park,Aston Villa,Luton,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/1359.png
+1035130,2023-10-29,51.0,36.0,,,The American Express Community Stadium,Brighton,Fulham,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/36.png
+1035133,2023-10-29,40.0,65.0,,,Anfield,Liverpool,Nottingham Forest,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/65.png
+1035134,2023-10-29,33.0,50.0,,,Old Trafford,Manchester United,Manchester City,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/50.png
+1035140,2023-11-04,36.0,33.0,,,Craven Cottage,Fulham,Manchester United,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/33.png
+1035137,2023-11-04,55.0,48.0,,,Gtech Community Stadium,Brentford,West Ham,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/48.png
+1035138,2023-11-04,44.0,52.0,,,Turf Moor,Burnley,Crystal Palace,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/52.png
+1035139,2023-11-04,45.0,51.0,,,Goodison Park,Everton,Brighton,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/51.png
+1035142,2023-11-04,50.0,35.0,,,Etihad Stadium,Manchester City,Bournemouth,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/35.png
+1035145,2023-11-04,62.0,39.0,,,Bramall Lane,Sheffield Utd,Wolves,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/39.png
+1035143,2023-11-04,34.0,42.0,,,St. James' Park,Newcastle,Arsenal,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/42.png
+1035144,2023-11-05,65.0,66.0,,,The City Ground,Nottingham Forest,Aston Villa,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/66.png
+1035141,2023-11-05,13.0,40.0,,,Kenilworth Road,Luton,Liverpool,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/40.png
+1035146,2023-11-06,47.0,49.0,,,Tottenham Hotspur Stadium,Tottenham,Chelsea,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/49.png
+1035156,2023-11-11,39.0,47.0,,,Molineux Stadium,Wolves,Tottenham,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/47.png
+1035148,2023-11-11,42.0,44.0,,,Emirates Stadium,Arsenal,Burnley,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/44.png
+1035152,2023-11-11,52.0,45.0,,,Selhurst Park,Crystal Palace,Everton,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/45.png
+1035154,2023-11-11,33.0,13.0,,,Old Trafford,Manchester United,Luton,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/1359.png
+1035147,2023-11-11,35.0,34.0,,,Vitality Stadium,Bournemouth,Newcastle,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/34.png
+1035149,2023-11-12,66.0,36.0,,,Villa Park,Aston Villa,Fulham,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/36.png
+1035150,2023-11-12,51.0,62.0,,,The American Express Community Stadium,Brighton,Sheffield Utd,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/62.png
+1035153,2023-11-12,40.0,55.0,,,Anfield,Liverpool,Brentford,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/55.png
+1035155,2023-11-12,48.0,65.0,,,London Stadium,West Ham,Nottingham Forest,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/65.png
+1035151,2023-11-12,49.0,50.0,,,Stamford Bridge,Chelsea,Manchester City,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/50.png
+1035294,2023-11-25,55.0,42.0,,,Gtech Community Stadium,Brentford,Arsenal,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/42.png
+1035295,2023-11-25,44.0,48.0,,,Turf Moor,Burnley,West Ham,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/48.png
+1035296,2023-11-25,45.0,33.0,,,Goodison Park,Everton,Manchester United,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/33.png
+1035297,2023-11-25,36.0,39.0,,,Craven Cottage,Fulham,Wolves,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/39.png
+1035298,2023-11-25,13.0,52.0,,,Kenilworth Road,Luton,Crystal Palace,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/52.png
+1035299,2023-11-25,50.0,40.0,,,Etihad Stadium,Manchester City,Liverpool,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/40.png
+1035300,2023-11-25,34.0,49.0,,,St. James' Park,Newcastle,Chelsea,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/49.png
+1035301,2023-11-25,65.0,51.0,,,The City Ground,Nottingham Forest,Brighton,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/51.png
+1035302,2023-11-25,62.0,35.0,,,Bramall Lane,Sheffield Utd,Bournemouth,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/35.png
+1035303,2023-11-25,47.0,66.0,,,Tottenham Hotspur Stadium,Tottenham,Aston Villa,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/66.png
+1035304,2023-12-02,35.0,66.0,,,Vitality Stadium,Bournemouth,Aston Villa,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/66.png
+1035305,2023-12-02,42.0,39.0,,,Emirates Stadium,Arsenal,Wolves,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/39.png
+1035306,2023-12-02,55.0,13.0,,,Gtech Community Stadium,Brentford,Luton,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/1359.png
+1035307,2023-12-02,44.0,62.0,,,Turf Moor,Burnley,Sheffield Utd,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/62.png
+1035308,2023-12-02,49.0,51.0,,,Stamford Bridge,Chelsea,Brighton,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/51.png
+1035309,2023-12-02,40.0,36.0,,,Anfield,Liverpool,Fulham,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/36.png
+1035310,2023-12-02,50.0,47.0,,,Etihad Stadium,Manchester City,Tottenham,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/47.png
+1035311,2023-12-02,34.0,33.0,,,St. James' Park,Newcastle,Manchester United,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/33.png
+1035312,2023-12-02,65.0,45.0,,,The City Ground,Nottingham Forest,Everton,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/45.png
+1035313,2023-12-02,48.0,52.0,,,London Stadium,West Ham,Crystal Palace,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/52.png
+1035314,2023-12-05,66.0,50.0,,,Villa Park,Aston Villa,Manchester City,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/50.png
+1035315,2023-12-05,51.0,55.0,,,The American Express Community Stadium,Brighton,Brentford,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/55.png
+1035316,2023-12-05,45.0,34.0,,,Goodison Park,Everton,Newcastle,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/34.png
+1035317,2023-12-05,36.0,65.0,,,Craven Cottage,Fulham,Nottingham Forest,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/65.png
+1035318,2023-12-05,13.0,42.0,,,Kenilworth Road,Luton,Arsenal,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/42.png
+1035319,2023-12-05,62.0,40.0,,,Bramall Lane,Sheffield Utd,Liverpool,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/40.png
+1035320,2023-12-05,47.0,48.0,,,Tottenham Hotspur Stadium,Tottenham,West Ham,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/48.png
+1035321,2023-12-05,39.0,44.0,,,Molineux Stadium,Wolves,Burnley,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/44.png
+1035322,2023-12-05,52.0,35.0,,,Selhurst Park,Crystal Palace,Bournemouth,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/35.png
+1035323,2023-12-06,33.0,49.0,,,Old Trafford,Manchester United,Chelsea,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/49.png
+1035324,2023-12-09,66.0,42.0,,,Villa Park,Aston Villa,Arsenal,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/42.png
+1035325,2023-12-09,51.0,44.0,,,The American Express Community Stadium,Brighton,Burnley,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/44.png
+1035326,2023-12-09,52.0,40.0,,,Selhurst Park,Crystal Palace,Liverpool,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/40.png
+1035327,2023-12-09,45.0,49.0,,,Goodison Park,Everton,Chelsea,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/49.png
+1035328,2023-12-09,36.0,48.0,,,Craven Cottage,Fulham,West Ham,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/48.png
+1035329,2023-12-09,13.0,50.0,,,Kenilworth Road,Luton,Manchester City,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/50.png
+1035330,2023-12-09,33.0,35.0,,,Old Trafford,Manchester United,Bournemouth,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/35.png
+1035331,2023-12-09,62.0,55.0,,,Bramall Lane,Sheffield Utd,Brentford,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/55.png
+1035332,2023-12-09,47.0,34.0,,,Tottenham Hotspur Stadium,Tottenham,Newcastle,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/34.png
+1035333,2023-12-09,39.0,65.0,,,Molineux Stadium,Wolves,Nottingham Forest,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/65.png
+1035334,2023-12-16,35.0,13.0,,,Vitality Stadium,Bournemouth,Luton,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/1359.png
+1035335,2023-12-16,42.0,51.0,,,Emirates Stadium,Arsenal,Brighton,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/51.png
+1035336,2023-12-16,55.0,66.0,,,Gtech Community Stadium,Brentford,Aston Villa,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/66.png
+1035337,2023-12-16,44.0,45.0,,,Turf Moor,Burnley,Everton,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/45.png
+1035338,2023-12-16,49.0,62.0,,,Stamford Bridge,Chelsea,Sheffield Utd,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/62.png
+1035339,2023-12-16,40.0,33.0,,,Anfield,Liverpool,Manchester United,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/33.png
+1035340,2023-12-16,50.0,52.0,,,Etihad Stadium,Manchester City,Crystal Palace,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/52.png
+1035341,2023-12-16,34.0,36.0,,,St. James' Park,Newcastle,Fulham,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/36.png
+1035342,2023-12-16,65.0,47.0,,,The City Ground,Nottingham Forest,Tottenham,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/47.png
+1035343,2023-12-16,48.0,39.0,,,London Stadium,West Ham,Wolves,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/39.png
+1035344,2023-12-23,66.0,62.0,,,Villa Park,Aston Villa,Sheffield Utd,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/62.png
+1035345,2023-12-23,52.0,51.0,,,Selhurst Park,Crystal Palace,Brighton,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/51.png
+1035346,2023-12-23,36.0,44.0,,,Craven Cottage,Fulham,Burnley,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/44.png
+1035347,2023-12-23,40.0,42.0,,,Anfield,Liverpool,Arsenal,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/42.png
+1035348,2023-12-23,13.0,34.0,,,Kenilworth Road,Luton,Newcastle,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/34.png
+1035349,2023-12-23,50.0,55.0,,,Etihad Stadium,Manchester City,Brentford,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/55.png
+1035350,2023-12-23,65.0,35.0,,,The City Ground,Nottingham Forest,Bournemouth,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/35.png
+1035351,2023-12-23,47.0,45.0,,,Tottenham Hotspur Stadium,Tottenham,Everton,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/45.png
+1035352,2023-12-23,48.0,33.0,,,London Stadium,West Ham,Manchester United,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/33.png
+1035353,2023-12-23,39.0,49.0,,,Molineux Stadium,Wolves,Chelsea,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/49.png
+1035354,2023-12-26,35.0,36.0,,,Vitality Stadium,Bournemouth,Fulham,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/36.png
+1035355,2023-12-26,42.0,48.0,,,Emirates Stadium,Arsenal,West Ham,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/48.png
+1035356,2023-12-26,55.0,39.0,,,Gtech Community Stadium,Brentford,Wolves,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/39.png
+1035357,2023-12-26,51.0,47.0,,,The American Express Community Stadium,Brighton,Tottenham,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/47.png
+1035358,2023-12-26,44.0,40.0,,,Turf Moor,Burnley,Liverpool,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/40.png
+1035359,2023-12-26,49.0,52.0,,,Stamford Bridge,Chelsea,Crystal Palace,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/52.png
+1035360,2023-12-26,45.0,50.0,,,Goodison Park,Everton,Manchester City,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/50.png
+1035361,2023-12-26,33.0,66.0,,,Old Trafford,Manchester United,Aston Villa,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/66.png
+1035362,2023-12-26,34.0,65.0,,,St. James' Park,Newcastle,Nottingham Forest,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/65.png
+1035363,2023-12-26,62.0,13.0,,,Bramall Lane,Sheffield Utd,Luton,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/1359.png
+1035364,2023-12-30,66.0,44.0,,,Villa Park,Aston Villa,Burnley,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/44.png
+1035365,2023-12-30,52.0,55.0,,,Selhurst Park,Crystal Palace,Brentford,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/55.png
+1035366,2023-12-30,36.0,42.0,,,Craven Cottage,Fulham,Arsenal,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/42.png
+1035367,2023-12-30,40.0,34.0,,,Anfield,Liverpool,Newcastle,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/34.png
+1035368,2023-12-30,13.0,49.0,,,Kenilworth Road,Luton,Chelsea,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/49.png
+1035369,2023-12-30,50.0,62.0,,,Etihad Stadium,Manchester City,Sheffield Utd,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/62.png
+1035370,2023-12-30,65.0,33.0,,,The City Ground,Nottingham Forest,Manchester United,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/33.png
+1035371,2023-12-30,47.0,35.0,,,Tottenham Hotspur Stadium,Tottenham,Bournemouth,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/35.png
+1035372,2023-12-30,48.0,51.0,,,London Stadium,West Ham,Brighton,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/51.png
+1035373,2023-12-30,39.0,45.0,,,Molineux Stadium,Wolves,Everton,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/45.png
+1035374,2024-01-13,35.0,40.0,,,Vitality Stadium,Bournemouth,Liverpool,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/40.png
+1035375,2024-01-13,42.0,52.0,,,Emirates Stadium,Arsenal,Crystal Palace,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/52.png
+1035376,2024-01-13,55.0,65.0,,,Gtech Community Stadium,Brentford,Nottingham Forest,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/65.png
+1035377,2024-01-13,51.0,39.0,,,The American Express Community Stadium,Brighton,Wolves,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/39.png
+1035378,2024-01-13,44.0,13.0,,,Turf Moor,Burnley,Luton,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/1359.png
+1035379,2024-01-13,49.0,36.0,,,Stamford Bridge,Chelsea,Fulham,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/36.png
+1035380,2024-01-13,45.0,66.0,,,Goodison Park,Everton,Aston Villa,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/66.png
+1035381,2024-01-13,33.0,47.0,,,Old Trafford,Manchester United,Tottenham,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/47.png
+1035382,2024-01-13,34.0,50.0,,,St. James' Park,Newcastle,Manchester City,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/50.png
+1035383,2024-01-13,62.0,48.0,,,Bramall Lane,Sheffield Utd,West Ham,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/48.png
+1035384,2024-01-30,66.0,34.0,,,Villa Park,Aston Villa,Newcastle,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/34.png
+1035385,2024-01-30,36.0,45.0,,,Craven Cottage,Fulham,Everton,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/45.png
+1035386,2024-01-30,13.0,51.0,,,Kenilworth Road,Luton,Brighton,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/51.png
+1035387,2024-01-30,65.0,42.0,,,The City Ground,Nottingham Forest,Arsenal,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/42.png
+1035388,2024-01-30,47.0,55.0,,,Tottenham Hotspur Stadium,Tottenham,Brentford,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/55.png
+1035389,2024-01-30,48.0,35.0,,,London Stadium,West Ham,Bournemouth,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/35.png
+1035390,2024-01-30,39.0,33.0,,,Molineux Stadium,Wolves,Manchester United,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/33.png
+1035391,2024-01-30,52.0,62.0,,,Selhurst Park,Crystal Palace,Sheffield Utd,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/62.png
+1035392,2024-01-31,40.0,49.0,,,Anfield,Liverpool,Chelsea,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/49.png
+1035393,2024-01-31,50.0,44.0,,,Etihad Stadium,Manchester City,Burnley,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/44.png
+1035394,2024-02-03,35.0,65.0,,,Vitality Stadium,Bournemouth,Nottingham Forest,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/65.png
+1035395,2024-02-03,42.0,40.0,,,Emirates Stadium,Arsenal,Liverpool,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/40.png
+1035396,2024-02-03,55.0,50.0,,,Gtech Community Stadium,Brentford,Manchester City,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/50.png
+1035397,2024-02-03,51.0,52.0,,,The American Express Community Stadium,Brighton,Crystal Palace,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/52.png
+1035398,2024-02-03,44.0,36.0,,,Turf Moor,Burnley,Fulham,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/36.png
+1035399,2024-02-03,49.0,39.0,,,Stamford Bridge,Chelsea,Wolves,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/39.png
+1035400,2024-02-03,45.0,47.0,,,Goodison Park,Everton,Tottenham,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/47.png
+1035401,2024-02-03,33.0,48.0,,,Old Trafford,Manchester United,West Ham,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/48.png
+1035402,2024-02-03,34.0,13.0,,,St. James' Park,Newcastle,Luton,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/1359.png
+1035403,2024-02-03,62.0,66.0,,,Bramall Lane,Sheffield Utd,Aston Villa,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/66.png
+1035404,2024-02-10,66.0,33.0,,,Villa Park,Aston Villa,Manchester United,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/33.png
+1035405,2024-02-10,52.0,49.0,,,Selhurst Park,Crystal Palace,Chelsea,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/49.png
+1035406,2024-02-10,36.0,35.0,,,Craven Cottage,Fulham,Bournemouth,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/35.png
+1035407,2024-02-10,40.0,44.0,,,Anfield,Liverpool,Burnley,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/44.png
+1035408,2024-02-10,13.0,62.0,,,Kenilworth Road,Luton,Sheffield Utd,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/62.png
+1035409,2024-02-10,50.0,45.0,,,Etihad Stadium,Manchester City,Everton,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/45.png
+1035410,2024-02-10,65.0,34.0,,,The City Ground,Nottingham Forest,Newcastle,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/34.png
+1035411,2024-02-10,47.0,51.0,,,Tottenham Hotspur Stadium,Tottenham,Brighton,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/51.png
+1035412,2024-02-10,48.0,42.0,,,London Stadium,West Ham,Arsenal,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/42.png
+1035413,2024-02-10,39.0,55.0,,,Molineux Stadium,Wolves,Brentford,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/55.png
+1035414,2024-02-17,55.0,40.0,,,Gtech Community Stadium,Brentford,Liverpool,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/40.png
+1035415,2024-02-17,44.0,42.0,,,Turf Moor,Burnley,Arsenal,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/42.png
+1035416,2024-02-17,45.0,52.0,,,Goodison Park,Everton,Crystal Palace,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/52.png
+1035417,2024-02-17,36.0,66.0,,,Craven Cottage,Fulham,Aston Villa,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/66.png
+1035418,2024-02-17,13.0,33.0,,,Kenilworth Road,Luton,Manchester United,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/33.png
+1035419,2024-02-17,50.0,49.0,,,Etihad Stadium,Manchester City,Chelsea,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/49.png
+1035420,2024-02-17,34.0,35.0,,,St. James' Park,Newcastle,Bournemouth,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/35.png
+1035421,2024-02-17,65.0,48.0,,,The City Ground,Nottingham Forest,West Ham,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/48.png
+1035422,2024-02-17,62.0,51.0,,,Bramall Lane,Sheffield Utd,Brighton,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/51.png
+1035423,2024-02-17,47.0,39.0,,,Tottenham Hotspur Stadium,Tottenham,Wolves,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/39.png
+1035424,2024-02-24,35.0,50.0,,,Vitality Stadium,Bournemouth,Manchester City,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/50.png
+1035425,2024-02-24,42.0,34.0,,,Emirates Stadium,Arsenal,Newcastle,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/34.png
+1035426,2024-02-24,66.0,65.0,,,Villa Park,Aston Villa,Nottingham Forest,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/65.png
+1035427,2024-02-24,51.0,45.0,,,The American Express Community Stadium,Brighton,Everton,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/45.png
+1035428,2024-02-24,49.0,47.0,,,Stamford Bridge,Chelsea,Tottenham,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/47.png
+1035429,2024-02-24,52.0,44.0,,,Selhurst Park,Crystal Palace,Burnley,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/44.png
+1035430,2024-02-24,40.0,13.0,,,Anfield,Liverpool,Luton,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/1359.png
+1035431,2024-02-24,33.0,36.0,,,Old Trafford,Manchester United,Fulham,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/36.png
+1035432,2024-02-24,48.0,55.0,,,London Stadium,West Ham,Brentford,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/55.png
+1035433,2024-02-24,39.0,62.0,,,Molineux Stadium,Wolves,Sheffield Utd,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/62.png
+1035434,2024-03-02,55.0,49.0,,,Gtech Community Stadium,Brentford,Chelsea,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/49.png
+1035435,2024-03-02,44.0,35.0,,,Turf Moor,Burnley,Bournemouth,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/35.png
+1035436,2024-03-02,45.0,48.0,,,Goodison Park,Everton,West Ham,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/48.png
+1035437,2024-03-02,36.0,51.0,,,Craven Cottage,Fulham,Brighton,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/51.png
+1035438,2024-03-02,13.0,66.0,,,Kenilworth Road,Luton,Aston Villa,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/66.png
+1035439,2024-03-02,50.0,33.0,,,Etihad Stadium,Manchester City,Manchester United,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/33.png
+1035440,2024-03-02,34.0,39.0,,,St. James' Park,Newcastle,Wolves,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/39.png
+1035441,2024-03-02,65.0,40.0,,,The City Ground,Nottingham Forest,Liverpool,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/40.png
+1035442,2024-03-02,62.0,42.0,,,Bramall Lane,Sheffield Utd,Arsenal,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/42.png
+1035443,2024-03-02,47.0,52.0,,,Tottenham Hotspur Stadium,Tottenham,Crystal Palace,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/52.png
+1035444,2024-03-09,35.0,62.0,,,Vitality Stadium,Bournemouth,Sheffield Utd,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/62.png
+1035445,2024-03-09,42.0,55.0,,,Emirates Stadium,Arsenal,Brentford,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/55.png
+1035446,2024-03-09,66.0,47.0,,,Villa Park,Aston Villa,Tottenham,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/47.png
+1035447,2024-03-09,51.0,65.0,,,The American Express Community Stadium,Brighton,Nottingham Forest,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/65.png
+1035448,2024-03-09,49.0,34.0,,,Stamford Bridge,Chelsea,Newcastle,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/34.png
+1035449,2024-03-09,52.0,13.0,,,Selhurst Park,Crystal Palace,Luton,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/1359.png
+1035450,2024-03-09,40.0,50.0,,,Anfield,Liverpool,Manchester City,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/50.png
+1035451,2024-03-09,33.0,45.0,,,Old Trafford,Manchester United,Everton,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/45.png
+1035452,2024-03-09,48.0,44.0,,,London Stadium,West Ham,Burnley,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/44.png
+1035453,2024-03-09,39.0,36.0,,,Molineux Stadium,Wolves,Fulham,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/36.png
+1035454,2024-03-16,42.0,49.0,,,Emirates Stadium,Arsenal,Chelsea,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/49.png
+1035455,2024-03-16,51.0,50.0,,,The American Express Community Stadium,Brighton,Manchester City,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/50.png
+1035456,2024-03-16,44.0,55.0,,,Turf Moor,Burnley,Brentford,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/55.png
+1035457,2024-03-16,52.0,34.0,,,Selhurst Park,Crystal Palace,Newcastle,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/34.png
+1035458,2024-03-16,45.0,40.0,,,Goodison Park,Everton,Liverpool,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/40.png
+1035459,2024-03-16,36.0,47.0,,,Craven Cottage,Fulham,Tottenham,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/47.png
+1035460,2024-03-16,13.0,65.0,,,Kenilworth Road,Luton,Nottingham Forest,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/65.png
+1035461,2024-03-16,33.0,62.0,,,Old Trafford,Manchester United,Sheffield Utd,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/62.png
+1035462,2024-03-16,48.0,66.0,,,London Stadium,West Ham,Aston Villa,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/66.png
+1035463,2024-03-16,39.0,35.0,,,Molineux Stadium,Wolves,Bournemouth,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/35.png
+1035464,2024-03-30,35.0,45.0,,,Vitality Stadium,Bournemouth,Everton,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/45.png
+1035465,2024-03-30,66.0,39.0,,,Villa Park,Aston Villa,Wolves,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/39.png
+1035466,2024-03-30,55.0,33.0,,,Gtech Community Stadium,Brentford,Manchester United,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/33.png
+1035467,2024-03-30,49.0,44.0,,,Stamford Bridge,Chelsea,Burnley,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/44.png
+1035468,2024-03-30,40.0,51.0,,,Anfield,Liverpool,Brighton,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/51.png
+1035469,2024-03-30,50.0,42.0,,,Etihad Stadium,Manchester City,Arsenal,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/42.png
+1035470,2024-03-30,34.0,48.0,,,St. James' Park,Newcastle,West Ham,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/48.png
+1035471,2024-03-30,65.0,52.0,,,The City Ground,Nottingham Forest,Crystal Palace,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/52.png
+1035472,2024-03-30,62.0,36.0,,,Bramall Lane,Sheffield Utd,Fulham,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/36.png
+1035473,2024-03-30,47.0,13.0,,,Tottenham Hotspur Stadium,Tottenham,Luton,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/1359.png
+1035474,2024-04-02,35.0,52.0,,,Vitality Stadium,Bournemouth,Crystal Palace,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/52.png
+1035475,2024-04-02,42.0,13.0,,,Emirates Stadium,Arsenal,Luton,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/1359.png
+1035476,2024-04-02,55.0,51.0,,,Gtech Community Stadium,Brentford,Brighton,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/51.png
+1035477,2024-04-02,44.0,39.0,,,Turf Moor,Burnley,Wolves,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/39.png
+1035478,2024-04-02,65.0,36.0,,,The City Ground,Nottingham Forest,Fulham,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/36.png
+1035479,2024-04-02,48.0,47.0,,,London Stadium,West Ham,Tottenham,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/47.png
+1035480,2024-04-03,49.0,33.0,,,Stamford Bridge,Chelsea,Manchester United,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/33.png
+1035481,2024-04-03,34.0,45.0,,,St. James' Park,Newcastle,Everton,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/45.png
+1035482,2024-04-03,40.0,62.0,,,Anfield,Liverpool,Sheffield Utd,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/62.png
+1035483,2024-04-03,50.0,66.0,,,Etihad Stadium,Manchester City,Aston Villa,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/66.png
+1035484,2024-04-06,66.0,55.0,,,Villa Park,Aston Villa,Brentford,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/55.png
+1035485,2024-04-06,51.0,42.0,,,The American Express Community Stadium,Brighton,Arsenal,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/42.png
+1035486,2024-04-06,52.0,50.0,,,Selhurst Park,Crystal Palace,Manchester City,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/50.png
+1035487,2024-04-06,45.0,44.0,,,Goodison Park,Everton,Burnley,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/44.png
+1035488,2024-04-06,36.0,34.0,,,Craven Cottage,Fulham,Newcastle,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/34.png
+1035489,2024-04-06,13.0,35.0,,,Kenilworth Road,Luton,Bournemouth,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/35.png
+1035490,2024-04-06,33.0,40.0,,,Old Trafford,Manchester United,Liverpool,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/40.png
+1035491,2024-04-06,62.0,49.0,,,Bramall Lane,Sheffield Utd,Chelsea,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/49.png
+1035492,2024-04-06,47.0,65.0,,,Tottenham Hotspur Stadium,Tottenham,Nottingham Forest,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/65.png
+1035493,2024-04-06,39.0,48.0,,,Molineux Stadium,Wolves,West Ham,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/48.png
+1035494,2024-04-13,35.0,33.0,,,Vitality Stadium,Bournemouth,Manchester United,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/33.png
+1035495,2024-04-13,42.0,66.0,,,Emirates Stadium,Arsenal,Aston Villa,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/66.png
+1035496,2024-04-13,55.0,62.0,,,Gtech Community Stadium,Brentford,Sheffield Utd,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/62.png
+1035497,2024-04-13,44.0,51.0,,,Turf Moor,Burnley,Brighton,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/51.png
+1035498,2024-04-13,49.0,45.0,,,Stamford Bridge,Chelsea,Everton,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/45.png
+1035499,2024-04-13,40.0,52.0,,,Anfield,Liverpool,Crystal Palace,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/52.png
+1035500,2024-04-13,50.0,13.0,,,Etihad Stadium,Manchester City,Luton,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/1359.png
+1035501,2024-04-13,34.0,47.0,,,St. James' Park,Newcastle,Tottenham,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/47.png
+1035502,2024-04-13,65.0,39.0,,,The City Ground,Nottingham Forest,Wolves,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/39.png
+1035503,2024-04-13,48.0,36.0,,,London Stadium,West Ham,Fulham,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/36.png
+1035504,2024-04-20,66.0,35.0,,,Villa Park,Aston Villa,Bournemouth,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/35.png
+1035505,2024-04-20,51.0,49.0,,,The American Express Community Stadium,Brighton,Chelsea,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/49.png
+1035506,2024-04-20,52.0,48.0,,,Selhurst Park,Crystal Palace,West Ham,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/48.png
+1035507,2024-04-20,45.0,65.0,,,Goodison Park,Everton,Nottingham Forest,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/65.png
+1035508,2024-04-20,36.0,40.0,,,Craven Cottage,Fulham,Liverpool,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/40.png
+1035509,2024-04-20,13.0,55.0,,,Kenilworth Road,Luton,Brentford,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/55.png
+1035510,2024-04-20,33.0,34.0,,,Old Trafford,Manchester United,Newcastle,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/34.png
+1035511,2024-04-20,62.0,44.0,,,Bramall Lane,Sheffield Utd,Burnley,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/44.png
+1035512,2024-04-20,47.0,50.0,,,Tottenham Hotspur Stadium,Tottenham,Manchester City,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/50.png
+1035513,2024-04-20,39.0,42.0,,,Molineux Stadium,Wolves,Arsenal,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/42.png
+1035514,2024-04-27,35.0,51.0,,,Vitality Stadium,Bournemouth,Brighton,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/51.png
+1035515,2024-04-27,66.0,49.0,,,Villa Park,Aston Villa,Chelsea,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/49.png
+1035516,2024-04-27,45.0,55.0,,,Goodison Park,Everton,Brentford,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/55.png
+1035517,2024-04-27,36.0,52.0,,,Craven Cottage,Fulham,Crystal Palace,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/52.png
+1035518,2024-04-27,33.0,44.0,,,Old Trafford,Manchester United,Burnley,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/44.png
+1035519,2024-04-27,34.0,62.0,,,St. James' Park,Newcastle,Sheffield Utd,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/62.png
+1035520,2024-04-27,65.0,50.0,,,The City Ground,Nottingham Forest,Manchester City,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/50.png
+1035521,2024-04-27,47.0,42.0,,,Tottenham Hotspur Stadium,Tottenham,Arsenal,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/42.png
+1035522,2024-04-27,48.0,40.0,,,London Stadium,West Ham,Liverpool,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/40.png
+1035523,2024-04-27,39.0,13.0,,,Molineux Stadium,Wolves,Luton,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/1359.png
+1035524,2024-05-04,42.0,35.0,,,Emirates Stadium,Arsenal,Bournemouth,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/35.png
+1035525,2024-05-04,55.0,36.0,,,Gtech Community Stadium,Brentford,Fulham,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/36.png
+1035526,2024-05-04,51.0,66.0,,,The American Express Community Stadium,Brighton,Aston Villa,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/66.png
+1035527,2024-05-04,44.0,34.0,,,Turf Moor,Burnley,Newcastle,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/34.png
+1035528,2024-05-04,49.0,48.0,,,Stamford Bridge,Chelsea,West Ham,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/48.png
+1035529,2024-05-04,52.0,33.0,,,Selhurst Park,Crystal Palace,Manchester United,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/33.png
+1035530,2024-05-04,40.0,47.0,,,Anfield,Liverpool,Tottenham,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/47.png
+1035531,2024-05-04,13.0,45.0,,,Kenilworth Road,Luton,Everton,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/45.png
+1035532,2024-05-04,50.0,39.0,,,Etihad Stadium,Manchester City,Wolves,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/39.png
+1035533,2024-05-04,62.0,65.0,,,Bramall Lane,Sheffield Utd,Nottingham Forest,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/65.png
+1035534,2024-05-11,35.0,55.0,,,Vitality Stadium,Bournemouth,Brentford,https://media-4.api-sports.io/football/teams/35.png,https://media-4.api-sports.io/football/teams/55.png
+1035535,2024-05-11,66.0,40.0,,,Villa Park,Aston Villa,Liverpool,https://media-4.api-sports.io/football/teams/66.png,https://media-4.api-sports.io/football/teams/40.png
+1035536,2024-05-11,45.0,62.0,,,Goodison Park,Everton,Sheffield Utd,https://media-4.api-sports.io/football/teams/45.png,https://media-4.api-sports.io/football/teams/62.png
+1035537,2024-05-11,36.0,50.0,,,Craven Cottage,Fulham,Manchester City,https://media-4.api-sports.io/football/teams/36.png,https://media-4.api-sports.io/football/teams/50.png
+1035538,2024-05-11,33.0,42.0,,,Old Trafford,Manchester United,Arsenal,https://media-4.api-sports.io/football/teams/33.png,https://media-4.api-sports.io/football/teams/42.png
+1035539,2024-05-11,34.0,51.0,,,St. James' Park,Newcastle,Brighton,https://media-4.api-sports.io/football/teams/34.png,https://media-4.api-sports.io/football/teams/51.png
+1035540,2024-05-11,65.0,49.0,,,The City Ground,Nottingham Forest,Chelsea,https://media-4.api-sports.io/football/teams/65.png,https://media-4.api-sports.io/football/teams/49.png
+1035541,2024-05-11,47.0,44.0,,,Tottenham Hotspur Stadium,Tottenham,Burnley,https://media-4.api-sports.io/football/teams/47.png,https://media-4.api-sports.io/football/teams/44.png
+1035542,2024-05-11,48.0,13.0,,,London Stadium,West Ham,Luton,https://media-4.api-sports.io/football/teams/48.png,https://media-4.api-sports.io/football/teams/1359.png
+1035543,2024-05-11,39.0,52.0,,,Molineux Stadium,Wolves,Crystal Palace,https://media-4.api-sports.io/football/teams/39.png,https://media-4.api-sports.io/football/teams/52.png
+1035544,2024-05-19,42.0,45.0,,,Emirates Stadium,Arsenal,Everton,https://media-4.api-sports.io/football/teams/42.png,https://media-4.api-sports.io/football/teams/45.png
+1035545,2024-05-19,55.0,34.0,,,Gtech Community Stadium,Brentford,Newcastle,https://media-4.api-sports.io/football/teams/55.png,https://media-4.api-sports.io/football/teams/34.png
+1035546,2024-05-19,51.0,33.0,,,The American Express Community Stadium,Brighton,Manchester United,https://media-4.api-sports.io/football/teams/51.png,https://media-4.api-sports.io/football/teams/33.png
+1035547,2024-05-19,44.0,65.0,,,Turf Moor,Burnley,Nottingham Forest,https://media-4.api-sports.io/football/teams/44.png,https://media-4.api-sports.io/football/teams/65.png
+1035548,2024-05-19,49.0,35.0,,,Stamford Bridge,Chelsea,Bournemouth,https://media-4.api-sports.io/football/teams/49.png,https://media-4.api-sports.io/football/teams/35.png
+1035549,2024-05-19,52.0,66.0,,,Selhurst Park,Crystal Palace,Aston Villa,https://media-4.api-sports.io/football/teams/52.png,https://media-4.api-sports.io/football/teams/66.png
+1035550,2024-05-19,40.0,39.0,,,Anfield,Liverpool,Wolves,https://media-4.api-sports.io/football/teams/40.png,https://media-4.api-sports.io/football/teams/39.png
+1035551,2024-05-19,13.0,36.0,,,Kenilworth Road,Luton,Fulham,https://media-4.api-sports.io/football/teams/1359.png,https://media-4.api-sports.io/football/teams/36.png
+1035552,2024-05-19,50.0,48.0,,,Etihad Stadium,Manchester City,West Ham,https://media-4.api-sports.io/football/teams/50.png,https://media-4.api-sports.io/football/teams/48.png
+1035553,2024-05-19,62.0,47.0,,,Bramall Lane,Sheffield Utd,Tottenham,https://media-4.api-sports.io/football/teams/62.png,https://media-4.api-sports.io/football/teams/47.png
