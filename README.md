@@ -123,6 +123,10 @@ Several areas of further work are suggested to improve the predictions made in t
 
 - Gradient boosting applied to decision trees should be tested as an additional algorithm for consideration. This approach has been cited to 'strictly outperform random forests most of the time whilst having similar properties' (Chollet, 2021).
 
+- Currently data engineering best practices have not been followed. All data from the API is collected and saved in a single folder location with only a single set of transformations occurring to prepare the data for ML model training. A robust medallion data lake structure should be put in place to sequentially process the data, allowing for easier access to the data for different disciplines - e.g., analytics and data science.
+
+- Currently data is being uploaded to this repository due to the fact I work on this project across multiple machines. Including data in the repository is not best practice and instead some file sharing mechanism should be put in place for the data.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
