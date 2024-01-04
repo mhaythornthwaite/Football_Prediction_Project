@@ -127,6 +127,8 @@ Several areas of further work are suggested to improve the predictions made in t
 
 - Currently data is being uploaded to this repository due to the fact I work on this project across multiple machines. Including data in the repository is not best practice and instead some file sharing mechanism should be put in place for the data.
 
+- Whilst class imbalance is expected to be low, the exact extent is not known. The class imbalance between teams winning and drawing could be causing some of the issues around accurately predicting a draw. Some investigation into this imbalance should be made, and if significant enough, a balancing technique such as SMOTE should be tested to understand it's impact on model performance.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
