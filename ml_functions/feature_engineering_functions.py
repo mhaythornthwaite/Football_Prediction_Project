@@ -40,7 +40,8 @@ def running_mean(x, N):
 
 def average_stats_df(games_slide, team_list, team_fixture_id_dict, game_stats, making_predictions=False):
     '''
-    Output is a dataframe of averaged game stats. Included is a teams average stats over 'games_slide' number of games as well as the avergae opponent stats in those games.
+    Output is a dataframe of averaged game stats. Included is a teams average 
+    stats over 'games_slide' number of games as well as the avergae opponent stats in those games.
 
     Parameters
     ----------

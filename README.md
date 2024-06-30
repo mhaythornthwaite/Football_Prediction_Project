@@ -131,6 +131,8 @@ Several areas of further work are suggested to improve the predictions made in t
 
 - Any further testing and experiments should be completed using a tracking tool such as mlflow, making monitoring and sharing testing different approaches to model training easier. 
 
+- Code does not adhere to styling best practice and should be refactored to follow to PEP 8 styling.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

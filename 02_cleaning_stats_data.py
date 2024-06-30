@@ -22,8 +22,8 @@ import pickle
 
 #Please state the name of the fixtures DataFrame we want to generate our dictionary, as well as the name of the saved output file (nested stats dictionary).
 
-fixtures_saved_name = '2019_2020_2021_2022_2023_premier_league_fixtures_df.csv'
-stats_dict_output_name = '2019_2020_2021_2022_2023_prem_all_stats_dict.txt'
+fixtures_saved_name = '2019_2020_2021_2022_2023_2024_premier_league_fixtures_df.csv'
+stats_dict_output_name = '2019_2020_2021_2022_2023_2024_prem_all_stats_dict.txt'
 
 
 #---------------------------- CREATING DF PER TEAM ----------------------------
@@ -78,6 +78,7 @@ for team in team_id_list:
         #adding game date
         gd = fixtures_clean['Game Date'].iloc[temp_index]
         df['Game Date'] = [gd, gd]
+        df = df.fillna(0)
         #adding this modified df to nested dictionary
         sub_dict_1 = {j:df}
         all_stats_dict[team].update(sub_dict_1)
@@ -89,7 +90,7 @@ for team in team_id_list:
             if math.isnan(fixtures_clean['Away Team Goals'].iloc[i]) == False:
                 team_fixture_list.append(fixtures_clean['Fixture ID'].iloc[i])
     for j in team_fixture_list:
-        #loading df
+        #loading df 
         df = pd.read_json('prem_game_stats_json_files/' + str(j) + '.json', orient='values')
         #removing percentage symbol in possession and passes and conv to int
         df['Ball Possession'] = df['Ball Possession'].str.replace('[\%]', '').astype(int)
@@ -115,6 +116,7 @@ for team in team_id_list:
         #adding game date
         gd = fixtures_clean['Game Date'].iloc[temp_index]
         df['Game Date'] = [gd, gd]
+        df = df.fillna(0)
         #adding this modified df to nested dictionary
         sub_dict_1 = {j:df}
         all_stats_dict[team].update(sub_dict_1)

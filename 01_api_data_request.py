@@ -25,10 +25,10 @@ from os import listdir
 
 #Please state the year of investigation. 
 
-YEAR = 2023
+YEAR = 2024
 YEAR_str = str(YEAR)
 
-request_league_ids = True
+request_league_ids = False
 request_fixtures = True
 request_missing_game_stats = True
 
@@ -88,7 +88,7 @@ def req_prem_fixtures_id(season_code, year=YEAR_str):
 
 #requesting data on the premier leagues, we will use this response to get the league_id of the season we were interested in
 if request_league_ids:
-    leagues = premier_league_fixtures_raw = get_api_data(base_url, 'leagues/country/England/2023')
+    leagues = premier_league_fixtures_raw = get_api_data(base_url, 'leagues/country/England/2024')
 
 if YEAR == 2019:
     season_id = 524
@@ -100,6 +100,8 @@ elif YEAR == 2022:
     season_id = 4335
 elif YEAR == 2023:
     season_id = 5267
+elif YEAR == 2024:
+    season_id = 6280
 else:
     print('please lookup season id and specify this as season_id variable')
 
@@ -161,14 +163,14 @@ fixtures_clean.to_csv(f'prem_clean_fixtures_and_dataframes/{YEAR_str}_premier_le
 
 #in this section we simply load the 2019+2020+2021+2022 fixtures and the 2023 fixtures and stitch the two dataframes together. 
 
-fixtures_clean_2019_2020_2021_2022 = pd.read_csv('prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_premier_league_fixtures_df.csv')
+fixtures_clean_2019_2020_2021_2022_2023 = pd.read_csv('prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_2023_premier_league_fixtures_df.csv')
 
-fixtures_clean_2023 = pd.read_csv('prem_clean_fixtures_and_dataframes/2023_premier_league_fixtures_df.csv')
+fixtures_clean_2024 = pd.read_csv('prem_clean_fixtures_and_dataframes/2024_premier_league_fixtures_df.csv')
 
-fixtures_clean_combined = pd.concat([fixtures_clean_2019_2020_2021_2022, fixtures_clean_2023])
+fixtures_clean_combined = pd.concat([fixtures_clean_2019_2020_2021_2022_2023, fixtures_clean_2024])
 fixtures_clean_combined = fixtures_clean_combined.reset_index(drop=True)
 
-fixtures_clean_combined.to_csv('prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_2023_premier_league_fixtures_df.csv', index=False)
+fixtures_clean_combined.to_csv('prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_2023_2024_premier_league_fixtures_df.csv', index=False)
 
 
 #-------------------------- REQUESTING SPECIFIC STATS -------------------------

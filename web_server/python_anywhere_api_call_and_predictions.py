@@ -28,7 +28,7 @@ from os import listdir
 
 #Please state the year of investigation.
 
-YEAR = 2023
+YEAR = 2024
 YEAR_str = str(YEAR)
 
 request_league_ids = False
@@ -103,6 +103,8 @@ elif YEAR == 2022:
     season_id = 4335
 elif YEAR == 2023:
     season_id = 5267
+elif YEAR == 2024:
+    season_id = 6280
 else:
     print('please lookup season id and specify this as season_id variable')
 
@@ -164,14 +166,14 @@ fixtures_clean.to_csv(f'/home/matthaythornthwaite/Football_Prediction_Project/pr
 
 #in this section we simply load the 2019 fixtures and the 2020 fixtures and stitch the two dataframes together.
 
-fixtures_clean_2019_2020_2021_2022 = pd.read_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_premier_league_fixtures_df.csv')
+fixtures_clean_2019_2020_2021_2022_2023 = pd.read_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_2023_premier_league_fixtures_df.csv')
 
-fixtures_clean_2023 = pd.read_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2023_premier_league_fixtures_df.csv')
+fixtures_clean_2024 = pd.read_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2024_premier_league_fixtures_df.csv')
 
-fixtures_clean_combined = pd.concat([fixtures_clean_2019_2020_2021_2022, fixtures_clean_2023])
+fixtures_clean_combined = pd.concat([fixtures_clean_2019_2020_2021_2022_2023, fixtures_clean_2024])
 fixtures_clean_combined = fixtures_clean_combined.reset_index(drop=True)
 
-fixtures_clean_combined.to_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_2023_premier_league_fixtures_df.csv', index=False)
+fixtures_clean_combined.to_csv('/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fixtures_and_dataframes/2019_2020_2021_2022_2023_2024_premier_league_fixtures_df.csv', index=False)
 
 
 
@@ -482,11 +484,11 @@ def mod_df(df, making_predictions=False):
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-fixtures_saved_name = '2019_2020_2021_2022_2023_premier_league_fixtures_df.csv'
+fixtures_saved_name = '2019_2020_2021_2022_2023_2024_premier_league_fixtures_df.csv'
 
-stats_dict_saved_name = '2019_2020_2021_2022_2023_prem_all_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_2021_2022_2023_2024_prem_all_stats_dict.txt'
 
-df_10_saved_name = '2019_2020_2021_2022_2023_prem_df_for_ml_10_v2.txt'
+df_10_saved_name = '2019_2020_2021_2022_2023_2024_prem_df_for_ml_10_v2.txt'
 
 path_to_model = '/home/matthaythornthwaite/Football_Prediction_Project/ml_model_build_random_forest/ml_models/random_forest_model_10.pk1'
 
@@ -648,8 +650,8 @@ with open('/home/matthaythornthwaite/Football_Prediction_Project/web_server/pl_p
 
 #Please state the name of the fixtures DataFrame we want to generate our dictionary, as well as the name of the saved output file (nested stats dictionary).
 
-fixtures_saved_name = '2019_2020_2021_2022_2023_premier_league_fixtures_df.csv'
-stats_dict_output_name = '2019_2020_2021_2022_2023_prem_all_stats_dict.txt'
+fixtures_saved_name = '2019_2020_2021_2022_2023_2024_premier_league_fixtures_df.csv'
+stats_dict_output_name = '2019_2020_2021_2022_2023_2024_prem_all_stats_dict.txt'
 
 
 #---------- CREATING DF PER TEAM ----------
@@ -704,6 +706,7 @@ for team in team_id_list:
         #adding game date
         gd = fixtures_clean['Game Date'].iloc[temp_index]
         df['Game Date'] = [gd, gd]
+        df = df.fillna(0)
         #adding this modified df to nested dictionary
         sub_dict_1 = {j:df}
         all_stats_dict[team].update(sub_dict_1)
@@ -741,6 +744,7 @@ for team in team_id_list:
         #adding game date
         gd = fixtures_clean['Game Date'].iloc[temp_index]
         df['Game Date'] = [gd, gd]
+        df = df.fillna(0)
         #adding this modified df to nested dictionary
         sub_dict_1 = {j:df}
         all_stats_dict[team].update(sub_dict_1)
@@ -757,9 +761,9 @@ with open(f'/home/matthaythornthwaite/Football_Prediction_Project/prem_clean_fix
 #in this section we will load our already generated stats dictionary and apply some slight transforms to get a df per team which has the past results and the teams played. This will then be used in the 'more information' dropdown / collapsible on our website
 
 
-stats_dict_saved_name = '2019_2020_2021_2022_2023_prem_all_stats_dict.txt'
-fixtures_saved_name = '2019_2020_2021_2022_2023_premier_league_fixtures_df.csv'
-results_dict_saved_name = '2019_2020_2021_2022_2023_additional_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_2021_2022_2023_2024_prem_all_stats_dict.txt'
+fixtures_saved_name = '2019_2020_2021_2022_2023_2024_premier_league_fixtures_df.csv'
+results_dict_saved_name = '2019_2020_2021_2022_2023_2024_additional_stats_dict.txt'
 
 
 #---------- LOADING DATA ----------

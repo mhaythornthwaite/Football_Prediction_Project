@@ -19,9 +19,9 @@ import pandas as pd
 
 #------------------------------- INPUT VARIABLES ------------------------------
 
-stats_dict_saved_name = '2019_2020_2021_2022_2023_prem_all_stats_dict.txt'
-fixtures_saved_name = '2019_2020_2021_2022_2023_premier_league_fixtures_df.csv'
-results_dict_saved_name = '2019_2020_2021_2022_2023_additional_stats_dict.txt'
+stats_dict_saved_name = '2019_2020_2021_2022_2023_2024_prem_all_stats_dict.txt'
+fixtures_saved_name = '2019_2020_2021_2022_2023_2024_premier_league_fixtures_df.csv'
+results_dict_saved_name = '2019_2020_2021_2022_2023_2024_additional_stats_dict.txt'
 
 
 #------------------------------ ADDITIONAL STATS ------------------------------
