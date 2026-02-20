@@ -1,7 +1,7 @@
 
 <a href="http://matthaythornthwaite.pythonanywhere.com/"><img src="https://raw.githubusercontent.com/mhaythornthwaite/Football_Prediction_Project/master/web_server/static/images/Smart_Football_Predictor_Github_Logo_v2.png" alt="Smart Football Predictor" alt="Smart Football Predictor"></a>
 
-<h4 align="center">View live predictions displayed in simple web application <a href="http://matthaythornthwaite.pythonanywhere.com/" target="_blank">here</a>.
+<h4 align="center">Live predictions were displayed in a webapp from 2020 and 2024 but this feature is no longer supported.
 </h4>
 
 <p align="center">
